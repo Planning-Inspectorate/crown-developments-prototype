@@ -1,0 +1,27 @@
+{% extends "layouts/question.njk" %}
+
+{% block question %}
+    {{ govukRadios({
+        name: "agent-for-client",
+        fieldset: {
+            legend: {
+                text: "Are you acting as an agent on behalf of a client?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+            }
+        },
+        hint: {
+            text: "For example, your organisation has been hired to represent a client on planning matters."
+        },
+        items: [
+            {
+                value: "yes",
+                text: "Yes"
+            },
+            {
+                value: "no",
+                text: "No"
+            }
+        ]
+    }) }}
+{% endblock %}

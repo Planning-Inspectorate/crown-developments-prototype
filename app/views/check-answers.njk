@@ -1,0 +1,122 @@
+{% extends "layouts/main.njk" %}
+
+{% block pageTitle %}
+    Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds-from-desktop">
+
+            <h1 class="govuk-heading-xl">
+                Check your answers before sending your application
+            </h1>
+
+            {{ govukSummaryList({
+                rows: [
+                    {
+                        key: {
+                        text: "Representing on behalf of?"
+                    },
+                        value: {
+                        text: data['who-are-you-representing']
+                    },
+                        actions: {
+                        items: [
+                            {
+                                href: "#",
+                                text: "Change",
+                                visuallyHiddenText: "representing on behalf of"
+                            }
+                        ]
+                    }
+                    }
+                    ,
+                    {
+                        key: {
+                        text: "Are you 18 or older?"
+                    },
+                        value: {
+                        text: data['18-or-over']
+                    },
+                        actions: {
+                        items: [
+                            {
+                                href: "#",
+                                text: "Change",
+                                visuallyHiddenText: "Are you 18 or older"
+                            }
+                        ]
+                    }
+                    }
+                    ,
+                    {
+                        key: {
+                        text: "Full name"
+                    },
+                        value: {
+                        text: data['full-name']
+                    },
+                        actions: {
+                        items: [
+                            {
+                                href: "#",
+                                text: "Change",
+                                visuallyHiddenText: "full name"
+                            }
+                        ]
+                    }
+                    }
+                    ,
+                    {
+                        key: {
+                        text: "Email address"
+                    },
+                        value: {
+                        text: data['email-address']
+                    },
+                        actions: {
+                        items: [
+                            {
+                                href: "#",
+                                text: "Change",
+                                visuallyHiddenText: "Question 3"
+                            }
+                        ]
+                    }
+
+                    }
+                    ,
+                    {
+                        key: {
+                        text: "Your representation"
+                    },
+                        value: {
+                        text: data['comments']
+                    },
+                        actions: {
+                        items: [
+                            {
+                                href: "#",
+                                text: "Change",
+                                visuallyHiddenText: "Question 3"
+                            }
+                        ]
+                    }
+
+                    }
+                ]
+            }) }}
+
+
+            <form action="/declaration" method="post" novalidate>
+
+                {{ govukButton({
+                    text: "Accept and continue"
+                }) }}
+
+            </form>
+
+        </div>
+    </div>
+{% endblock %}

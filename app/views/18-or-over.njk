@@ -1,0 +1,27 @@
+{% extends "layouts/question.njk" %}
+
+{% block question %}
+    {{ govukRadios({
+        name: "18-or-over",
+        fieldset: {
+            legend: {
+                text: "Are you 18 or older?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+            }
+        },
+        hint: {
+            text: "You can still have your say if you are under 18, but we will process your personal details in a different way."
+        },
+        items: [
+            {
+                value: "Yes",
+                text: "Yes"
+            },
+            {
+                value: "No",
+                text: "No"
+            }
+        ]
+    }) }}
+{% endblock %}

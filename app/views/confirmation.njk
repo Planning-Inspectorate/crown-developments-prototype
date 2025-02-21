@@ -1,0 +1,53 @@
+{% extends "layouts/main.njk" %}
+
+{% block pageTitle %}
+    Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+            {{ govukPanel({
+                titleText: "Representation submitted",
+                html: "Your reference number<br><strong>HDJ2123F</strong>"
+            }) }}
+
+            <p>
+                We have received your comments. Make a note of your reference number.
+            <p>
+                We will contact you if we need more information about the comments you have provided.
+
+            </p>
+
+            <h2 class="govuk-heading-m">
+                What happens next
+            </h2>
+
+            <p>
+                Following the end of the representation period we will notify you of the procedure that the application
+                will follow.  Where a hearing or local inquiry is to be held, you will be able to request in writing to
+                participate in the hearing or inquiry. 
+            </p>
+
+            <h2 class="govuk-heading-m">
+                Providing more information
+            </h2>
+
+            <p>
+                If you wish to include documents or photographs as part of your comments, you must send them to <a
+                        href="mailto:crownapplications@planninginspectorate.gov.uk">crownapplications@planninginspectorate.gov.uk</a>
+                and include your name, application reference number and site address in the subject line.
+            </p>
+            <p>
+                <a href="#">
+                    Go back to the application information page
+                </a>
+            </p>
+
+
+        </div>
+    </div>
+
+{% endblock %}

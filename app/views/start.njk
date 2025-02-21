@@ -1,0 +1,109 @@
+{% extends "layouts/main.njk" %}
+
+{% block pageTitle %}
+    Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+    <!-- Blank header with no service name for the start page -->
+    {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+    {{ govukBreadcrumbs({
+        items: [
+            {
+                text: "Home",
+                href: "#"
+            },
+            {
+                text: "Section",
+                href: "#"
+            },
+            {
+                text: "Subsection"
+            }
+        ]
+    }) }}
+
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-xl">
+                {{ serviceName }}
+            </h1>
+
+            <p>Use this service to have your say about a Crown Development Application. We need your personal details
+                and
+                your comments about [name].</p>
+
+            <p>The application can be inspected under the Documents heading. </p>
+
+            <p>You will be able to comment on this application until [date].</p>
+
+            <h2 class="govuk-heading-m">
+                Writing your comments
+            </h2>
+
+
+            <p>Your comments must be about what you consider to be the main issues and impacts. You should include as
+                much
+                detail as possible and cover anything that may affect your day-to-day life.</p>
+
+            <p>This information will be:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>seen by the examining authority</li>
+                <li>published on our website</li>
+            </ul>
+
+            <p>You will be able to submit further comments during the examination of the application once you have
+                registered.
+
+            <p>You must submit your registration before [time] on [date]. </p>
+
+
+            {{ govukButton({
+                text: "Start now",
+                href: "/who-are-you-submitting-for",
+                isStartButton: true
+            }) }}
+
+            <h2 class="govuk-heading-m">
+                Before you start
+            </h2>
+
+            <p><strong>If you are commenting for yourself as an individual</strong></p>
+            <p>You will need your:
+            <ul class="govuk-list govuk-list--bullet">
+                <li>full name</li>
+                <li>email address</li>
+                <li>comments about the application</li>
+            </ul>
+
+            <p><strong> If you are commenting for an organisation you work or volunteer for</strong></p>
+
+            <p>You will need your:
+            <ul class="govuk-list govuk-list--bullet">
+                <li>full name</li>
+                <li>email address</li>
+                <li>the name of the charity or organisation you work for</li>
+                <li>comments about the application</li>
+            </ul>
+
+            <p><strong>If you are commenting on behalf of another person or organisation</strong></p>
+
+            <p>You will need your:
+            <ul class="govuk-list govuk-list--bullet">
+                <li>full name</li>
+                <li>email address</li>
+                <li>the details of the person or organisation you are representing</li>
+                <li>comments about the application</li>
+            </ul>
+
+        </div>
+    </div>
+{% endblock %}

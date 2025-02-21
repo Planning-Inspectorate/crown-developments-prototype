@@ -1,0 +1,28 @@
+{% extends "layouts/question.njk" %}
+
+{% block question %}
+    {{ govukRadios({
+        name: "agent-options",
+        fieldset: {
+            legend: {
+                text: "Who are you representing?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+            }
+        },
+        items: [
+            {
+                value: "person",
+                text: "A person"
+            },
+            {
+                value: "orgyes",
+                text: "An organisation or charity I work or volunteer for "
+            },
+            {
+                value: "orgno",
+                text: "An organisation or charity I do not work or volunteer for"
+            }
+        ]
+    }) }}
+{% endblock %}

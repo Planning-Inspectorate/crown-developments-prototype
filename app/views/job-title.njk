@@ -1,0 +1,12 @@
+{% extends "layouts/question.njk" %}
+
+{% block question %}
+    {{ govukInput({
+        label: {
+            text: "What your job title or volunteer role?",
+            classes: "govuk-label--l",
+            isPageHeading: true
+        },
+        id: "job-title",
+    }) }}
+{% endblock %}
