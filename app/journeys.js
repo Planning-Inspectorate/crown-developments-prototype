@@ -1,6 +1,6 @@
-import {QUESTIONS} from "./questions.js";
+const {QUESTIONS} = require("./questions");
 
-export function getJourney(req) {
+function getJourney(req) {
     let journey = myselfJourney(req); // default to start
     if (isMyself(req)) {
         return journey;
@@ -105,3 +105,7 @@ function forOrganisation(req) {
 function repOrganisation(req) {
     return req.session.data[QUESTIONS.AGENT_OPTIONS] === 'orgno';
 }
+
+module.exports = {
+    getJourney
+};

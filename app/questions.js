@@ -1,4 +1,4 @@
-export const QUESTIONS = Object.freeze({
+const QUESTIONS = Object.freeze({
     WHO_ARE_YOU_SUBMITTING_FOR: 'who-are-you-submitting-for',
     AGE_18_OR_OVER: '18-or-over',
     FULL_NAME: 'full-name',
@@ -16,3 +16,7 @@ export const QUESTIONS = Object.freeze({
     JOB_TITLE: 'job-title',
     REP_ORG_NAME: 'rep-org-name'
 });
+
+module.exports = {
+    QUESTIONS
+};
