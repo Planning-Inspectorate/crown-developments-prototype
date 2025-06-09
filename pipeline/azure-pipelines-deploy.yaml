@@ -12,19 +12,29 @@ resources:
       type: github
       endpoint: Planning-Inspectorate
       name: Planning-Inspectorate/common-pipeline-templates
-      ref: refs/tags/release/3.20.3
+      ref: refs/tags/release/3.22.2
 
-steps:
-  - checkout: self
-  - task: ArchiveFiles@2
-    inputs:
-      rootFolderOrFile: $(Build.Repository.LocalPath)/
-      workingDirectory: $(Build.Repository.LocalPath)/
-      includeRootFolder: false
-      archiveFile: $(Build.ArtifactStagingDirectory)/pins-app-prototype-crown-dev.zip
-  - task: AzureWebApp@1
-    inputs:
-      azureSubscription: Azure DevOps Pipelines - Prototypes dev
-      appType: webAppLinux
-      appName: pins-app-prototype-crown-dev
-      package: $(Build.ArtifactStagingDirectory)/pins-app-prototype-crown-dev.zip
+extends:
+  template: stages/wrapper_cd.yml@templates
+  parameters:
+    environments:
+      - name: Dev
+    deploymentStages:
+      - name: Build & Deploy
+        deploymentJobs:
+          - name: Build & Deploy
+            steps:
+              - checkout: self
+              - template: ../steps/azure_web_app_docker_build_push.yml@templates
+                parameters:
+                  azurecrName: pinscrsharedtoolinguks
+                  dockerfilePath: $(Build.SourcesDirectory)/Dockerfile
+                  repository: prototypes/crown-dev
+              - template: ../steps/azure_web_app_deploy_slot.yml@templates
+                parameters:
+                  appName: pins-app-prototype-crown-dev
+                  appResourceGroup: pins-rg-prototypes-dev
+                  azurecrName: pinscrsharedtoolinguks
+                  repository: prototypes/crown-dev
+                  slot: default
+                  gitCommitHash: $(Build.SourceVersion)
