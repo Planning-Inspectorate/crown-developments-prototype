@@ -4,6 +4,10 @@
 //
 
 const govukPrototypeKit = require('govuk-prototype-kit')
+
+const {applyAzureHostingFix} = require('./azure-hosting-fix');
+applyAzureHostingFix();
+
 const {getJourney} = require("./journeys");
 const router = govukPrototypeKit.requests.setupRouter();
 
