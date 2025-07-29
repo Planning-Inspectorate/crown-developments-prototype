@@ -1,0 +1,110 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  {% from "govuk/components/task-list/macro.njk" import govukTaskList %}
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="/path/of/next/page" method="post">
+
+        <h1 class="govuk-heading-l">Review representation</h1>
+
+        <h2 class="govuk-heading-m">Review comment</h2>
+
+        {{ govukTaskList({
+          idPrefix: "before-you-start",
+          items: [
+            {
+             title: {
+                text: "Comment"
+              },
+              href: "#",
+              status: {
+                tag: {
+                  text: "Incomplete",
+                  classes: "govuk-tag--blue"
+                }
+              }
+            }
+          ]
+        }) }}
+
+        <h2 class="govuk-heading-m govuk-!-margin-top-5">Review attachments</h2>
+
+        {{ govukTaskList({
+          idPrefix: "prepare-application",
+          items: [
+            {
+              title: {
+                text: "Site map.pdf"
+              },
+              href: "#",
+              status: {
+                text: "Accepted"
+              }
+            },
+            {
+              title: {
+                text: "Environmental impact assessment.pdf"
+              },
+              href: "#",
+              status: {
+                tag: {
+                  text: "Incomplete",
+                  classes: "govuk-tag--blue"
+                }
+              }
+            },
+            {
+              title: {
+                text: "Flood risk assessment.doc"
+              },
+              href: "#",
+              status: {
+                text: "Accepted and redacted"
+                
+              }
+            },
+            {
+              title: {
+                text: "Protected species map.pdf"
+              },
+              href: "#",
+              status: {
+                tag: {
+                  text: "Rejected",
+                  classes: "govuk-tag--red"
+                }
+              }
+          
+            }
+          ]
+        }) }}
+
+    
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,211 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Application details
+      </h1>
+      <h2 class="govuk-heading-m">About this application</h2>
+      {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Application type"
+            },
+            value: {
+              text: "Outline planning permission with some matters reserved"
+            }
+          },
+          {
+            key: {
+              text: "Local planning authority"
+            },
+            value: {
+              text: "System Test Borough Council"
+            }
+          },
+          {
+            key: {
+              text: "Applicant name"
+            },
+            value: {
+              html: "Other Government Department"
+            }
+          },
+          {
+            key: {
+              text: "Site address"
+            },
+            value: {
+              html: "Easting: 654321, Northing: 123456"
+            }
+          },
+          {
+            key: {
+              text: "Description of the proposed development
+              "
+            },
+            value: {
+              text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem."
+           
+            }
+          },
+          {
+            key: {
+                text: "Application form
+                "
+              },
+              value: {
+                text: "To view the full application, go to the Documents section."
+             
+              }
+          
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">Important dates</h2>
+      {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Application complete date"
+            },
+            value: {
+              text: "01 January 2025"
+            }
+          },
+          {
+            key: {
+              text: "Representations period"
+            },
+            value: {
+              text: "3 April 2025 at midnight to 30 April 2025 at 11:59pm"
+            }
+          },
+          {
+            key: {
+              text: "Application decision date"
+            },
+            value: {
+              html: "1 June 2025"
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">Procedure details</h2>
+      {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Procedure type"
+            },
+            value: {
+              text: "Hearing"
+            }
+          },
+          {
+            key: {
+              text: "Hearing date"
+            },
+            value: {
+              text: "1 July 2025"
+            }
+          },
+          {
+            key: {
+              text: "Hearing venue"
+            },
+            value: {
+              html: "Chelsea Town Hall"
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">Application decision</h2>
+      {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Decision date"
+            },
+            value: {
+              text: "1st August 2025"
+            }
+          },
+          {
+            key: {
+              text: "Decision outcome"
+            },
+            value: {
+              text: "-"
+            }
+          },
+          {
+            key: {
+              text: "Hearing venue"
+            },
+            value: {
+              html: "Chelsea Town Hall"
+            }
+          }
+        ]
+      }) }}
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break">
+
+      <h1 class="govuk-heading-m" >Have your say on this application</h1>
+      <p class="govuk-body">Use this service to have your say about the application.</p>
+      <p class="govuk-body">We'll ask for your personal details and your comments about this application.</p>
+      <p class="govuk-body">The representation period is open from: 31 Jan 2025 00:00 - 31 Mar 2025 23:59</p>
+  
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+  
+      {{ govukButton({
+        text: "Have your say",
+        href: "/start"
+      }) }}
+  
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+  
+      <h1 class="govuk-heading-m">Contact us</h1>
+      <h2 class="govuk-heading-s">Telephone</h2>
+      <p class="govuk-body">If you have a reference number, make sure you have it with you when you call.</p>
+      <p class="govuk-body">Telephone: 0303 444 5000</p>
+      <p class="govuk-body">Open Monday to Friday: 9am to 4pm. Closed on weekends and bank holidays.</p>
+      <h2 class="govuk-heading-s">Email</h2>
+      <p class="govuk-body"><a
+        href="mailto:crownapplications@planninginspectorate.gov.uk">crownapplications@planninginspectorate.gov.uk</a>
+      <p class="govuk-body">When writing an email, quote the name of the project in the subject line.</p>
+      <p class="govuk-body">We aim to respond within 10 working days.</p>
+  
+      <h2 class="govuk-heading-s">Alternative formats</h2>
+      <p class="govuk-body">Call or email to ask for application documents in alternative formats such as PDF, large print, easy read, audio recording or braille.</p>
+    </div>
+  </div>
+  
+  {% endblock %}

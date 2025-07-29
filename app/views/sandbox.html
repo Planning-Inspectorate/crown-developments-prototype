@@ -1,0 +1,53 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% set html %}
+<p class="govuk-notification-banner__heading">
+  This is part of a planning permission application.
+  <a class="govuk-notification-banner__link" href="#">View planning permission application</a>.
+</p>
+{% endset %}
+
+{{ govukNotificationBanner({
+html: html
+}) }}
+
+{% set html %}
+<p class="govuk-notification-banner__heading">
+  This application includes a
+  <a class="govuk-notification-banner__link" href="#">listed building consent (LBC) application</a>.
+</p>
+{% endset %}
+
+{{ govukNotificationBanner({
+html: html
+}) }}
+
+{% set html %}
+<p class="govuk-notification-banner__heading">
+  This application is connected to a
+  <a class="govuk-notification-banner__link" href="#">Listed Building Consent (LBC) application</a>.
+</p>
+{% endset %}
+
+{{ govukNotificationBanner({
+html: html
+}) }}
+
+{% set html %}
+<p class="govuk-notification-banner__heading">
+  This application is connected to a
+  <a class="govuk-notification-banner__link" href="#">planning permission application</a>.
+</p>
+{% endset %}
+
+{{ govukNotificationBanner({
+html: html
+}) }}
+
+{% endblock %}
