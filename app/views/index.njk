@@ -6,24 +6,47 @@
 
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
+        <h1 class=govuk-heading-l>Crown Developments prototype</h1>
 
-            {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
-
-            <h1 class="govuk-heading-xl">
-                {{ serviceName }}
-            </h1>
-
-            
-
-            <p class="govuk-body">
+            <div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#past-day">
+        Full flow
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#past-week">
+        Standalone designs
+      </a>
+    </li>
+   
+  </ul>
+  <div class="govuk-tabs__panel" id="past-day">
+    
+     <p class="govuk-body">
                 <a href="/application-info" class="govuk-link">Have your say - Application information</a>
             </p>
 
             <p class="govuk-body">
                 <a href="/start" class="govuk-link">Have your say - Start</a>
             </p>
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+    
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month">
+    <h2 class="govuk-heading-l">Past month</h2>
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-year">
+    <h2 class="govuk-heading-l">Past year</h2>
+  </div>
+</div>
+           
 
-            {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
         </div>
     </div>
 
