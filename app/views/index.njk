@@ -1,53 +1,57 @@
 {% extends "layouts/main.njk" %}
 
-{% set pageName="Home" %}
+{% set pageName = "Home" %}
 
 {% block content %}
 
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-        <h1 class=govuk-heading-l>Crown Developments prototype</h1>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class=govuk-heading-l>Crown Developments prototype</h1>
 
-            <div class="govuk-tabs" data-module="govuk-tabs">
-  <h2 class="govuk-tabs__title">
-    Contents
+      <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+    Prototypes
   </h2>
-  <ul class="govuk-tabs__list">
-    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-      <a class="govuk-tabs__tab" href="#past-day">
-        Full flow
-      </a>
-    </li>
-    <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="#past-week">
-        Standalone designs
-      </a>
-    </li>
-   
-  </ul>
-  <div class="govuk-tabs__panel" id="past-day">
-    
-     <p class="govuk-body">
-                <a href="/application-info" class="govuk-link">Have your say - Application information</a>
-            </p>
-
-            <p class="govuk-body">
-                <a href="/start" class="govuk-link">Have your say - Start</a>
-            </p>
-  </div>
-  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
-    
-  </div>
-  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month">
-    <h2 class="govuk-heading-l">Past month</h2>
-  </div>
-  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-year">
-    <h2 class="govuk-heading-l">Past year</h2>
-  </div>
-</div>
-           
-
+        <!--tab headings-->
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+            <a class="govuk-tabs__tab" href="#flows">Flows</a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#features">Features</a>
+          </li>
+        </ul>
+        <!--tab content-->
+        <div class="govuk-tabs__panel" id="flows">
+          <p class="govuk-body">
+            <a href="/application-info" class="govuk-link">Have your say - Application information</a>
+          </p>
+          <p class="govuk-body">
+            <a href="/start" class="govuk-link">Have your say - Start</a>
+          </p>
         </div>
+        <div class="govuk-tabs__panel" id="features">
+
+          <ul class="govuk-task-list">
+            <h2 class="govuk-heading-medium"> Features </h2>
+            
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#"> Application stages</a>
+                <div class="govuk-task-list__hint"> Application stages accordion designs </div>
+              </div>
+              <div class="govuk-task-list__status">
+                <strong class="govuk-tag govuk-tag--blue">Incomplete</strong>
+              </div>
+            </li>
+            
+            
+          </ul>
+          
+        </div>
+      </div>
+
     </div>
+  </div>
 
 {% endblock %}
