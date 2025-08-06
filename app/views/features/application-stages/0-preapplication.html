@@ -1,0 +1,430 @@
+
+{% extends "layouts/front-office.html" %}
+
+{% set pageName="CROWN/2025/0000020" %}
+
+{% block content %}
+
+<!-- Floating panel with prototype options -->
+<style>
+  .govuk-task-list__summary-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100% !important;
+  }
+
+  .govuk-task-list__name {
+    margin: 0;
+  }
+
+  .govuk-task-list__accordion {
+    margin-bottom: 0;
+    padding: 0.5em 0;
+    border-bottom: none;
+    /* GOV.UK grey border */
+  }
+
+  .summary-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+
+  .floating-panel {
+    position: fixed;
+    top: 100px;
+    left: 40px;
+    /* Changed from right: 40px; */
+    width: 150px;
+    background: #f3f2f1;
+    border: 1px solid #b1b4b6;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 20px 16px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .floating-panel h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+
+  .govuk-details__summary {
+    width: 96%;
+  }
+
+  .pins-modded-summary-full-width {
+    margin: 10px 0px;
+  }
+
+  .floating-panel .govuk-button {
+    width: 100%;
+    margin-bottom: 0;
+  }
+</style>
+<div class="floating-panel">
+
+  <h3 class="govuk-heading-m">Prototype options: Application stage</h3>
+
+  <a href="0-preapplication.html#land" class="govuk-link govuk-button--secondary"
+    data-module="govuk-button">Pre-application (?)</a>
+  <a href="1-accepted.html#land" class="govuk-link govuk-button--secondary" data-module="govuk-button">Accepted</a>
+  <a href="2-consultation.html#land" class="govuk-link govuk-button--secondary"
+    data-module="govuk-button">Consultation</a>
+  <a href="3-procedure-decision.html#land" class="govuk-link govuk-button--secondary"
+    data-module="govuk-button">Procedure
+    decision</a>
+  <a href="4-written-representations.html#land" class="govuk-link govuk-button--secondary"
+    data-module="govuk-button">Written representations</a>
+  <a href="5-inquiry.html#land" class="govuk-link govuk-button--secondary" data-module="govuk-button">Inquiry</a>
+  <a href="6-hearing.html#land" class="govuk-link govuk-button--secondary" data-module="govuk-button">Hearing</a>
+  <a href="7-reporting.html#land" class="govuk-link govuk-button--secondary" data-module="govuk-button">Reporting/
+    Decision</a>
+  <a href="8-post-decision.html#land" class="govuk-link govuk-button--secondary"
+    data-module="govuk-button">Post-decision</a>
+
+</div>
+
+{%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
+
+<div class="govuk-grid-row">
+  <!--Side nav-->
+  <div class="govuk-grid-column-one-third">
+
+    {{ mojSideNavigation({
+    label: "Side navigation",
+    items: [{
+    text: "Application information",
+    href: "#1",
+    active: true
+    }, {
+    text: "Documents",
+    href: "#2"
+    }, {
+    text: "Have your say",
+    href: "#3"
+    }, {
+    text: "Application updates",
+    href: "2-application-updates.njk"
+    }, {
+    text: "Written representations",
+    href: "#4"
+    }]
+    }) }}
+
+  </div>
+  <!--Main content-->
+  <div class="govuk-grid-column-two-thirds">
+    <!--Header-->
+    <span class="govuk-caption-xl">CROWN/2025/0000020</span>
+    <h1 class="govuk-heading-xl">Application information</h1>
+    <!--About-->
+    <div>
+      <h2 class="govuk-heading-m">About the application</h2>
+      <h3 class="govuk-heading-s">Type of application</h3>
+      <p class="govuk-body">Planning permission and listed building consent (LBC) for alterations, extension or
+        demolition of a listed building</p>
+      <h3 class="govuk-heading-s">This application</h3>
+      <p class="govuk-body">Listed building consent</p>
+      <h3 class="govuk-heading-s">Local Planning Authority</h3>
+      <p class="govuk-body">City of Westminster</p>
+      <h3 class="govuk-heading-s">Applicant name</h3>
+      <p class="govuk-body">Sherlock Holmes</p>
+      <h3 class="govuk-heading-s">Site Address</h3>
+      <p class="govuk-body">221B Baker Street, London</p>
+      <h3 class="govuk-heading-s">Description of the proposed development</h3>
+      <p class="govuk-body">A new detective headquarters</p>
+      <h3 class="govuk-heading-s">Important dates</h3>
+      <p class="govuk-body">Representation period: 31 January 2025 to 31 March 2025</p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    </div>
+
+    <!-- Project stage -->
+    <section id="land">
+      <h2 class="govuk-heading-m">Application stage</h2>
+      <p class="govuk-body">
+        This project is at the <strong>pre-application</strong> stage.
+      </p>
+
+
+      <div id="project-stage-pre-application" class="govuk-!-margin-top-6">
+        <details class="govuk-details pins-modded-summary-full-width">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              <div class="summary-content">
+                <span>Pre-application</span>
+                <div>
+                  <strong class="govuk-tag govuk-tag--green -white-space--nowrap">Completed</strong>
+                </div>
+              </div>
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p class="govuk-body">The pre-application process for Crown development applications is handled by the
+              Ministry of Housing, Communities and Local Government (MHCLG). Together the applicant and MHCLG will
+              identify any issues there may be with reference to the development plan, the National Planning Policy
+              Framework, planning practice guidance documents and issues raised by pre-application community
+              consultation. These will be addressed in the application submission. </p>
+
+          </div>
+        </details>
+        <hr class="govuk-section-break govuk-section-break--visible">
+      </div>
+
+      <div id="project-stage-acceptance">
+        <details class="govuk-details pins-modded-summary-full-width">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              <div class="summary-content">
+                <span>Accepted</span>
+                <div>
+                  <strong class="govuk-tag govuk-tag--green -white-space--nowrap">Completed</strong>
+                </div>
+              </div>
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p class="govuk-body">This is the stage added once the application has been deemed to be of national
+              importance by SoS. The is when case is published but not yet open for consultation.</p>
+            <p class="govuk-body">The Planning Inspectorate (PINS) will assess the application to check that it is
+              complete (i.e., that the required documentation has been submitted and the correct fee paid). The
+              Secretary of State will assess whether the application is considered to be of national importance. Once
+              these are confirmed, the application is accepted for consideration and is published. </p>
+          </div>
+        </details>
+        <hr class="govuk-section-break govuk-section-break--visible">
+      </div>
+
+      <div id="project-stage-pre-examination">
+        <details class="govuk-details pins-modded-summary-full-width">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              <div class="summary-content">
+                <span>Consultation</span>
+                <div>
+                  <strong class="govuk-tag govuk-tag--green -white-space--nowrap">Completed</strong>
+                </div>
+              </div>
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p>The relevant Local Planning Authority (LPA) notifies anyone who has been consulted and publicises the
+              fact that a Crown Development application has been made and that PINS is accepting written representations
+              in response to the application from statutory consultees and other interested parties. The time limit for
+              submitting written representations is no less than 21 days from the date the application is accepted. Any
+              representations submitted after this date may not be taken into account.
+
+            </p>
+          </div>
+        </details>
+        <hr class="govuk-section-break govuk-section-break--visible">
+      </div>
+
+      <div id="project-stage-examination">
+        <details class="govuk-details pins-modded-summary-full-width">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              <div class="summary-content">
+                <span>Procedure decision</span>
+                <div>
+                  <strong class="govuk-tag govuk-tag--green -white-space--nowrap">Completed</strong>
+                </div>
+              </div>
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p class="govuk-body">At the end of the consultation period, the Planning Inspectorate will determine
+              whether the application should proceed by written representations, hearing or inquiry. The decision will
+              be communicated to the applicant, relevant LPA and anyone who submitted comments during the
+              representations period.</p>
+
+          </div>
+        </details>
+        <hr class="govuk-section-break govuk-section-break--visible">
+      </div>
+
+      <div id="project-stage-reporting">
+        <details class="govuk-details pins-modded-summary-full-width">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              <div class="summary-content">
+                <span>Written representations</span>
+                <div>
+                  <strong class="govuk-tag govuk-tag--green -white-space--nowrap">Completed</strong>
+                </div>
+              </div>
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p class="govuk-body">The chosen procedure for this application is by written representation. Where an
+              application is determined through the written representations procedure, the application will be
+              determined by the appointed person on the basis of written submissions usually following a site
+              inspection.</p>
+
+          </div>
+        </details>
+        <hr class="govuk-section-break govuk-section-break--visible">
+      </div>
+
+      <div id="project-stage-decision">
+        <details class="govuk-details pins-modded-summary-full-width">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              <div class="summary-content">
+                <span>Inquiry</span>
+                <div>
+                  <strong class="govuk-tag govuk-tag--green -white-space--nowrap">Completed</strong>
+                </div>
+              </div>
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p class="govuk-body">The chosen procedure for this application is by inquiry. The inquiry is open to the
+              public and provides for the investigation into, and formal testing of, evidence, usually through cross
+              examination of expert witnesses and other witnesses. Parties may be formally represented by advocates.</p>
+
+            <p class="govuk-body">The applicant, relevant LPA and any statutory party will be able to submit a statement
+              of case. This must be submitted within 5 weeks of the date they are notified of the inquiry.</p>
+
+            <p class="govuk-body">The Inspector or, as the case may be, panel of Inspectors, under rule 13(3) of the
+              2025 Hearings and Inquiries rules, may in writing require any person that has made a request to appear at
+              the inquiry to also submit a statement of case. This must be submitted within 4 weeks of our writing to
+              them.</p>
+
+            <p class="govuk-body">Proofs of evidence must be submitted no later than 4 weeks before the inquiry date. If
+              they exceed 1500 words, they should be submitted with a summary.</p>
+
+            <p class="govuk-body">A case management conference (CMC) will likely be held in the run up to the inquiry.
+              The Planning Inspectorate will notify anyone entitled to attend the inquiry of the details and circulate
+              an agenda in advance.</p>
+
+          </div>
+        </details>
+        <hr class="govuk-section-break govuk-section-break--visible">
+      </div>
+
+      <div id="project-stage-reporting">
+        <details class="govuk-details pins-modded-summary-full-width">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              <div class="summary-content">
+                <span>Written representations</span>
+                <div>
+                  <strong class="govuk-tag govuk-tag--green -white-space--nowrap">Completed</strong>
+                </div>
+              </div>
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p class="govuk-body">The chosen procedure for this application is by written representation. Where an
+              application is determined through the written representations procedure, the application will be
+              determined by the appointed person on the basis of written submissions usually following a site
+              inspection.</p>
+
+          </div>
+        </details>
+        <hr class="govuk-section-break govuk-section-break--visible">
+      </div>
+
+      <div id="project-stage-reporting">
+        <details class="govuk-details pins-modded-summary-full-width">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              <div class="summary-content">
+                <span>Written representations</span>
+                <div>
+                  <strong class="govuk-tag govuk-tag--green -white-space--nowrap">Completed</strong>
+                </div>
+              </div>
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p class="govuk-body">The chosen procedure for this application is by written representation. Where an
+              application is determined through the written representations procedure, the application will be
+              determined by the appointed person on the basis of written submissions usually following a site
+              inspection.</p>
+
+          </div>
+        </details>
+        <hr class="govuk-section-break govuk-section-break--visible">
+      </div>
+
+      <div id="project-stage-post-decision">
+        <details class="govuk-details pins-modded-summary-full-width">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              <div class="summary-content">
+                <span>Post-decision</span>
+                <div>
+                  <strong class="govuk-tag govuk-tag--green -white-space--nowrap">Completed</strong>
+                </div>
+              </div>
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p class="govuk-body">After the decision, there may be some final checks or actions needed. This could
+              include things like ensuring any conditions of the permission are met.</p>
+            <p class="govuk-body">The post-decision stage varies in length depending on the project.</p>
+            <a class="govuk-link" href="/decision-making-process-guide/post-decision">What happens after the
+              decision.</a>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"
+      style="margin-bottom: 30px; margin-top: 0;">
+
+
+    <!--Have your say-->
+
+    <div>
+      <h2 class="govuk-heading-m">Have your say</h2>
+      <p class="govuk-body">Use this service to have your say about the application.</p>
+      <p class="govuk-body">We'll ask for your personal details and your comments about this application.</p>
+      <p class="govuk-body">The representation period is open from: 12am on 31 January 2025 to 11:59pm on 31 March
+        2025 </p>
+
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+      text: "Have your say",
+      href: "/start"
+      }) }}
+    </div>
+
+
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <!--Contact us -->
+    <div>
+      <h2 class="govuk-heading-m">Contact us</h2>
+      <h3 class="govuk-heading-s">Telephone</h3>
+      <p class="govuk-body">If you have an representation reference number, have it with you when you call.</p>
+      <p class="govuk-body">Telephone: 0303 444 5000</p>
+      <p class="govuk-body">Open Monday to Friday: 9am to 4pm. Closed on weekends and bank holidays.</p>
+      <h3 class="govuk-heading-s">Email</h3>
+      <p class="govuk-body"><a
+          href="mailto:crownapplications@planninginspectorate.gov.uk">crownapplications@planninginspectorate.gov.uk</a>
+      <p class="govuk-body">When writing an email, quote the name of the project in the subject line.</p>
+      <p class="govuk-body">We aim to respond within 10 working days.</p>
+
+      <h3 class="govuk-heading-s">Alternative formats</h3>
+      <p class="govuk-body">Call or email to ask for application documents in alternative formats such as PDF, large
+        print, easy read, audio recording or braille.</p>
+    </div>
+
+  </div>
+
+</div>
+
+
+{% endblock %}
