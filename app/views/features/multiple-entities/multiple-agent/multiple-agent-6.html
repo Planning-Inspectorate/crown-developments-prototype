@@ -1,0 +1,57 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName = "Home" %}
+
+{% block content %}
+
+  <a href="index.html" class="govuk-back-link">Back</a>
+
+
+  <span class="govuk-caption-xl">CROWN/2025/0000010</span>
+  <h1 class="govuk-heading-xl">Check agent contact details</h1>
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+      Agent 1
+    </dt>
+      <dd class="govuk-summary-list__value">
+      Agent Agent<br>
+      agent@agent.com<br>
+      07712345678
+    </dd>
+      <dd class="govuk-summary-list__actions">
+        <ul class="govuk-summary-list__actions-list">
+          <li class="govuk-summary-list__actions-list-item">
+            <a class="govuk-link" href="multiple-agent-2">Remove<span class="govuk-visually-hidden"> contact details</span></a>
+          </li>
+          <li class="govuk-summary-list__actions-list-item">
+            <a class="govuk-link" href="multiple-agent-3">Change<span class="govuk-visually-hidden"> contact details</span></a>
+          </li>
+        </ul>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+      Agent 2
+    </dt>
+      <dd class="govuk-summary-list__value">
+      Agent Agent<br>
+      agent@agent.com<br>
+    </dd>
+      <dd class="govuk-summary-list__actions">
+        <ul class="govuk-summary-list__actions-list">
+          <li class="govuk-summary-list__actions-list-item">
+            <a class="govuk-link" href="multiple-agent-2">Remove<span class="govuk-visually-hidden"> contact details</span></a>
+          </li>
+          <li class="govuk-summary-list__actions-list-item">
+            <a class="govuk-link" href="multiple-agent-3">Change<span class="govuk-visually-hidden"> contact details</span></a>
+          </li>
+        </ul>
+      </dd>
+    </div>
+  </dl>
+  <a href="multiple-agent-3.html" class="govuk-button govuk-button--secondary">Add another</a><br>
+
+  <a href="multiple-agent-5#contacts" class="govuk-button">Save</a>
+
+{% endblock %}
