@@ -2,29 +2,143 @@
 
 {% set pageName = "Home" %}
 
-
-
 {% block content %}
-<ul class="govuk-list">
-  <li>
-    <a class="govuk-link" href="multiple-agent/multiple-agent.html">Allow multiple agent data entities</a>
-    <ul> 
-        <li> <a class="govuk-link" href="https://pins-ds.atlassian.net/browse/CROWN-825">CROWN-825</a></li>
-    </ul>
-  </li>
-  <li>
-    <a class="govuk-link" href="multiple-lpa/0.html">Allow multiple LPA entities</a>
-    <ul> 
-        <li> <a class="govuk-link" href="https://pins-ds.atlassian.net/browse/CROWN-826">CROWN-826</a></li>
-    </ul>
-  </li>
-  <li>
-    <a class="govuk-link" href="multiple-applicant/0.html#contacts">Allow multiple applicant data entities</a>
-    <ul> 
-        <li> <a class="govuk-link" href="https://pins-ds.atlassian.net/browse/CROWN-807">CROWN-807</a></li>
-    </ul>
-  </li>
-  
-</ul>
+  <ul class="govuk-list">
+    <li>
+      <a class="govuk-link" href="multiple-agent/multiple-agent.html">Allow multiple agent data entities</a>
+      <ul>
+        <li>
+          <a class="govuk-link" href="https://pins-ds.atlassian.net/browse/CROWN-825">CROWN-825</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link" href="multiple-lpa/0.html">Allow multiple LPA entities</a>
+      <ul>
+        <li>
+          <a class="govuk-link" href="https://pins-ds.atlassian.net/browse/CROWN-826">CROWN-826</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link" href="multiple-applicant/0.html#contacts">Allow multiple applicant data entities</a>
+      <ul>
+        <li>
+          <a class="govuk-link" href="https://pins-ds.atlassian.net/browse/CROWN-807">CROWN-807</a>
+        </li>
+      </ul>
+    </li>
+
+  </ul>
+
+  <!--
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+      aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Success
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-body"> Updated <a class="govuk-notification-banner__link" href="#contacts">applicant contact details</a></p>
+      </div>
+    </div>
+-->
+
+  <h2 class="govuk-heading-l"> Start </h2>
+  <div class="govuk-summary-card" id="contacts">
+    <div class="govuk-summary-card__title-wrapper">
+      <h2 class="govuk-summary-card__title">
+          Contacts
+        </h2>
+    </div>
+
+
+
+    <div class="govuk-summary-card__content">
+      <dl class="govuk-summary-list">
+        
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+              Local planning authority (LPA)
+            </dt>
+          <dd class="govuk-summary-list__value">
+              Example LPA<br>1 Town Square<br>Barking<br>IG11 7LU
+              <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
+              Other LPA<br>15 Mitchell Lane<br>Bristol<br>BS123FF
+            </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="">
+              <span class="govuk-visually-hidden"> (Contacts)</span></a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+              LPA contacts
+            </dt>
+          <dd class="govuk-summary-list__value">
+              another-system-test-council@example.com<br>0987654321<br>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="">
+              <span class="govuk-visually-hidden"> (Contacts)</span></a>
+          </dd>
+        </div>
+        
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+              Applicant
+            </dt>
+          <dd class="govuk-summary-list__value">
+              Example organisation<br>Flat 1, 2 Test house<br>Test road<br>Test city<br>County<br>TE517ES
+            </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="15">Edit<span class="govuk-visually-hidden"> What is the address of the
+                  Applicant? (Contacts)</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+              Applicant contacts
+            </dt>
+          <dd class="govuk-summary-list__value">
+              Test.edited.account@test.com<br>012345678912345<br>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="1.html">Edit<span class="govuk-visually-hidden"> What are the Applicant
+                  Contact details? (Contacts)</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+              Agent
+            </dt>
+          <dd class="govuk-summary-list__value">
+              Organisation name<br>Test Agent Address<br>Test Line 1<br>Test Town<br>Test County<br>BS123FF
+            </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="">Edit</a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+              Agent contacts
+            </dt>
+          <dd class="govuk-summary-list__value">
+              Agent Agent <br>agent@agent.com<br> 07712345678
+
+              <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
+              Agent Agent <br>agent@agent.com
+
+            </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../multiple-agent/multiple-agent-6">Edit</a>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
 
 {% endblock %}
