@@ -1,0 +1,55 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName = "CROWN/2025/0000020" %}
+
+{% block content %}
+<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Important
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-body">
+      No changes made to the update. Do you want to continue?
+    </p>
+  </div>
+</div>
+
+    <span class="govuk-caption-xl">CROWN/2025/0000086</span>
+    <h1 class="govuk-heading-xl">Change update</h1>
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+    You should only change minor parts of the update such as typos. For major changes, you should create a new update.
+  </strong>
+</div>
+
+<div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper" id="field-heading">
+            <label class="govuk-label govuk-label--l" for="more-detail">
+            Update details 
+        </label>
+        </h1>
+
+        
+
+        <div id="more-detail-hint" class="govuk-hint">
+        The recommended length is 1000 characters </div>
+
+        
+        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"
+        aria-describedby="more-detail-hint">Gateshead Council Response to the Secretary of State's consultation has been published.
+
+    
+</textarea>
+
+    </div>
+
+    <a href="manage.html" role="button" class="govuk-button govuk-button--primary"
+    data-module="govuk-button">
+    Continue </a>
+
+{% endblock %}
