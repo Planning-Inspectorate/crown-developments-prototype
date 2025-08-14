@@ -1,0 +1,29 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% block header %}
+  <header class="back-office-header " role="banner">
+    <div class=""></div>
+
+    <div class="govuk-width-container back-office-header__container">
+      <div class="back-office-header__logo-group">
+        <div class="back-office-header__logo-wrapper">
+          <img src="/public/Crown.png" alt="Crown logo">
+        </div>
+        <div class="back-office-header__org-name">
+          <p  id="PINS-name">
+          Planning<br>Inspectorate </p>
+        </div>
+      </div>
+
+      <div class="back-office-header__right">
+        <h1 class="govuk-heading-m back-office-header__service-name">
+          Manage a Crown Development Application
+        </h1>
+        <nav class="back-office-header__nav">
+          <a href="/all-cases">All cases</a>
+          <a href="/sign-out">Sign out</a>
+        </nav>
+      </div>  
+    </div>
+    <div class="back-office-header__bottom-line"></div>
+  {% endblock %}
