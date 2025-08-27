@@ -6,15 +6,19 @@
 
 {% block content %}
 
+<h1 class="govuk-heading-l">What is the application procedure?
+</h1>
+
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+If you change the procedure after it's been set, any details you've added about the procedure will be removed.  </strong>
+</div>
+
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h1 class="govuk-fieldset__heading">
-What is the application procedure?
-      </h1>
-    </legend>
-    <div id="changedName-hint" class="govuk-hint">
-If you change the procedure after it's been set, any details you've added about the procedure will be removed    </div>
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
