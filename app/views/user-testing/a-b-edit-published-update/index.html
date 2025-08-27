@@ -1,0 +1,22 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName = "CROWN/2025/0000020" %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">Editing published application update</h1>
+
+<a href="/user-testing/a-b-edit-published-update/manage.html" class="govuk-button">Starting point</a>
+
+  <main class="govuk-main-wrapper govuk-width-container" id="main-content" role="main">
+    <h2 class="govuk-heading-m">Choose a flow to test</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a class="govuk-link" href="/user-testing/a-b-edit-published-update/flow-a/review.html">Flow A - Validation error </a></li>
+      <li><a class="govuk-link" href="/user-testing/a-b-edit-published-update/flow-b/review.html">Flow B - Are you sure? / Warning message</a></li>
+      <li><a class="govuk-link" href="/user-testing/a-b-edit-published-update/flow-c/review.html">Flow C - Notify within success banner</a></li>
+      <li><a class="govuk-link" href="/user-testing/a-b-edit-published-update/flow-d/review.html">Flow D - No notification</a></li>
+    </ul>
+
+
+
+{% endblock %}

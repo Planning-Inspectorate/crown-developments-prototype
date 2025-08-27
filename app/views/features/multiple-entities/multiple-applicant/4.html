@@ -1,0 +1,51 @@
+
+{% extends "layouts/back-office.html" %}
+
+{% set pageName = "Home" %}
+
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+<div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Success
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-body">Added applicant contact details</p>
+  </div>
+</div>
+
+<span class="govuk-caption-xl">CROWN/2025/0000010</span>
+<h1 class="govuk-heading-xl">Check applicant contact details</h1>
+<dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Contact 1
+        </dt>
+        <dd class="govuk-summary-list__value">
+            Applicant Applicant<br>
+            applicant@applicant.com<br>
+            07712345678
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <ul class="govuk-summary-list__actions-list">
+                <li class="govuk-summary-list__actions-list-item">
+                    <a class="govuk-link" href="9">Remove<span class="govuk-visually-hidden"> contact
+                            details</span></a>
+                </li>
+                <li class="govuk-summary-list__actions-list-item">
+                    <a class="govuk-link" href="3">Change<span class="govuk-visually-hidden"> contact
+                            details</span></a>
+                </li>
+            </ul>
+        </dd>
+    </div>
+</dl>
+<a href="5" class="govuk-button govuk-button--secondary">Add another</a><br>
+
+<a href="0#contacts" class="govuk-button">Save</a>
+
+{% endblock %}

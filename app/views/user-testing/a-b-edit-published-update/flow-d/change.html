@@ -1,0 +1,44 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName = "CROWN/2025/0000020" %}
+
+{% block content %}
+
+
+   <a href="#" class="govuk-back-link">Back</a>
+
+<span class="govuk-caption-xl">CROWN/2025/0000086</span>
+    <h1 class="govuk-heading-xl">Change update</h1>
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+    You should only change minor parts of the update such as typos. For major changes, you should create a new update.
+  </strong>
+</div>
+
+    <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="more-detail">
+            Update details 
+        </label>
+        </h1>
+
+        
+
+        <div id="more-detail-hint" class="govuk-hint">
+        The recommended length is 1000 characters </div>
+        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"
+        aria-describedby="more-detail-hint">Gateshead Council Response to the Secretary of State's consultation has been published.
+
+    
+</textarea>
+
+    </div>
+
+    <a href="manage.html" role="button" class="govuk-button govuk-button--primary"
+    data-module="govuk-button">
+    Continue </a>
+
+{% endblock %}
