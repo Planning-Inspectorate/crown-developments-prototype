@@ -1,0 +1,53 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName="Home" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+        <span class="govuk-caption-xl">CROWN/2025/0000086</span>
+        <h1 class="govuk-heading-xl">Review update</h1>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Update details </dt>
+                <dd class="govuk-summary-list__value">
+                    Gateshead Council Response to the Secretary of State's consultation has been published
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="3-create-application-update.html">Change<span
+                            class="govuk-visually-hidden"> name</span></a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Publish now?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    Yes
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="3a-publish-update-now.html">Change<span class="govuk-visually-hidden">
+                            date of birth</span></a>
+                </dd>
+            </div>
+
+        </dl>
+
+        <form action="/form-handler" method="post" novalidate>
+            <input type="hidden" name="answers-checked" value="true">
+            <div class="govuk-button-group">
+                <a href="3d-success-published.html" role="button" class="govuk-button govuk-button--primary"
+                    data-module="govuk-button">
+                    Save </a>
+                <a href="3e-delete-update" role="button" class="govuk-button govuk-button--warning"
+                    data-module="govuk-button">
+                    Delete </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

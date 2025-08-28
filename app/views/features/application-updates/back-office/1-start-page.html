@@ -1,0 +1,144 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+<h1 class="back-office-font govuk-heading-l">CROWN/2025/0000086</h1>
+
+<div id="top-nav" style="display: flex;">
+    <div style="flex:1;" id="top-nav-left">
+                   
+
+        <ul class="govuk-list">
+            <li><a href="#" class="govuk-link">Overview</a></li>
+                        <li><a href="#" class="govuk-link">Details</a></li>
+
+            <li><a href="#" class="govuk-link">Contacts</a></li>
+            <li><a href="#" class="govuk-link">Dates</a></li>
+            <li><a href="#" class="govuk-link">Representation period</a></li>
+            <li><a href="#" class="govuk-link">Case involvement</a></li>
+            <li><a href="#" class="govuk-link">Environmental Impact Assessment (EIA)</a></li>
+            <li><a href="#" class="govuk-link">Inquiry</a></li>
+            <li><a href="#" class="govuk-link">Fee</a></li>
+        </ul>
+
+    </div>
+    <div id="top-nav-right" style="display: flex; flex-direction: column; align-items: flex-end;">
+        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Open SharePoint folder
+        </button>
+        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Manage representations
+        </button>
+        <a href="2-application-updates.html" role="button" class="govuk-button govuk-button--secondary"
+            data-module="govuk-button">
+            Manage application updates
+        </a>
+
+        <button type="submit" class="govuk-button govuk-button--warning" data-module="govuk-button">
+            Unpublish application
+        </button>
+    </div>
+</div>
+<h2 class="back-office-font govuk-heading-m">Overview</h1>
+
+
+    <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Application reference</dt>
+            <dd class="govuk-summary-list__value">CROWN/2025/0000086</dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> application reference</span></a>
+            </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Applicant contact</dt>
+            <dd class="govuk-summary-list__value">
+                test name name test<br>
+                charlotte.morphet.pn@planninginspectorate.gov.uk<br>
+                12324
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> applicant contact</span></a>
+            </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Application description</dt>
+            <dd class="govuk-summary-list__value">Big nationally important development plus extra info test</dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> application
+                        description</span></a>
+            </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Application type</dt>
+            <dd class="govuk-summary-list__value">Planning permission</dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> application type</span></a>
+            </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Local planning authority</dt>
+            <dd class="govuk-summary-list__value">System Test Borough Council</dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> local planning
+                        authority</span></a>
+            </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Site address</dt>
+            <dd class="govuk-summary-list__value">Buckingham palace</dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> site address</span></a>
+            </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Site coordinates</dt>
+            <dd class="govuk-summary-list__value">Easting: 222222<br>Northing: 111111</dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> site coordinates</span></a>
+            </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Site area (hectares)</dt>
+            <dd class="govuk-summary-list__value">-</dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> site area</span></a>
+            </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Expected date of submission</dt>
+            <dd class="govuk-summary-list__value">21 April 2025</dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> expected date of
+                        submission</span></a>
+            </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Decision outcome</dt>
+            <dd class="govuk-summary-list__value">Approved</dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> decision outcome</span></a>
+            </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Decision date</dt>
+            <dd class="govuk-summary-list__value">31 December 2025</dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> decision date</span></a>
+            </dd>
+        </div>
+    </dl>
+
+
+    {% endblock %}

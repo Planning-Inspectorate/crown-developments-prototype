@@ -1,0 +1,120 @@
+{% extends "layouts/front-office.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+
+{% block content %}
+{%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+
+    {{ mojSideNavigation({
+      label: "Side navigation",
+      items: [{
+        text: "Application information",
+        href: "#1",
+        active: true
+      }, {
+        text: "Documents",
+        href: "#2"
+      }, {
+        text: "Have your say",
+        href: "#3"
+      }, {
+        text: "Application updates",
+        href: "2-application-updates.njk"
+      }, {
+        text: "Written representations",
+        href: "#4"
+      }]
+    }) }}
+
+  </div>
+
+  
+  <div class="govuk-grid-column-two-thirds">
+    {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+{% set html %}
+
+  <p class="govuk-notification-banner__heading">
+    Latest update - 11 May 2021
+
+      <p>The Secretary of State has made a Correction Order affecting the A1 Birtley to Coal House development.&nbsp;A Correction Notice&nbsp; was issued on 30 April 2021. The Correction was made following&nbsp;a request from The Applicant&rsquo;s solicitor DLA Piper Scotland Ltd on 19 February 2021&nbsp;.  </p>
+  </p>
+  <p> <a href="2-application-updates.html"> View all updates </a> </p>
+{% endset %}
+
+{{ govukNotificationBanner({
+  html: html,
+  titleText: "Important"
+}) }}
+    <span class="govuk-caption-xl">CROWN/2025/0000020</span>
+    <h1 class="govuk-heading-xl">Application information</h1>
+    <h1 class="govuk-heading-m">About the application</h1>
+    <h2 class="govuk-heading-s">Type of application</h2>
+    <p class="govuk-body">Planning permission and listed building consent (LBC) for alterations, extension or demolition of a listed building</p>
+
+    <h2 class="govuk-heading-s">This application</h2>
+    <p class="govuk-body">Listed building consent</p>
+
+    <h2 class="govuk-heading-s">Local Planning Authority</h2>
+    <p class="govuk-body">City of Westminster</p>
+
+    <h2 class="govuk-heading-s">Applicant name</h2>
+    <p class="govuk-body">Sherlock Holmes</p>
+
+    <h2 class="govuk-heading-s">Site Address</h2>
+    <p class="govuk-body">221B Baker Street, London</p>
+
+    <h2 class="govuk-heading-s">Description of the proposed development</h2>
+    <p class="govuk-body">A new detective headquarters</p>
+
+    <h2 class="govuk-heading-s">Important dates</h2>
+    <p class="govuk-body">Representation period: 31 January 2025 to 31 March 2025</p>
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <h1 class="govuk-heading-m">Have your say</h1>
+    <p class="govuk-body">Use this service to have your say about the application.</p>
+    <p class="govuk-body">We'll ask for your personal details and your comments about this application.</p>
+    <p class="govuk-body">The representation period is open from: 12am on 31 January 2025 to 11:59pm on 31 March 2025 </p>
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+    {{ govukButton({
+      text: "Have your say",
+      href: "/start"
+    }) }}
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <h1 class="govuk-heading-m">Contact us</h1>
+    <h2 class="govuk-heading-s">Telephone</h2>
+    <p class="govuk-body">If you have an representation reference number, have it with you when you call.</p>
+    <p class="govuk-body">Telephone: 0303 444 5000</p>
+    <p class="govuk-body">Open Monday to Friday: 9am to 4pm. Closed on weekends and bank holidays.</p>
+    <h2 class="govuk-heading-s">Email</h2>
+    <p class="govuk-body"><a
+      href="mailto:crownapplications@planninginspectorate.gov.uk">crownapplications@planninginspectorate.gov.uk</a>
+    <p class="govuk-body">When writing an email, quote the name of the project in the subject line.</p>
+    <p class="govuk-body">We aim to respond within 10 working days.</p>
+
+    <h2 class="govuk-heading-s">Alternative formats</h2>
+    <p class="govuk-body">Call or email to ask for application documents in alternative formats such as PDF, large print, easy read, audio recording or braille.</p>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName="Home" %}
+
+
+{% block content %}
+
+<span class="govuk-caption-xl">CROWN/2025/0000086</span>
+<h1 class="govuk-heading-xl">Create update</h1>
+<div class="govuk-form-group">
+    <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--l" for="more-detail">
+            Update details
+        </label>
+    </h1>
+    <div id="more-detail-hint" class="govuk-hint">
+        The recommended length is 1000 characters </div>
+    <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"
+        aria-describedby="more-detail-hint"></textarea>
+</div>
+
+<a href="3a-publish-update-now.html" role="button" class="govuk-button govuk-button--primary"
+    data-module="govuk-button">
+    Continue </a>
+
+{% endblock %}
