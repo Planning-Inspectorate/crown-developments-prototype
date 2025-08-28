@@ -1,9 +1,18 @@
 {% extends "layouts/front-office.html" %}
 
-{% set pageName = "Home" %}
+{% block pageTitle %}
+  Application updates
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
 
 {% block content %}
-  <a href="#" class="govuk-back-link">Back</a>
   {%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
 
   <div class="govuk-grid-row">
