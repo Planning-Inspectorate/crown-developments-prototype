@@ -1,0 +1,29 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName="Home" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<span class="govuk-caption-xl">CROWN/2025/0000086</span>
+<h1 class="govuk-heading-xl">Manage application updates</h1>
+
+
+<div style="display: flex; align-items: flex-end;">
+    <a href="3-new.html" role="button" class="govuk-button govuk-button--primary"
+        data-module="govuk-button">
+        Create update
+    </a>
+</div>
+
+
+
+<p class="govuk-body">No updates yet</p>
+
+{% endblock %}

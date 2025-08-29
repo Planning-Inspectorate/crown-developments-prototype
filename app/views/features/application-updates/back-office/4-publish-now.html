@@ -1,0 +1,39 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName="Home" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<form action="/continue-answer" method="post">
+    <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-!-margin-bottom-0">
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">Do you want to publish this update now?</h1>
+        </legend>
+        <div id="changedName-hint" class="govuk-hint">
+            You can review the update before publishing
+        </div>
+        <div class="govuk-radios govuk-!-margin-bottom-6">
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="yes" name="continue" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="yes">Yes</label>
+            </div>
+
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="no" name="continue" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="no">No</label>
+            </div>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+    </fieldset>
+</form>
+
+
+{% endblock %}

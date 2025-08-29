@@ -1,0 +1,30 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName="Home" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-form-group">
+    <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--l" for="more-detail">
+            Update details
+        </label>
+    </h1>
+    <div id="more-detail-hint" class="govuk-hint">
+        The recommended length is 1000 characters </div>
+    <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"
+        aria-describedby="more-detail-hint">Gateshead Council Response to the Secretary of State's consultation has been published	</textarea>
+</div>
+
+<a href="4-publish-now.html" role="button" class="govuk-button govuk-button--primary"
+    data-module="govuk-button">
+    Continue </a>
+
+{% endblock %}
