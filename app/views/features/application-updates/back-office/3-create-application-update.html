@@ -2,11 +2,15 @@
 
 {% set pageName="Home" %}
 
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
 
 {% block content %}
 
-<span class="govuk-caption-xl">CROWN/2025/0000086</span>
-<h1 class="govuk-heading-xl">Create update</h1>
 <div class="govuk-form-group">
     <h1 class="govuk-label-wrapper">
         <label class="govuk-label govuk-label--l" for="more-detail">
@@ -19,7 +23,7 @@
         aria-describedby="more-detail-hint"></textarea>
 </div>
 
-<a href="3a-publish-update-now.html" role="button" class="govuk-button govuk-button--primary"
+<a href="4-publish-update-now.html" role="button" class="govuk-button govuk-button--primary"
     data-module="govuk-button">
     Continue </a>
 

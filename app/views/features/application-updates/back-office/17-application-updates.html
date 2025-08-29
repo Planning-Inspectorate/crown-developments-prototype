@@ -2,20 +2,14 @@
 
 {% set pageName="Home" %}
 
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
 
 {% block content %}
-
-<div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-  <div class="govuk-notification-banner__header">
-    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-      Success
-    </h2>
-  </div>
-  <div class="govuk-notification-banner__content">
-    <h3 class="govuk-notification-banner__heading">
-    Your update was unpublished </h3>
-  </div>
-</div>
 
 <span class="govuk-caption-xl">CROWN/2025/0000086</span>
 <h1 class="govuk-heading-xl">Manage application updates</h1>
@@ -23,12 +17,29 @@
 
 <div style="display: flex; align-items: flex-end;">
     <a href="3-create-application-update.html" role="button" class="govuk-button govuk-button--primary"
-            data-module="govuk-button">
-            Create update
-        </a>
+        data-module="govuk-button">
+        Create update
+    </a>
 </div>
 
-<div id="pagination" style=" flex: 1; display: flex; align-items: center;">
+
+<table class="govuk-table" data-module="moj-sortable-table">
+
+    <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+
+            <th scope="col" class="govuk-table__header" aria-sort="none">Date published</th>
+
+            <th scope="col" class="govuk-table__header">Update details</th>
+
+            <th scope="col" class="govuk-table__header" aria-sort="none">Status</th>
+
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Action</th>
+
+        </tr>
+    </thead>
+
+    <div id="pagination" style=" flex: 1; display: flex; align-items: center;">
 
         <div class="govuk-body" style=" flex: 1;width:275px; display:flex; justify-content:space-between; ">
             <p>Showing 1 to 3 of 3 results</p>
@@ -44,27 +55,12 @@
 
         </div>
     </div>
-<table class="govuk-table" data-module="moj-sortable-table">
-
-    <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-
-            <th scope="col" class="govuk-table__header" aria-sort="none">Published</th>
-
-            <th scope="col" class="govuk-table__header">Update details</th>
-
-            <th scope="col" class="govuk-table__header" aria-sort="none">Status</th>
-
-            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Action</th>
-
-        </tr>
-    </thead>
 
     <tbody class="govuk-table__body">
 
         <tr class="govuk-table__row">
 
-            <td class="govuk-table__cell">Not published</td>
+            <td class="govuk-table__cell">Not yet published</td>
 
             <td class="govuk-table__cell" data-sort-value="6961">Decision made by the Secretary of State</td>
 
@@ -73,7 +69,7 @@
                 </strong></td>
 
             <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1897"> <a
-                    href="3b-no.html">Review</a></td>
+                    href="5-no.html">Review</a></td>
 
         </tr>
 
@@ -89,7 +85,7 @@
                 </strong></td>
 
             <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1897"> <a
-                    href="5-review-unpublished-application-update.html">Review</a></td>
+                    href="10-review-unpublished-application-update.html">Review</a></td>
 
         </tr>
 
@@ -104,7 +100,7 @@
                 </strong></td>
 
             <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1897"> <a
-                    href="4-review-application-update.html">Review</a></td>
+                    href="8-review-application-update.html">Review</a></td>
 
         </tr>
     </tbody>

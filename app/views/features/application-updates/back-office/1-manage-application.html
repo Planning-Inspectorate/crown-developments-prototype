@@ -2,6 +2,13 @@
 
 {% set pageName="Home" %}
 
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
 {% block content %}
 <h1 class="back-office-font govuk-heading-l">CROWN/2025/0000086</h1>
 
@@ -30,7 +37,7 @@
         <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
             Manage representations
         </button>
-        <a href="2-application-updates.html" role="button" class="govuk-button govuk-button--secondary"
+        <a href="2-manage-application-updates-empty.html" role="button" class="govuk-button govuk-button--secondary"
             data-module="govuk-button">
             Manage application updates
         </a>
