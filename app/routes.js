@@ -19,7 +19,7 @@ router.post('/continue-answer', function (req, res) {
   } else if (req.body.continue === 'no') {
     res.redirect('/features/application-updates/back-office/5-no');
   } else {
-    res.redirect('/features/application-updates/back-office/4-publish-update-now');
+    res.redirect('/features/application-updates/back-office/4-publish-now');
   }
 });
 
