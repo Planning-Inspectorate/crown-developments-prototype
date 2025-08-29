@@ -1,0 +1,113 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName="Home" %}
+
+
+{% block content %}
+<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Important
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading">
+      No changes made to the update.
+    </p>
+  </div>
+</div>
+
+<span class="govuk-caption-xl">CROWN/2025/0000086</span>
+<h1 class="govuk-heading-xl">Manage application updates</h1>
+
+
+<div style="display: flex; align-items: flex-end;">
+    <a href="3-create-application-update.html" role="button" class="govuk-button govuk-button--primary"
+        data-module="govuk-button">
+        Create update
+    </a>
+</div>
+<div id="pagination" style=" flex: 1; display: flex; align-items: center;">
+
+    <div class="govuk-body" style=" flex: 1;width:275px; display:flex; justify-content:space-between; ">
+        <p>Showing 1 to 3 of 3 results</p>
+    </div>
+
+    <div class="govuk-body" style="width:275px; display:flex; justify-content:space-between; ">
+        <label class="govuk-label" for="results-per-page">Results per page</label>
+        <div><a class="govuk-link" href="http://" target="_blank" rel="noopener noreferrer">25</a></div>
+        <div class="govuk-body">|</div>
+        <div><a href="http://" target="_blank" rel="noopener noreferrer">50</a></div>
+        <div class="govuk-body">|</div>
+        <div><a href="http://" target="_blank" rel="noopener noreferrer">100</a></div>
+
+    </div>
+</div>
+
+<table class="govuk-table" data-module="moj-sortable-table">
+
+    <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+
+            <th scope="col" class="govuk-table__header" aria-sort="none">Date published</th>
+            <th scope="col" class="govuk-table__header">Update details</th>
+
+            <th scope="col" class="govuk-table__header" aria-sort="none">Status</th>
+
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Action</th>
+
+        </tr>
+    </thead>
+
+    <tbody class="govuk-table__body">
+
+        <tr class="govuk-table__row">
+
+            <td class="govuk-table__cell">Not published</td>
+
+            <td class="govuk-table__cell" data-sort-value="6961">Decision made by the Secretary of State</td>
+
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">
+                    Draft
+                </strong></td>
+
+            <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1897"> <a
+                    href="5-no.html">Review</a></td>
+
+        </tr>
+
+        <tr class="govuk-table__row">
+
+            <td class="govuk-table__cell">11 April 2025</td>
+
+            <td class="govuk-table__cell" data-sort-value="6961">Gateshead Council Response to the Secretary of State's
+                consultation has been published</td>
+
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">
+                    Unpublished
+                </strong></td>
+
+            <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1897"> <a
+                    href="10-review-unpublished-application-update.html">Review</a></td>
+
+        </tr>
+
+        <tr class="govuk-table__row">
+
+            <td class="govuk-table__cell">14 February 2025</td>
+
+            <td class="govuk-table__cell" data-sort-value="6961">Recommendations given by the Planning Inspectorate</td>
+
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
+                    Published
+                </strong></td>
+
+            <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1897"> <a
+                    href="8-review-application-update.html">Review</a></td>
+
+        </tr>
+    </tbody>
+</table>
+
+
+{% endblock %}
