@@ -1,0 +1,93 @@
+{% extends "layouts/main.njk" %}
+
+{% set pageName = "Home" %}
+
+{% block content %}
+
+
+<main class="govuk-main-wrapper" id="main-content" role="main">
+    <span class="govuk-caption-l">CC78A-6FDB6</span>
+    <h1 class="govuk-heading-l">Redact representation</h1>
+
+    <h2 class="govuk-heading-m">Redaction suggestions</h2>
+    <p class="govuk-body">
+      We have suggested some common redactions and hidden these for you. To make these visible again, 'Reject' each suggestion.
+    </p>
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Redaction suggestion</th>
+          <th scope="col" class="govuk-table__header">Type of information</th>
+          <th scope="col" class="govuk-table__header">Action</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body ">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">92 September Street, BS1 8CF</td>
+          <td class="govuk-table__cell">Address</td>
+          <td class="govuk-table__cell">
+            <a href="" class="govuk-link">Accept</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">amelia.scanlan.9d@planninginspectorate.gov.uk</td>
+          <td class="govuk-table__cell">Email</td>
+          <td class="govuk-table__cell">
+           <a href="" class="govuk-link">Reject</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="govuk-heading-m">Redaction preview</h2>
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">Original representation</span>
+      </summary>
+      <div class="govuk-details__text">
+        <p class="govuk-body">Do not include these details Sensitive information refers to: comments from children, information relating to children, health, crime, race, ethnic origin, politics, religion, trade union membership, genetics, physical characteristics, sex life, sexual orientation.</p>
+        <p class="govuk-body"><mark>92 September Street, BS1 8CF</mark></p>
+        <p class="govuk-body"><mark>amelia.scanlan.9d@planninginspectorate.gov.uk</mark></p>
+        <p class="govuk-body">trade union membership<br>genetics<br>physical characteristics<br>sex life<br>sexual orientation</p>
+      </div>
+    </details>
+
+    <div class="govuk-form-group">
+
+  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint">Do not include these details
+Sensitive information refers to:
+
+comments from children
+information relating to children
+information relating to health
+information relating to crime
+It also means any information relating to an individual's:
+
+race
+ethnic origin
+politics
+religion
+trade union membership
+genetics
+physical characteristics
+sex life
+sexual orientation
+
+████████████████████████████
+
+█████████████████████████████████████████████</textarea>
+</div>
+
+    <div class="govuk-button-group">
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">Redact selected text</button>
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">Undo</button>
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">Undo all changes</button>
+      
+    </div>
+
+    <button class="govuk-button" data-module="govuk-button">Continue</button>
+  </main>
+
+
+{% endblock %}
