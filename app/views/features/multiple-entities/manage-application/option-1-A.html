@@ -75,9 +75,9 @@ Option 1 - Multiple rows (current)
     <h3 class="govuk-heading-m">Prototype: Multiple entities</h3>
 
     <a href="option-1-A#contacts" class="govuk-link govuk-button--secondary">Empty</a>
-    <a href="option-1-B#contacts.html" class="govuk-link govuk-button--secondary">Single</a>
-    <a href="option-1-C#contacts.html" class="govuk-link govuk-button--secondary">Multiple</a>
-    <a href="option-1-D#contacts.html" class="govuk-link govuk-button--secondary">Max</a>
+    <a href="option-1-B#contacts" class="govuk-link govuk-button--secondary">Single</a>
+    <a href="option-1-C#contacts" class="govuk-link govuk-button--secondary">Multiple</a>
+    <a href="option-1-D#contacts" class="govuk-link govuk-button--secondary">Max</a>
     
   </div>
 <a href="/app/views/features/multiple-entities/multiple-agent/multiple-agent-13.html">0 agent contacts</a>
@@ -95,6 +95,8 @@ Option 1 - Multiple rows (current)
 
     <a href="/app/views/features/multiple-entities/multiple-applicant/10.html">1 applicant org, 10 applicant contacts</a>
  <a href="/app/views/features/multiple-entities/multiple-applicant/10.html">2 applicant org, 1 applicant contacts</a>
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full govuk-!-margin-bottom-3">
@@ -145,7 +147,7 @@ Option 1 - Multiple rows (current)
             Manage representations
         </a>
       <a href="" role="button" draggable="false" class="govuk-button govuk-button--warning" data-module="govuk-button">
-            Unpublish Application
+            Unpublish application
         </a>
     </div>
     <div class="govuk-grid-column-full">
@@ -426,10 +428,10 @@ Option 1 - Multiple rows (current)
           <dl class="govuk-summary-list">
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                            LPA contact
+                            Local planning authority (LPA)
                         </dt>
               <dd class="govuk-summary-list__value">
-                            another-system-test-council@example.com<br>0987654321<br>
+                            Ashford LPA<br>1 Town Square<br>Barking<br>IG11 7LU
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="">
@@ -438,10 +440,11 @@ Option 1 - Multiple rows (current)
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                            LPA address
+                            LPA contacts
                         </dt>
               <dd class="govuk-summary-list__value">
-                            1 Town Square<br>Barking<br>IG11 7LU
+                            	system-test-council@example.com<br>
+1234567890
                         </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="">
@@ -450,10 +453,9 @@ Option 1 - Multiple rows (current)
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                            Applicant contact
+                            Applicants
                         </dt>
               <dd class="govuk-summary-list__value">
-                            Test.edited.account@test.com<br>012345678912345<br>
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What are the Applicant Contact details? (Contacts)</span></a>
@@ -461,10 +463,10 @@ Option 1 - Multiple rows (current)
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                            Applicant address
+                            Applicant contacts
                         </dt>
               <dd class="govuk-summary-list__value">
-                            Flat 1, 2 Test house<br>Test road<br>Test city<br>County<br>TE517ES
+                            -
                         </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the address of the Applicant? (Contacts)</span></a>
@@ -472,10 +474,10 @@ Option 1 - Multiple rows (current)
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                            Agent organisation
+                            Agents
                         </dt>
               <dd class="govuk-summary-list__value">
-                            Organisation name<br>Test Agent Address<br>Test Line 1<br>Test Town<br>Test County<br>BS123FF
+                            -
                         </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="">Edit</a>
@@ -486,7 +488,7 @@ Option 1 - Multiple rows (current)
                             Agent contacts
                         </dt>
               <dd class="govuk-summary-list__value">
-                           -
+                           
 
                         </dd>
               <dd class="govuk-summary-list__actions">
@@ -971,6 +973,4 @@ Option 1 - Multiple rows (current)
 
 </main>
 </div>
-
-
 {% endblock %}
