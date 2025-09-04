@@ -1,0 +1,100 @@
+
+{% extends "layouts/main.njk" %}
+
+{% set serviceName %}
+Option 1 - Multiple rows (current)
+{% endset%}
+
+{% block content %}
+
+
+<style>
+    .govuk-task-list__summary-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100% !important;
+    }
+
+    .govuk-task-list__name {
+      margin: 0;
+    }
+
+    .govuk-task-list__accordion {
+      margin-bottom: 0;
+      padding: 0.5em 0;
+      border-bottom: none;
+      /* GOV.UK grey border */
+    }
+
+    .summary-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .floating-panel {
+      position: fixed;
+      top: 100px;
+      right: 40px;
+      width: 150px;
+      background: #f3f2f1;
+      border: 1px solid #b1b4b6;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      padding: 20px 16px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .floating-panel h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+
+    .govuk-details__summary {
+      width: 96%;
+    }
+
+    .pins-modded-summary-full-width {
+      margin: 10px 0;
+    }
+
+    .floating-panel .govuk-button {
+      width: 100%;
+      margin-bottom: 0;
+    }
+  </style>
+<div class="floating-panel">
+
+    <h3 class="govuk-heading-m">Prototype: Multiple entities</h3>
+
+    <a href="" class="govuk-link govuk-button--secondary" data-module="govuk-button" data-govuk-button-init="">Empty</a>
+    <a href="" class="govuk-link govuk-button--secondary" data-module="govuk-button" data-govuk-button-init="">Single</a>
+    <a href="" class="govuk-link govuk-button--secondary" data-module="govuk-button" data-govuk-button-init="">Multiple</a>
+    <a href="" class="govuk-link govuk-button--secondary" data-module="govuk-button" data-govuk-button-init="">Max</a>
+    
+  </div>
+<a href="/app/views/features/multiple-entities/multiple-agent/multiple-agent-13.html">0 agent contacts</a>
+
+<a href="/app/views/features/multiple-entities/multiple-agent/multiple-agent-7.html">1 agent contacts in row</a>
+
+ <a href="/app/views/features/multiple-entities/multiple-agent/multiple-agent-5.html">2 agent contacts in row</a>
+
+ <a href="/app/views/features/multiple-entities/multiple-agent/multiple-agent-15.html">10 agent contacts in row</a>
+
+ <a href="/app/views/features/multiple-entities/multiple-applicant/0.html">1 applicant org, 1 applicant contact</a>
+ <a href="/app/views/features/multiple-entities/multiple-applicant/7.html">1 applicant org, 0 applicant contact</a>
+
+  <a href="/app/views/features/multiple-entities/multiple-applicant/10.html">1 applicant org, 2 applicant contacts</a>
+
+    <a href="/app/views/features/multiple-entities/multiple-applicant/10.html">1 applicant org, 10 applicant contacts</a>
+ <a href="/app/views/features/multiple-entities/multiple-applicant/10.html">2 applicant org, 1 applicant contacts</a>
+
+
+{% endblock %}
