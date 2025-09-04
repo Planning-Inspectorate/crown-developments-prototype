@@ -5,6 +5,23 @@
 {% block content %}
 
 <div class="govuk-grid-row">
+
+     <!--Side nav-->
+     <div class="govuk-grid-column-one-third">
+
+        {{ mojSideNavigation({
+      label: "Side navigation",
+      items: [{
+      text: "Application details",
+      href: "#1",
+      active: true
+      }, {
+      text: "Documents",
+      href: "#2"
+      }]
+      }) }}
+  
+      </div>
     <div class="govuk-grid-column-two-thirds">
 
         <span class="govuk-caption-xl">CROWN/2025/0000020</span>
