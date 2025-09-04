@@ -2,7 +2,7 @@
 {% extends "layouts/main.njk" %}
 
 {% set serviceName %}
-Option 1 - Multiple rows (current)
+Option 2
 {% endset%}
 
 {% block content %}
@@ -74,10 +74,10 @@ Option 1 - Multiple rows (current)
 
     <h3 class="govuk-heading-m">Prototype: Multiple entities</h3>
 
-    <a href="option-1-A#contacts" class="govuk-link govuk-button--secondary">Empty</a>
-    <a href="option-1-B#contacts" class="govuk-link govuk-button--secondary">Single</a>
-    <a href="option-1-C#contacts" class="govuk-link govuk-button--secondary">Multiple</a>
-    <a href="option-1-D#contacts" class="govuk-link govuk-button--secondary">Max</a>
+    <a href="option-2-A#contacts" class="govuk-link govuk-button--secondary">Empty</a>
+    <a href="option-2-B#contacts" class="govuk-link govuk-button--secondary">Single</a>
+    <a href="option-2-C#contacts" class="govuk-link govuk-button--secondary">Multiple</a>
+    <a href="option-2-D#contacts" class="govuk-link govuk-button--secondary">Max</a>
     
   </div>
 
@@ -435,57 +435,86 @@ Option 1 - Multiple rows (current)
                   <span class="govuk-visually-hidden"> (Contacts)</span></a>
               </dd>
             </div>
-            <div class="govuk-summary-list__row">
+
+
+
+            <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
               <dt class="govuk-summary-list__key">
                             Applicants
                         </dt>
               <dd class="govuk-summary-list__value">
                 Applicant Organisation<br>1 Town Square<br>Barking<br>IG11 7LU
-
-              <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
-              Applicant Organisation<br>1 Town Square<br>Barking<br>IG11 7LU
-              <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
-              Applicant Organisation<br>1 Town Square<br>Barking<br>IG11 7LU
-              <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
-              Applicant Organisation<br>1 Town Square<br>Barking<br>IG11 7LU
-              <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
-              Applicant Organisation<br>1 Town Square<br>Barking<br>IG11 7LU
-
               </dd>
               <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What are the Applicant Contact details? (Contacts)</span></a>
-              </dd>
+                <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                        <a class="govuk-link" href="">Remove<span class="govuk-visually-hidden"> contact details</span></a>
+                    </li>
+                     <li class="govuk-summary-list__actions-list-item">
+                         <a class="govuk-link" href="">Change<span class="govuk-visually-hidden"> contact details</span></a>
+                    </li>
+                 </ul>              
+                </dd>
             </div>
             <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+               </dt>
+              <dd class="govuk-summary-list__value" style="border-top: 1px solid #b1b4b6;">
+                Applicant Organisation<br>1 Town Square<br>Barking<br>IG11 7LU
+              </dd>
+              <dd class="govuk-summary-list__actions" style="border-top: 1px solid #b1b4b6;">
+                <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                        <a class="govuk-link" href="">Remove<span class="govuk-visually-hidden"> contact details</span></a>
+                    </li>
+                     <li class="govuk-summary-list__actions-list-item">
+                         <a class="govuk-link" href="">Change<span class="govuk-visually-hidden"> contact details</span></a>
+                    </li>
+                 </ul>              
+                 </dd>
+            </div>
+
+
+
+            <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
               <dt class="govuk-summary-list__key">
                             Applicant contacts
                         </dt>
               <dd class="govuk-summary-list__value">
-                            Firstname Surname <br>applicant@agent.com<br> 07712345678
-
-              <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
-              Firstname Surname <br>applicant.s@organisation.com
-              <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
-              Firstname Surname <br>applicant.s@organisation.com
-              <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
-              Firstname Surname <br>applicant@agent.com<br> 07712345678
-              <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
-              Firstname Surname <br>applicant.s@organisation.com
-              <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
-              Firstname Surname <br>applicant.s@organisation.com
-              <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
-              Firstname Surname <br>applicant.s@organisation.com
-              <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
-              Firstname Surname <br>applicant@agent.com<br> 07712345678
-              <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
-              Firstname Surname <br>applicant@agent.com<br> 07712345678
-              <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
-              Firstname Surname <br>applicant.s@organisation.com
-                        </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the address of the Applicant? (Contacts)</span></a>
-              </dd>
+                Firstname Surname <br>applicant@agent.com<br> 07712345678              
+                </dd>
+              <dd class="govuk-summary-list__actions" style="border-top: 1px solid #b1b4b6;">
+                <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                        <a class="govuk-link" href="">Remove<span class="govuk-visually-hidden"> contact details</span></a>
+                    </li>
+                     <li class="govuk-summary-list__actions-list-item">
+                         <a class="govuk-link" href="">Change<span class="govuk-visually-hidden"> contact details</span></a>
+                    </li>
+                 </ul>              
+                </dd>
             </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+               </dt>
+              <dd class="govuk-summary-list__value" style="border-top: 1px solid #b1b4b6;">
+                Firstname Surname <br>applicant.s@organisation.com
+              </dd>
+              <dd class="govuk-summary-list__actions" style="border-top: 1px solid #b1b4b6;">
+                <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                        <a class="govuk-link" href="">Remove<span class="govuk-visually-hidden"> contact details</span></a>
+                    </li>
+                     <li class="govuk-summary-list__actions-list-item">
+                         <a class="govuk-link" href="">Change<span class="govuk-visually-hidden"> contact details</span></a>
+                    </li>
+                 </ul>              
+                 </dd>
+            </div>
+
+
+
+
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
                             Agents
@@ -494,40 +523,54 @@ Option 1 - Multiple rows (current)
                             Agent Organisation<br>1 Town Square<br>Barking<br>IG11 7LU
                         </dd>
               <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="">Edit</a>
-              </dd>
+<ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                        <a class="govuk-link" href="">Remove<span class="govuk-visually-hidden"> contact details</span></a>
+                    </li>
+                     <li class="govuk-summary-list__actions-list-item">
+                         <a class="govuk-link" href="">Change<span class="govuk-visually-hidden"> contact details</span></a>
+                    </li>
+                 </ul>                </dd>
             </div>
-            <div class="govuk-summary-list__row">
+            
+
+
+             <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
               <dt class="govuk-summary-list__key">
                             Agent contacts
                         </dt>
-              <dd class="govuk-summary-list__value">
-                                                      Agent Agent <br>agent@agent.com<br> 07712345678
+              <dd class="govuk-summary-list__value" style="border-top: 1px solid #b1b4b6;">
+                Agent Agent <br>agent@agent.com<br> 07712345678              
+                </dd>
+              <dd class="govuk-summary-list__actions" style="border-top: 1px solid #b1b4b6;">
+                <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                        <a class="govuk-link" href="">Remove<span class="govuk-visually-hidden"> contact details</span></a>
+                    </li>
+                     <li class="govuk-summary-list__actions-list-item">
+                         <a class="govuk-link" href="">Change<span class="govuk-visually-hidden"> contact details</span></a>
+                    </li>
+                 </ul>              
+                </dd>
+            </div>
 
-              <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
-              Agent Agent <br>agent@agent.com
-              <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
-              Agent Agent <br>agent@agent.com
-              <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
-              Agent Agent <br>agent@agent.com
-              <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
-              Agent Agent <br>agent@agent.com
-              <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
-              Agent Agent <br>agent@agent.com<br> 07712345678
-              <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
-              Agent Agent <br>agent@agent.com<br> 07712345678
-              <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
-              Agent Agent <br>agent@agent.com<br> 07712345678
-              <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
-              Agent Agent <br>agent@agent.com
-              <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
-              Agent Agent <br>agent@agent.com
-
-
-                        </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="multiple-agent-14">Edit</a>
+            
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+               </dt>
+              <dd class="govuk-summary-list__value" style="border-top: 1px solid #b1b4b6;">
+                Agent Agent <br>agent@agent.com
               </dd>
+              <dd class="govuk-summary-list__actions" style="border-top: 1px solid #b1b4b6;">
+                <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                        <a class="govuk-link" href="">Remove<span class="govuk-visually-hidden"> contact details</span></a>
+                    </li>
+                     <li class="govuk-summary-list__actions-list-item">
+                         <a class="govuk-link" href="">Change<span class="govuk-visually-hidden"> contact details</span></a>
+                    </li>
+                 </ul>              
+                 </dd>
             </div>
           </dl>
         </div>
