@@ -1,0 +1,148 @@
+{% extends "layouts/front-office.html" %}
+
+{% block pageTitle %}
+  Application updates
+{% endblock %}
+  
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  {%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+
+      {{ mojSideNavigation({
+      label: "Side navigation",
+      items: [{
+        text: "Application information",
+        href: "application-summary"
+       
+      }, {
+        text: "Documents",
+        href: "#2"
+      }, {
+        text: "Have your say",
+        href: "#3"
+      }, {
+        text: "Application updates",
+        href: "application-updates.njk",
+         active: true
+      }, {
+        text: "Written representations",
+        href: "#4"
+      }]
+    }) }}
+
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">CROWN/2025/0000020</span>
+      <h1 class="govuk-heading-xl">Application updates</h1>
+
+      <!--timeline starts here -->
+
+      <div class="moj-timeline">
+        <div class="moj-timeline__item">
+
+          <div class="moj-timeline__header">
+            <h2 class="moj-timeline__title">11 May 2021</h2>
+
+          </div>
+
+          <p class="moj-timeline__date"></p>
+
+          <div class="moj-timeline__description">
+            <p class="govuk-!-margin-0">The Secretary of State has made a Correction Order affecting the A1 Birtley to Coal House development.&nbsp;A Correction Notice&nbsp; was issued on 30 April 2021. The Correction was made following&nbsp;a request from The Applicant&rsquo;s solicitor DLA Piper Scotland Ltd on 19 February 2021.</p>
+          </div>
+
+        </div>
+
+        <div class="moj-timeline__item">
+
+          <div class="moj-timeline__header">
+            <h2 class="moj-timeline__title">19 January 2021
+</h2>
+
+          </div>
+
+          <p class="moj-timeline__date"></p>
+
+          <div class="moj-timeline__description">Decision made by the Secretary of State.
+</div>
+
+        </div>
+
+        <div class="moj-timeline__item">
+
+          <div class="moj-timeline__header">
+            <h2 class="moj-timeline__title">7 December 2020
+</h2>
+
+          </div>
+
+          <p class="moj-timeline__date"></p>
+          <div class="moj-timeline__description">
+Gateshead Council Response to the Secretary of State&rsquo;s consultation&nbsp;has been published.
+
+ </div>
+
+        </div>
+
+        <div class="moj-timeline__item">
+
+          <div class="moj-timeline__header">
+            <h2 class="moj-timeline__title">10 November 2020</h2>
+
+          </div>
+
+          <p class="moj-timeline__date"></p>
+
+          <div class="moj-timeline__description">
+            <div>The Secretary of State for Transport has requested comments from Gateshead Council by 27 November 2020.</div>
+
+          </div>
+
+        </div>
+
+        <div class="moj-timeline__item">
+
+          <div class="moj-timeline__header">
+            <h2 class="moj-timeline__title">21 October 2020</h2>
+
+          </div>
+
+          <p class="moj-timeline__date"></p>
+
+          <div class="moj-timeline__description">
+     Recommendations given by the Planning Inspectorate.
+
+    </div>
+
+        </div>
+
+        <div class="moj-timeline__item">
+
+          <div class="moj-timeline__header">
+            <h2 class="moj-timeline__title">22 July 2020</h2>
+
+          </div>
+
+          <p class="moj-timeline__date"></p>
+
+          <div class="moj-timeline__description">
+            <p>Notification of completion of the Examination has been issued.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  {% endblock %}

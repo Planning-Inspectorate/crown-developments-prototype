@@ -1,25 +1,24 @@
 {% extends "layouts/back-office.html" %}
 
-{% set pageName = "CROWN/2025/0000020" %}
+{% set pageName="Home" %}
+
 
 {% block content %}
-
-
-<div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
-    aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-    <div class="govuk-notification-banner__header">
-        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-            Success
-        </h2>
-    </div>
-    <div class="govuk-notification-banner__content">
-        <h3 class="govuk-notification-banner__heading">
-            Your update was published </h3>
-    </div>
+<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Important
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading">
+      No changes made to the update.
+    </p>
+  </div>
 </div>
 
 <span class="govuk-caption-xl">CROWN/2025/0000086</span>
-<h1 class="govuk-heading-xl">Manage application updates</h1>
+<h1 class="govuk-heading-l">Manage application updates</h1>
 
 
 <div style="display: flex; align-items: flex-end;">
@@ -64,9 +63,40 @@
 
         <tr class="govuk-table__row">
 
+            <td class="govuk-table__cell">Not published</td>
+
+            <td class="govuk-table__cell" data-sort-value="6961">Decision made by the Secretary of State</td>
+
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">
+                    Draft
+                </strong></td>
+
+            <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1897"> <a
+                    href="5-no.html">Review</a></td>
+
+        </tr>
+
+        <tr class="govuk-table__row">
+
+            <td class="govuk-table__cell">11 April 2025</td>
+
+            <td class="govuk-table__cell" data-sort-value="6961">Gateshead Council Response to the Secretary of State's
+                consultation has been published</td>
+
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">
+                    Unpublished
+                </strong></td>
+
+            <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1897"> <a
+                    href="10-review-unpublished.html">Review</a></td>
+
+        </tr>
+
+        <tr class="govuk-table__row">
+
             <td class="govuk-table__cell">14 February 2025</td>
 
-            <td class="govuk-table__cell" data-sort-value="6961">Gateshead Council Response to the Secretary of State's consultation has been published.</td>
+            <td class="govuk-table__cell" data-sort-value="6961">Recommendations given by the Planning Inspectorate</td>
 
             <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
                     Published
@@ -79,6 +109,5 @@
     </tbody>
 </table>
 
-<a href="../index.html">Back to flow options </a>
 
 {% endblock %}

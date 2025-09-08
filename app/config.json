@@ -1,3 +1,8 @@
 {
-  "serviceName": "Crown Developments prototype"
+  "serviceName": "Crown Developments prototype",
+  "plugins": {
+  "govuk-frontend": {
+    "rebrand": true
+  }
+}
 }
