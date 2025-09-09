@@ -1,11 +1,13 @@
 {% extends "layouts/back-office.html" %}
 
+
 {% block content %}
 
 <!-- Floating 'Back to the start' link -->
 <a href="../../index.html" class="govuk-link govuk-link--no-visited-state" style="color:white; position: fixed; top: 24px; right: 32px; z-index: 1000; background: #359026ff; padding: 8px 16px; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
   Back to prototype options
 </a>
+
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -74,13 +76,13 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Applicant contact
+              agent contact
             </dt>
             <dd class="govuk-summary-list__value">
               Test.edited.account@test.com<br>012345678912345<br>
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What are the Applicant Contact
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What are the agent Contact
                   details? (Overview)</span></a>
             </dd>
           </div>
@@ -353,11 +355,7 @@
               Local planning authority (LPA)
             </dt>
             <dd class="govuk-summary-list__value">
-              <ul class="govuk-list govuk-list--bullet">
-                <li>Ashfield District Council<br>Urban Road<br>Nottingham<br>NG17 8DA</li>
-                <li>Bristol City Council <br> Bristol <br> BS1 5UY</li>
-              </ul>
-              
+              Ashford LPA<br>1 Town Square<br>Barking<br>IG11 7LU
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="">
@@ -382,9 +380,13 @@
               Applicant
             </dt>
             <dd class="govuk-summary-list__value">
+              -
+
+
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What are the Applicant Contact
+              <a class="govuk-link" href="8-check-agent-details.html">Edit<span class="govuk-visually-hidden"> What
+                  are the agent Contact
                   details? (Contacts)</span></a>
             </dd>
           </div>
@@ -396,8 +398,8 @@
               -
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the address of the
-                  Applicant? (Contacts)</span></a>
+              <a class="govuk-link" href="8-check-agent-contact-details.html">Edit<span class="govuk-visually-hidden"> What is the address of the
+                  agent? (Contacts)</span></a>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -416,7 +418,94 @@
               Agent contacts
             </dt>
             <dd class="govuk-summary-list__value">
-              -
+              <ul class="govuk-list govuk-list--bullet">
+                
+                                
+                <li>
+                Amina Rahman<br>
+                amina.rahman@stratwellglobal.com<br>
+                +44 20 7946 8711<br>
+                </li>
+
+
+                <li>
+                James Okafor<br>
+                james.okafor@stratwellglobal.com<br>
+                +44 20 7946 8712<br>
+                </li>
+
+                
+              </ul>
+              <a href="#" id="toggle-agent-contacts" class="govuk-link"
+                onclick="event.preventDefault(); var s=document.getElementById('agent-contacts-extra'); if(s.style.display==='none'){s.style.display=''; this.textContent='Hide';}else{s.style.display='none'; this.textContent='Show 8 more';}">Show
+                8 more</a>
+              <br>
+              <span id="agent-contacts-extra" style="display:none;">
+                <ul class="govuk-list govuk-list--bullet">
+
+                                    
+                  <li>
+                  Sophie Zhang<br>
+                  sophie.zhang@stratwellglobal.com<br>
+                  </li>
+
+
+                                  
+                  <li>
+                  Tomás García<br>
+                  tomas.garcia@stratwellglobal.com<br>
+                  +44 20 7946 8714<br>
+                  </li>
+
+
+                                    
+                  <li>
+                  Priya Desai<br>
+                  priya.desai@stratwellglobal.com<br>
+                  </li>
+
+
+                                    
+                  <li>
+                  Luca Moretti<br>
+                  luca.moretti@stratwellglobal.com<br>
+                  +44 20 7946 8716<br>
+                  </li>
+
+
+                                    
+                  <li>
+                  Chloe Bennett<br>
+                  chloe.bennett@stratwellglobal.com<br>
+                  +44 20 7946 8717<br>
+                  </li>
+
+
+                                    
+                  <li>
+                  Aneta Kowalska<br>
+                  aneta.kowalska@stratwellglobal.com<br>
+                  +44 20 7946 8723<br>
+                  </li>
+
+
+                                    
+                  <li>
+                  Kwame Boateng<br>
+                  kwame.boateng@stratwellglobal.com<br>
+                  </li>
+
+
+                                    
+                  <li>
+                  Nia Roberts<br>
+                  nia.roberts@stratwellglobal.com<br>
+                  +44 20 7946 8719<br>
+                  </li>
+
+
+                </ul>
+              </span>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="multiple-agent-14">Edit</a>
