@@ -1,3 +1,8 @@
 {
-  "serviceName": "Have your say on a Crown Development application"
+  "serviceName": "Crown Developments prototype",
+  "plugins": {
+  "govuk-frontend": {
+    "rebrand": true
+  }
+}
 }
