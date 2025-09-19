@@ -73,19 +73,13 @@
     <h3 class="govuk-heading-m">Prototype options: Application stage</h3>
 
     <a href="1-accepted.html#land" class="govuk-link govuk-button--secondary" data-module="govuk-button">Accepted</a>
-    <a href="2-consultation.html#land" class="govuk-link govuk-button--secondary"
-    data-module="govuk-button">Consultation</a>
-    <a href="3-procedure-decision.html#land" class="govuk-link govuk-button--secondary"
-    data-module="govuk-button">Procedure
-    decision</a>
-    <a href="4-written-representations.html#land" class="govuk-link govuk-button--secondary"
-    data-module="govuk-button">Written representations</a>
+    <a href="2-consultation.html#land" class="govuk-link govuk-button--secondary" data-module="govuk-button">Consultation</a>
+    <a href="3-procedure-decision.html#land" class="govuk-link govuk-button--secondary" data-module="govuk-button">Procedure decision</a>
+    <a href="4-written-representations.html#land" class="govuk-link govuk-button--secondary" data-module="govuk-button">Written representations</a>
     <a href="5-inquiry.html#land" class="govuk-link govuk-button--secondary" data-module="govuk-button">Inquiry</a>
     <a href="6-hearing.html#land" class="govuk-link govuk-button--secondary" data-module="govuk-button">Hearing</a>
-    <a href="7-reporting.html#land" class="govuk-link govuk-button--secondary" data-module="govuk-button">Reporting/
-    Decision</a>
-    <a href="8-post-decision.html#land" class="govuk-link govuk-button--secondary"
-    data-module="govuk-button">Post-decision</a>
+    <a href="7-reporting.html#land" class="govuk-link govuk-button--secondary" data-module="govuk-button">Final decision</a>
+    <a href="8-post-decision.html#land" class="govuk-link govuk-button--secondary" data-module="govuk-button">Post-decision</a>
 
   </div>
 
@@ -95,7 +89,7 @@
     <!--Side nav-->
     <div class="govuk-grid-column-one-third">
 
-        {{ mojSideNavigation({
+      {{ mojSideNavigation({
     label: "Side navigation",
     items: [{
     text: "Application information",
@@ -116,8 +110,7 @@
       <div>
         <h2 class="govuk-heading-m">About the application</h2>
         <h3 class="govuk-heading-s">Type of application</h3>
-        <p class="govuk-body">Planning permission and listed building consent (LBC) for alterations, extension or
-        demolition of a listed building</p>
+        <p class="govuk-body">Planning permission and listed building consent (LBC) for alterations, extension or demolition of a listed building</p>
         <h3 class="govuk-heading-s">This application</h3>
         <p class="govuk-body">Listed building consent</p>
         <h3 class="govuk-heading-s">Local Planning Authority</h3>
@@ -133,16 +126,14 @@
         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
       </div>
 
-
-
       <!--Have your say-->
 
       <div>
         <h2 class="govuk-heading-m">Have your say</h2>
         <p class="govuk-body">Use this service to have your say about the application.</p>
         <p class="govuk-body">We'll ask for your personal details and your comments about this application.</p>
-        <p class="govuk-body">The representation period is open from: 12am on 31 January 2025 to 11:59pm on 31 March
-        2025 </p>
+        <p class="govuk-body">The representation period is open from: 12am on 31 January 2025 to 11:59pm on 31 March 2025
+        </p>
 
         {% from "govuk/components/button/macro.njk" import govukButton %}
 
@@ -157,8 +148,11 @@
       <!-- Project stage -->
       <section id="land">
         <h2 class="govuk-heading-m">Application stage</h2>
-        <p class="govuk-body">This application is at the <strong>inquiry</strong> stage. </p>
-<div id="project-stage-pre-application" class="govuk-!-margin-top-6">
+        <p class="govuk-body">This application is at the
+          <strong>inquiry</strong>
+          stage.
+        </p>
+        <div id="project-stage-pre-application" class="govuk-!-margin-top-6">
           <details class="govuk-details pins-modded-summary-full-width">
             <summary class="govuk-details__summary">
               <span class="govuk-details__summary-text">
@@ -171,16 +165,25 @@
               </span>
             </summary>
             <div class="govuk-details__text">
-              
 
+              <p>The Crown Casework Team at the Ministry of Housing, Communities and Local Government (MHCLG) handles the pre-application process for Crown Development applications. This team is responsible for early engagement with prospective applicants, which includes giving advice on suitable planning routes through the Crown Development process.</p>
+              <p>MHCLG can also give general pre-application planning guidance to make sure applications cover everything needed for submission.</p>
+              <p>Pre-application engagement may also include engagement with:</p>
+              <ul>
+                <li>the local planning authority</li>
 
+                <li>statutory and non-statutory consultees</li>
 
+                <li>local communities</li>
 
+                <li>other government departments and agencies whose interests may be affected by the proposal</li>
+              </ul>
 
             </div>
           </details>
           <hr class="govuk-section-break govuk-section-break--visible">
-        </div> <div id="project-stage-acceptance">
+        </div>
+        <div id="project-stage-acceptance">
           <details class="govuk-details pins-modded-summary-full-width">
             <summary class="govuk-details__summary">
               <span class="govuk-details__summary-text">
@@ -193,10 +196,13 @@
               </span>
             </summary>
             <div class="govuk-details__text">
-             
 
-
-
+              <p>The Planning Inspectorate (PINS) checks the application is complete<strong>.</strong>
+                This includes checking that all required documents have been submitted following national requirements.</p>
+              <p>Where applicable, it also checks that the documents listed in the local planning authority&rsquo;s local validation checklist are included.</p>
+              <p>The Planning Inspectorate also checks that the correct planning fee has been paid. The fee is calculated in line with the Town and Country Planning (Fees for Applications, Deemed Applications, Requests and Site Visits) (England) Regulations 2012 (as amended).</p>
+              <p>The Secretary of State assesses whether the application is of national importance.</p>
+              <p>If the Planning Inspectorate decides that the application is complete and the Secretary of State considers the application to be of national importance, the application will be accepted.</p>
 
             </div>
           </details>
@@ -215,10 +221,18 @@
               </span>
             </summary>
             <div class="govuk-details__text">
-              
 
+              <p>The Planning Inspectorate (PINS):</p>
+              <ul>
+                <li>publishes the application documents on a dedicated web page</li>
 
+                <li>carries out any required consultations</li>
 
+                <li>may place a press notice</li>
+              </ul>
+              <p>The relevant local planning authority displays a site notice and notifies any adjoining owner or occupier if needed.</p>
+              <p>Statutory consultees and other interested parties can send written representations to the Planning Inspectorate.</p>
+              <p>Written representations must be sent no less than 21 days from the date the application is accepted. Written representations submitted after this date may not be considered.</p>
 
             </p>
           </div>
@@ -231,7 +245,7 @@
           <summary class="govuk-details__summary">
             <span class="govuk-details__summary-text">
               <div class="summary-content">
-                <span>Procedure decision</span>
+                <span>Procedure to be followed</span>
                 <div>
                   <strong class="govuk-tag govuk-tag--green -white-space--nowrap">Completed</strong>
                 </div>
@@ -239,109 +253,116 @@
             </span>
           </summary>
           <div class="govuk-details__text">
-           
 
-
-
-
-        </div>
-      </details>
-      <hr class="govuk-section-break govuk-section-break--visible">
-
-    </div>
-    <div id="project-stage-pre-examination">
-      <details class="govuk-details pins-modded-summary-full-width" open>
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            <div class="summary-content">
-              <span>Inquiry</span>
-              <div>
-                <strong class="govuk-tag govuk-tag--yellow -white-space--nowrap">In progress</strong>
-              </div>
-            </div>
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-         
-        </div>
-      </details>
-      <hr class="govuk-section-break govuk-section-break--visible">
-    </div>
-
-    <div id="project-stage-reporting">
-      <details class="govuk-details pins-modded-summary-full-width">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            <div class="summary-content">
-              <span>Reporting and decision</span>
-              <div>
-                <strong class="govuk-tag govuk-tag--grey -white-space--nowrap">Not started</strong>
-              </div>
-            </div>
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-       
-
-
-
-
-          
+            <p>The procedure is the method the Planning Inspectorate (PINS) will use to decide the application.</p>
+            <p>The Planning Inspectorate will decide at the end of the consultation period how the application should continue. The procedures are:</p>
+            <ul>
+              <li>written representations</li>
+              <li>hearing</li>
+              <li>inquiry</li>
+            </ul>
+            <p>The Planning Inspectorate tells the applicant, local planning authority and anyone who submitted written representations about the decision. The Planning Inspectorate will keep the procedure choice, including combined procedures, under review. Subject to any notification and procedural requirement, the procedure may be changed at any point before the decision is issued.</p>
 
           </div>
-      </details>
-      <hr class="govuk-section-break govuk-section-break--visible">
-    </div>
+        </details>
+        <hr class="govuk-section-break govuk-section-break--visible">
 
-    <div id="project-stage-post-decision">
-      <details class="govuk-details pins-modded-summary-full-width">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            <div class="summary-content">
-              <span>Post-decision</span>
-              <div>
-                <strong class="govuk-tag govuk-tag--grey -white-space--nowrap">Not started</strong>
+      </div>
+      <div id="project-stage-pre-examination">
+        <details class="govuk-details pins-modded-summary-full-width" open="open">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              <div class="summary-content">
+                <span>Inquiry</span>
+                <div>
+                  <strong class="govuk-tag govuk-tag--yellow -white-space--nowrap">In progress</strong>
+                </div>
               </div>
-            </div>
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-         
+            </span>
+          </summary>
+          <div class="govuk-details__text">
 
+            <p>An inquiry is the most formal of procedures. Although it is not a court of law, the proceedings are similar. An inquiry is open to the public and provides for the investigation into, and formal testing of evidence, usually through cross-examination of expert witnesses and other witnesses. Parties may be formally represented by advocates.</p>
+            <p>The applicant, local planning authority and any statutory parties can submit a statement of case. This must be submitted within 5 weeks of the date they are notified of the inquiry.</p>
+            <p>The inspector (or panel of inspectors), under rule 13(3) of the 2025 Hearings and Inquiries rules, may require any person who has requested to appear at the inquiry to also submit a statement of case. This must be submitted within 4 weeks of our writing to them.</p>
+            <p>Proof of evidence must be submitted no later than 4 weeks before the inquiry. If the proof of evidence exceeds 1,500 words, it should be submitted with a summary.</p>
+            <p>A case management conference may be held before the inquiry. The Planning Inspectorate notifies anyone entitled to attend the inquiry the details of the case management conference and provides an agenda beforehand.</p>
+          </div>
+        </details>
+        <hr class="govuk-section-break govuk-section-break--visible">
+      </div>
 
+      <div id="project-stage-reporting">
+        <details class="govuk-details pins-modded-summary-full-width">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              <div class="summary-content">
+                <span>Final decision</span>
+                <div>
+                  <strong class="govuk-tag govuk-tag--grey -white-space--nowrap">Not started</strong>
+                </div>
+              </div>
+            </span>
+          </summary>
+          <div class="govuk-details__text">
 
-
+            <p>After the inquiry, hearing or site visit (for written representations), the inspector decides based on the evidence.</p>
+            <p>The formal decision notice includes a statement explaining the reasons for the decision.</p>
+            <p>If the application is approved, the decision will also list any necessary conditions.</p>
+            <p>If the application is recovered, the inspector will make a recommendation to the Secretary of State rather than issue a decision. The Secretary of State will consider the recommendation and issue a decision.</p>
 
           </div>
-      </section>
+        </details>
+        <hr class="govuk-section-break govuk-section-break--visible">
+      </div>
 
-            <br>
-<p class="govuk-body">Get more <a class="govuk-link" href="https://www.gov.uk/guidance/crown-development-applications">information about Crown Development applications</a>.
-      </p>
+      <div id="project-stage-post-decision">
+        <details class="govuk-details pins-modded-summary-full-width">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              <div class="summary-content">
+                <span>Post-decision</span>
+                <div>
+                  <strong class="govuk-tag govuk-tag--grey -white-space--nowrap">Not started</strong>
+                </div>
+              </div>
+            </span>
+          </summary>
+          <div class="govuk-details__text">
 
-<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible"> 
+            <p>If permission is granted for a Crown Development application, the local planning authority is responsible for monitoring its implementation.</p>
+            <p>The local planning authority must make sure the development follows the approved plans and planning conditions.</p>
+            <p>To challenge a decision on a Crown Development application, an application must be made to the High Court. This application must be made within 6 weeks of the day the decision is issued.</p>
 
-      <!--Contact us -->
-      <div>
-        <h2 class="govuk-heading-m">Contact us</h2>
-        <h3 class="govuk-heading-s">Telephone</h3>
-        <p class="govuk-body">If you have an representation reference number, have it with you when you call.</p>
-        <p class="govuk-body">Telephone: 0303 444 5000</p>
-        <p class="govuk-body">Open Monday to Friday: 9am to 4pm. Closed on weekends and bank holidays.</p>
-        <h3 class="govuk-heading-s">Email</h3>
-        <p class="govuk-body">
-          <a
-          href="mailto:crownapplications@planninginspectorate.gov.uk">crownapplications@planninginspectorate.gov.uk</a>
-          <p class="govuk-body">When writing an email, quote the name of the project in the subject line.</p>
-          <p class="govuk-body">We aim to respond within 10 working days.</p>
+          </div>
+        </section>
 
-          <h3 class="govuk-heading-s">Alternative formats</h3>
-          <p class="govuk-body">Call or email to ask for application documents in alternative formats such as PDF, large
-        print, easy read, audio recording or braille.</p>
+        <br>
+        <p class="govuk-body">Get more
+          <a class="govuk-link" href="https://www.gov.uk/guidance/crown-development-applications">information about Crown Development applications</a>.
+        </p>
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <!--Contact us -->
+        <div>
+          <h2 class="govuk-heading-m">Contact us</h2>
+          <h3 class="govuk-heading-s">Telephone</h3>
+          <p class="govuk-body">If you have an representation reference number, have it with you when you call.</p>
+          <p class="govuk-body">Telephone: 0303 444 5000</p>
+          <p class="govuk-body">Open Monday to Friday: 9am to 4pm. Closed on weekends and bank holidays.</p>
+          <h3 class="govuk-heading-s">Email</h3>
+          <p class="govuk-body">
+            <a href="mailto:crownapplications@planninginspectorate.gov.uk">crownapplications@planninginspectorate.gov.uk</a>
+            <p class="govuk-body">When writing an email, quote the name of the project in the subject line.</p>
+            <p class="govuk-body">We aim to respond within 10 working days.</p>
+
+            <h3 class="govuk-heading-s">Alternative formats</h3>
+            <p class="govuk-body">Call or email to ask for application documents in alternative formats such as PDF, large print, easy read, audio recording or braille.</p>
+          </div>
+
         </div>
 
       </div>
 
-    </div>
-
-  {% endblock %}
+    {% endblock %}
