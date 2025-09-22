@@ -32,34 +32,32 @@
                 </div>
                 <div class="govuk-grid-column-full">
 
-                    <div class="govuk-grid-row">
-                        <div class="govuk-grid-column-one-third">
-                            <h3 class="govuk-heading-s">Keyword search</h3>
-                            <form class="govuk-form-group" style="display: flex; gap: 8px; align-items: center; margin-bottom: 0;">
-                                <label class="govuk-label govuk-visually-hidden" for="keyword-search">Keyword search</label>
-                                <input class="govuk-input" id="keyword-search" name="keyword-search" type="text" autocomplete="off" style="margin-bottom: 0; width:100%;">
-                                <button class="govuk-button" id="keyword-search-button" type="submit" style="margin-bottom: 0;">Search</button>
-                            </form>
-                        </div>
+                    <div class="govuk-grid-row" style="padding-left:20px">
 
-                    </div>
+                        <h3 class="govuk-heading-s">Keyword search</h3>
+                        <form class="govuk-form-group" style="display: flex; gap: 8px; align-items: center; margin-bottom: 0;;">
+                            <label class="govuk-label govuk-visually-hidden" for="keyword-search">Keyword search</label>
+                            <input class="govuk-input" id="keyword-search" name="keyword-search" type="text" autocomplete="off" style="margin-bottom: 0; width:50%;">
+                            <button class="govuk-button" id="keyword-search-button" type="submit" style="margin-bottom: 0;">Search</button>
+                        </form>
+
+                    
+                    <details class="govuk-details govuk-!-margin-top-3" id="filter-panel">
                         <details class="govuk-details govuk-!-margin-top-3" id="filter-panel">
                             <summary class="govuk-details__summary">
                                 <span class="govuk-details__summary-text">
-                                    Filters
+                                    Type of application
                                 </span>
                             </summary>
                             <div class="govuk-details__text">
                                 <form class="govuk-form-group">
                                     <fieldset class="govuk-fieldset">
-                                        
+
                                         <div class="govuk-grid-row">
 
                                             <div class="">
                                                 <fieldset class="govuk-fieldset" aria-describedby="type-of-application-hint">
-                                                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                                                        Type of application
-                                                    </legend>
+
                                                     <div class="govuk-checkboxes govuk-checkboxes--small">
                                                         <div class="govuk-checkboxes__item">
                                                             <input class="govuk-checkboxes__input" id="type-1" name="type" type="checkbox" value="Planning permission" checked="checked">
@@ -88,11 +86,28 @@
                                                     </div>
                                                 </fieldset>
                                             </div>
-                                            <div class="govuk-grid-column-one-third">
+
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </details>
+
+                        <details class="govuk-details govuk-!-margin-top-3" id="filter-panel">
+                            <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text">
+                                    Filters
+                                </span>
+                            </summary>
+                            <div class="govuk-details__text">
+                                <form class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+
+                                        <div class="govuk-grid-row">
+
+                                            <div class="">
                                                 <fieldset class="govuk-fieldset" aria-describedby="stage-hint">
-                                                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                                                        Stage
-                                                    </legend>
+
                                                     <div class="govuk-checkboxes govuk-checkboxes--small">
                                                         <div class="govuk-checkboxes__item">
                                                             <input class="govuk-checkboxes__input" id="stage-accepted" name="stage" type="checkbox" value="Accepted" checked="checked">
@@ -139,193 +154,215 @@
                                                     </div>
                                                 </fieldset>
                                             </div>
+                                            <div class="govuk-grid-column-one-third"></div>
                                         </div>
-                                        <div class="govuk-grid-row" style="margin-top: 16px;">
-                                            <div class="govuk-grid-column-full">
-                                                <button type="submit" class="govuk-button">
-                                                    Apply filters
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="govuk-grid-row" style="margin-top: 24px;">
-                                            <div class="govuk-grid-column-full">
-                                                <h2 class="govuk-heading-m">
-                                                    Selected filters
-                                                    <a href="#" class="govuk-link" style="margin-left:16px; font-size:19px; font-weight:normal;">Clear all filters</a>
-                                                </h2>
-                                                <div style="display:flex; flex-direction:column; gap:12px;">
-                                                    <div style="display:flex; align-items:center; gap:12px;">
-                                                        <span class="govuk-body govuk-!-font-weight-bold" style="margin-right:8px;">Type of application</span>
-                                                        <span style="display:inline-flex; gap:8px;">
-                                                            <span class="selected-filter-tag">
-                                                                Planning permission
-                                                                <button type="button" aria-label="Remove filter" style="background:none; border:none; padding:0; margin-left:8px; font-size:16px; line-height:1; cursor:pointer;">×</button>
-                                                            </span>
-                                                            <span class="selected-filter-tag">
-                                                                Outline planning permission with some matters reserved
-                                                                <button type="button" aria-label="Remove filter" style="background:none; border:none; padding:0; margin-left:8px; font-size:16px; line-height:1; cursor:pointer;">×</button>
-                                                            </span>
-                                                        </span>
-                                                    </div>
-                                                    <div style="display:flex; align-items:center; gap:12px;">
-                                                        <span class="govuk-body govuk-!-font-weight-bold" style="margin-right:8px;">Stage</span>
-                                                        <span style="display:inline-flex; gap:8px;">
-                                                            <span class="selected-filter-tag">
-                                                                Accepted
-                                                                <button type="button" aria-label="Remove filter" style="background:none; border:none; padding:0; margin-left:8px; font-size:16px; line-height:1; cursor:pointer;">×</button>
-                                                            </span>
-                                                            <span class="selected-filter-tag">
-                                                                Decision
-                                                                <button type="button" aria-label="Remove filter" style="background:none; border:none; padding:0; margin-left:8px; font-size:16px; line-height:1; cursor:pointer;">×</button>
-                                                            </span>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+
+                                        <div class="govuk-grid-row" style="margin-top: 24px;"></div>
                                     </fieldset>
                                 </form>
                             </div>
                         </details>
 
-                        <div class="pins-table__container" role="region" aria-label="Scrollable content. Use the arrow keys to navigate.">
-                            <table class="govuk-table">
-                                <thead class="govuk-table__head">
-                                    <tr class="govuk-table__row">
-                                        <th scope="col" class="govuk-table__header">Application reference</th>
-                                        <th scope="col" class="govuk-table__header">Application type</th>
-                                        <th scope="col" class="govuk-table__header">Applicant name</th>
-                                        <th scope="col" class="govuk-table__header">Local planning authority</th>
-                                        <th scope="col" class="govuk-table__header">Stage</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="govuk-table__body">
-                                    <tr class="govuk-table__row">
-                                        <th scope="row" class="govuk-table__header">
-                                            <a class="govuk-link" href="/applications/194fbc93-7f27-435e-9e97-6de8166df211/application-information">
-                                                CROWN/<wbr>2025/<wbr>0000057
-                                            </a>
-                                        </th>
-                                        <td class="govuk-table__cell">Planning permission</td>
-                                        <td class="govuk-table__cell">John Silver</td>
-                                        <td class="govuk-table__cell">System Test Borough Council</td>
-                                        <td class="govuk-table__cell"></td>
-                                    </tr>
-                                    <tr class="govuk-table__row">
-                                        <th scope="row" class="govuk-table__header">
-                                            <a class="govuk-link" href="/applications/0556d736-3ccb-4964-89d3-a3895f8c3a4c/application-information">
-                                                CROWN/<wbr>2025/<wbr>0000051
-                                            </a>
-                                        </th>
-                                        <td class="govuk-table__cell">Planning permission</td>
-                                        <td class="govuk-table__cell">Tom Elliott</td>
-                                        <td class="govuk-table__cell">System Test Borough Council</td>
-                                        <td class="govuk-table__cell"></td>
-                                    </tr>
-                                    <tr class="govuk-table__row">
-                                        <th scope="row" class="govuk-table__header">
-                                            <a class="govuk-link" href="/applications/446a058b-324d-4193-9c18-83bb2a68771c/application-information">
-                                                CROWN/<wbr>2025/<wbr>0000046
-                                            </a>
-                                        </th>
-                                        <td class="govuk-table__cell">Outline planning permission with some matters reserved</td>
-                                        <td class="govuk-table__cell">Some Org</td>
-                                        <td class="govuk-table__cell">System Test Borough Council</td>
-                                        <td class="govuk-table__cell"></td>
-                                    </tr>
-                                    <tr class="govuk-table__row">
-                                        <th scope="row" class="govuk-table__header">
-                                            <a class="govuk-link" href="/applications/40745538-d030-4370-bb74-26eb9bf57e87/application-information">
-                                                CROWN/<wbr>2025/<wbr>0000045
-                                            </a>
-                                        </th>
-                                        <td class="govuk-table__cell">Planning permission</td>
-                                        <td class="govuk-table__cell"></td>
-                                        <td class="govuk-table__cell">System Test Borough Council</td>
-                                        <td class="govuk-table__cell">Procedure decision</td>
-                                    </tr>
-                                    <tr class="govuk-table__row">
-                                        <th scope="row" class="govuk-table__header">
-                                            <a class="govuk-link" href="/applications/707e56be-fd21-4749-a50d-07444f71f9f7/application-information">
-                                                CROWN/<wbr>2025/<wbr>0000020
-                                            </a>
-                                        </th>
-                                        <td class="govuk-table__cell">Planning permission</td>
-                                        <td class="govuk-table__cell"></td>
-                                        <td class="govuk-table__cell">System Test Borough Council</td>
-                                        <td class="govuk-table__cell"></td>
-                                    </tr>
-                                    <tr class="govuk-table__row">
-                                        <th scope="row" class="govuk-table__header">
-                                            <a class="govuk-link" href="/applications/75f87446-7bc5-4bc4-8fb5-a870690e106d/application-information">
-                                                CROWN/<wbr>2025/<wbr>0000018
-                                            </a>
-                                        </th>
-                                        <td class="govuk-table__cell">Planning permission</td>
-                                        <td class="govuk-table__cell"></td>
-                                        <td class="govuk-table__cell">System Test Borough Council</td>
-                                        <td class="govuk-table__cell"></td>
-                                    </tr>
-                                    <tr class="govuk-table__row">
-                                        <th scope="row" class="govuk-table__header">
-                                            <a class="govuk-link" href="/applications/ae6c3a49-df53-4df0-b193-33a4b631aba7/application-information">
-                                                CROWN/<wbr>2025/<wbr>0000017
-                                            </a>
-                                        </th>
-                                        <td class="govuk-table__cell">Planning permission</td>
-                                        <td class="govuk-table__cell"></td>
-                                        <td class="govuk-table__cell">System Test Borough Council</td>
-                                        <td class="govuk-table__cell"></td>
-                                    </tr>
-                                    <tr class="govuk-table__row">
-                                        <th scope="row" class="govuk-table__header">
-                                            <a class="govuk-link" href="/applications/d3172afc-7422-46af-bac0-eae8e422ac03/application-information">
-                                                CROWN/<wbr>2025/<wbr>0000010
-                                            </a>
-                                        </th>
-                                        <td class="govuk-table__cell">Planning permission</td>
-                                        <td class="govuk-table__cell"></td>
-                                        <td class="govuk-table__cell">Another System Test Borough Council</td>
-                                        <td class="govuk-table__cell">Procedure decision</td>
-                                    </tr>
-                                    <tr class="govuk-table__row">
-                                        <th scope="row" class="govuk-table__header">
-                                            <a class="govuk-link" href="/applications/6a62b624-11b4-421b-a323-96d0af1e9a6b/application-information">
-                                                CROWN/<wbr>2025/<wbr>0000007
-                                            </a>
-                                        </th>
-                                        <td class="govuk-table__cell">Planning permission</td>
-                                        <td class="govuk-table__cell"></td>
-                                        <td class="govuk-table__cell">System Test Borough Council</td>
-                                        <td class="govuk-table__cell"></td>
-                                    </tr>
-                                    <tr class="govuk-table__row">
-                                        <th scope="row" class="govuk-table__header">
-                                            <a class="govuk-link" href="/applications/846f14ab-8a1d-4fa4-a34e-c333e79abdf2/application-information">
-                                                CROWN/<wbr>2025/<wbr>0000003
-                                            </a>
-                                        </th>
-                                        <td class="govuk-table__cell">Outline planning permission with some matters reserved</td>
-                                        <td class="govuk-table__cell">test 1 , test 3, test 4, test 5</td>
-                                        <td class="govuk-table__cell">System Test Borough Council</td>
-                                        <td class="govuk-table__cell"></td>
-                                    </tr>
-                                    <tr class="govuk-table__row">
-                                        <th scope="row" class="govuk-table__header">
-                                            <a class="govuk-link" href="/applications/edf4cf2c-f14d-414a-8368-4f96c9b5d253/application-information">
-                                                CROWN/<wbr>2025/<wbr>0000001
-                                            </a>
-                                        </th>
-                                        <td class="govuk-table__cell">Planning permission</td>
-                                        <td class="govuk-table__cell"></td>
-                                        <td class="govuk-table__cell">System Test Borough Council</td>
-                                        <td class="govuk-table__cell">Hearing</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                                Filters
+                            </span>
+                        </summary>
+
+                        <form class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+
+                                <div class="govuk-grid-row"></div>
+                                <div class="govuk-grid-row" style="margin-top: 16px;">
+                                    <div class="govuk-grid-column-full">
+                                        <button type="submit" class="govuk-button">
+                                            Apply filters
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                            </fieldset>
+                        </form>
+
+                    </details>
+
+                    <div class="govuk-grid-row" style="margin-top: 24px;">
+                                    <div class="govuk-grid-column-full">
+                                        <h2 class="govuk-heading-m">
+                                            Selected filters
+                                            <a href="#" class="govuk-link" style="margin-left:16px; font-size:19px; font-weight:normal;">Clear all filters</a>
+                                        </h2>
+                                        <div style="display:flex; flex-direction:column; gap:12px;">
+                                            <div style="display:flex; align-items:center; gap:12px;">
+                                                <span class="govuk-body govuk-!-font-weight-bold" style="margin-right:8px;">Type of application</span>
+                                                <span style="display:inline-flex; gap:8px;">
+                                                    <span class="selected-filter-tag" style="background:#f3f2f1; color:#0b0c0c; font-family:'GDS Transport',Arial,sans-serif; border-radius:4px; padding:4px 12px; border:none;">
+                                                        Planning permission
+                                                        <button type="button" style="background:none; border:none; padding:0; margin-left:8px; font-size:16px; line-height:1; cursor:pointer;">×</button>
+                                                    </span>
+                                                    <span class="selected-filter-tag" style="background:#f3f2f1; color:#0b0c0c; font-family:'GDS Transport',Arial,sans-serif; border-radius:4px; padding:4px 12px; border:none;">
+                                                        Outline planning permission with some matters reserved
+                                                        <button type="button" style="background:none; border:none; padding:0; margin-left:8px; font-size:16px; line-height:1; cursor:pointer;">×</button>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div style="display:flex; align-items:center; gap:12px;">
+                                                <span class="govuk-body govuk-!-font-weight-bold" style="margin-right:8px;">Stage</span>
+                                                <span style="display:inline-flex; gap:8px;">
+                                                    <span class="selected-filter-tag" style="background:#f3f2f1; color:#0b0c0c; font-family:'GDS Transport',Arial,sans-serif; border-radius:4px; padding:4px 12px; border:none;">
+                                                        Accepted
+                                                        <button type="button" style="background:none; border:none; padding:0; margin-left:8px; font-size:16px; line-height:1; cursor:pointer;">×</button>
+                                                    </span>
+                                                    <span class="selected-filter-tag" style="background:#f3f2f1; color:#0b0c0c; font-family:'GDS Transport',Arial,sans-serif; border-radius:4px; padding:4px 12px; border:none;">
+                                                        Decision
+                                                        <button type="button" style="background:none; border:none; padding:0; margin-left:8px; font-size:16px; line-height:1; cursor:pointer;">×</button>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                    </div>
+
+                    <div class="pins-table__container" role="region">
+                        <table class="govuk-table">
+                            <thead class="govuk-table__head">
+                                <tr class="govuk-table__row">
+                                    <th scope="col" class="govuk-table__header">Application reference</th>
+                                    <th scope="col" class="govuk-table__header">Application type</th>
+                                    <th scope="col" class="govuk-table__header">Applicant name</th>
+                                    <th scope="col" class="govuk-table__header">Local planning authority</th>
+                                    <th scope="col" class="govuk-table__header">Stage</th>
+                                </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                                <tr class="govuk-table__row">
+                                    <th scope="row" class="govuk-table__header">
+                                        <a class="govuk-link" href="/applications/194fbc93-7f27-435e-9e97-6de8166df211/application-information">
+                                            CROWN/<wbr>2025/<wbr>0000057
+                                        </a>
+                                    </th>
+                                    <td class="govuk-table__cell">Planning permission</td>
+                                    <td class="govuk-table__cell">John Silver</td>
+                                    <td class="govuk-table__cell">System Test Borough Council</td>
+                                    <td class="govuk-table__cell"></td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <th scope="row" class="govuk-table__header">
+                                        <a class="govuk-link" href="/applications/0556d736-3ccb-4964-89d3-a3895f8c3a4c/application-information">
+                                            CROWN/<wbr>2025/<wbr>0000051
+                                        </a>
+                                    </th>
+                                    <td class="govuk-table__cell">Planning permission</td>
+                                    <td class="govuk-table__cell">Tom Elliott</td>
+                                    <td class="govuk-table__cell">System Test Borough Council</td>
+                                    <td class="govuk-table__cell"></td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <th scope="row" class="govuk-table__header">
+                                        <a class="govuk-link" href="/applications/446a058b-324d-4193-9c18-83bb2a68771c/application-information">
+                                            CROWN/<wbr>2025/<wbr>0000046
+                                        </a>
+                                    </th>
+                                    <td class="govuk-table__cell">Outline planning permission with some matters reserved</td>
+                                    <td class="govuk-table__cell">Some Org</td>
+                                    <td class="govuk-table__cell">System Test Borough Council</td>
+                                    <td class="govuk-table__cell"></td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <th scope="row" class="govuk-table__header">
+                                        <a class="govuk-link" href="/applications/40745538-d030-4370-bb74-26eb9bf57e87/application-information">
+                                            CROWN/<wbr>2025/<wbr>0000045
+                                        </a>
+                                    </th>
+                                    <td class="govuk-table__cell">Planning permission</td>
+                                    <td class="govuk-table__cell"></td>
+                                    <td class="govuk-table__cell">System Test Borough Council</td>
+                                    <td class="govuk-table__cell">Procedure decision</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <th scope="row" class="govuk-table__header">
+                                        <a class="govuk-link" href="/applications/707e56be-fd21-4749-a50d-07444f71f9f7/application-information">
+                                            CROWN/<wbr>2025/<wbr>0000020
+                                        </a>
+                                    </th>
+                                    <td class="govuk-table__cell">Planning permission</td>
+                                    <td class="govuk-table__cell"></td>
+                                    <td class="govuk-table__cell">System Test Borough Council</td>
+                                    <td class="govuk-table__cell"></td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <th scope="row" class="govuk-table__header">
+                                        <a class="govuk-link" href="/applications/75f87446-7bc5-4bc4-8fb5-a870690e106d/application-information">
+                                            CROWN/<wbr>2025/<wbr>0000018
+                                        </a>
+                                    </th>
+                                    <td class="govuk-table__cell">Planning permission</td>
+                                    <td class="govuk-table__cell"></td>
+                                    <td class="govuk-table__cell">System Test Borough Council</td>
+                                    <td class="govuk-table__cell"></td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <th scope="row" class="govuk-table__header">
+                                        <a class="govuk-link" href="/applications/ae6c3a49-df53-4df0-b193-33a4b631aba7/application-information">
+                                            CROWN/<wbr>2025/<wbr>0000017
+                                        </a>
+                                    </th>
+                                    <td class="govuk-table__cell">Planning permission</td>
+                                    <td class="govuk-table__cell"></td>
+                                    <td class="govuk-table__cell">System Test Borough Council</td>
+                                    <td class="govuk-table__cell"></td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <th scope="row" class="govuk-table__header">
+                                        <a class="govuk-link" href="/applications/d3172afc-7422-46af-bac0-eae8e422ac03/application-information">
+                                            CROWN/<wbr>2025/<wbr>0000010
+                                        </a>
+                                    </th>
+                                    <td class="govuk-table__cell">Planning permission</td>
+                                    <td class="govuk-table__cell"></td>
+                                    <td class="govuk-table__cell">Another System Test Borough Council</td>
+                                    <td class="govuk-table__cell">Procedure decision</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <th scope="row" class="govuk-table__header">
+                                        <a class="govuk-link" href="/applications/6a62b624-11b4-421b-a323-96d0af1e9a6b/application-information">
+                                            CROWN/<wbr>2025/<wbr>0000007
+                                        </a>
+                                    </th>
+                                    <td class="govuk-table__cell">Planning permission</td>
+                                    <td class="govuk-table__cell"></td>
+                                    <td class="govuk-table__cell">System Test Borough Council</td>
+                                    <td class="govuk-table__cell"></td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <th scope="row" class="govuk-table__header">
+                                        <a class="govuk-link" href="/applications/846f14ab-8a1d-4fa4-a34e-c333e79abdf2/application-information">
+                                            CROWN/<wbr>2025/<wbr>0000003
+                                        </a>
+                                    </th>
+                                    <td class="govuk-table__cell">Outline planning permission with some matters reserved</td>
+                                    <td class="govuk-table__cell">test 1 , test 3, test 4, test 5</td>
+                                    <td class="govuk-table__cell">System Test Borough Council</td>
+                                    <td class="govuk-table__cell"></td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <th scope="row" class="govuk-table__header">
+                                        <a class="govuk-link" href="/applications/edf4cf2c-f14d-414a-8368-4f96c9b5d253/application-information">
+                                            CROWN/<wbr>2025/<wbr>0000001
+                                        </a>
+                                    </th>
+                                    <td class="govuk-table__cell">Planning permission</td>
+                                    <td class="govuk-table__cell"></td>
+                                    <td class="govuk-table__cell">System Test Borough Council</td>
+                                    <td class="govuk-table__cell">Hearing</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-            </main>
-        </div>
-    {% endblock %}
+            </div>
+        </main>
+    </div>
+{% endblock %}
