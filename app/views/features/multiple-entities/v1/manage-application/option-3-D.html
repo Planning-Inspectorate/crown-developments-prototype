@@ -3,7 +3,7 @@
 {% extends "layouts/main.njk" %}
 
 {% set serviceName %}
-Option 4
+Option 3 - Collapsible
 {% endset%}
 
 {% block content %}
@@ -74,11 +74,11 @@ Option 4
 <div class="floating-panel">
 
     <h3 class="govuk-heading-m">Prototype: Multiple entities</h3>
-    <div><a href="option-1-C.html#contacts">Option 1</a> | <a href="option-2-C.html#contacts">Option 2</a> | <a href="option-3-C.html#contacts">Option 3</a> | <a href="option-4-C.html#contacts">Option 4</a></div>
-    <a href="option-4-A#contacts" class="govuk-link govuk-button--secondary">A) Empty</a>
-    <a href="option-4-B#contacts" class="govuk-link govuk-button--secondary">B) Single</a>
-    <a href="option-4-C#contacts" class="govuk-link govuk-button--secondary">C) Multiple</a>
-    <a href="option-4-D#contacts" class="govuk-link govuk-button--secondary">D) Max</a>
+    <div><a href="option-1-D.html#contacts">Option 1</a> | <a href="option-2-D.html#contacts">Option 2</a> | <a href="option-3-D.html#contacts">Option 3</a> | <a href="option-4-D.html#contacts">Option 4</a></div>
+    <a href="option-3-A#contacts" class="govuk-link govuk-button--secondary">A) Empty</a>
+    <a href="option-3-B#contacts" class="govuk-link govuk-button--secondary">B) Single</a>
+    <a href="option-3-C#contacts" class="govuk-link govuk-button--secondary">C) Multiple</a>
+    <a href="option-3-D#contacts" class="govuk-link govuk-button--secondary">D) Max</a>
     
   </div>
 
@@ -415,7 +415,7 @@ Option 4
                             Local planning authority (LPA)
                         </dt>
               <dd class="govuk-summary-list__value">
-                            (Ashford LPA<br>1 Town Square<br>Barking<br>IG11 7LU<hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible"> Another LPA<br>15 Rivergate<br>London<br>SO22 9RS)
+                            Ashford LPA<br>1 Town Square<br>Barking<br>IG11 7LU<hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible"> Another LPA<br>15 Rivergate<br>London<br>SO22 9RS
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="">
@@ -427,7 +427,8 @@ Option 4
                             LPA contacts
                         </dt>
               <dd class="govuk-summary-list__value">
-                            	system-test-council@example.com<br>1234567890
+                            	system-test-council@example.com<br>
+1234567890
                         </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="">
@@ -439,7 +440,22 @@ Option 4
                             Applicant
                         </dt>
               <dd class="govuk-summary-list__value">
-                Too many to display, select 'Edit' to view
+               
+                <a href="#" id="toggle-applicants" class="govuk-link" onclick="event.preventDefault(); var s=document.getElementById('applicant-org-extra'); if(s.style.display==='none'){s.style.display=''; this.textContent='Hide';}else{s.style.display='none'; this.textContent='Show all';}">Show all</a>
+                <br>
+                <span id="applicant-org-extra" style="display:none;">
+                 Applicant Organisation<br>1 Town Square<br>Barking<br>IG11 7LU<br>
+                <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
+                Applicant Organisation<br>1 Town Square<br>Barking<br>IG11 7LU
+                <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
+                Applicant Organisation<br>1 Town Square<br>Barking<br>IG11 7LU
+                <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
+                Applicant Organisation<br>1 Town Square<br>Barking<br>IG11 7LU
+                 <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
+              Applicant Organisation<br>1 Town Square<br>Barking<br>IG11 7LU
+              </span>
+             
+
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What are the Applicant Contact details? (Contacts)</span></a>
@@ -450,7 +466,29 @@ Option 4
                             Applicant contacts
                         </dt>
               <dd class="govuk-summary-list__value">
-                Too many to display, select 'Edit' to view
+                <a href="#" id="toggle-applicant-contacts" class="govuk-link" onclick="event.preventDefault(); var s=document.getElementById('applicant-contacts-extra'); if(s.style.display==='none'){s.style.display=''; this.textContent='Hide';}else{s.style.display='none'; this.textContent='Show all';}">Show all</a>
+                <br>
+                <span id="applicant-contacts-extra" style="display:none;">
+                  Firstname Surname <br>applicant@agent.com<br> 07712345678
+                  <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
+                  Firstname Surname <br>applicant.s@organisation.com
+                  <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
+                  Firstname Surname <br>applicant.s@organisation.com
+                  <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
+                  Firstname Surname <br>applicant@agent.com<br> 07712345678
+                  <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
+                  Firstname Surname <br>applicant.s@organisation.com
+                  <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
+                  Firstname Surname <br>applicant.s@organisation.com
+                  <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
+                  Firstname Surname <br>applicant.s@organisation.com
+                  <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
+                  Firstname Surname <br>applicant@agent.com<br> 07712345678
+                  <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
+                  Firstname Surname <br>applicant@agent.com<br> 07712345678
+                  <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
+                  Firstname Surname <br>applicant.s@organisation.com
+                </span>
                         </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the address of the Applicant? (Contacts)</span></a>
@@ -472,9 +510,30 @@ Option 4
                             Agent contacts
                         </dt>
               <dd class="govuk-summary-list__value">
-                                Too many to display, select 'Edit' to view
-
-                        </dd>
+                <a href="#" id="toggle-agent-contacts" class="govuk-link" onclick="event.preventDefault(); var s=document.getElementById('agent-contacts-extra'); if(s.style.display==='none'){s.style.display=''; this.textContent='Hide';}else{s.style.display='none'; this.textContent='Show all';}">Show all</a>
+                <br>
+                <span id="agent-contacts-extra" style="display:none;">
+                  Agent Agent <br>agent@agent.com<br> 07712345678
+                  <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
+                  Agent Agent <br>agent@agent.com
+                  <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
+                  Agent Agent <br>agent@agent.com
+                  <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
+                  Agent Agent <br>agent@agent.com
+                  <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
+                  Agent Agent <br>agent@agent.com
+                  <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
+                  Agent Agent <br>agent@agent.com<br> 07712345678
+                  <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
+                  Agent Agent <br>agent@agent.com<br> 07712345678
+                  <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
+                  Agent Agent <br>agent@agent.com<br> 07712345678
+                  <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
+                  Agent Agent <br>agent@agent.com
+                  <hr class="govuk-section-break govuk-section-break--m  govuk-section-break--visible">
+                  Agent Agent <br>agent@agent.com
+                </span>
+              </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="multiple-agent-14">Edit</a>
               </dd>
