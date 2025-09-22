@@ -2,46 +2,111 @@
 
 {% set pageName = "Home" %}
 
-
 {% block content %}
 
     <h1 class="govuk-heading-xl">Filter designs</h1>
 
-    <h2 class="govuk-heading-l">Find an application</h2>
+    <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+            Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+            <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                <a class="govuk-tabs__tab" href="#version-2">
+                    Version 2
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#version-1">
+                    Version 1
+                </a>
+            </li>
+        </ul>
+        <div class="govuk-tabs__panel" id="version-2">
+        <h2 class="govuk-heading-l">Find an application</h2>
 
-    <a class="govuk-button govuk-button--secondary" href="https://app.mural.co/t/allpins6990/m/allpins6990/1746611803608/c3078216935143c36c2da98c51e21f31f54d319d?wid=7-1751975307688">Mural link</a>
-    <a class="govuk-button govuk-button--secondary" href="https://pins-ds.atlassian.net/browse/CROWN-1091">Jira ticket 1091</a>
+            <a class="govuk-button govuk-button--secondary" href="https://app.mural.co/t/allpins6990/m/allpins6990/1746611803608/c3078216935143c36c2da98c51e21f31f54d319d?wid=7-1751975307688">Mural link</a>
+            <a class="govuk-button govuk-button--secondary" href="https://pins-ds.atlassian.net/browse/CROWN-1091">Jira ticket 1091</a>
 
-    <p class="govuk-body">Filter options:</p>
-    <ul class="govuk-list govuk-list--bullet">
-        <li>Application type</li>
-        <li> Application stage</li>
-    </ul>
+            <p class="govuk-body">Filter options:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Application type</li>
+                <li>
+                    Application stage</li>
+            </ul>
 
-    <div>
-        <a class="govuk-button govuk-button--start" href="applications.html">Start <svg class="govuk-button__start-icon govuk-!-display-none-print" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" focusable="false" aria-hidden="true">
-                <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
-            </svg>
-        </a>
-    </div>
+            <div>
+                <a class="govuk-button govuk-button--start" href="v2/applications.html">Start
+                    <svg class="govuk-button__start-icon govuk-!-display-none-print" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewbox="0 0 33 40" focusable="false" aria-hidden="true">
+                        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+                    </svg>
+                </a>
+            </div>
 
-    <h2 class="govuk-heading-l">Written representations</h2>
+            <h2 class="govuk-heading-l">Written representations</h2>
 
-    <a class="govuk-button govuk-button--secondary" href="https://app.mural.co/t/allpins6990/m/allpins6990/1746611803608/c3078216935143c36c2da98c51e21f31f54d319d?wid=5-1751975307688">Mural link</a>
-    <a class="govuk-button govuk-button--secondary" href="https://pins-ds.atlassian.net/browse/CROWN-1090">Jira ticket 1090</a>
+            <a class="govuk-button govuk-button--secondary" href="https://app.mural.co/t/allpins6990/m/allpins6990/1746611803608/c3078216935143c36c2da98c51e21f31f54d319d?wid=5-1751975307688">Mural link</a>
+            <a class="govuk-button govuk-button--secondary" href="https://pins-ds.atlassian.net/browse/CROWN-1090">Jira ticket 1090</a>
 
-    <p class="govuk-body">Filter options:</p>
-    <ul class="govuk-list govuk-list--bullet">
-        <li>Submitted by</li>
-        <li>Attachments (y/n)</li>
-        <li>Date submitted</li>
-    </ul>
+            <p class="govuk-body">Filter options:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Submitted by</li>
+                <li>Attachments (y/n)</li>
+                <li>Date submitted</li>
+            </ul>
 
-    <div>
-        <a class="govuk-button govuk-button--start" href="written-reps">Start <svg class="govuk-button__start-icon govuk-!-display-none-print" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" focusable="false" aria-hidden="true">
-                <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
-            </svg>
-        </a>
+            <div>
+                <a class="govuk-button govuk-button--start" href="v2/written-reps">Start
+                    <svg class="govuk-button__start-icon govuk-!-display-none-print" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewbox="0 0 33 40" focusable="false" aria-hidden="true">
+                        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="version-1">
+            <h2 class="govuk-heading-l">Find an application</h2>
+
+            <a class="govuk-button govuk-button--secondary" href="https://app.mural.co/t/allpins6990/m/allpins6990/1746611803608/c3078216935143c36c2da98c51e21f31f54d319d?wid=7-1751975307688">Mural link</a>
+            <a class="govuk-button govuk-button--secondary" href="https://pins-ds.atlassian.net/browse/CROWN-1091">Jira ticket 1091</a>
+
+            <p class="govuk-body">Filter options:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Application type</li>
+                <li>
+                    Application stage</li>
+            </ul>
+
+            <div>
+                <a class="govuk-button govuk-button--start" href="v1/applications.html">Start
+                    <svg class="govuk-button__start-icon govuk-!-display-none-print" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewbox="0 0 33 40" focusable="false" aria-hidden="true">
+                        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <h2 class="govuk-heading-l">Written representations</h2>
+
+            <a class="govuk-button govuk-button--secondary" href="https://app.mural.co/t/allpins6990/m/allpins6990/1746611803608/c3078216935143c36c2da98c51e21f31f54d319d?wid=5-1751975307688">Mural link</a>
+            <a class="govuk-button govuk-button--secondary" href="https://pins-ds.atlassian.net/browse/CROWN-1090">Jira ticket 1090</a>
+
+            <p class="govuk-body">Filter options:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Submitted by</li>
+                <li>Attachments (y/n)</li>
+                <li>Date submitted</li>
+            </ul>
+
+            <div>
+                <a class="govuk-button govuk-button--start" href="v1/written-reps">Start
+                    <svg class="govuk-button__start-icon govuk-!-display-none-print" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewbox="0 0 33 40" focusable="false" aria-hidden="true">
+                        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+                    </svg>
+                </a>
+            </div>
+
+        </div>
+
     </div>
 
 {% endblock %}
