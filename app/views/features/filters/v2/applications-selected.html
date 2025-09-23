@@ -26,7 +26,9 @@
     {% block content %}
         <main class="govuk-main-wrapper" id="main-content">
             <div class="govuk-grid-row">
+                
                 <div class="govuk-grid-column-full">
+
                     <h2 class="govuk-heading-l">
                         All Crown Development applications
                     </h2>
@@ -172,6 +174,51 @@
 
                     </div>
                     <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+
+
+                        <div class="govuk-grid-row" style="margin-top: 24px;">
+                            <div class="govuk-grid-column-full">
+                                <p class="govuk-body">
+                                    Active filters
+
+                                </p>
+                                <div style="flex-direction:column; gap:0px;">
+                                    <div style="display:flex; align-items:center; gap:12px;">
+
+                                        <span style="display:inline-flex; gap:0px;">
+                                            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                                <span class="govuk-body selected-filter-tag" style="margin:0px; border-radius:5px; background:#f3f2f1; color:#0b0c0c; font-family:'GDS Transport',Arial,sans-serif; border-radius:4px; padding:4px 12px; border:1px solid #b1b4b6; white-space:nowrap;">
+                                                    Type of application: Planning permission
+                                                    <button type="button" style="background:none; border:none; padding:0; margin-left:8px; font-size:20px; line-height:1; cursor:pointer;">×</button>
+                                                </span>
+                                                <span class="govuk-body selected-filter-tag" style="margin:0px; border-radius:5px; background:#f3f2f1; color:#0b0c0c; font-family:'GDS Transport',Arial,sans-serif; border-radius:4px; padding:4px 12px; border:1px solid #b1b4b6; white-space:nowrap;">
+                                                    Type of application: Outline planning permission with some matters reserved
+                                                    <button type="button" style="background:none; border:none; padding:0; margin-left:8px; font-size:16px; line-height:1; cursor:pointer;">×</button>
+                                                </span>
+                                                <span class="govuk-body selected-filter-tag" style="margin:0px; border-radius:5px; background:#f3f2f1; color:#0b0c0c; font-family:'GDS Transport',Arial,sans-serif; border-radius:4px; padding:4px 12px; border:1px solid #b1b4b6; white-space:nowrap;">
+                                                    Stage: Accepted
+                                                    <button type="button" style="background:none; border:none; padding:0; margin-left:8px; font-size:16px; line-height:1; cursor:pointer;">×</button>
+                                                </span>
+                                                <span class="govuk-body selected-filter-tag" style="margin:0px; border-radius:5px; background:#f3f2f1; color:#0b0c0c; font-family:'GDS Transport',Arial,sans-serif; border-radius:4px; padding:4px 12px; border:1px solid #b1b4b6; white-space:nowrap;">
+                                                    Stage: Decision
+                                                    <button type="button" style="background:none; border:none; padding:0; margin-left:8px; font-size:16px; line-height:1; cursor:pointer;">×</button>
+                                                </span>
+                                            </div>
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding-top:20px; font-size:19px;">
+
+                            <a href="#" class="govuk-link" style="font-weight:normal;">Clear all filters</a>
+                        </div>
+                        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+                    </div>
+
 
                     <div class="pins-table__container" role="region">
                         <table class="govuk-table">
