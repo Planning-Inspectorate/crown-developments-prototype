@@ -185,13 +185,13 @@
                                                         <fieldset class="govuk-fieldset" aria-describedby="type-of-application-hint">
                                                             <div class="govuk-checkboxes govuk-checkboxes--small">
                                                                 <div class="govuk-checkboxes__item">
-                                                                    <input class="govuk-checkboxes__input" id="type-1" name="type" type="checkbox" value="Planning permission">
+                                                                    <input checked class="govuk-checkboxes__input" id="type-1" name="type" type="checkbox" value="Planning permission">
                                                                     <label class="govuk-label govuk-checkboxes__label" for="type-1">
                                                                         Interested party
                                                                     </label>
                                                                 </div>
                                                                 <div class="govuk-checkboxes__item">
-                                                                    <input class="govuk-checkboxes__input" id="type-2" name="type" type="checkbox" value="Outline planning permission with some matters reserved">
+                                                                    <input checked class="govuk-checkboxes__input" id="type-2" name="type" type="checkbox" value="Outline planning permission with some matters reserved">
                                                                     <label class="govuk-label govuk-checkboxes__label" for="type-2">
                                                                         Consultee
                                                                     </label>
@@ -324,9 +324,10 @@
                                     </div>
 
                                 </details>
-                                <a href="written-reps-selected" class="govuk-button" style="margin-bottom:0px; width:100%">
-                                    Apply
-                                </a>
+                                 <a href="written-reps-selected" class="govuk-button" style="margin-bottom:0px; width:65%">
+                                        Apply
+                                    </a>
+                                    <a href="written-reps" class="govuk-link" style="padding:20px; font-weight:normal;">Clear all filters</a>
                             </div>
 
                             <summary class="govuk-details__summary">
@@ -337,6 +338,41 @@
 
                         </details>
                     </div>
+
+                     <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+                    <div class="govuk-grid-row" style="margin-top: 24px;">
+                        <div class="govuk-grid-column-full">
+                            <p class="govuk-body">
+                                Active filters
+
+                            </p>
+                            <div style="flex-direction:column; gap:0px;">
+                                <div style="display:flex; align-items:center; gap:12px;">
+
+                                    <span style="display:inline-flex; gap:0px;">
+                                        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                            <span class="govuk-body selected-filter-tag" style="margin:0px; border-radius:5px; background:#f3f2f1; color:#0b0c0c; font-family:'GDS Transport',Arial,sans-serif; border-radius:4px; padding:4px 12px; border:1px solid #b1b4b6; white-space:nowrap;">
+                                                Submitted by: Interested party
+                                                <button type="button" style="background:none; border:none; padding:0; margin-left:8px; font-size:20px; line-height:1; cursor:pointer;">×</button>
+                                            </span>
+                                            <span class="govuk-body selected-filter-tag" style="margin:0px; border-radius:5px; background:#f3f2f1; color:#0b0c0c; font-family:'GDS Transport',Arial,sans-serif; border-radius:4px; padding:4px 12px; border:1px solid #b1b4b6; white-space:nowrap;">
+                                                Submitted by: Consultee
+                                                <button type="button" style="background:none; border:none; padding:0; margin-left:8px; font-size:16px; line-height:1; cursor:pointer;">×</button>
+                                            </span>
+                                        </div>
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding-top:20px; font-size:19px;">
+
+                        <a href="applications" class="govuk-link" style="font-weight:normal;">Clear all filters</a>
+                    </div>
+                    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
                     <div id="pagination" class="govuk-body">
                         <p class="govuk-body">
                             Showing
@@ -939,8 +975,8 @@
     display: flex;
     align-items: center;
 ">
-    <a href="written-reps-selected" class="govuk-button govuk-button--secondary" style="margin:0;">
-        Filters selected
+    <a href="written-reps" class="govuk-button govuk-button--secondary" style="margin:0;">
+        No filters
     </a>
 </div>
 
