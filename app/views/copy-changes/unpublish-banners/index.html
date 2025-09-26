@@ -1,0 +1,60 @@
+{% extends "layouts/main.njk" %}
+{% set serviceName %}
+Crown Developments prototype
+{% endset%}
+
+{% block content %}
+
+  <h1 class="govuk-heading-xl">Unpublish banners</h1>
+  <details class="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        Jira link
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+      <ul class="govuk-list">
+        <a href="https://pins-ds.atlassian.net/browse/CROWN-240">CROWN-240</a>
+
+      </ul>
+    </div>
+  </details>
+
+  <div class="govuk-tabs" data-module="govuk-tabs">
+    <h2 class="govuk-tabs__title">
+      Contents
+    </h2>
+    <ul class="govuk-tabs__list">
+      <!--[VERSION 2] <li class="govuk-tabs__list-item govuk-tabs__list-item--selected"> <a class="govuk-tabs__tab" href="#version-2"> Version 2 </a> </li>-->
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#version-1">
+          Version 1
+        </a>
+      </li>
+    </ul>
+
+    <!--<div class="govuk-tabs__panel" id="version-2"> <h2 class="govuk-heading-m">[Version title]</h2> <ul class="govuk-list govuk-list--bullet"> <li>[Description]</li> </ul> <a href="" Class="govuk-button">[Link to prototype]</a> <details class="govuk-details"> <summary class="govuk-details__summary"> <span class="govuk-details__summary-text"> Page list </span> </summary> <div class="govuk-details__text"> <ul class="govuk-list"> <li><a href="" class="govuk-link"> [Links to pages]</a></li> </ul> </div> </details> <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible"> </div>-->
+
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="version-1">
+      <h2 class="govuk-heading-m">Unpublish banners</h2>
+      <ul class="govuk-list">
+        <li>
+          Changing back office unpublish and publish success panels to notification banners procedure question</li>
+      </ul>
+
+      <ul class="govuk-list  govuk-list--bullet">
+        <li>
+          <a href="unpublished" class="govuk-link">
+            Unpublished</a>
+        </li>
+        <li>
+          <a href="published" class="govuk-link">
+            Published</a>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+
+{% endblock %}
