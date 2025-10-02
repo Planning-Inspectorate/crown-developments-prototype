@@ -1,0 +1,122 @@
+{% extends "layouts/back-office.html" %}
+
+{% block content %}
+    <span class="govuk-caption-l">
+
+        CROWN/2025/0000010
+    </span>
+    <h1 class="govuk-heading-l">View application history</h1>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <table class="govuk-table">
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Date and time</th>
+                        <th scope="col" class="govuk-table__header govuk-!-width-two-quarters">Details</th>
+                        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">User</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">30 September 2025<br>
+                            <span>7:04am</span></td>
+                        <td class="govuk-table__cell">Application assigned to team North4</td>
+                        <td class="govuk-table__cell">John Crimwell</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">26 September 2025<br>
+                            <span>12:37pm</span></td>
+                        <td class="govuk-table__cell">The inspector Mabel Humphrey was assigned to the application</td>
+                        <td class="govuk-table__cell">John Crimwell</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">22 September 2025<br>
+                            <span>1:12pm</span></td>
+                        <td class="govuk-table__cell">Application note added:
+                            <br>[note contents]]</td>
+                        <td class="govuk-table__cell">Aisha Grumann</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">19 September 2025<br>
+                            <span>1:51pm</span></td>
+                        <td class="govuk-table__cell">Application progressed to 
+                            <strong class="govuk-tag govuk-tag--green">Inquiry</strong>
+                        </td>
+                        <td class="govuk-table__cell">Jeff Parker</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">19 September 2025<br>
+                            <span>1:51pm</span></td>
+                        <td class="govuk-table__cell">Email sent to LPA<details class="govuk-details">
+                                <summary class="govuk-details__summary">
+                                    <span class="govuk-details__summary-text">
+                                        View email
+                                    </span>
+                                </summary>
+                                <div class="govuk-details__text">
+                                    <div class="pins-notify-preview-border-no-bottom">
+                                        Subject: [Email subject]<br>
+                                    </div>
+                                    <div class="pins-notify-preview-border">
+                                        <p>[Email content]</div>
+                                    </div>
+                                </details>
+                            </td>
+                            <td class="govuk-table__cell">Jeff Parker</td>
+                        </tr>
+                        
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">19 September 2025<br>
+                                <span>1:51pm</span></td>
+                            <td class="govuk-table__cell">Application started<br>Application procedure: written</td>
+                            <td class="govuk-table__cell">Jeff Parker</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">19 September 2025<br>
+                                <span>1:51pm</span></td>
+                            <td class="govuk-table__cell">The application timeline was created</td>
+                            <td class="govuk-table__cell">Jeff Parker</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">19 September 2025<br>
+                                <span>1:50pm</span></td>
+                            <td class="govuk-table__cell">Application updated</td>
+                            <td class="govuk-table__cell">Jeff Parker</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">19 September 2025<br>
+                                <span>1:50pm</span></td>
+                            <td class="govuk-table__cell">Email sent to applicant<details class="govuk-details">
+                                    <summary class="govuk-details__summary">
+                                        <span class="govuk-details__summary-text">
+                                            View email
+                                        </span>
+                                    </summary>
+                                    <div class="govuk-details__text">
+                                        <div class="pins-notify-preview-border-no-bottom">
+                                            Subject: [Email subject]<br>
+                                        </div>
+                                        <div class="pins-notify-preview-border">
+                                            [Email content]</div>
+                                    </div>
+                                </details>
+                            </td>
+                            <td class="govuk-table__cell">Jeff Parker</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">19 September 2025<br>
+                                <span>1:50pm</span></td>
+                            <td class="govuk-table__cell">Application progressed to
+                                <strong class="govuk-tag govuk-tag--green">Ready to start</strong>
+                            </td>
+                            <td class="govuk-table__cell">Jeff Parker</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    {% endblock %}
