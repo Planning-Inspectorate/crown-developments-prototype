@@ -154,10 +154,13 @@
                             </li>
                         </ul>
                     </nav>
-<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+                    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
                     <h3 class="govuk-heading-s">Filters</h3>
-                    <div style="padding-bottom:10px;"><a href="" class="govuk-link"> Show all filters</a></div>
+                    <div style="padding-bottom:10px;">
+                        <a href="" class="govuk-link">
+                            Show all filters</a>
+                    </div>
                     <details class="govuk-details govuk-!-margin-bottom-0" id="filter-panel">
                         <summary class="govuk-details__summary" style="padding:10px 30px;width:80%">
                             <a class="govuk-link">
@@ -174,13 +177,13 @@
                                                     <div class="govuk-checkboxes__item">
                                                         <input class="govuk-checkboxes__input" id="type-1" name="type" type="checkbox" value="Planning permission">
                                                         <label class="govuk-label govuk-checkboxes__label" for="type-1">
-                                                            Interested party (20)
+                                                            Interested party (23)
                                                         </label>
                                                     </div>
                                                     <div class="govuk-checkboxes__item">
                                                         <input class="govuk-checkboxes__input" id="type-2" name="type" type="checkbox" value="Outline planning permission with some matters reserved">
                                                         <label class="govuk-label govuk-checkboxes__label" for="type-2">
-                                                            Consultee (2)
+                                                            Consultee (20)
                                                         </label>
                                                     </div>
 
@@ -210,13 +213,13 @@
                                                     <div class="govuk-checkboxes__item">
                                                         <input class="govuk-checkboxes__input" id="type-1" name="type" type="checkbox" value="Planning permission">
                                                         <label class="govuk-label govuk-checkboxes__label" for="type-1">
-                                                            Yes (28)
+                                                            Yes (3)
                                                         </label>
                                                     </div>
                                                     <div class="govuk-checkboxes__item">
                                                         <input class="govuk-checkboxes__input" id="type-2" name="type" type="checkbox" value="Outline planning permission with some matters reserved">
                                                         <label class="govuk-label govuk-checkboxes__label" for="type-2">
-                                                            No (2)
+                                                            No (72)
                                                         </label>
                                                     </div>
 
@@ -230,78 +233,90 @@
                     </details>
                     <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
 
-                    <details class="govuk-details govuk-!-margin-top-3 govuk-!-margin-padding-0" id="filter-panel">
+                    <details class="govuk-details govuk-!-margin-top-3 govuk-!-margin-padding-0" id="filter-panel" open="open">
                         <summary class="govuk-details__summary" style="padding:10px 30px;width:80%">
                             <a class="govuk-link">Date submitted</a>
                         </summary>
-                        <div style="padding-left:30px;">
+                        <div style="padding-left:25px;">
                             <form class="govuk-form-group">
-                                <fieldset class="govuk-fieldset">
+                                <fieldset" class="govuk-fieldset"> <div style="border-left:5px solid #d4351c; padding-left:15px;">
                                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xs">
                                         <h4 class="govuk-fieldset__heading">
                                             From
                                         </h4>
                                     </legend>
-                                    <div id="passport-issued-hint" class="govuk-hint">
+                                    <div class="govuk-hint">
                                         For example, 5 7 2022
                                     </div>
-                                    <div class="govuk-date-input" id="passport-issued">
+                                    <p id="docments-page-date-from-form-group-error" class="govuk-error-message">
+                                        <span class="govuk-visually-hidden">Error:</span>
+                                        'From' date must include month and year
+                                    </p>
+                                    <div class="govuk-date-input">
                                         <div class="govuk-date-input__item">
                                             <div class="govuk-form-group">
-                                                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                                <label class="govuk-label govuk-date-input__label">
                                                     Day
                                                 </label>
-                                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                                                <input class="govuk-input govuk-date-input__input govuk-input--width-2">
                                             </div>
                                         </div>
                                         <div class="govuk-date-input__item">
                                             <div class="govuk-form-group">
-                                                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                                <label class="govuk-label govuk-date-input__label">
                                                     Month
                                                 </label>
-                                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                                                <input class="govuk-input govuk-date-input__input govuk-input--width-2">
                                             </div>
                                         </div>
                                         <div class="govuk-date-input__item">
                                             <div class="govuk-form-group">
-                                                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                                <label class="govuk-label govuk-date-input__label">
                                                     Year
                                                 </label>
-                                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                                                <input class="govuk-input govuk-date-input__input govuk-input--width-4">
                                             </div>
                                         </div>
                                     </div>
-                                    <legend style="margin-top:20px" class="govuk-fieldset__legend govuk-fieldset__legend--xs">
+                                </div>
+
+                                <br>
+                                <div style="border-left:5px solid #D4351C; padding-left:15px;">
+                                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xs">
                                         <h4 class="govuk-fieldset__heading">
                                             To
                                         </h4>
                                     </legend>
-                                    <div id="passport-issued-hint" class="govuk-hint">
-                                        For example, 27 3 2023
+                                    <div class="govuk-hint">
+                                        For example, 5 7 2022
                                     </div>
-                                    <div class="govuk-date-input" id="passport-issued">
+                                    <p id="docments-page-date-from-form-group-error" class="govuk-error-message">
+                                        <span class="govuk-visually-hidden">Error:</span>
+                                        'To' date must include day and month
+                                    </p>
+                                    <div class="govuk-date-input">
                                         <div class="govuk-date-input__item">
                                             <div class="govuk-form-group">
-                                                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                                <label class="govuk-label govuk-date-input__label">
                                                     Day
                                                 </label>
-                                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                                                <input class="govuk-input govuk-date-input__input govuk-input--width-2">
                                             </div>
                                         </div>
                                         <div class="govuk-date-input__item">
                                             <div class="govuk-form-group">
-                                                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                                <label class="govuk-label govuk-date-input__label">
                                                     Month
                                                 </label>
-                                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                                                <input class="govuk-input govuk-date-input__input govuk-input--width-2">
                                             </div>
                                         </div>
                                         <div class="govuk-date-input__item">
                                             <div class="govuk-form-group">
-                                                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                                <label class="govuk-label govuk-date-input__label">
                                                     Year
                                                 </label>
-                                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                                                <input class="govuk-input govuk-date-input__input govuk-input--width-4">
                                             </div>
                                         </div>
                                     </div>
@@ -314,56 +329,39 @@
                     <a href="written-reps-selected" class="govuk-button" style="margin-bottom:0px;">
                         Apply filters
                     </a>
+
                 </div>
 
                 <div class="govuk-grid-column-two-thirds">
+                    <div class="govuk-error-summary" data-module="govuk-error-summary">
+                        <div role="alert">
+                            <h2 class="govuk-error-summary__title">
+                                There is a problem
+                            </h2>
+                            <div class="govuk-error-summary__body">
+                                <ul class="govuk-list govuk-error-summary__list">
+                                    <li>
+                                        <a href="#filter-panel">'From' date must include month and year</a>
+                                    </li>
+                                    <li>
+                                        <a href="#filter-panel">'To' date must include day and month</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                     <span class="govuk-caption-xl">CROWN/2025/0000001</span>
                     <h1 class="govuk-heading-xl">Written representations</h1>
                     <div>
                         <div id="search-hint" class="govuk-hint">
                             Search by keywords or by name of person or organisation who made the submission.</div>
-                        <form class="govuk-form-group" style="display: flex; gap: 8px; align-items: center; margin-bottom: 0px;">
+                        <form class="govuk-form-group" style="display: flex; gap: 8px; align-items: center">
                             <label class="govuk-label govuk-visually-hidden" for="keyword-search">Keyword search</label>
-                            <input class="govuk-input" id="keyword-search" name="keyword-search" type="text" autocomplete="off" style="margin-bottom: 0; width:100%;">
-                            <button class="govuk-button" id="keyword-search-button" type="submit" style="margin-bottom: 0;">Search</button>
+                            <input class="govuk-input" id="keyword-search" name="keyword-search" type="text" autocomplete="off" style="width:100%;">
+                            <button class="govuk-button" id="keyword-search-button" type="submit" style="margin-bottom:0px;">Search</button>
                         </form>
 
-                        
                     </div>
-
-                     <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
-
-                    <div class="govuk-grid-row" style="margin-top: 24px;">
-                        <div class="govuk-grid-column-full">
-                            <p class="govuk-body">
-                                Active filters
-
-                            </p>
-                            <div style="flex-direction:column; gap:0px;">
-                                <div style="display:flex; align-items:center; gap:12px;">
-
-                                    <span style="display:inline-flex; gap:0px;">
-                                        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                                            <span class="govuk-body selected-filter-tag" style="margin:0px; border-radius:5px; background:#f3f2f1; color:#0b0c0c; font-family:'GDS Transport',Arial,sans-serif; border-radius:4px; padding:4px 12px; border:1px solid #b1b4b6; white-space:nowrap;">
-                                                <button type="button" style="background:none; border:none; padding:0; margin-right:8px; font-size:20px; line-height:1; cursor:pointer;">×</button> Submitted by: Interested party
-                                            </span>
-                                            <span class="govuk-body selected-filter-tag" style="margin:0px; border-radius:5px; background:#f3f2f1; color:#0b0c0c; font-family:'GDS Transport',Arial,sans-serif; border-radius:4px; padding:4px 12px; border:1px solid #b1b4b6; white-space:nowrap;">
-                                                <button type="button" style="background:none; border:none; padding:0; margin-right:8px; font-size:16px; line-height:1; cursor:pointer;">×</button>Contains attachments: No
-                                                
-                                            </span>
-                                        </div>
-                                    </span>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding-top:20px; font-size:19px;">
-
-                        <a href="written-reps" class="govuk-link" style="font-weight:normal;">Clear search and filters</a>
-                    </div>
-                    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-
                     <div id="pagination" class="govuk-body">
                         <p class="govuk-body">
                             Showing
@@ -953,7 +951,7 @@
 </main>
 </div>
 
- <div id="no-filters-panel" style="
+<div id="no-filters-panel" style="
     position: fixed;
     bottom: 32px;
     right: 32px;
@@ -966,9 +964,9 @@
     display: flex;
     align-items: center;
 ">
-    <a href="written-reps" class="govuk-button govuk-button--secondary" style="margin:0;">
-        No filters
-    </a>
+<a href="written-reps-selected" class="govuk-button govuk-button--secondary" style="margin:0;">
+Filters selected
+</a>
 </div>
 
 {% endblock %}
