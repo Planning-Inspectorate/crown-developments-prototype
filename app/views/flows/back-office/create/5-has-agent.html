@@ -1,0 +1,40 @@
+{% extends "layouts/back-office.njk" %}
+
+{% set pageName = "Home" %}
+
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+<div style="margin-bottom: 20px;">
+    <fieldset class="govuk-fieldset" aria-describedby="hasAgent-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          Is the applicant using an agent?
+        </h1>
+      </legend>
+      <div id="hasAgent-hint" class="govuk-hint">
+    
+      </div>
+      <div class="govuk-radios govuk-radios" data-module="govuk-radios" data-govuk-radios-init="">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="hasAgent" name="hasAgent" type="radio" value="yes" data-cy="answer-yes">
+          <label class="govuk-label govuk-radios__label" for="hasAgent">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="hasAgent-2" name="hasAgent" type="radio" value="no" data-cy="answer-no">
+          <label class="govuk-label govuk-radios__label" for="hasAgent-2">
+            No
+          </label>
+        </div>
+      </div>
+    </fieldset>
+</div>
+
+
+<a href="6-agent-name" class="govuk-button">Continue</a>
+
+{% endblock %}
