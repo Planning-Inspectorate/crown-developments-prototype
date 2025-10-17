@@ -1,0 +1,52 @@
+{% extends "layouts/main.njk" %}
+{% set serviceName %}
+Crown Developments prototype
+{% endset%}
+
+{% block content %}
+
+    <h1 class="govuk-heading-xl">Application stage accordion</h1>
+
+    <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+            Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#version-3">
+                    Version 3
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                <a class="govuk-tabs__tab" href="#version-2">
+                    Version 2
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#version-1">
+                    Version 1
+                </a>
+            </li>
+
+        </ul>
+        <div class="govuk-tabs__panel" id="version-3">
+            <p>Updated content from Crown working group:</p>
+            <a href="/features/application-stages/v3/1-accepted" class="govuk-button" data-module="govuk-button">
+                View version 3</a>
+        </div>
+        <div class="govuk-tabs__panel" id="version-2">
+            <p>Updated content from Crown working group:</p>
+            <a href="/features/application-stages/v2/1-accepted" class="govuk-button" data-module="govuk-button">
+                View version 2</a>
+        </div>
+
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="version-1">
+            <p>Original content</p>
+            <a href="/features/application-stages/v1/1-accepted" class="govuk-button" data-module="govuk-button">
+                View version 1</a>
+
+        </div>
+
+    </div>
+
+{% endblock %}

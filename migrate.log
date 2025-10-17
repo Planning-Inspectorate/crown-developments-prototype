@@ -1,0 +1,6 @@
+2025-09-05T11:50:07.639Z
+cwd: ~/PINS/prototyping/crown-developments-prototype
+package: govuk-prototype-kit@13.18.0
+argv: /usr/local/bin/node ~/.npm/_npx/751a68202a4807b7/node_modules/.bin/govuk-prototype-kit migrate
+Started [Check migration is being applied to a pre v13 prototype]
+Failed [Check migration is being applied to a pre v13 prototype]

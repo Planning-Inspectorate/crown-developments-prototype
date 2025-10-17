@@ -59,6 +59,23 @@
     font-size: 1.1rem;
 }
 
+.full-bleed {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.cd-banner {
+  background: #10847F;
+  color: #fff;
+  padding: 24px 0; /* vertical padding only */
+}
+
+.cd-banner .govuk-heading-xl,
+.cd-banner .govuk-body,
+.cd-banner a.govuk-link { color: #fff; }
+.cd-banner a.govuk-link:hover { color: #fff; text-decoration: underline; }
+
+
 .back-office-header {
     background: #fff;
 

@@ -1,0 +1,944 @@
+{% extends "layouts/back-office.html" %}
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <ul class="govuk-list">
+      <li>
+        <a href="" class="govuk-link govuk-link--no-visited-state">Overview</a>
+      </li>
+      <li>
+        <a href="" class="govuk-link govuk-link--no-visited-state">Details</a>
+      </li>
+      <li>
+        <a href="#contacts" class="govuk-link govuk-link--no-visited-state">Contacts</a>
+      </li>
+      <li>
+        <a href="" class="govuk-link govuk-link--no-visited-state">Dates</a>
+      </li>
+      <li>
+        <a href="" class="govuk-link govuk-link--no-visited-state">Representations period</a>
+      </li>
+      <li>
+        <a href="" class="govuk-link govuk-link--no-visited-state">Case involvement</a>
+      </li>
+      <li>
+        <a href="" class="govuk-link govuk-link--no-visited-state">EIA</a>
+      </li>
+      <li>
+        <a href="" class="govuk-link govuk-link--no-visited-state">Hearing</a>
+      </li>
+      <li>
+        <a href="" class="govuk-link govuk-link--no-visited-state">Fee</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="govuk-grid-column-one-third govuk-!-text-align-right">
+    <a href="" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button"
+      target="_blank">
+      Open SharePoint Folder
+    </a>
+    <a href="" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Manage representations
+    </a>
+    <a href="" role="button" draggable="false" class="govuk-button govuk-button--warning" data-module="govuk-button">
+      Unpublish application
+    </a>
+  </div>
+  <div class="govuk-grid-column-full">
+    <div class="govuk-summary-card" id="overview">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          Overview
+        </h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Application reference
+            </dt>
+            <dd class="govuk-summary-list__value">
+              CROWN/2025/0000010
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> (Overview)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Applicant contact
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Test.edited.account@test.com<br>012345678912345<br>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What are the Applicant Contact
+                  details? (Overview)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Application description
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Test description of the application
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the description of the
+                  application? (Overview)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Application type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Planning permission
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What type of application is it?
+                  (Overview)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Local planning authority
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Another System Test Borough Council
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> Select the Local Planning Authority
+                  for this application (Overview)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Site address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Flat 1, 2 Test Building<br>Test Road<br>Test Town<br>Test County<br>me24th
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the address of the site?
+                  (Overview)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Site coordinates
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Easting: 369823<br>Northing: 023698<br>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What are the coordinates of the
+                  site? (Overview)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Site area (ha)
+            </dt>
+            <dd class="govuk-summary-list__value">
+              2
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the area of the site in
+                  hectares? (Overview)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Expected date of submission
+            </dt>
+            <dd class="govuk-summary-list__value">
+              21 December 2025
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the Expected Date of
+                  Submission? (Overview)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Decision outcome
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the decision outcome?
+                  (Overview)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Decision date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the Decision Date?
+                  (Overview)</span></a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card" id="details">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          Details
+        </h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Last updated
+            </dt>
+            <dd class="govuk-summary-list__value">
+              09:57 10 February 2025
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">
+                <span class="govuk-visually-hidden"> (Details)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Category
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Major development<br> Buildings over 1000 square metres
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the category?
+                  (Details)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Procedure
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Hearing
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the application procedure?
+                  (Details)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Status
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Consultation period open
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the application status?
+                  (Details)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Stage
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Procedure decision
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the application stage?
+                  (Details)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              LPA reference
+            </dt>
+            <dd class="govuk-summary-list__value">
+              25698
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is LPA reference for this
+                  application? (Details)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Nationally important
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Yes
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> Is this application nationally
+                  important? (Details)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Nationally important confirmation date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              30 December 2025
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the Nationally Important
+                  Confirmation Date? (Details)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Green belt
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Yes
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> Is this application in green belt
+                  land? (Details)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Site is visible from public land
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> Is the site visible from public
+                  land? (Details)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Health and safety issues
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Health and Safety
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What are the health and safety
+                  issues for the site? (Details)</span></a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card" id="contacts">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          Contacts
+        </h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Primary local planning authority (LPA)
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Ashfield District Council<br>
+              160 Tooley Street<br>
+              London<br>
+              SE1 2QH<br>
+              planning.applications@southwark.gov.uk<br>
+              020 7525 5403
+                
+              </ul>
+              
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">
+                <span class="govuk-visually-hidden"> (Contacts)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Secondary LPA
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Bristol City Council <br> 
+              City Hall <br>
+              College Green<br>
+              Bristol <br> 
+              BS1 5UY<br>
+              development.management@bristol.gov.uk<br>
+              0117 922 3000
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">
+                <span class="govuk-visually-hidden"> (Contacts)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Applicant
+            </dt>
+            <dd class="govuk-summary-list__value">-
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What are the Applicant Contact
+                  details? (Contacts)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Applicant contacts
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the address of the
+                  Applicant? (Contacts)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Agent
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="2-add-applicant.html">Edit</a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Agent contacts
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="multiple-agent-14">Edit</a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card" id="dates">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          Dates
+        </h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Application received date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the Application Received
+                  Date? (Dates)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Application accepted date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the Application Accepted
+                  Date? (Dates)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              LPA questionnaire sent date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the LPA Questionnaire Sent
+                  Date? (Dates)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              LPA questionnaire received date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the LPA Questionnaire
+                  Received Date? (Dates)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Publish date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              19 March 2025
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">
+                <span class="govuk-visually-hidden"> (Dates)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Press notice date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the Press Notice Date?
+                  (Dates)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Neighbours notified by LPA date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the Neighbours Notified By
+                  LPA Date? (Dates)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Site notice by LPA date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the Site Notice by LPA
+                  Date? (Dates)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Target decision date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the Target Decision Date?
+                  (Dates)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Extended target decision date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the Extended Target
+                  Decision Date? (Dates)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Recovered date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the Recovered Date?
+                  (Dates)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Recovered report sent date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the Recovered Report Sent
+                  Date? (Dates)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Site visit
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> When is the site visit?
+                  (Dates)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Withdrawn date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the Withdrawn Date?
+                  (Dates)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Original decision date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the Original Decision Date?
+                  (Dates)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Turned away date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the Turned Away Date?
+                  (Dates)</span></a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card" id="representations period">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          Representations period
+        </h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Representations period
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the Representations Period?
+                  (Representations Period)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Representations publish date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the Representations Publish
+                  Date? (Representations Period)</span></a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card" id="case involvement">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          Case involvement
+        </h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Inspector 1
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> Which inspector is assigned to this
+                  case? (Case Involvement)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Inspector 2
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Jacobs, Benjamin
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> Which inspector is assigned to this
+                  case? (Case Involvement)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Inspector 3
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> Which inspector is assigned to this
+                  case? (Case Involvement)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Assessor inspector
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> Which assessor inspector is
+                  assigned to this case? (Case Involvement)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Case officer
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> Which case officer is assigned to
+                  this case? (Case Involvement)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Planning officer
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> Which planning officer is assigned
+                  to this case? (Case Involvement)</span></a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card" id="eia">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          EIA
+        </h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              EIA screening
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> Is EIA Screening Required?
+                  (EIA)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              EIA screening outcome
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the EIA Screening Outcome?
+                  (EIA)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Environmental statement received date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the Environmental Statement
+                  Received Date? (EIA)</span></a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card" id="hearing">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          Hearing
+        </h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Hearing procedure notification date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the Hearing Procedure
+                  Notification Date? (Hearing)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Hearing date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the Hearing Date?
+                  (Hearing)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Hearing duration
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the hearing duration?
+                  (Hearing)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Hearing venue
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the venue of the hearing?
+                  (Hearing)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Hearing notification date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the Hearing Notification
+                  Date? (Hearing)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Hearing issues report published date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the Hearing Issues Report
+                  Published Date? (Hearing)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Hearing statements date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the Hearing Statements
+                  Date? (Hearing)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Hearing case management conference date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> What is the Hearing Case Management
+                  Conference Date? (Hearing)</span></a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card" id="fee">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          Fee
+        </h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Fee amount
+            </dt>
+            <dd class="govuk-summary-list__value">
+              -
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden"> Does the application have a fee?
+                  (Fee)</span></a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</main>
+</div>
+{% endblock %}

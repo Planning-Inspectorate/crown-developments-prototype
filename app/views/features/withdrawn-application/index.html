@@ -1,0 +1,83 @@
+{% extends "layouts/main.njk" %}
+{% set serviceName %}
+Crown Developments prototype {% endset%}
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">Withdrawn application</h1>
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Jira links
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <ul class="govuk-list">
+      <a href="https://pins-ds.atlassian.net/browse/CROWN-1170">CROWN-1170</a>
+
+    </ul>
+  </div>
+</details>
+
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#version-2">
+        Version 2
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#version-1">
+        Version 1
+      </a>
+    </li>
+  </ul>
+
+
+  <div class="govuk-tabs__panel" id="version-2">
+    <h2 class="govuk-heading-m">v2</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Added feedback from Crown Working Group</li>
+    </ul>
+
+    <a href="v2/application-information.html" Class="govuk-button">Application information</a>
+
+
+  </div>
+
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="version-1">
+    <h2 class="govuk-heading-m">Withdrawn application</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Front office designs for when an application is withdrawn</li>
+    </ul>
+    <a class="govuk-link" href="v1/application-information.html">Application information</a>
+    <!--
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Page list
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <ul class="govuk-list">
+          <li><a href="" class="govuk-link">
+              [Links to pages]</a></li>
+        </ul>
+      </div>
+    </details>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+-->
+  </div>
+
+</div>
+
+
+{% endblock %}

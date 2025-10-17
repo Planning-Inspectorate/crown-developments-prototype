@@ -1,0 +1,413 @@
+{% extends "layouts/front-office.html" %}
+
+{% set pageName = "Home" %}
+
+{% block beforeContent %}
+
+    <!-- Full-width teal banner -->
+    <div style="width:100vw; margin-left:calc(-50vw + 50%); background:#00847E;">
+        <div class="govuk-width-container">
+            <br>
+            <h1 style="color:white" class="govuk-heading-xl pins-info-heading">
+                Find a Crown Development application
+            </h1>
+            <p style="color:white" class="govuk-body pins-info-body">
+                Here you can find more information about Crown development applications. These are planning applications for non-urgent, nationally important developments made by Crown bodies (including Other Government Departments).
+            </p>
+            <p style="color:white" class="govuk-body pins-info-body">
+                This site is managed by the Planning Inspectorate, the government agency responsible for handling Crown development applications.
+            </p>
+            <br>
+        </div>
+    </div>
+    <div class="govuk-width-container">
+    {% endblock %}
+
+    {% block content %}
+
+        <style>
+
+            /* Tooltip text */
+            #tooltiptext {
+                visibility: hidden;
+                background-color: white;
+                color: #000;
+                text-align: left;
+                margin: 10px;
+                padding: 16px;
+                border-radius: 4px;
+                left: 48%;
+                /* Position the tooltip text - see examples below! */
+                position: absolute;
+                z-index: 1;
+            }
+
+            #tooltiptext:after {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 0;
+                z-index: 1;
+                border-style: solid;
+                border-color: #ffffff transparent;
+                border-width: 10px 10px 0;
+                bottom: -10px;
+                left: 50%;
+                margin-left: -10px;
+            }
+
+            #tooltip {
+                background-image: url("https://www.ordnancesurvey.co.uk/img-assets/products/overview-england-wales.x4fa67183.xe4e2d2f0.jpg");
+                background-size: cover;
+                height: 700px;
+                width: 100%;
+                background-color: rgb(188, 214, 188);
+                text-align: center;
+                padding-top: 400px;
+            }
+
+            .layout-slots__divider {
+                color: #ffffff;
+            }
+            a {
+                color: #1d70b8;
+            }
+            .grey-box {
+                display: none;
+            }
+
+            .govuk-main-wrapper {
+                padding-top: 0;
+            }
+
+            .filter {
+                background-color: #f3f2f1;
+                padding: 8px;
+                border-radius: 5px;
+                margin-left: 10px;
+                border: 1px solid #505a5f;
+                text-decoration: none;
+                color: black;
+            }
+
+            .filters {
+                margin-bottom: 16px;
+                padding-bottom: 14px;
+                border-bottom: 1px solid #b1b4b6;
+            }
+
+            .filters .govuk-details__text {
+                border: none;
+                padding-left: 0;
+            }
+
+            .filtersText {
+                text-decoration: none;
+                color: #000;
+                font-weight: 700;
+                font-size: 1.1875rem;
+            }
+
+            .filter:visited {
+                color: black;
+            }
+
+            .govuk-header,
+            .govuk-header__container {
+                background-color: rgb(7, 71, 69);
+
+                border-bottom: 10px solid #00847f;
+            }
+
+            .greybg {
+                box-shadow: #f3f2f1 800px 0px, #f3f2f1 -800px 0;
+            }
+
+            .listbox {
+                border: 1px solid rgb(147, 147, 147);
+                padding: 16px;
+                margin: 12px;
+                transform: translateY(600px);
+                position: absolute;
+                background-color: white;
+                width: 554px;
+            }
+
+            .govuk-details__summary::before {
+                clip-path: polygon(6.38% 22.63%, 49.5% 65.75%, 92.63% 22.63%, 100% 30%, 50% 80%, 0% 30%);
+                background-color: black;
+                color: black;
+                width: 3px;
+                height: 3px;
+                background-color: black;
+                color: black;
+            }
+
+            .govuk-details[open] > .govuk-details__summary::before {
+                clip-path: polygon(0% 71.88%, 49.5% 22.63%, 98.5% 71.88%, 91.63% 78.71%, 50% 36.88%, 7.37% 79.29%);
+                width: 3px;
+                height: 3px;
+            }
+        </style>
+        <main class="govuk-main-wrapper" id="main-content">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-l" style="margin-top: 30px;">
+                        All Crown Development applications
+                    </h2>
+                </div>
+                <div class="govuk-grid-column-full">
+
+                    <div>
+
+                        <div>
+                            <div id="search-hint" class="govuk-hint">
+                                Search applications</div>
+                            <form class="govuk-form-group" style="display: flex; gap: 8px; align-items: center; margin-bottom: 0px;">
+                                <label class="govuk-label govuk-visually-hidden" for="keyword-search">Keyword search</label>
+                                <input class="govuk-input" id="keyword-search" name="keyword-search" type="text" autocomplete="off" style="margin-bottom: 0; width:100%;">
+                                <button class="govuk-button" id="keyword-search-button" type="submit" style="margin-bottom: 0;">Search</button>
+                            </form>
+
+                            <details class="govuk-details govuk-!-margin-top-3" id="filter-panel">
+                                <div style="background-color:#F3F2F1; padding:20px;">
+                                    <details class="govuk-details govuk-!-margin-bottom-0" id="filter-panel">
+                                        <summary class="govuk-details__summary" style="width:96%;">
+                                            <h3 class="govuk-heading-s" style="display: flex; justify-content: space-between; align-items: center;">
+                                                <span>Type of application</span>
+                                                <span style="font-size:16px; font-weight: normal; margin-right: 16px; margin-left: 16px; text-align: right;">2 selected</span>
+                                            </h3>
+
+                                        </summary>
+                                        <div style="padding-left:30px;">
+                                            <form class="govuk-form-group">
+                                                <fieldset class="govuk-fieldset">
+                                                    <div class="govuk-grid-row">
+                                                        <div class="">
+                                                            <fieldset class="govuk-fieldset" aria-describedby="type-of-application-hint">
+                                                                <div class="govuk-checkboxes govuk-checkboxes--small">
+                                                                    <div class="govuk-checkboxes__item">
+                                                                        <input class="govuk-checkboxes__input" id="type-3" name="type" type="checkbox" value="Approval of reserved matters following outline approval">
+                                                                        <label class="govuk-label govuk-checkboxes__label" for="type-3">
+                                                                            Approval of reserved matters following outline approval (0)
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="govuk-checkboxes__item">
+                                                                        <input class="govuk-checkboxes__input" id="type-4" name="type" type="checkbox" value="Planning permission and listed building consent (LBC)">
+                                                                        <label class="govuk-label govuk-checkboxes__label" for="type-4">
+                                                                            Planning permission and listed building consent (LBC) for alterations, extension or demolition of a listed building (3)
+                                                                        </label>
+
+                                                                    </div>
+                                                                    <div class="govuk-checkboxes__item">
+                                                                        <input checked="checked" class="govuk-checkboxes__input" id="type-2" name="type" type="checkbox" value="Outline planning permission with some matters reserved">
+                                                                        <label class="govuk-label govuk-checkboxes__label" for="type-2">
+                                                                            Outline planning permission with some matters reserved (1)
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="govuk-checkboxes__item">
+                                                                        <input class="govuk-checkboxes__input" id="type-2" name="type" type="checkbox" value="Outline planning permission with some matters reserved">
+                                                                        <label class="govuk-label govuk-checkboxes__label" for="type-2">
+                                                                            Outline planning permission with all matters reserved (1)
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="govuk-checkboxes__item">
+                                                                        <input checked="checked" class="govuk-checkboxes__input" id="type-1" name="type" type="checkbox" value="Planning permission">
+                                                                        <label class="govuk-label govuk-checkboxes__label" for="type-1">
+                                                                            Planning permission (20)
+                                                                        </label>
+                                                                    </div>
+
+                                                                </div>
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </details>
+                                    <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+                                    <details class="govuk-details govuk-!-margin-top-3 govuk-!-margin-padding-0 govuk-!-margin-bottom-0" id="filter-panel">
+                                        <summary class="govuk-details__summary" style="width:96%;">
+                                            <h3 class="govuk-heading-s" style="display: flex; justify-content: space-between; align-items: center;">
+                                                <span>Stage</span>
+                                                <span style="font-size:16px; font-weight: normal; margin-right: 16px; margin-left: 16px; text-align: right;">2 selected</span>
+                                            </h3>
+                                        </summary>
+                                        <div style="padding-left:30px;">
+                                            <form class="govuk-form-group">
+                                                <fieldset class="govuk-fieldset">
+                                                    <div class="govuk-grid-row">
+                                                        <div class="">
+                                                            <fieldset class="govuk-fieldset" aria-describedby="stage-hint">
+                                                                <div class="govuk-checkboxes govuk-checkboxes--small">
+                                                                    <div class="govuk-checkboxes__item">
+                                                                        <input checked="checked" class="govuk-checkboxes__input" id="stage-accepted" name="stage" type="checkbox" value="Accepted">
+                                                                        <label class="govuk-label govuk-checkboxes__label" for="stage-accepted">
+                                                                            Accepted (0)
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="govuk-checkboxes__item">
+                                                                        <input class="govuk-checkboxes__input" id="stage-consultation" name="stage" type="checkbox" value="Consultation">
+                                                                        <label class="govuk-label govuk-checkboxes__label" for="stage-consultation">
+                                                                            Consultation (2)
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="govuk-checkboxes__item">
+                                                                        <input class="govuk-checkboxes__input" id="stage-procedure" name="stage" type="checkbox" value="Procedure choice">
+                                                                        <label class="govuk-label govuk-checkboxes__label" for="stage-procedure">
+                                                                            Procedure choice (2)
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="govuk-checkboxes__item">
+                                                                        <input class="govuk-checkboxes__input" id="stage-written" name="stage" type="checkbox" value="Written representations">
+                                                                        <label class="govuk-label govuk-checkboxes__label" for="stage-written">
+                                                                            Written representations (0)
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="govuk-checkboxes__item">
+                                                                        <input class="govuk-checkboxes__input" id="stage-inquiry" name="stage" type="checkbox" value="Inquiry">
+                                                                        <label class="govuk-label govuk-checkboxes__label" for="stage-inquiry">
+                                                                            Inquiry (1)
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="govuk-checkboxes__item">
+                                                                        <input class="govuk-checkboxes__input" id="stage-hearing" name="stage" type="checkbox" value="Hearing">
+                                                                        <label class="govuk-label govuk-checkboxes__label" for="stage-hearing">
+                                                                            Hearing (1)
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="govuk-checkboxes__item">
+                                                                        <input checked="checked" class="govuk-checkboxes__input" id="stage-decision" name="stage" type="checkbox" value="Decision">
+                                                                        <label class="govuk-label govuk-checkboxes__label" for="stage-decision">
+                                                                            Decision (0)
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </fieldset>
+                                                        </div>
+                                                        <div class="govuk-grid-column-one-third"></div>
+                                                    </div>
+
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </details>
+                                    <a href="applications" class="govuk-button" style="margin-bottom:0px">
+                                        Apply filters
+                                    </a>
+                                    <div style="margin: 20px 0px 0px 0px">
+                                        
+                                        <a href="applications" class="govuk-link" style="font-weight:normal;">Clear all filters</a>
+                                    </div>
+
+                                </div>
+
+                                <summary class="govuk-details__summary">
+                                    <span class="govuk-details__summary-text">
+                                        Filter applications
+                                    </span>
+                                </summary>
+
+                            </details>
+                        </div>
+
+                    </div>
+                    <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+                    <div class="govuk-grid-row" style="margin-top: 24px;">
+                        <div class="govuk-grid-column-full">
+                            <p class="govuk-body">
+                                Active filters
+
+                            </p>
+                            <div style="flex-direction:column; gap:0px;">
+                                <div style="display:flex; align-items:center; gap:12px;">
+
+                                    <span style="display:inline-flex; gap:0px;">
+                                        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                            <span class="govuk-body selected-filter-tag" style="margin:0px; border-radius:5px; background:#f3f2f1; color:#0b0c0c; font-family:'GDS Transport',Arial,sans-serif; border-radius:4px; padding:4px 12px; border:1px solid #b1b4b6; white-space:nowrap;">
+                                                <button type="button" style="background:none; border:none; padding:0; margin-right:8px; font-size:16px; line-height:1; cursor:pointer;">×</button>
+                                                Type of application: Planning permission
+
+                                            </span>
+                                            <span class="govuk-body selected-filter-tag" style="margin:0px; border-radius:5px; background:#f3f2f1; color:#0b0c0c; font-family:'GDS Transport',Arial,sans-serif; border-radius:4px; padding:4px 12px; border:1px solid #b1b4b6; white-space:nowrap;">
+                                                <button type="button" style="background:none; border:none; padding:0; margin-right:8px; font-size:16px; line-height:1; cursor:pointer;">×</button>
+                                                Type of application: Outline planning permission with some matters reserved
+
+                                            </span>
+                                            <span class="govuk-body selected-filter-tag" style="margin:0px; border-radius:5px; background:#f3f2f1; color:#0b0c0c; font-family:'GDS Transport',Arial,sans-serif; border-radius:4px; padding:4px 12px; border:1px solid #b1b4b6; white-space:nowrap;">
+                                                <button type="button" style="background:none; border:none; padding:0; margin-right:8px; font-size:16px; line-height:1; cursor:pointer;">×</button>
+                                                Stage: Accepted
+
+                                            </span>
+                                            <span class="govuk-body selected-filter-tag" style="margin:0px; border-radius:5px; background:#f3f2f1; color:#0b0c0c; font-family:'GDS Transport',Arial,sans-serif; border-radius:4px; padding:4px 12px; border:1px solid #b1b4b6; white-space:nowrap;">
+                                                <button type="button" style="background:none; border:none; padding:0; margin-right:8px; font-size:16px; line-height:1; cursor:pointer;">×</button>
+                                                Stage: Decision
+
+                                            </span>
+                                        </div>
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding-top:20px; font-size:19px;">
+
+                        <a href="applications" class="govuk-link" style="font-weight:normal;">Clear search and filters</a>
+                    </div>
+                    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+                </div>
+                <div style="margin-left:19px;">
+
+                    <div class="pins-table__container" role="region">
+                        <table class="govuk-table">
+                            <thead class="govuk-table__head">
+                                <tr class="govuk-table__row">
+                                    <th scope="col" class="govuk-table__header">Application reference</th>
+                                    <th scope="col" class="govuk-table__header">Applicant name</th>
+                                    <th scope="col" class="govuk-table__header">Local planning authority</th>
+                                </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                                <tr class="govuk-table__row">
+                                    <th scope="row" class="govuk-table__header">
+                                        <a class="govuk-link" href="/applications/194fbc93-7f27-435e-9e97-6de8166df211/application-information">
+                                            CROWN/<wbr>2025/<wbr>0000057
+                                        </a>
+                                    </th>
+
+                                    <td class="govuk-table__cell">Department for Sustainable Infrastructure and Regional Equity (DSIRE)</td>
+                                    <td class="govuk-table__cell">North Wessex Planning Partnership (NWPP)</td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<div id="no-filters-panel" style="
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 1000;
+    background: #fff;
+    border: 2px solid #b1b4b6;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+">
+    <a href="applications" class="govuk-button govuk-button--secondary" style="margin:0;">
+        No filters selected
+    </a>
+</div>
+{% endblock %}
