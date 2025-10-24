@@ -4,7 +4,8 @@
 
 {% block content %}
 
-
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
 
 <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
@@ -32,7 +33,7 @@
   </div>
   <div class="govuk-form-group">
     <label class="govuk-label" for="address-town">
-      Town or city
+      Town or city (optional)
     </label>
     <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="addressTown" type="text" autocomplete="address-level2">
   </div>
@@ -51,5 +52,8 @@
 </fieldset>
 
 <a href="3-manage-application.html#contacts" class="govuk-button">Save</a>
+
+</div>
+    </div>
 
 {% endblock %}

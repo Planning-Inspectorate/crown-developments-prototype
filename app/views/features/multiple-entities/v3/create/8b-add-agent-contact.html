@@ -4,8 +4,11 @@
 
 {% block content %}
 
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
 
 <h1 class="govuk-heading-l">Add agent contact details</h1>
 
@@ -15,19 +18,19 @@
     <label class="govuk-label" for="address-line-1">
       First name
     </label>
-    <input class="govuk-input govuk-!-width-two-thirds" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1">
+    <input class="govuk-input" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1">
   </div>
   <div class="govuk-form-group">
     <label class="govuk-label" for="address-line-2">
       Last name
     </label>
-    <input class="govuk-input govuk-!-width-two-thirds" id="address-line-2" name="addressLine2" type="text" autocomplete="address-line2">
+    <input class="govuk-input" id="address-line-2" name="addressLine2" type="text" autocomplete="address-line2">
   </div>
   <div class="govuk-form-group">
     <label class="govuk-label" for="address-line-2">
       Email address
     </label>
-    <input class="govuk-input govuk-!-width-two-thirds" id="address-line-2" name="addressLine2" type="text" autocomplete="address-line2">
+    <input class="govuk-input" id="address-line-2" name="addressLine2" type="text" autocomplete="address-line2">
   </div>
   
   <div class="govuk-form-group">
@@ -40,5 +43,7 @@
 </fieldset>
 
 <a href="8c-check-agent-contact-details" class="govuk-button">Continue</a>
+    </div>
+  </div>
 
 {% endblock %}
