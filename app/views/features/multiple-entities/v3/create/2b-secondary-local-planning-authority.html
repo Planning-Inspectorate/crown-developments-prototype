@@ -3,9 +3,9 @@
 {% set pageName = "Home" %}
 
 {% block content %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
-    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
-
+<main class="govuk-main-wrapper" id="main-content">
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
 
@@ -15,17 +15,20 @@
                         Select the secondary local planning authority for this application
                     </label>
                 </h1>
-                <select class="govuk-select" id="lpa" name="lpa" data-module="autocomplete" data-autoselect="" data-display-menu="" data-min-length="" data-show-all-values="" data-show-no-options-found="">
+                <select class="govuk-select" id="lpa" name="lpa" data-module="autocomplete" data-autoselect=""
+                    data-display-menu="" data-min-length="" data-show-all-values="" data-show-no-options-found="">
                     <option value="" selected="selected" disabled="disabled">Select an option</option>
                     <option value="Adur District Council">Adur District Council</option>
-                    <option value="Barking and Dagenham London Borough Council">Barking and Dagenham London Borough Council</option>
+                    <option value="Barking and Dagenham London Borough Council">Barking and Dagenham London Borough
+                        Council</option>
                     <option value="Barnet London Borough Council">Barnet London Borough Council</option>
                     <option value="Bath and North East Somerset Council">Bath and North East Somerset Council</option>
                     <option value="Bedford Borough Council">Bedford Borough Council</option>
                     <option value="Birmingham City Council">Birmingham City Council</option>
                     <option value="Blackpool Council">Blackpool Council</option>
                     <option value="Bolton Council">Bolton Council</option>
-                    <option value="Bournemouth, Christchurch and Poole Council">Bournemouth, Christchurch and Poole Council</option>
+                    <option value="Bournemouth, Christchurch and Poole Council">Bournemouth, Christchurch and Poole
+                        Council</option>
                     <option value="Bradford City Council">Bradford City Council</option>
                     <option value="Brent London Borough Council">Brent London Borough Council</option>
                     <option value="Brighton & Hove City Council">Brighton & Hove City Council</option>
@@ -72,7 +75,8 @@
                     <option value="Guildford Borough Council">Guildford Borough Council</option>
                     <option value="Hackney London Borough Council">Hackney London Borough Council</option>
                     <option value="Halton Borough Council">Halton Borough Council</option>
-                    <option value="Hammersmith and Fulham London Borough Council">Hammersmith and Fulham London Borough Council</option>
+                    <option value="Hammersmith and Fulham London Borough Council">Hammersmith and Fulham London Borough
+                        Council</option>
                     <option value="Hampshire County Council">Hampshire County Council</option>
                     <option value="Haringey London Borough Council">Haringey London Borough Council</option>
                     <option value="Harrow London Borough Council">Harrow London Borough Council</option>
@@ -86,9 +90,11 @@
                     <option value="Hull City Council">Hull City Council</option>
                     <option value="Isle of Wight Council">Isle of Wight Council</option>
                     <option value="Islington London Borough Council">Islington London Borough Council</option>
-                    <option value="Kensington and Chelsea London Borough Council">Kensington and Chelsea London Borough Council</option>
+                    <option value="Kensington and Chelsea London Borough Council">Kensington and Chelsea London Borough
+                        Council</option>
                     <option value="Kent County Council">Kent County Council</option>
-                    <option value="Kingston upon Thames London Borough Council">Kingston upon Thames London Borough Council</option>
+                    <option value="Kingston upon Thames London Borough Council">Kingston upon Thames London Borough
+                        Council</option>
                     <option value="Kirklees Council">Kirklees Council</option>
                     <option value="Knowsley Metropolitan Borough Council">Knowsley Metropolitan Borough Council</option>
                     <option value="Lambeth London Borough Council">Lambeth London Borough Council</option>
@@ -125,9 +131,11 @@
                     <option value="Preston City Council">Preston City Council</option>
                     <option value="Reading Borough Council">Reading Borough Council</option>
                     <option value="Redbridge London Borough Council">Redbridge London Borough Council</option>
-                    <option value="Richmond upon Thames London Borough Council">Richmond upon Thames London Borough Council</option>
+                    <option value="Richmond upon Thames London Borough Council">Richmond upon Thames London Borough
+                        Council</option>
                     <option value="Rochdale Borough Council">Rochdale Borough Council</option>
-                    <option value="Rotherham Metropolitan Borough Council">Rotherham Metropolitan Borough Council</option>
+                    <option value="Rotherham Metropolitan Borough Council">Rotherham Metropolitan Borough Council
+                    </option>
                     <option value="Rutland County Council">Rutland County Council</option>
                     <option value="Salford City Council">Salford City Council</option>
                     <option value="Sandwell Metropolitan Borough Council">Sandwell Metropolitan Borough Council</option>
@@ -143,7 +151,8 @@
                     <option value="Southwark London Borough Council">Southwark London Borough Council</option>
                     <option value="St Helens Borough Council">St Helens Borough Council</option>
                     <option value="Staffordshire County Council">Staffordshire County Council</option>
-                    <option value="Stockport Metropolitan Borough Council">Stockport Metropolitan Borough Council</option>
+                    <option value="Stockport Metropolitan Borough Council">Stockport Metropolitan Borough Council
+                    </option>
                     <option value="Stockton-on-Tees Borough Council">Stockton-on-Tees Borough Council</option>
                     <option value="Stoke-on-Trent City Council">Stoke-on-Trent City Council</option>
                     <option value="Suffolk County Council">Suffolk County Council</option>
@@ -168,7 +177,8 @@
                     <option value="Westminster City Council">Westminster City Council</option>
                     <option value="Wigan Council">Wigan Council</option>
                     <option value="Wiltshire Council">Wiltshire Council</option>
-                    <option value="Windsor and Maidenhead Borough Council">Windsor and Maidenhead Borough Council</option>
+                    <option value="Windsor and Maidenhead Borough Council">Windsor and Maidenhead Borough Council
+                    </option>
                     <option value="Wirral Council">Wirral Council</option>
                     <option value="Woking Borough Council">Woking Borough Council</option>
                     <option value="Wolverhampton City Council">Wolverhampton City Council</option>
@@ -178,5 +188,8 @@
             </div>
 
             <a href="3-applicant-name" class="govuk-button">Continue</a>
+        </div>
+    </div>
+</main>
 
-        {% endblock %}
+{% endblock %}
