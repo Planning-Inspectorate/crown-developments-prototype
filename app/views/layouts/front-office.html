@@ -449,3 +449,29 @@
 
 
 {% endblock %}
+
+{% block footer %}
+ {{ govukFooter({
+   meta: {
+     items: [
+       {
+         href: "",
+         text: "Terms and conditions"
+       },
+       {
+         href: "",
+         text: "Accessibility statement"
+       },
+       {
+         href: "",
+         text: "Privacy"
+       },
+       {
+         href: "",
+         text: "Cookies"
+       }
+     ],
+     visuallyHiddenTitle: "Footer links"
+   }
+ }) }}
+{% endblock %}
