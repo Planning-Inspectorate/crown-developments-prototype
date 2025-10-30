@@ -1,0 +1,39 @@
+{% extends "/layouts/front-office.html" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form class="form" action="" method="post">
+
+
+            {{ govukRadios({
+            name: "who-are-you-submitting-for",
+            fieldset: {
+            legend: {
+            text: "Who are you submitting a representation for?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+            }
+            },
+            items: [
+            {
+            value: "Myself",
+            text: "Myself"
+            },
+            {
+            value: "other",
+            text: "On behalf of another person or an organisation"
+            }
+            ]
+            }) }}
+
+
+            {{ govukButton({
+            text: "Continue"
+            }) }}
+        </form>
+    </div>
+</div>
+
+{% endblock %}
