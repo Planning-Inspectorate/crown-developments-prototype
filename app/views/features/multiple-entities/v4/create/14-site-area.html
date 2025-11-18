@@ -1,0 +1,36 @@
+{% extends "layouts/back-office.njk" %}
+
+{% set pageName = "Home" %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper" id="main-content">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">What is the area of the site in hectares?</h1>
+            <p class="govuk-body"></p>
+            <form action="" method="post" novalidate="">
+                <input type="hidden" name="_csrf" value="">
+                <div class="govuk-form-group">
+  
+  <div id="siteArea-hint" class="govuk-hint">
+    
+  </div>
+  <div class="govuk-input__wrapper">
+    <input class="govuk-input govuk-input--width-5" id="siteArea" name="siteArea" type="text" spellcheck="false" value="" aria-describedby="siteArea-hint" inputmode="numeric">
+    <div class="govuk-input__suffix" aria-hidden="true">ha</div>
+  </div>
+</div>
+
+<a href="15-development-description" class="govuk-button">Continue</a>
+            </form>
+        </div>
+    </div>
+        </main>
+        </div>
+        
+
+{% endblock %}
