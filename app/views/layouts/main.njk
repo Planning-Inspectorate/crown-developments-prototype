@@ -8,10 +8,3 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 {% block pageTitle %}
     Crown Developments prototype – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
-
-{% block beforeContent %}
-    {{ govukBackLink({
-        text: "Back",
-        href: "javascript:window.history.back()"
-    }) }}
-{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName = "Home" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      
+      <h1 class="govuk-heading-l">Add applicant contact details</h1>
+
+      <fieldset class="govuk-fieldset">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-line-1">
+            First name
+          </label>
+          <input class="govuk-input" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-line-2">
+            Last name
+          </label>
+          <input class="govuk-input" id="address-line-2" name="addressLine2" type="text" autocomplete="address-line2">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-line-2">
+            Email address
+          </label>
+          <input class="govuk-input" id="address-line-2" name="addressLine2" type="text" autocomplete="address-line2">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-county">
+            Phone number (optional)
+          </label>
+          <input class="govuk-input govuk-!-width-one-half" id="address-county" name="addressCounty" type="text">
+        </div>
+
+      </fieldset>
+
+      <a href="8-check-applicant-contact-details.html" class="govuk-button">Continue</a>
+                  <a href="6-check-applicant-contact-details" class="govuk-button govuk-button--secondary">Cancel</a>
+
+
+    </div>
+  </div>
+
+{% endblock %}

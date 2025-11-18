@@ -1,0 +1,269 @@
+{% extends "layouts/front-office.html" %}
+{% set serviceName %}
+Crown Developments prototype
+{% endset%}
+
+{% block content %}
+
+<!--Custom styles for application stage accordion-->
+
+<style>
+    .govuk-task-list__summary-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100% !important;
+    }
+
+    .govuk-task-list__name {
+        margin: 0;
+    }
+
+    .govuk-task-list__accordion {
+        margin-bottom: 0;
+        padding: 0.5em 0;
+        border-bottom: none;
+        /* GOV.UK grey border */
+    }
+
+    .summary-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .govuk-details__summary {
+        width: 96%;
+    }
+
+    .pins-modded-summary-full-width {
+        margin: 10px 0;
+    }
+</style>
+
+<div class="govuk-grid-row">
+
+    <!--Side nav-->
+    <div class="govuk-grid-column-one-third">
+
+        {{ mojSideNavigation({
+        label: "Side navigation",
+        items: [{
+        text: "Application details",
+        href: "#1",
+        active: true
+        }]
+        }) }}
+
+    </div>
+
+    <!--Main content-->
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <span class="govuk-caption-l">CROWN/2025/0000020</span>
+        <h1 class="govuk-heading-l">Application details</h1>
+
+        <!--
+
+        <h2 class="govuk-heading-m">About this application</h2>
+        {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+        {{ govukSummaryList({
+        rows: [
+        {
+        key: {
+        text: "Application type"
+        },
+        value: {
+        text: "Outline planning permission with some matters reserved"
+        }
+        },
+        {
+        key: {
+        text: "Local planning authority"
+        },
+        value: {
+        text: "Manchester City Council"
+        }
+        },
+        {
+        key: {
+        text: "Applicant name"
+        },
+        value: {
+        html: "Home Office"
+        }
+        },
+        {
+        key: {
+        text: "Site address"
+        },
+        value: {
+        html: "Easting: 654321, Northing: 123456"
+        }
+        },
+        {
+        key: {
+        text: "Stage"
+        },
+        value: {
+        text: "Accepted"
+        }
+        },
+        {
+        key: {
+        text: "Description of the proposed development"
+        },
+        value: {
+        text: "The Department for Civic Infrastructure has submitted a planning application for the development of a new
+        integrated public service campus on Crown land adjacent to the Ashton Civic Quarter. The proposal includes a
+        consolidated administrative centre, secure facilities for multi-agency coordination, and a publicly accessible
+        forum space designed to support democratic engagement and community outreach. The scheme prioritises low-carbon
+        construction, passive design principles, and enhanced public realm connectivity, with landscaped courtyards and
+        green infrastructure linking to existing pedestrian routes. The development forms part of a wider strategic
+        programme to modernise the government estate and improve service delivery across the region."
+
+        }
+        },
+        {
+        key: {
+        text: "Application form"
+        },
+        value: {
+        html: 'To view the full application, go to the <a href="#" class="govuk-link">Documents section</a>.'
+        }
+
+        }
+        ]
+        }) }}
+        
+
+        <h2 class="govuk-heading-m">Important dates</h2>
+
+        {{ govukSummaryList({
+        rows: [
+        {
+        key: {
+        text: "Application complete date"
+        },
+        value: {
+        text: "1 January 2025"
+        }
+        },
+        {
+        key: {
+        text: "Representations period"
+        },
+        value: {
+        text: "3 April 2025 at 12:00am to 30 April 2025 at 11:59pm"
+        }
+        },
+        {
+        key: {
+        text: "Decision date"
+        },
+        value: {
+        html: "-"
+        }
+        },
+        {
+        key: {
+        text: "Withdrawal date"
+        },
+        value: {
+        html: "26 September 2025"
+        }
+        }
+        ]
+        }) }}
+
+       
+
+        <h2 class="govuk-heading-m">Procedure details</h2>
+
+        {{ govukSummaryList({
+        rows: [
+        {
+        key: {
+        text: "Procedure type"
+        },
+        value: {
+        text: "-"
+        }
+
+        }
+
+        ]
+        }) }}
+
+        <h2 class="govuk-heading-m">Application decision</h2>
+
+        {{ govukSummaryList({
+        rows: [
+        {
+        key: {
+        text: "Decision date"
+        },
+        value: {
+        text: "-"
+        }
+        },
+        {
+        key: {
+        text: "Decision outcome"
+        },
+        value: {
+        text: "-"
+        }
+        }
+        ]
+        }) }}
+
+       
+        <h2 class="govuk-heading-m">Application stage</h2>
+        <p class="govuk-body">
+            This application was
+            <strong>withdrawn</strong>
+            on 26 September 2025.
+        </p>
+        <p class="govuk-body">
+            The details and documents for this application will be available for 1 year from the date of withdrawal.
+        </p>
+
+        <p class="govuk-body">Get more
+            <a class="govuk-link" href="https://www.gov.uk/guidance/crown-development-applications">information about
+                Crown Development applications</a>.
+        </p>
+
+        
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Contact us</h2>
+        <h3 class="govuk-heading-s">Telephone</h2>
+            <p class="govuk-body">If you have a reference number, make sure you have it with you when you call.</p>
+            <p class="govuk-body">Telephone: 0303 444 5000</p>
+            <p class="govuk-body">Open Monday to Friday: 9am to 4pm. Closed on weekends and bank holidays.</p>
+            <h3 class="govuk-heading-s">Email</h2>
+                <p class="govuk-body">
+                    <a
+                        href="mailto:crownapplications@planninginspectorate.gov.uk">crownapplications@planninginspectorate.gov.uk</a>
+                <p class="govuk-body">When writing an email, quote the name of the project in the subject line.</p>
+                <p class="govuk-body">We aim to respond within 10 working days.</p>
+
+                <h3 class="govuk-heading-s">Alternative formats</h2>
+                    <p class="govuk-body">Call or email to ask for application documents in alternative formats such as
+                        PDF, large print, easy read, audio recording or Braille.</p>
+    </div>
+
+    -->
+
+    <p class="govuk-body">This application was withdrawn on 18 November 2023.</p>
+     <p class="govuk-body">The application details are no longer available.</p>
+
+    <a class="govuk-body govuk-link" href="">Back to homepage</a>.
+
+
+    {% endblock %}

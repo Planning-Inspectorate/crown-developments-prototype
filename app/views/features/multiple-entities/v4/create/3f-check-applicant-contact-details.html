@@ -1,0 +1,21 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName = "Home" %}
+
+{% block content %}
+
+  <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+  <div class="govuk-grid-row">
+
+    <h1 class="govuk-heading-l">Check applicant contact details</h1>
+
+    <p class="govuk-body">No applicant contacts found</p>
+
+    <a href="4-add-applicant-contact.html" class="govuk-button govuk-button--secondary">Add details</a><br>
+
+    <a href="5-has-agent.html" class="govuk-button">Continue</a>
+
+  </div>
+
+{% endblock %}

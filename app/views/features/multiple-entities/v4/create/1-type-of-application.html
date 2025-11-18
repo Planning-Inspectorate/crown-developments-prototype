@@ -1,0 +1,67 @@
+{% extends "layouts/back-office.njk" %}
+
+{% set pageName = "Home" %}
+
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper" id="main-content">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form action="" method="post" novalidate="">
+                <input type="hidden" name="_csrf" value="">
+
+
+<fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h1 class="govuk-fieldset__heading">
+      What type of application is it?
+    </h1>
+  </legend>
+
+                        <p class="govuk-body"></p>
+
+
+                        <div class="govuk-form-group">
+  <div id="typeOfApplication-hint" class="govuk-hint">
+    
+  </div>
+  <div class="govuk-radios govuk-radios" data-module="govuk-radios" data-govuk-radios-init="">
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="typeOfApplication" name="typeOfApplication" type="radio" value="planning-permission" data-cy="answer-planning-permission">
+      <label class="govuk-label govuk-radios__label" for="typeOfApplication">
+        Planning permission
+      </label>
+    </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="typeOfApplication-2" name="typeOfApplication" type="radio" value="outline-planning-permission-some-reserved" data-cy="answer-outline-planning-permission-some-reserved">
+      <label class="govuk-label govuk-radios__label" for="typeOfApplication-2">
+        Outline planning permission with some matters reserved
+      </label>
+    </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="typeOfApplication-3" name="typeOfApplication" type="radio" value="outline-planning-permission-all-reserved" data-cy="answer-outline-planning-permission-all-reserved">
+      <label class="govuk-label govuk-radios__label" for="typeOfApplication-3">
+        Outline planning permission with all matters reserved
+      </label>
+    </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="typeOfApplication-4" name="typeOfApplication" type="radio" value="approval-of-reserved-matters" data-cy="answer-approval-of-reserved-matters">
+      <label class="govuk-label govuk-radios__label" for="typeOfApplication-4">
+        Approval of reserved matters following outline approval
+      </label>
+    </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="typeOfApplication-5" name="typeOfApplication" type="radio" value="planning-permission-and-listed-building-consent" data-cy="answer-planning-permission-and-listed-building-consent">
+      <label class="govuk-label govuk-radios__label" for="typeOfApplication-5">
+        Planning permission and listed building consent (LBC) for alterations, extension or demolition of a listed building
+      </label>
+    </div>
+  </div>
+</div>
+</fieldset>
+
+<a href="2-local-planning-authority" class="govuk-button">Continue</a>
+
+{% endblock %}
