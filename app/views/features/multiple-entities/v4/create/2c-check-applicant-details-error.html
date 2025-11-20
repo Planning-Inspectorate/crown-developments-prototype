@@ -1,0 +1,32 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName = "Home" %}
+
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#">Enter at least one applicant</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h1 class="govuk-heading-l">Check applicant details</h1>
+
+<p class="govuk-body">No applicants found</p>
+
+<a href="3-applicant-name.html" class="govuk-button govuk-button--secondary">Add details</a><br>
+
+<a href="4-add-applicant-contact.html" class="govuk-button">Continue</a>
+
+{% endblock %}
