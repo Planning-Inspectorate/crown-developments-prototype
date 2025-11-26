@@ -1,0 +1,73 @@
+{% extends "layouts/main.njk" %}
+{% set serviceName %}
+Crown Developments prototype
+{% endset%}
+
+{% block content %}
+
+  <h1 class="govuk-heading-xl">Representation submission method monitoring</h1>
+  <details class="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        Jira links
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+      <ul class="govuk-list">
+        <a href="https://pins-ds.atlassian.net/browse/CROWN-1301">CROWN-1301</a>
+        <a href="https://pins-ds.atlassian.net/browse/CROWN-1353">CROWN-1353</a>
+      </ul>
+    </div>
+  </details>
+
+  <div class="govuk-tabs" data-module="govuk-tabs">
+    <h2 class="govuk-tabs__title">
+      Contents
+    </h2>
+    <ul class="govuk-tabs__list">
+      <!--[VERSION 2] <li class="govuk-tabs__list-item govuk-tabs__list-item--selected"> <a class="govuk-tabs__tab" href="#version-2"> Version 2 </a> </li>-->
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#version-1">
+          Version 1
+        </a>
+      </li>
+    </ul>
+
+    <!--<div class="govuk-tabs__panel" id="version-2"> <h2 class="govuk-heading-m">[Version title]</h2> <ul class="govuk-list govuk-list--bullet"> <li>[Description]</li> </ul> <a href="" Class="govuk-button">[Link to prototype]</a> <details class="govuk-details"> <summary class="govuk-details__summary"> <span class="govuk-details__summary-text"> Page list </span> </summary> <div class="govuk-details__text"> <ul class="govuk-list"> <li><a href="" class="govuk-link"> [Links to pages]</a></li> </ul> </div> </details> <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible"> </div>-->
+
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="version-1">
+      <h2 class="govuk-heading-m">Version 1</h2>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Creating a way to identify how a representation was submitted to monitor digital take up for the service</li>
+      </ul>
+
+      <ul class="govuk-list">
+        <li>
+          <a href="v1/submission-method" class="govuk-link">Submission method</a>
+        </li>
+        <li>
+          <a href="v1/submission-method-error" class="govuk-link">Submission method with error</a>
+        </li>
+        <li>
+          <a href="v1/submission-method-reason" class="govuk-link">Submission method reason</a>
+        </li>
+        <li>
+          <a href="v1/submission-method-reason-error" class="govuk-link">Submission method reason with error</a>
+        </li>
+        <li>
+          <a href="v1/check-your-answers" class="govuk-link">Check your answers</a>
+        </li>
+         <li>
+          <a href="v1/check-your-answers-no-reason" class="govuk-link">Check your answers no reason</a>
+        </li>
+        <li>
+          <a href="v1/review-representation" class="govuk-link">Review representation</a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+{% endblock %}
