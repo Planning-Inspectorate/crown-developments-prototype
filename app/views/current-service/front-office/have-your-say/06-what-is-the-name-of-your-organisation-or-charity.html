@@ -1,0 +1,33 @@
+{% extends "layouts/front-office.html" %}
+
+{% set pageName = "What is the name of your organisation or charity?" %}
+
+{% block content %}
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+            <form action="" method="post" novalidate="">
+
+                <div class="govuk-form-group">
+                    <h1 class="govuk-label-wrapper">
+                        <label class="govuk-label govuk-label--l" for="orgName">
+                            What is the name of your organisation or charity?
+                        </label>
+                    </h1>
+                    <div id="orgName-hint" class="govuk-hint">
+                        We will publish your organisation name on the website along with your representation.
+                    </div>
+                    <input class="govuk-input" id="orgName" name="orgName" type="text" value="" aria-describedby="orgName-hint">
+                </div>
+
+                <button type="submit" class="govuk-button" data-module="govuk-button" data-cy="button-save-and-continue" data-govuk-button-init="">
+                    Continue
+                </button>
+            </form>
+        </div>
+
+    </div>
+
+{% endblock %}
