@@ -1,14 +1,30 @@
 {% extends "layouts/front-office.html" %}
 
-{% set pageName = "" %}
+{% set pageName = "What is the full name of the organisation or charity that you are representing?" %}
 
 {% block content %}
     <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
     <div class="govuk-grid-row">
-    
-    
-    
+
+        <div class="govuk-grid-column-two-thirds">
+            <form action="" method="post" novalidate="">
+
+                <div class="govuk-form-group">
+                    <h1 class="govuk-label-wrapper">
+                        <label class="govuk-label govuk-label--l" for="representedOrgName">
+                            What is the full name of the organisation or charity that you are representing?
+                        </label>
+                    </h1>
+                    <input class="govuk-input" id="representedOrgName" name="representedOrgName" type="text" value="">
+                </div>
+
+                <button type="submit" class="govuk-button" data-module="govuk-button" data-cy="button-save-and-continue" data-govuk-button-init="">
+                    Continue
+                </button>
+            </form>
+        </div>
+
     </div>
 
 {% endblock %}
