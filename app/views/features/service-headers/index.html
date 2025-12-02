@@ -1,0 +1,45 @@
+{% extends "layouts/main.njk" %}
+{% set serviceName %}
+Crown Developments prototype {% endset%}
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">Service header redesign</h1>
+<p class="govuk-body">Redesign of service header and footers to be consistent with other PINS services.</p>
+
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    <!--[VERSION 2]
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#version-2">
+        Version 2
+      </a>
+    </li>-->
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#version-1">
+        Version 1
+      </a>
+    </li>
+  </ul>
+
+
+  <!--<div class="govuk-tabs__panel" id="version-2">
+    <h2 class="govuk-heading-m">Version 2</h2>
+
+    <h3 class="govuk-heading-s"> Page list</h3>
+  </div>-->
+
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="version-1">
+    <h2 class="govuk-heading-m">Version 1</h2>
+
+    <h3 class="govuk-heading-s">Page list</h3>
+
+  </div>
+
+</div>
+
+
+{% endblock %}
