@@ -23,6 +23,22 @@ router.post('/continue-answer', function (req, res) {
   }
 });
 
+router.post('/who-are-you-submitting-a-representation-for', function (request, response) {
+  // save answer to session
+  request.session.data['submittedForId'] = request.body.submittedForId;
+
+  if (request.body.submittedForId === 'myself') {
+    return response.redirect('/current-service/front-office/have-your-say/04-what-is-your-name');
+  }
+
+  if (request.body.submittedForId === 'on-behalf-of') {
+    return response.redirect('/current-service/front-office/have-your-say/03-who-are-you-representing');
+  }
+
+  // fallback: go back to the form
+  return response.redirect('back');
+});
+
 router.use(function (req, res, next) {
     if (req.url.endsWith('start')) {
         req.session.data = {}; // clear session on each start
