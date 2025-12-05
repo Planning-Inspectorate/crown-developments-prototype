@@ -1,0 +1,36 @@
+{% extends "layouts/front-office.html" %}
+{% set serviceName %}
+Contact us
+{% endset%}
+
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <h1 class="govuk-heading-xl">
+                Contact us
+            </h1>
+        </div>
+    </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-m">Telephone</h2>
+            <p class="govuk-body">If you have a representation reference number, have it with you when you call.</p>
+            <p class="govuk-body">Telephone:
+                <a href="tel:03034445000" class="govuk-link">0303 444 5000</a>
+            </p>
+            <p class="govuk-body">Open Monday to Friday: 9am to 4pm. Closed on weekends and bank holidays.</p>
+            <h2 class="govuk-heading-m">Email</h2>
+            <p class="govuk-body">
+                <a class="govuk-link" href="mailto:not.real@fake.example.com">
+                    not.real@fake.example.com
+                </a>
+            </p>
+            <p class="govuk-body">When writing an email, quote the application reference in the subject line.</p>
+            <p class="govuk-body">We aim to respond within 10 working days.</p>
+            <h2 class="govuk-heading-m">Alternative formats</h2>
+            <p class="govuk-body">Call or email to ask for project documents in alternative formats such as PDF, large print, easy read, audio recording or braille.</p>
+
+        </div>
+    </div>
+
+{% endblock %}
