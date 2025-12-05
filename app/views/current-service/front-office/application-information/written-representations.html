@@ -1,0 +1,500 @@
+{% extends "layouts/front-office.html" %}
+
+{% set pageName = "Home" %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-third">
+            {{ mojSideNavigation({
+                label: "Side navigation",
+                items: [{
+                text: "Application Information",
+                href: "application-information"
+                }, {
+                text: "Documents",
+                href: "documents"
+                }, {
+                text: "Have your say",
+                href: "have-your-say-on-a-crown-development-application"
+                }, {
+                text: "Application updates",
+                href: "application-updates.html"
+                }, {
+                text: "Written representations",
+                href: "written-representations.html",
+                active: true
+                }]
+                }) }}
+
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+            <span class="govuk-caption-xl">CROWN/2025/0000001</span>
+            <h1 class="govuk-heading-xl">Written representations</h1>
+            <div>
+                <div id="search-hint" class="govuk-hint">
+                    Search by keywords or by name of person or organisation who made the submission.</div>
+                <form class="govuk-form-group" style="display: flex; gap: 8px; align-items: center">
+                    <label class="govuk-label govuk-visually-hidden" for="keyword-search">Keyword search</label>
+                    <input class="govuk-input" id="keyword-search" name="keyword-search" type="text" autocomplete="off" style="width:100%;">
+                    <button class="govuk-button" id="keyword-search-button" type="submit" style="margin-bottom:0px;">Search</button>
+                </form>
+
+            </div>
+            <div id="pagination" class="govuk-body">
+                <p class="govuk-body">
+                    Showing
+                    <strong>1</strong>
+                    to
+                    <strong>25</strong>
+                    of
+                    <strong>51</strong>
+                    representations, newest first.
+                </p>
+
+                <span>
+                    <strong>Results per page</strong>
+                </span>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <span class="govuk-body">25</span>
+
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a class="govuk-link--no-visited-state" href="?itemsPerPage=50" data-pagination="50">50</a>
+
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a class="govuk-link--no-visited-state" href="?itemsPerPage=100" data-pagination="100">100</a>
+            </div>
+            <div style="margin-top: 24px;">
+                <p class='govuk-body govuk-!-font-weight-bold'>
+                    <a href='written-representations-example' class='govuk-link'>Amira Khan on behalf of Avonvale Heritage Trust</a>
+                </p>
+                <p class='govuk-body'>See attached representation document.</p>
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Submitted by:</strong>
+                            Avonvale Heritage Trust</p>
+                    </div>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Date submitted:</strong>
+                            21 Nov 2025</p>
+                    </div>
+                </div>
+                <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
+                <p class='govuk-body govuk-!-font-weight-bold'>
+                    <a href='written-representations-example' class='govuk-link'>Rajesh Patel on behalf of Avonvale Chamber of Commerce</a>
+                </p>
+                <p class='govuk-body'>See attached letter.</p>
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Submitted by:</strong>
+                            Rajesh Patel</p>
+                    </div>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Date submitted:</strong>
+                            7 Sep 2025</p>
+                    </div>
+                </div>
+                <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
+                <p class='govuk-body govuk-!-font-weight-bold'>
+                    <a href='written-representations-example' class='govuk-link'>Sophie Williams</a>
+                </p>
+                <p class='govuk-body'>See attached letter.</p>
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Submitted by:</strong>
+                            Sophie Williams</p>
+                    </div>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Date submitted:</strong>
+                            13 May 2025</p>
+                    </div>
+                </div>
+                <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
+                <p class='govuk-body govuk-!-font-weight-bold'>
+                    <a href='written-representations-example' class='govuk-link'>Mohammed Ali on behalf of Community Development Group</a>
+                </p>
+                <p class='govuk-body'>While we welcome sustainable design features, we urge the applicant to commit to biodiversity net gain targets and publish a detailed ecological management plan.</p>
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Submitted by:</strong>
+                            Mohammed Ali</p>
+                    </div>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Date submitted:</strong>
+                            1 Oct 2025</p>
+                    </div>
+                </div>
+                <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
+                <p class='govuk-body govuk-!-font-weight-bold'>
+                    <a href='written-representations-example' class='govuk-link'>Chloe Brown</a>
+                </p>
+                <p class='govuk-body'>We request additional information on flood risk management and drainage plans for the site.</p>
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Submitted by:</strong>
+                            Chloe Brown</p>
+                    </div>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Date submitted:</strong>
+                            20 Sep 2025</p>
+                    </div>
+                </div>
+                <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
+                <p class='govuk-body govuk-!-font-weight-bold'>
+                    <a href='written-representations-example' class='govuk-link'>Kwame Mensah on behalf of Community Development Group</a>
+                </p>
+                <p class='govuk-body'>See attached letter.</p>
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Submitted by:</strong>
+                            Kwame Mensah</p>
+                    </div>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Date submitted:</strong>
+                            23 Apr 2025</p>
+                    </div>
+                </div>
+                <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
+                <p class='govuk-body govuk-!-font-weight-bold'>
+                    <a href='written-representations-example' class='govuk-link'>Emily Saunders on behalf of Community Development Group</a>
+                </p>
+                <p class='govuk-body'>See attached PDF letter.</p>
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Submitted by:</strong>
+                            Community Development Group</p>
+                    </div>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Date submitted:</strong>
+                            14 Jun 2025</p>
+                    </div>
+                </div>
+                <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
+                <p class='govuk-body govuk-!-font-weight-bold'>
+                    <a href='written-representations-example' class='govuk-link'>Hardeep Singh</a>
+                </p>
+                <p class='govuk-body'>The development will bring economic benefits, but clarity is needed on local procurement opportunities and job creation commitments.</p>
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Submitted by:</strong>
+                            Hardeep Singh</p>
+                    </div>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Date submitted:</strong>
+                            18 Nov 2025</p>
+                    </div>
+                </div>
+                <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
+                <p class='govuk-body govuk-!-font-weight-bold'>
+                    <a href='written-representations-example' class='govuk-link'>Fatima Begum on behalf of Heritage and Conservation Society</a>
+                </p>
+                <p class='govuk-body'>The development will bring economic benefits, but clarity is needed on local procurement opportunities and job creation commitments.</p>
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Submitted by:</strong>
+                            Heritage and Conservation Society</p>
+                    </div>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Date submitted:</strong>
+                            20 Oct 2025</p>
+                    </div>
+                </div>
+                <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
+                <p class='govuk-body govuk-!-font-weight-bold'>
+                    <a href='written-representations-example' class='govuk-link'>Daniel O’Connor on behalf of Community Development Group</a>
+                </p>
+                <p class='govuk-body'>We request additional information on flood risk management and drainage plans for the site.</p>
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Submitted by:</strong>
+                            Daniel O’Connor</p>
+                    </div>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Date submitted:</strong>
+                            20 Jul 2025</p>
+                    </div>
+                </div>
+                <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
+                <p class='govuk-body govuk-!-font-weight-bold'>
+                    <a href='written-representations-example' class='govuk-link'>Aisha Hussain on behalf of Heritage and Conservation Society</a>
+                </p>
+                <p class='govuk-body'>While we welcome sustainable design features, we urge the applicant to commit to biodiversity net gain targets and publish a detailed ecological management plan.</p>
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Submitted by:</strong>
+                            Aisha Hussain</p>
+                    </div>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Date submitted:</strong>
+                            18 Mar 2025</p>
+                    </div>
+                </div>
+                <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
+                <p class='govuk-body govuk-!-font-weight-bold'>
+                    <a href='written-representations-example' class='govuk-link'>James McAllister on behalf of Avonvale Residents Association</a>
+                </p>
+                <p class='govuk-body'>The development will bring economic benefits, but clarity is needed on local procurement opportunities and job creation commitments.</p>
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Submitted by:</strong>
+                            James McAllister</p>
+                    </div>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Date submitted:</strong>
+                            6 Aug 2025</p>
+                    </div>
+                </div>
+                <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
+                <p class='govuk-body govuk-!-font-weight-bold'>
+                    <a href='written-representations-example' class='govuk-link'>Meera Shah</a>
+                </p>
+                <p class='govuk-body'>Public transport links should be improved to support the development and reduce car dependency.</p>
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Submitted by:</strong>
+                            Meera Shah</p>
+                    </div>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Date submitted:</strong>
+                            8 Sep 2025</p>
+                    </div>
+                </div>
+                <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
+                <p class='govuk-body govuk-!-font-weight-bold'>
+                    <a href='written-representations-example' class='govuk-link'>Olivia Evans</a>
+                </p>
+                <p class='govuk-body'>We support the principle of government investment in the area but have concerns about traffic congestion during construction.</p>
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Submitted by:</strong>
+                            Olivia Evans</p>
+                    </div>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Date submitted:</strong>
+                            12 Apr 2025</p>
+                    </div>
+                </div>
+                <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
+                <p class='govuk-body govuk-!-font-weight-bold'>
+                    <a href='written-representations-example' class='govuk-link'>Adeola Okafor</a>
+                </p>
+                <p class='govuk-body'>See attached letter.</p>
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Submitted by:</strong>
+                            Adeola Okafor</p>
+                    </div>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Date submitted:</strong>
+                            30 Jul 2025</p>
+                    </div>
+                </div>
+                <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
+                <p class='govuk-body govuk-!-font-weight-bold'>
+                    <a href='written-representations-example' class='govuk-link'>Connor Murphy</a>
+                </p>
+                <p class='govuk-body'>Noise and dust during construction could impact local residents. Please ensure robust mitigation measures are in place.</p>
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Submitted by:</strong>
+                            Connor Murphy</p>
+                    </div>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Date submitted:</strong>
+                            20 Sep 2025</p>
+                    </div>
+                </div>
+                <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
+                <p class='govuk-body govuk-!-font-weight-bold'>
+                    <a href='written-representations-example' class='govuk-link'>Zara Ahmed on behalf of Green Avon Campaign</a>
+                </p>
+                <p class='govuk-body'>See attached representation document.</p>
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Submitted by:</strong>
+                            Green Avon Campaign</p>
+                    </div>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Date submitted:</strong>
+                            17 Apr 2025</p>
+                    </div>
+                </div>
+                <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
+                <p class='govuk-body govuk-!-font-weight-bold'>
+                    <a href='written-representations-example' class='govuk-link'>Harvey Thompson</a>
+                </p>
+                <p class='govuk-body'>See attached PDF letter.</p>
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Submitted by:</strong>
+                            Harvey Thompson</p>
+                    </div>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Date submitted:</strong>
+                            14 Sep 2025</p>
+                    </div>
+                </div>
+                <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
+                <p class='govuk-body govuk-!-font-weight-bold'>
+                    <a href='written-representations-example' class='govuk-link'>Priya Desai</a>
+                </p>
+                <p class='govuk-body'>Noise and dust during construction could impact local residents. Please ensure robust mitigation measures are in place.</p>
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Submitted by:</strong>
+                            Priya Desai</p>
+                    </div>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Date submitted:</strong>
+                            3 Mar 2025</p>
+                    </div>
+                </div>
+                <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
+                <p class='govuk-body govuk-!-font-weight-bold'>
+                    <a href='written-representations-example' class='govuk-link'>Liam Jones</a>
+                </p>
+                <p class='govuk-body'>The development will bring economic benefits, but clarity is needed on local procurement opportunities and job creation commitments.</p>
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Submitted by:</strong>
+                            Liam Jones</p>
+                    </div>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Date submitted:</strong>
+                            25 May 2025</p>
+                    </div>
+                </div>
+                <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
+                <p class='govuk-body govuk-!-font-weight-bold'>
+                    <a href='written-representations-example' class='govuk-link'>Chen Wei</a>
+                </p>
+                <p class='govuk-body'>We request additional information on flood risk management and drainage plans for the site.</p>
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Submitted by:</strong>
+                            Chen Wei</p>
+                    </div>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Date submitted:</strong>
+                            24 Nov 2025</p>
+                    </div>
+                </div>
+                <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
+                <p class='govuk-body govuk-!-font-weight-bold'>
+                    <a href='written-representations-example' class='govuk-link'>Grace Taylor on behalf of Avonvale Residents Association</a>
+                </p>
+                <p class='govuk-body'>We support the principle of government investment in the area but have concerns about traffic congestion during construction.</p>
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Submitted by:</strong>
+                            Avonvale Residents Association</p>
+                    </div>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Date submitted:</strong>
+                            21 Aug 2025</p>
+                    </div>
+                </div>
+                <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
+                <p class='govuk-body govuk-!-font-weight-bold'>
+                    <a href='written-representations-example' class='govuk-link'>Bilal Mahmood</a>
+                </p>
+                <p class='govuk-body'>See attached representation document.</p>
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Submitted by:</strong>
+                            Bilal Mahmood</p>
+                    </div>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Date submitted:</strong>
+                            8 May 2025</p>
+                    </div>
+                </div>
+                <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
+                <p class='govuk-body govuk-!-font-weight-bold'>
+                    <a href='written-representations-example' class='govuk-link'>Elena Petrova</a>
+                </p>
+                <p class='govuk-body'>The proposed development is adjacent to a listed building. We request that heritage impact assessments are published and mitigation measures are clearly outlined.</p>
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Submitted by:</strong>
+                            Elena Petrova</p>
+                    </div>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Date submitted:</strong>
+                            16 May 2025</p>
+                    </div>
+                </div>
+                <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
+                <p class='govuk-body govuk-!-font-weight-bold'>
+                    <a href='written-representations-example' class='govuk-link'>Marcus Green on behalf of Urban Futures Alliance</a>
+                </p>
+                <p class='govuk-body'>While we welcome sustainable design features, we urge the applicant to commit to biodiversity net gain targets and publish a detailed ecological management plan.</p>
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Submitted by:</strong>
+                            Urban Futures Alliance</p>
+                    </div>
+                    <div class='govuk-grid-column-one-half'>
+                        <p class='govuk-body'>
+                            <strong>Date submitted:</strong>
+                            30 Nov 2025</p>
+                    </div>
+                </div>
+                <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
