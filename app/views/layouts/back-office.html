@@ -27,3 +27,14 @@
     </div>
     <div class="back-office-header__bottom-line"></div>
   {% endblock %}
+
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+  tag: {
+    text: "Prototype",
+    classes: "govuk-tag--pink"
+  },
+  html: 'This is a design mockup: data is not stored and some features may not work.'
+}) }}
+  {% endblock %}

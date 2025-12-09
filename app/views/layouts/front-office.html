@@ -418,12 +418,15 @@
 
 {% block phaseBanner %}
 <div class="govuk-width-container">
-    {{ govukPhaseBanner({
-    tag: {
-    text: "Beta"
-    },
-    html: 'This is a beta service - your <a class="govuk-link" href="https://forms.office.com/e/qea9t1nt8M">feedback</a> will help us to improve it.'
-    }) }}
+    
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype",
+    classes: "govuk-tag--pink"
+  },
+  html: 'This is a design mockup: data is not stored and some features may not work.'
+}) }}
 </div>
 {% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
 
