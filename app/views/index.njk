@@ -5,22 +5,7 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <h1 class="govuk-heading-xl">Planning Inspectorate Crown Developments prototype</h1>
-
-    <!--
-
-    <h2 class="govuk-heading-m">What's included in this prototype</h2>
-    <p class="govuk-body">You can use this prototype to see:</p>
-    <ul class="govuk-list govuk-list--bullet">
-      <li>the existing Crown Developments service</li>
-      <li>upcoming features</li>
-      <li>user testing journeys</li>
-    </ul>
-    <div class="govuk-inset-text">
-      We regularly update the prototype to reflect live journeys, but it's not an exact copy and does not use production code. Data is not stored by the prototype.
-    </div>
-
-    -->
+    <h1 class="govuk-heading-xl">Crown Developments prototype</h1>
 
     <div class="govuk-tabs" data-module="govuk-tabs">
       <h2 class="govuk-tabs__title">
@@ -37,15 +22,13 @@
         <li class="govuk-tabs__list-item">
           <a class="govuk-tabs__tab" href="#user-testing">User testing</a>
         </li>
-        <li class="govuk-tabs__list-item">
-          <a class="govuk-tabs__tab" href="#copy-changes">Copy changes</a>
-        </li>
       </ul>
       <!--tab content-->
 
       <!--CURRENT SERVICE-->
       <div class="govuk-tabs__panel" id="current-service">
         <h2 class="govuk-heading-l">Current service</h2>
+        <p class="govuk-body">Prototype version of the service: data is not stored and some features may not work.</p>
         <h3 class="govuk-heading-m">Front office</h3>
         <h4 class="govuk-heading-s">Main site</h4>
         <ul class="govuk-list">
@@ -171,7 +154,7 @@
 
       <div class="govuk-tabs__panel" id="features">
         <ul class="govuk-task-list">
-          <h2 class="govuk-heading-medium">Upcoming features</h2>
+          <h2 class="govuk-heading-l">Upcoming features</h2>
 
           <details class="govuk-details">
             <summary class="govuk-details__summary">
@@ -204,6 +187,24 @@
                 </div>
 
               </li>
+
+              <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="features/change-procedure/index.html">Procedure type hint text</a>
+                <div class="govuk-task-list__hint">Add warning/hint message to back office<br>
+                  procedure question</div>
+              </div>
+              
+            </li>
+
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="copy-changes/unpublish-banners/index.html">Unpublish banners</a>
+                <div class="govuk-task-list__hint">Changing back office unpublish and publish success panels to notification banners<br>
+                  procedure question</div>
+              </div>
+             
+            </li>
 
             </details>
 
@@ -270,7 +271,7 @@
               <li class="govuk-task-list__item govuk-task-list__item--with-link">
                 <div class="govuk-task-list__name-and-hint">
                   <a class="govuk-link govuk-task-list__link" href="features/rep-submission-method/index.html">Representation submission method monitoring</a>
-                  <div class="govuk-task-list__hint">Creating a way to identify how a representation was submitted to monitor digital take up for the service.</div>
+                  <div class="govuk-task-list__hint">Identify how a representation was submitted to monitor digital take up for the service.</div>
                 </div>
                 <div class="govuk-task-list__status">
                   <strong class="govuk-tag govuk-tag--blue">In progress</strong>
@@ -284,7 +285,7 @@
           <!--USER TESTING-->
           <div class="govuk-tabs__panel" id="user-testing">
             <ul class="govuk-task-list">
-              <h2 class="govuk-heading-medium">User testing</h2>
+              <h2 class="govuk-heading-l">User testing</h2>
               <li class="govuk-task-list__item govuk-task-list__item--with-link">
                 <div class="govuk-task-list__name-and-hint">
                   <a class="govuk-link govuk-task-list__link" href="user-testing/a-b-edit-published-update">A/B testing: Editing published update</a>
@@ -297,30 +298,7 @@
             </ul>
           </div>
 
-          <div class="govuk-tabs__panel" id="copy-changes">
-            <h2 class="govuk-heading-medium">Copy changes</h2>
-            <li class="govuk-task-list__item govuk-task-list__item--with-link">
-              <div class="govuk-task-list__name-and-hint">
-                <a class="govuk-link govuk-task-list__link" href="features/change-procedure/index.html">Procedure type hint text</a>
-                <div class="govuk-task-list__hint">Add warning/hint message to back office<br>
-                  procedure question</div>
-              </div>
-              <div class="govuk-task-list__status">
-                <strong class="govuk-tag govuk-tag--green">Done</strong>
-              </div>
-            </li>
-
-            <li class="govuk-task-list__item govuk-task-list__item--with-link">
-              <div class="govuk-task-list__name-and-hint">
-                <a class="govuk-link govuk-task-list__link" href="copy-changes/unpublish-banners/index.html">Unpublish banners</a>
-                <div class="govuk-task-list__hint">Changing back office unpublish and publish success panels to notification banners<br>
-                  procedure question</div>
-              </div>
-              <div class="govuk-task-list__status">
-                <strong class="govuk-tag govuk-tag--yellow">In progress</strong>
-              </div>
-            </li>
-          </div>
+          
         </div>
 
       </div>
