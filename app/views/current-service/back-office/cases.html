@@ -1,0 +1,32 @@
+{% extends "layouts/back-office.html" %}
+{% from "components/dashboard-box/dashboard-box.njk" import dashboardBox %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ dashboardBox({
+
+    classes: "govuk-!-margin-bottom-6",
+    html: "<h1 class='govuk-label-wrapper'>Search cases</h1>
+    <div id='search-hint' class='govuk-hint'>
+      To find a specific case, search by reference.
+    </div>"
+    }) }}
+  </div>
+  <div class="govuk-grid-column-one-third">
+    {{ dashboardBox({
+
+    classes: "govuk-!-margin-bottom-6",
+    html: "<h1 class='govuk-label-wrapper'>Search cases</h1>
+    <h2>
+      <a href='/cases/create-a-case' id='create-case-link' class='govuk-link govuk-link--no-visited-state'>Create a
+        case</a>
+    </h2>"
+    }) }}
+  </div>
+</div>
+
+
+
+{%endblock%}
