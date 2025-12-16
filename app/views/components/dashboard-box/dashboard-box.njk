@@ -7,9 +7,9 @@
 
   {# width variants: 'one-third' or 'two-thirds' #}
   {% if params.width == "one-third" %}
-    {% set classes = classes ~ " dashboard-box--one-third" %}
+    {% set classes = classes ~ " govuk-grid-column-one-third" %}
   {% elif params.width == "two-thirds" %}
-    {% set classes = classes ~ " dashboard-box--two-thirds" %}
+    {% set classes = classes ~ " govuk-grid-column-two-thirds" %}
   {% endif %}
 
   {# any extra classes from caller #}
