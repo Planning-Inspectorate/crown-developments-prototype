@@ -1,22 +1,5 @@
 {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
 
-{% block head %}
-  {{ super() }}
-  <style>
-    /* force Arial on the whole page rendered by this layout */
-    html, body {
-      font-family: Arial, Helvetica, sans-serif !important;
-    }
-
-    /* optional: ensure GOV.UK heading classes also inherit the override */
-    .govuk-heading-xl,
-    .govuk-heading-l,
-    .govuk-heading-m,
-    .govuk-heading-s {
-      font-family: inherit !important;
-    }
-  </style>
-{% endblock %}
 
 {% block header %}
   {% include "components/headers/header-back-office.njk" %}
