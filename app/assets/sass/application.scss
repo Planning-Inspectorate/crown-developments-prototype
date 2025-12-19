@@ -5,39 +5,12 @@
 
 // Add extra styles here
 
-
 /*Front office*/
 
-.application-links {
-    margin-bottom: 12px;
-}
+/*Header styles*/
 
-.custom-header {
-    background-color: #074745;
-    padding: 20px 0;
-    border-bottom: 10px solid #13a19b;
-    width: 100%;
-}
 
-.custom-header__link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-.custom-header__logo {
-    height: 30px;
-    width: auto;
-    margin-right: 10px;
-    padding: 16px 15px 12px;
-}
-
-.custom-header__name {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ffffff;
-    padding-left: 35px;
-}
+/*Sortable table*/
 
 .govuk-table__header.sortable {
     color: #1d70b8;
@@ -49,108 +22,64 @@
     padding-left: 0.3em;
 }
 
-.govuk-pagination-info,
 .govuk-results-per-page {
     margin-top: 1em;
 }
 
-
-#PINS-name {
-    font-size: 1.1rem;
-}
+/*Teal homepage banner*/
 
 .full-bleed {
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
 }
 
 .cd-banner {
-  background: #10847F;
-  color: #fff;
-  padding: 24px 0; /* vertical padding only */
+    background: #10847F;
+    color: #fff;
+    padding: 24px 0;
+    /* vertical padding only */
 }
 
 .cd-banner .govuk-heading-xl,
 .cd-banner .govuk-body,
-.cd-banner a.govuk-link { color: #fff; }
-.cd-banner a.govuk-link:hover { color: #fff; text-decoration: underline; }
+.cd-banner a.govuk-link {
+    color: #fff;
+}
+
+.cd-banner a.govuk-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
 
 
-.back-office-header {
-    background: #fff;
+/*Components*/
 
-    &__bottom-line {
-        width: 100%;
-        height: 8px;
-        background-color: #28a197;
-    }
+/*Dashboard box*/
 
-    &__container {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: govuk-spacing(3) 0;
-    }
+.dashboard-box {
+    padding: govuk-spacing(5) govuk-spacing(5) 1px;
+	margin-bottom: govuk-spacing(7);
+	box-shadow:
+		0 2px 0 govuk-colour('mid-grey'),
+		inset 2px 0 0 govuk-colour('mid-grey'),
+		inset -2px 0 0 govuk-colour('mid-grey'),
+		inset 0 4px 0 govuk-colour('blue');
 
-    &__logo-group {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-right: govuk-spacing(6);
-        border-left: 2px solid #28a197;
-        padding-left: 5px;
-    }
+	&--title {
+		margin-bottom: govuk-spacing(4);
+	}
 
-    &__logo-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-    }
+	&--form {
+		position: relative;
+	}
 
-    &__logo {
-        height: auto;
-        width: auto;
-    }
+	&--btn {
+		margin-top: govuk-spacing(2);
+		margin-bottom: 2px;
+	}
+}
 
-    &__org-name {
-
-        font-size: 1rem;
-        line-height: 1.2;
-        text-align: left;
-    }
-
-    &__right {
-        flex: 1;
-        padding-left: govuk-spacing(2);
-        padding: 20px 50px;
-    }
-
-    &__service-name {
-        margin: 0;
-        font-weight: bold;
-    }
-
-    &__nav {
-        margin-top: govuk-spacing(2);
-        display: flex;
-        gap: govuk-spacing(4);
-    }
-
-    &__nav a {
-        font-size: 1rem;
-        text-decoration: none;
-        color: #0b0c0c;
-    }
-
-    &__nav a:hover {
-        text-decoration: underline;
-    }
-
-    * {
-        font-family: Arial, sans-serif !important;
-    }
-
-    .back-office-header__service-name {
-        padding-bottom: 30px;
-    }
+.row-inline {
+    display: flex;
+    gap: 8px;
 }
