@@ -2,15 +2,35 @@
 
 {% block content %}
 
-    <a href="javascript:history.back()" class="govuk-back-link" style="margin:0px">Back</a>
-    
-    <main class="govuk-main-wrapper" id="main-content">
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-two-thirds">
+<a href="javascript:history.back()" class="govuk-back-link" style="margin:0px">Back</a>
 
-            </div>
+<main class="govuk-main-wrapper" id="main-content">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form action="" method="post" novalidate="">
+                <h1 class="govuk-label-wrapper">
+                    <label class="govuk-label govuk-label--l" for="updateDetails">
+                        Update details
+                    </label>
+                </h1>
+
+                <div class="govuk-form-group">
+
+                    <div id="updateDetails-hint" class="govuk-hint">
+                        The recommended length is 1000 characters
+                    </div>
+                    <textarea class="govuk-textarea" id="updateDetails" name="updateDetails" rows="5"
+                        aria-describedby="updateDetails-hint"></textarea>
+                </div>
+
+                <a href="publish-now.html" type="submit" class="govuk-button" data-module="govuk-button" data-cy="button-save-and-continue"
+                    data-govuk-button-init="">
+                    Continue
+            </a>
+            </form>
         </div>
-    </main>
+    </div>
+</main>
 
 
 {% endblock %}
