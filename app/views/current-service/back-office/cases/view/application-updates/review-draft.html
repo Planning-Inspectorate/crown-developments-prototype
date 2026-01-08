@@ -1,0 +1,59 @@
+{% extends "layouts/back-office.html" %}
+
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link" style="margin:0px">Back</a>
+
+<main class="govuk-main-wrapper" id="main-content">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <h1 class="govuk-heading-xl">
+                Review draft update
+            </h1>
+        </div>
+    </div>
+    <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Update details
+            </dt>
+            <dd class="govuk-summary-list__value">
+                Decision has been issued
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link"
+                    href="create-update/update-details.html">Change<span
+                        class="govuk-visually-hidden"> details</span></a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Publish now?
+            </dt>
+            <dd class="govuk-summary-list__value">
+                No
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link"
+                    href="create-update/publish-now">Change<span
+                        class="govuk-visually-hidden"> publish now</span></a>
+            </dd>
+        </div>
+    </dl>
+    <div class="govuk-button-group">
+        <form method="POST">
+            <a href="application-updates" type="submit" class="govuk-button" data-module="govuk-button" data-govuk-button-init="">
+                Save
+            </a>
+            <a href="delete-update.html"
+                role="button" draggable="false" class="govuk-button govuk-button--warning" data-module="govuk-button"
+                data-govuk-button-init="">
+                Delete
+            </a>
+        </form>
+    </div>
+</main>
+
+
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "layouts/back-office.html" %}
+
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link" style="margin:0px">Back</a>
+
+<main class="govuk-main-wrapper" id="main-content">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <h1 class="govuk-heading-xl">
+                <span class="govuk-caption-xl">CROWN/2025/0000073</span>
+                Confirm unpublish update
+            </h1>
+        </div>
+    </div>
+    <div class="govuk-inset-text">
+        	New site assessment issued
+    </div>
+
+    <div class="govuk-button-group">
+        <form method="POST">
+            <a href="application-updates.html" type="submit" class="govuk-button" data-module="govuk-button" data-govuk-button-init="">
+                Confirm unpublish
+            </a>
+        </form>
+    </div>
+</main>
+
+
+{% endblock %}

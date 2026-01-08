@@ -1,0 +1,51 @@
+{% extends "layouts/back-office.html" %}
+
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link" style="margin:0px">Back</a>
+
+<main class="govuk-main-wrapper" id="main-content">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form action="" method="post" novalidate="">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="publishNow-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                                Do you want to publish this update now?
+                            </h1>
+                        </legend>
+                        <div id="publishNow-hint" class="govuk-hint">
+                            You can review the update before publishing
+                        </div>
+                        <div class="govuk-radios govuk-radios" data-module="govuk-radios" data-govuk-radios-init="">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="publishNow" name="publishNow" type="radio"
+                                    value="yes" data-cy="answer-yes">
+                                <label class="govuk-label govuk-radios__label" for="publishNow">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="publishNow-2" name="publishNow" type="radio"
+                                    value="no" data-cy="answer-no">
+                                <label class="govuk-label govuk-radios__label" for="publishNow-2">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+
+                <a href="review-update.html" type="submit" class="govuk-button" data-module="govuk-button" data-cy="button-save-and-continue"
+                    data-govuk-button-init="">
+                    Continue
+            </a>
+            </form>
+        </div>
+    </div>
+</main>
+
+
+{% endblock %}

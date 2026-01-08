@@ -1,0 +1,56 @@
+{% extends "layouts/back-office.html" %}
+
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link" style="margin:0px">Back</a>
+
+<main class="govuk-main-wrapper" id="main-content">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <h1 class="govuk-heading-xl">
+                Review unpublished update
+            </h1>
+        </div>
+    </div>
+    <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Update details
+            </dt>
+            <dd class="govuk-summary-list__value">
+                Decision has been delayed
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                First published
+            </dt>
+            <dd class="govuk-summary-list__value">
+                8 January 2025
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Date unpublished
+            </dt>
+            <dd class="govuk-summary-list__value">
+                8 December 2025
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Last edited
+            </dt>
+            <dd class="govuk-summary-list__value">
+                8 January 2025
+            </dd>
+        </div>
+    </dl>
+    <div class="govuk-button-group">
+        <form method="POST">
+        </form>
+    </div>
+</main>
+
+
+{% endblock %}

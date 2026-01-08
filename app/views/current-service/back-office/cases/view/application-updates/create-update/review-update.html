@@ -1,0 +1,59 @@
+{% extends "layouts/back-office.html" %}
+
+{% block content %}
+
+
+<main class="govuk-main-wrapper" id="main-content">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full govuk-!-margin-bottom-3">
+            <h1 class="govuk-heading-l">
+                Review update
+            </h1>
+        </div>
+    </div>
+
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Update details
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Enter update details
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link"
+                            href="update-details">Change<span
+                                class="govuk-visually-hidden"> Update details</span></a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Do you want to publish this update now?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Yes
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link"
+                            href="publish-now">Change<span
+                                class="govuk-visually-hidden"> Do you want to publish this update now?</span></a>
+                    </dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+
+    <form method="POST">
+        <a href="../application-updates.html" type="submit" class="govuk-button" data-module="govuk-button" data-govuk-button-init="">
+            Save
+        </a>
+    </form>
+
+
+</main>
+
+
+{% endblock %}
