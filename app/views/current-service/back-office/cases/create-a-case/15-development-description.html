@@ -4,30 +4,24 @@
 
 {% block content %}
 
-    <div class="govuk-width-container">
-        <a href="javascript:history.back()" class="govuk-back-link" style="margin:0px">Back</a>
-        <main class="govuk-main-wrapper">
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-two-thirds">
-
-                    <div class="govuk-column-two-thirds">
-
-                        <h1 >
-
-                            What is the description of the development?
-
-                        </h1>
-                        <div id="developmentDescription-hint" class="govuk-hint">
-                            This will be published on the website.
-                        </div>
-                        <textarea class="govuk-textarea" id="developmentDescription" name="developmentDescription" rows="5" aria-describedby="developmentDescription-hint"></textarea>
-                        <a href="16-expected-date-of-submission" class="govuk-button">Continue</a>
-
+ <a href="javascript:history.back()" class="govuk-back-link" style="margin:0px">Back</a>
+    
+    <main class="govuk-main-wrapper" id="main-content">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-l">What is the description of the development?</h1>
+                    <div id="developmentDescription-hint" class="govuk-hint">
+                        This will be published on the website.
                     </div>
+                    <textarea class="govuk-textarea" id="developmentDescription" name="developmentDescription" rows="5"
+                        aria-describedby="developmentDescription-hint"></textarea>
+                    <a href="16-expected-date-of-submission" class="govuk-button">Continue</a>
 
                 </div>
+
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
+</div>
 
 {% endblock %}
