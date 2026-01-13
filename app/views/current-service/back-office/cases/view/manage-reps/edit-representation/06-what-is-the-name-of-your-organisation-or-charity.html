@@ -1,0 +1,33 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName = "What is the name of your organisation or charity?" %}
+
+{% block content %}
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+            <form action="" method="post" novalidate="">
+
+                <div class="govuk-form-group">
+                    <h1 class="govuk-label-wrapper">
+                        <label class="govuk-label govuk-label--l" for="orgName">
+                            What is the name of your organisation or charity?
+                        </label>
+                    </h1>
+                    <div id="orgName-hint" class="govuk-hint">
+                        We will publish your organisation name on the website along with your representation.
+                    </div>
+                    <input class="govuk-input" id="orgName" name="orgName" type="text" value="" aria-describedby="orgName-hint">
+                </div>
+
+               <a href="07-are-you-acting-as-an-agent-on-behalf-of-a-client.html" class="govuk-button">
+                    Continue
+                </a>
+            </form>
+        </div>
+
+    </div>
+
+{% endblock %}

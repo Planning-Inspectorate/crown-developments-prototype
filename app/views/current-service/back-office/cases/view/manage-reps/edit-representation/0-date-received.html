@@ -1,0 +1,75 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName = "Home" %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+tag: {
+text: "Prototype",
+classes: "govuk-tag--pink"
+},
+html: 'This is a design mockup: data is not stored and some features may not work. <a class="govuk-link"
+    href="/../">Back to prototype home</a>.'
+}) }}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+    <form action="" method="post" novalidate="">
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="withdrawalRequestDate-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">
+                        What date was the representation recieved?
+                    </h1>
+                </legend>
+               
+                <div class="govuk-date-input" id="withdrawalRequestDate">
+                    <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="withdrawalRequestDate_day">
+                                Day
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                id="withdrawalRequestDate_day" name="withdrawalRequestDate_day" type="text"
+                                inputmode="numeric">
+                        </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="withdrawalRequestDate_month">
+                                Month
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                id="withdrawalRequestDate_month" name="withdrawalRequestDate_month" type="text"
+                                inputmode="numeric">
+                        </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="withdrawalRequestDate_year">
+                                Year
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-4"
+                                id="withdrawalRequestDate_year" name="withdrawalRequestDate_year" type="text"
+                                inputmode="numeric">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+
+
+        <a href="01-rep-type" type="submit" class="govuk-button" data-module="govuk-button" data-cy="button-save-and-continue"
+            data-govuk-button-init="">
+            Continue
+        </a>
+    </form>
+
+
+{% endblock %}
