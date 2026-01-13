@@ -1,0 +1,116 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName = "" %}
+
+{% block content %}
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+            <style>
+
+                .govuk-drop-zone {
+                    border: 2px dashed #9aa6b2;
+                    padding: 18px;
+                    border-radius: 4px;
+                    background: transparent;
+                }
+
+                .govuk-file-upload-button {
+                    display: block;
+                    width: 100%;
+                    text-align: left;
+                    padding: 0;
+                    background: transparent;
+                    border: none;
+                }
+
+                .govuk-file-upload-button__status {
+                    display: block;
+                    width: 100%;
+                    background-color: #D2E2F1;
+                    color: #0c2d4a;
+                    padding: 20px 10px;
+                    box-sizing: border-box;
+                    border-radius: 2px;
+                    font-size: 16px;
+                    margin: 0px;
+                }
+
+                .govuk-file-upload-button__pseudo-button-container {
+                    display: inline-block;
+                    margin-top: 12px;
+                    padding: 0;
+                }
+
+                .govuk-file-upload-button__pseudo-button .govuk-button {
+                    padding: 0px;
+                    margin: 0px;
+                    font-size: 14px;
+                }
+
+                .govuk-file-upload-button__instruction {
+                    margin-left: 12px;
+                    vertical-align: middle;
+                }
+            </style>
+            <input type="hidden" name="_csrf" value="">
+            <h1 class="govuk-heading-l">
+                Upload the withdrawal request
+            </h1>
+            
+            <p class="govuk-body">
+                You can upload the following file types:
+                <br>
+                PDF, PNG, JPG, JPEG, TIF, TIFF, DOC, DOCX, XLS, XLSX
+            </p>
+            <p class="govuk-body">Note that:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>files must not be compressed (ZIP files will not be accepted)</li>
+                <li>each file must be under 20MB</li>
+                <li>only 3 files can be uploaded at a time</li>
+                <li>total upload size must be under 1GB</li>
+            </ul>
+
+            <p class="govuk-body govuk-!-font-weight-bold">Upload attachments</p>
+
+            <form id="upload-form" method="post" enctype="multipart/form-data" action="/applications/4637e949-a248-495d-a6bf-9de0726c009b/have-your-say/agent/select-attachments/upload-documents">
+
+                <input type="hidden" name="_csrf" value="">
+                <div class="govuk-form-group">
+                    <label class="govuk-label govuk-visually-hidden" for="submitterAttachments" id="submitterAttachments-label">
+                        Upload attachments
+                    </label>
+                    <div class="govuk-drop-zone" data-module="govuk-file-upload" data-i18n.choose-files-button="Select attachments" data-i18n.drop-instruction="or drag and drop attachments here" data-govuk-file-upload-init="">
+                        <button class="govuk-file-upload-button govuk-file-upload-button--empty" type="button" id="submitterAttachments" aria-labelledby="submitterAttachments-label submitterAttachments-comma submitterAttachments">
+                            <span class="govuk-body govuk-file-upload-button__status" aria-live="polite">
+                                <p class="govuk-body" style="margin: 0px">No file chosen</p>
+                            </span><span class="govuk-visually-hidden" id="submitterAttachments-comma">,
+                            </span><a href="15b-upload-supporting-documents-uploading#uploadingBar" class="govuk-file-upload-button__pseudo-button-container"><span style="margin:0px" class="govuk-button govuk-button--secondary govuk-file-upload-button__pseudo-button">Select attachments</a>
+                                <span class="govuk-body govuk-file-upload-button__instruction">or drag and drop attachments here</span></span></a>
+                        <input class="govuk-file-upload" id="submitterAttachments-input" name="files[]" type="file" multiple="" accept="application/pdf, image/png, image/jpeg, image/tiff, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" hidden="true" tabindex="-1" aria-hidden="true">
+                    </div>
+                    <span class="govuk-file-upload-announcements govuk-visually-hidden" aria-live="assertive"></span>
+                </div>
+
+                <noscript>
+                    <button type="submit" class="govuk-button" data-module="govuk-button">
+                        Upload
+                    </a>
+                </noscript>
+            </form>
+
+            <form action="" method="post" novalidate="">
+                <input type="hidden" name="_csrf" value="">
+                <input type="hidden" name="submitterAttachments" value="IiI=">
+               <a href="check-your-answers.html" class="govuk-button">
+                    Continue
+                </a>
+            </form>
+
+        </div>
+
+    </div>
+
+{% endblock %}

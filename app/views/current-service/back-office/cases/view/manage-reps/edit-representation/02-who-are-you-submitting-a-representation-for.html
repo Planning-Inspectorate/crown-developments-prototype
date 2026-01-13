@@ -1,0 +1,45 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName = "Who are you submitting a representation for?" %}
+
+{% block content %}
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form class="form" action="/who-are-you-submitting-a-representation-for" method="post">
+
+                    <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                                Who are you submitting a representation for?
+                            </h1>
+                        </legend>
+
+                        <div class="govuk-form-group">
+                            <div class="govuk-radios govuk-radios" data-module="govuk-radios" data-govuk-radios-init="">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="submittedForId" name="submittedForId" type="radio" value="myself" data-cy="answer-myself" data-gtm-form-interact-field-id="0">
+                                    <label class="govuk-label govuk-radios__label" for="submittedForId">
+                                        Myself
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="submittedForId-2" name="submittedForId" type="radio" value="on-behalf-of" data-cy="answer-on-behalf-of">
+                                    <label class="govuk-label govuk-radios__label" for="submittedForId-2">
+                                        On behalf of another person or an organisation
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                   <a href="03-who-are-you-representing.html" class="govuk-button">
+                        Continue
+                    </a>
+                </form>
+            </div>
+        </div>
+
+{% endblock %}
