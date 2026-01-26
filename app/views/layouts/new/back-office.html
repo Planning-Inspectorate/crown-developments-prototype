@@ -2,90 +2,101 @@
 
 {% block header %}
 <style>
-.back-office-header {
-  background: #fff;
-}
+  *{
+    font-family: Helvetica, sans-serif !important;  
+  }
 
-.back-office-header__bottom-line {
-  width: 100%;
-  height: 8px;
-  background-color: #28a197;
-}
+  .back-office-header {
+    background: #fff;
+  }
 
-.back-office-header__container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 24px 0;
-}
+  .back-office-header__bottom-line {
+    width: 100%;
+    height: 8px;
+    background-color: #28a197;
+  }
 
-.back-office-header__logo-group {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-right: 48px;
-  border-left: 2px solid #28a197;
-  padding-left: 5px;
-}
+  .back-office-header__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 24px 0;
+  }
 
-.back-office-header__logo-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
+  .back-office-header__logo-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 48px;
+    border-left: 2px solid #28a197;
+    padding-left: 5px;
+  }
 
-.back-office-header__logo {
-  height: auto;
-  width: auto;
-}
+  .back-office-header__logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
 
-.back-office-header__org-name {
-  font-size: 1rem;
-  line-height: 1.2;
-  text-align: left;
-}
+  .back-office-header__logo {
+    height: auto;
+    width: auto;
+  }
 
-.back-office-header__right {
-  flex: 1;
-  padding-left: 16px;
-  padding: 20px 50px;
-}
+  .back-office-header__org-name {
+    font-size: 1rem;
+    line-height: 1.2;
+    text-align: left;
+  }
 
-.back-office-header__service-name {
-  margin: 0;
-  font-weight: bold;
-  padding-bottom: 30px;
-}
+  .back-office-header__right {
+    flex: 1;
+    padding-left: 16px;
+    padding: 20px 50px;
+  }
 
-.back-office-header__nav {
-  margin-top: 16px;
-  display: flex;
-  gap: 32px;
-}
+  .back-office-header__service-name {
+    margin: 0;
+    font-weight: bold;
+    padding-bottom: 30px;
+  }
 
-.back-office-header__nav a {
-  font-size: 1rem;
-  text-decoration: none;
-  color: #0b0c0c;
-  font-family: Arial, sans-serif !important;
-}
+  .back-office-header__nav {
+    margin-top: 16px;
+    display: flex;
+    gap: 32px;
+  }
 
-.back-office-header__nav a:hover {
-  text-decoration: underline;
-}
+  .back-office-header__nav a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #485156;
+  }
 
-.back-office-header * {
-  font-family: Arial, sans-serif !important;
-}
+  .back-office-header__nav a:hover {
+    text-decoration: underline;
+  }
 
-.back-office-header {
-  background: #F3F2F0;
-}
+  .back-office-header {
+    background: #F3F2F0;
+  }
 
-#logo {
-  width: 40%;
-}
+  #logo {
+    width: 40%;
+  }
 
+  .govuk-service-navigation__item--active {
+    border-bottom: black 5px solid;
+  }
+
+  .govuk-footer{
+    border-top: #11A19A 7px solid;
+    color:#485156;  
+  }
+
+  .govuk-template--rebranded .govuk-footer {
+    background:#F3F2F1;
+  }
 </style>
 
 <header class="back-office-header" role="banner">
@@ -100,75 +111,58 @@
   <div class="back-office-header__bottom-line"></div>
 
 
-<section aria-label="Service information"
-  class="govuk-service-navigation govuk-service-navigation--custom"
-  data-module="govuk-service-navigation">
-  <div class="govuk-width-container">
-    <div class="govuk-service-navigation__container">
-      <span class="govuk-service-navigation__service-name">
-        #
-          Service name
-        </a>
-      </span>
-      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
-        <button type="button"
-          class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle"
-          aria-controls="navigation" hidden>
-          Menu
-        </button>
-        <ul class="govuk-service-navigation__list" id="navigation">
-          <li class="govuk-service-navigation__item">
-            #
-              Navigation item 1
-            </a>
-          </li>
-          <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
-            #
-              <strong class="govuk-service-navigation__active-fallback">Navigation item 2</strong>
-            </a>
-          </li>
-          <li class="govuk-service-navigation__item">
-            #
-              Navigation item 3
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-</section>
-
-
-  <section aria-label="Service information" class="pins-govuk-service-navigation" data-module="pins-govuk-service-navigation">
+  <section aria-label="Service information" class="govuk-service-navigation--custom">
     <div class="govuk-width-container">
-      <div class="pins-govuk-service-navigation__container">
-        <span class="pins-govuk-service-navigation__service-name">
-          <a href="#" class="pins-govuk-service-navigation__link">
-            Manage Crown Development applications
-          </a>
+      <div class="govuk-service-navigation__container">
+        <span class="govuk-service-navigation__service-name">
+          Manage Crown Development applications
         </span>
-        <nav aria-label="Menu" class="pins-govuk-service-navigation__wrapper">
-          <button type="button" class="pins-govuk-service-navigation__toggle govuk-js-service-navigation-toggle"
+        <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+          <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle"
             aria-controls="navigation" hidden>
             Menu
           </button>
-          <ul class="pins-govuk-service-navigation__list" id="navigation">
-            <li class="pins-govuk-service-navigation__item pins-govuk-service-navigation__item--active">
-              <a class="pins-govuk-service-navigation__link" href="#" aria-current="true">
-                All cases
+          <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
+              All cases
               </a>
             </li>
-            <li class="pins-govuk-service-navigation__item">
-              <a class="pins-govuk-service-navigation__link" href="#">
-                <strong class="pins-govuk-service-navigation__active-fallback">Sign out</strong>
+            <li class="govuk-service-navigation__item">
+              <strong class="govuk-service-navigation__active-fallback">Sign out</strong>
               </a>
             </li>
-           
+
           </ul>
         </nav>
       </div>
     </div>
   </section>
 
+
 </header>
+
+{% endblock %}
+
+
+{% block content %}
+
+{% endblock %}
+
+
+{% block footer %}
+
+<footer class="govuk-footer">
+  <div class="govuk-width-container">
+
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <span class="govuk-footer__licence-description">
+          © 2025 Planning Inspectorate. All rights reserved.
+        </span>
+      </div>
+    </div>
+  </div>
+</footer>
+
 {% endblock %}
