@@ -1,0 +1,60 @@
+{% extends "layouts/back-office.html" %}
+
+{% block content %}
+
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+    <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-two-thirds" style="margin-top: 20px;">
+
+            {{ govukErrorSummary({
+            titleText: "There is a problem",
+            errorList: [
+                
+                {
+                text: "You cannot remove the only applicant contact. Add another contact first.",
+                href: "#"
+                }
+            ]
+            }) }}
+
+        </div>
+                <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-l">Check applicant contact details</h1>
+        <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key" style="width: 15%;">
+                    Contact 1
+                </dt>
+                <dd class="govuk-summary-list__value" style="width: 35%;">
+
+                    Marcus O'Connell<br>
+                    marcus.oconnell@justice.gov.uk<br>
+                    +44 7700 900123
+                </dd>
+                <dd class="govuk-summary-list__value">
+                    Ministry of Justice
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <ul class="govuk-summary-list__actions-list">
+                        <li class="govuk-summary-list__actions-list-item">
+                            <a class="govuk-link" href="4-applicant-contacts">Remove<span class="govuk-visually-hidden">
+                                    contact details</span></a>
+                        </li>
+                        <li class="govuk-summary-list__actions-list-item">
+                            <a class="govuk-link" href="">Change<span class="govuk-visually-hidden">
+                                    contact details</span></a>
+                        </li>
+                    </ul>
+                </dd>
+            </div>
+        </dl>
+        <a href="" class="govuk-button govuk-button--secondary">Add details</a><br>
+
+        <a href="" class="govuk-button">Save</a>
+
+    </div>
+
+{% endblock %}

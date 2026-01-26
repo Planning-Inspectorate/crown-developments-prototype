@@ -1,0 +1,33 @@
+{% extends "layouts/back-office.html" %}
+
+{% block content %}
+
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-l">Remove contact</h1>
+
+            <p class="govuk-body">Are you sure you want to remove this contact?</p>
+
+            {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+            {{ govukInsetText({
+            html: "Amina Rahman<br/>
+                    amina.rahman@stratwellglobal.com<br/>
+                    +44 20 7946 8711"
+            }) }}
+
+            <a href="3-applicant-contacts" class="govuk-button govuk-button--warning">
+                Remove contact
+            </a>
+            <a href="1-applicant-contacts" class="govuk-button govuk-button--secondary">
+                Cancel
+            </a>
+
+        </div>
+    </div>
+
+{% endblock %}

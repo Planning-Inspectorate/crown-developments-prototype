@@ -1,8 +1,7 @@
 {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
 
+
 {% block header %}
-  <header class="back-office-header " role="banner">
-    <div class=""></div>
 
     <div class="govuk-width-container back-office-header__container">
       <div class="back-office-header__logo-group">
@@ -15,15 +14,15 @@
         </div>
       </div>
 
-      <div class="back-office-header__right">
-        <a style="text-decoration: none" href="/"><h1 class="govuk-heading-m back-office-header__service-name">
-          Manage a Crown Development Application
-        </h1></a>
-        <nav class="back-office-header__nav">
-          <a href="">All cases</a>
-          <a href="">Sign out</a>
-        </nav>
-      </div>  
-    </div>
-    <div class="back-office-header__bottom-line"></div>
-  {% endblock %}
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+  tag: {
+  text: "Prototype",
+  classes: "govuk-tag--pink"
+  },
+  html: 'This is a design mockup: data is not stored and some features may not work. <a class="govuk-link" href="/../">Back to prototype home</a>.'
+  }) }}
+{% endblock %}

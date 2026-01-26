@@ -1,0 +1,57 @@
+{% extends "layouts/back-office.html" %}
+
+{% block content %}
+
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+    {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+    <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-two-thirds">
+
+        {% set html %}
+        <h3 class="govuk-notification-banner__heading">
+            Contact removed
+        </h3>
+        {% endset %}
+
+        {{ govukNotificationBanner({
+        html: html,
+        type: "success"
+        }) }}
+
+        </div>
+                <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-l">Check applicant contact details</h1>
+        <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key" style="width: 15%;">
+                    Contact 1
+                </dt>
+                <dd class="govuk-summary-list__value" style="width: 35%;">
+
+                    Marcus O'Connell<br>
+                    marcus.oconnell@justice.gov.uk<br>
+                    +44 7700 900123<br>
+                    Ministry of Justice
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <ul class="govuk-summary-list__actions-list">
+                        
+                        <li class="govuk-summary-list__actions-list-item">
+                            <a class="govuk-link" href="">Change<span class="govuk-visually-hidden">
+                                    contact details</span></a>
+                        </li>
+                    </ul>
+                </dd>
+            </div>
+        </dl>
+        <a href="" class="govuk-button govuk-button--secondary">Add details</a><br>
+
+        <a href="" class="govuk-button">Save</a>
+
+    </div>
+
+{% endblock %}

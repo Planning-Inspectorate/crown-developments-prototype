@@ -1,0 +1,102 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName = "Home" %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+tag: {
+text: "Prototype",
+classes: "govuk-tag--pink"
+},
+html: 'This is a design mockup: data is not stored and some features may not work. <a class="govuk-link"
+  href="/../">Back to prototype home</a>.'
+}) }}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+<form action="" method="post" novalidate="">
+
+
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Why is the representation being withdrawn?
+      </h1>
+    </legend>
+
+    <div class="govuk-form-group">
+      <div class="govuk-radios govuk-radios" data-module="govuk-radios" data-govuk-radios-init="">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="withdrawalReasonId" name="withdrawalReasonId" type="radio"
+            value="change-of-opinion" aria-describedby="withdrawalReasonId-item-hint"
+            data-cy="answer-change-of-opinion">
+          <label class="govuk-label govuk-radios__label" for="withdrawalReasonId">
+            Change of opinion
+          </label>
+          <div id="withdrawalReasonId-item-hint" class="govuk-hint govuk-radios__hint">
+            They no longer feel the same way about the application
+          </div>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="withdrawalReasonId-2" name="withdrawalReasonId" type="radio"
+            value="mistaken-submission" aria-describedby="withdrawalReasonId-2-item-hint"
+            data-cy="answer-mistaken-submission">
+          <label class="govuk-label govuk-radios__label" for="withdrawalReasonId-2">
+            Mistaken Submission
+          </label>
+          <div id="withdrawalReasonId-2-item-hint" class="govuk-hint govuk-radios__hint">
+            They accidentally submitted the representation
+          </div>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="withdrawalReasonId-3" name="withdrawalReasonId" type="radio"
+            value="misunderstanding" aria-describedby="withdrawalReasonId-3-item-hint"
+            data-cy="answer-misunderstanding">
+          <label class="govuk-label govuk-radios__label" for="withdrawalReasonId-3">
+            Misunderstanding
+          </label>
+          <div id="withdrawalReasonId-3-item-hint" class="govuk-hint govuk-radios__hint">
+            They misunderstood the application or its implications
+          </div>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="withdrawalReasonId-4" name="withdrawalReasonId" type="radio"
+            value="personal-reasons" aria-describedby="withdrawalReasonId-4-item-hint"
+            data-cy="answer-personal-reasons">
+          <label class="govuk-label govuk-radios__label" for="withdrawalReasonId-4">
+            Personal Reasons
+          </label>
+          <div id="withdrawalReasonId-4-item-hint" class="govuk-hint govuk-radios__hint">
+            Such as privacy or a change in circumstances
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </fieldset>
+
+
+  <button type="submit" class="govuk-button" data-module="govuk-button" data-cy="button-save-and-continue"
+    data-govuk-button-init="">
+    Continue
+  </button>
+</form>
+
+
+
+
+<a href="check-your-answers.html" type="submit" class="govuk-button" data-module="govuk-button"
+  data-cy="button-save-and-continue" data-govuk-button-init="">
+  Continue
+</a>
+</form>
+
+
+{% endblock %}

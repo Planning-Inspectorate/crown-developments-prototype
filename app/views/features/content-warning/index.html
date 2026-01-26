@@ -1,0 +1,63 @@
+{% extends "layouts/main.njk" %}
+{% set serviceName %}
+Crown Developments prototype
+{% endset%}
+
+{% block content %}
+
+  <h1 class="govuk-heading-xl">Sensitive content warning</h1>
+
+  <div class="govuk-tabs" data-module="govuk-tabs">
+    <h2 class="govuk-tabs__title">
+      Contents
+    </h2>
+    <ul class="govuk-tabs__list">
+     
+      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+        <a class="govuk-tabs__tab" href="#version-2">
+          Version 2
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#version-1">
+          Version 1
+        </a>
+      </li>
+    </ul>
+
+    <div class="govuk-tabs__panel" id="version-2">
+      <h2 class="govuk-heading-m">Version 2</h2>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Settled on blue Important banner based on Comms feedback</li>
+        <li>Still contains indicative content</li>
+        <li><a href="https://app.mural.co/t/allpins6990/m/allpins6990/1767863342296/1a53aafed5c905ae20db5f4a21d8b05d5d122d10">Mural link </a></li>
+      </ul>
+      <a href="v2" class="govuk-button">Link to prototype</a>
+    
+    </div>
+
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="version-1">
+      <h2 class="govuk-heading-m">Version 1 wireframes</h2>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Sensitive content warning to flag where documents may contain distressing content.</li>
+      </ul>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="/features/content-warning/v1-option-1.html" class="govuk-link">
+            Option 1</a>
+        </li>
+        <li>
+          <a href="/features/content-warning/v1-option-2.html" class="govuk-link">
+            Option 2</a>
+        </li>
+        <li>
+          <a href="/features/content-warning/v1-option-3.html" class="govuk-link">
+            Option 3</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+{% endblock %}

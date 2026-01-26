@@ -1,0 +1,55 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName = "Home" %}
+
+{% block content %}
+
+    <a href="javascript:history.back()" class="govuk-back-link" style="margin:0px">Back</a>
+
+    <main class="govuk-main-wrapper" id="main-content">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                {% set html %}
+                <h3 class="govuk-notification-banner__heading">
+                    Applicant removed
+                </h3>
+                {% endset %}
+
+                {{ govukNotificationBanner({
+                    html: html,
+                    type: "success"
+                }) }}
+            </div>
+        </div>
+        <h1 class="govuk-heading-l">Check applicant details</h1>
+        <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Applicant 1
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    Department for Transport<br>
+                    Great Minster House<br>
+                    33 Horseferry Road<br>
+                    London<br>
+                    SW1P 4DR<br>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <ul class="govuk-summary-list__actions-list">
+
+                        <li class="govuk-summary-list__actions-list-item">
+                            <a class="govuk-link" href="">Change<span class="govuk-visually-hidden">
+                                    contact details</span></a>
+                        </li>
+                    </ul>
+                </dd>
+            </div>
+        </dl>
+        <a href="" class="govuk-button govuk-button--secondary">Add details</a><br>
+
+        <a href="" class="govuk-button">Save</a>
+
+    </div>
+</div>
+
+{% endblock %}

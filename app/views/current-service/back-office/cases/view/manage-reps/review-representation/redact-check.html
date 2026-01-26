@@ -1,0 +1,90 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName = "Home" %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+tag: {
+text: "Prototype",
+classes: "govuk-tag--pink"
+},
+html: 'This is a design mockup: data is not stored and some features may not work. <a class="govuk-link"
+    href="/../">Back to prototype home</a>.'
+}) }}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <h1 class="govuk-heading-l">
+                    <span class="govuk-caption-xl">F5E60-CDE6D</span>
+                    Check details and redact representation
+                </h1>
+            </div>
+        </div>
+
+
+<table class="govuk-table">
+
+  <thead class="govuk-table__head">
+    
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__cell">Original representation</th>
+      <td class="govuk-table__cell">I am submitting this written representation regarding the proposed Crown development application for land adjacent
+    to Meadow Lane in Bristol. My name is Keir
+      Starmer</span> and I currently reside at Meadow Lane, Bristol, BS1 4AB</span>. If you need to contact me about this
+    representation, my phone number is +44 7912
+      345678</span>.<br><br>
+
+    While I understand the significance of this non-urgent Crown development and its role in supporting national
+    infrastructure, I have concerns about the potential impact on local traffic and access to essential services during
+    the construction phase. Disruption to residents and businesses could be considerable if appropriate measures are not
+    put in place.<br><br>
+
+    I strongly urge the Planning Inspectorate to ensure that a comprehensive traffic management plan is implemented and
+    that clear communication channels are established for local residents throughout the project. Furthermore, steps
+    should be taken to preserve existing green spaces and minimise noise and environmental disruption wherever possible.
+    Thank you for considering my comments on this application.</td>
+      <td class="govuk-table__cell"><a class="govuk-link" href=""></a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__cell">Redacted representation</th>
+      <td class="govuk-table__cell">I am
+  submitting this written representation regarding the proposed Crown development application for land adjacent to
+  Meadow Lane in Bristol. My name is <span style="background-color: rgb(0, 0, 0)" aria-label="redaction suggestion">Keir
+    Starmer</span> and I currently reside at <span style="background-color: rgb(0, 0, 0)"
+    aria-label="redaction suggestion">Meadow Lane, Bristol, BS1 4AB</span>. If you need to contact me about this
+  representation, my phone number is <span style="background-color:rgb(0, 0, 0)"  aria-label="redaction suggestion">+44
+    7912 345678</span>.<br><br>
+
+  While I understand the significance of this non-urgent Crown development and its role in supporting national
+  infrastructure, I have concerns about the potential impact on local traffic and access to essential services during
+  the construction phase. Disruption to residents and businesses could be considerable if appropriate measures are not
+  put in place.<br><br>
+
+  I strongly urge the Planning Inspectorate to ensure that a comprehensive traffic management plan is implemented and
+  that clear communication channels are established for local residents throughout the project. Furthermore, steps
+  should be taken to preserve existing green spaces and minimise noise and environmental disruption wherever possible.
+  Thank you for considering my comments on this application.</td>
+      <td class="govuk-table__cell"><a class="govuk-link" href="redact">Change</a></td>
+    </tr>
+    
+  </tbody>
+</table>
+
+    <a href="task-list-accepted-redacted.html" class="govuk-button">Accept and continue</a>
+
+    </div>
+
+</div>
+
+{% endblock %}

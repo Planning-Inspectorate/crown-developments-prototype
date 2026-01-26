@@ -1,0 +1,37 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName = "What do you want to say about this application?" %}
+
+{% block content %}
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+            <form action="" method="post" novalidate="">
+                <input type="hidden" name="_csrf" value="">
+                <h1 class="govuk-heading-l">
+                    What do you want to say about this application?
+                </h1>
+                
+                <div class="govuk-form-group">
+                    <label class="govuk-label govuk-!-font-weight-bold" for="submitterComment">
+                        Enter your comment
+                    </label>
+                    <div id="submitterComment-hint" class="govuk-hint">
+                        You must tell us in your comment if you’d like to attend a hearing in the event that one is scheduled.
+                    </div>
+                    <textarea class="govuk-textarea" id="submitterComment" name="submitterComment" rows="5" aria-describedby="submitterComment-hint"></textarea>
+                </div>
+
+                
+
+               <a href="13a-hearing.html" class="govuk-button">
+                    Continue
+                </a>
+            </form>
+        </div>
+
+    </div>
+
+{% endblock %}

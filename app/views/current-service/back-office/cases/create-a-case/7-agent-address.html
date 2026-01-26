@@ -1,0 +1,74 @@
+{% extends "layouts/back-office.njk" %}
+
+{% set pageName = "Home" %}
+
+{% block content %}
+
+  <div class="govuk-width-container">
+    <a href="javascript:history.back()" class="govuk-back-link" style="margin:0px">Back</a>
+    <main class="govuk-main-wrapper">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+<fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h1 class="govuk-fieldset__heading">
+      What is the address of the Agent?
+    </h1>
+  </legend>
+                        <div class="govuk-hint">Optional</div>
+
+
+                    <div class="govuk-form-group">
+  <label class="govuk-label" for="address-line-1">
+    Address line 1 (optional)
+  </label>
+  <input class="govuk-input" id="address-line-1" name="agentAddress_addressLine1" type="text" value="" autocomplete="address-line1">
+</div>
+
+
+                    <div class="govuk-form-group">
+  <label class="govuk-label" for="address-line-2">
+    Address line 2 (optional)
+  </label>
+  <input class="govuk-input" id="address-line-2" name="agentAddress_addressLine2" type="text" value="" autocomplete="address-line2">
+</div>
+
+
+                    <div class="govuk-form-group">
+  <label class="govuk-label" for="address-town">
+    Town or city (optional)
+  </label>
+  <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="agentAddress_townCity" type="text" value="" autocomplete="address-level2">
+</div>
+
+
+                    <div class="govuk-form-group">
+  <label class="govuk-label" for="address-county">
+    County (optional)
+  </label>
+  <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="agentAddress_county" type="text" value="" autocomplete="address-level1">
+</div>
+
+
+                    <div class="govuk-form-group">
+  <label class="govuk-label" for="address-postcode">
+    Postcode (optional)
+  </label>
+  <input class="govuk-input govuk-input--width-10" id="address-postcode" name="agentAddress_postcode" type="text" value="" autocomplete="postal-code">
+</div>
+
+                 
+
+</fieldset>
+
+
+
+<a href="8-agent-email" class="govuk-button">Continue</a>
+
+        </div>
+      </div>
+    </main>
+  </div>    
+
+{% endblock %}

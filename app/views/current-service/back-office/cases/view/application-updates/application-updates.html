@@ -1,0 +1,110 @@
+{% extends "layouts/back-office.html" %}
+
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link" style="margin:0px">Back</a>
+
+<main class="govuk-main-wrapper" id="main-content">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <h1 class="govuk-heading-xl">
+                <span class="govuk-caption-xl">CROWN/2025/0000073</span>
+                Manage application updates
+            </h1>
+        </div>
+    </div>
+
+    <a href="create-update/update-details" role="button" draggable="false" class="govuk-button"
+        data-module="govuk-button" data-govuk-button-init="">
+        Create update
+    </a>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <div id="pagination" class="govuk-body">
+                <p class="govuk-body govuk-clearfix">
+                    <span class="govuk-body">
+                        Showing <strong>1</strong> to <strong>3</strong>
+                        of <strong>3</strong> results
+                    </span>
+                    <span class="pins-pagination-options">
+
+                    </span>
+                </p>
+                <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+                <table class="govuk-table" data-module="moj-sortable-table" data-moj-sortable-table-init="">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header" aria-sort="descending"><button type="button"
+                                    data-index="0">Published<svg width="22" height="22" focusable="false"
+                                        aria-hidden="true" role="img" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.4375 7L11 15.8687L6.5625 7L15.4375 7Z" fill="currentColor"></path>
+                                    </svg></button></th>
+                            <th scope="col" class="govuk-table__header">Update details</th>
+                            <th scope="col" class="govuk-table__header" aria-sort="none"><button type="button"
+                                    data-index="2">Status<svg width="22" height="22" focusable="false"
+                                        aria-hidden="true" role="img" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.1875 9.5L10.9609 3.95703L13.7344 9.5H8.1875Z" fill="currentColor">
+                                        </path>
+                                        <path d="M13.7344 12.0781L10.9609 17.6211L8.1875 12.0781H13.7344Z"
+                                            fill="currentColor"></path>
+                                    </svg></button></th>
+                            <th scope="col" class="govuk-table__header">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+
+
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell" data-sort-value="">Not published</td>
+                            <td class="govuk-table__cell pins-pre-wrap">Decision has been issued</td>
+                            <td class="govuk-table__cell"> <strong class="govuk-tag govuk-tag--grey">
+                                    Draft
+                                </strong>
+
+                            </td>
+                            <td class="govuk-table__cell"><a
+                                    href="review-draft.html"
+                                    class="govuk-link">Review</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell" data-sort-value="1767875173777">8 January 2026</td>
+                            <td class="govuk-table__cell pins-pre-wrap"> Decision has been delayed</td>
+                            <td class="govuk-table__cell"> <strong class="govuk-tag govuk-tag--yellow">
+                                    Unpublished
+                                </strong>
+
+                            </td>
+                            <td class="govuk-table__cell"><a
+                                    href="review-unpublished.html"
+                                    class="govuk-link">Review</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell" data-sort-value="1766154703979">19 December 2025</td>
+                            <td class="govuk-table__cell pins-pre-wrap">New site assessment issued</td>
+                            <td class="govuk-table__cell"> <strong class="govuk-tag govuk-tag--green">
+                                    Published
+                                </strong>
+
+                            </td>
+                            <td class="govuk-table__cell"><a
+                                    href="review-published.html"
+                                    class="govuk-link">Review</a></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+
+
+        </div>
+    </div>
+</main>
+
+
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName = "Home" %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+tag: {
+text: "Prototype",
+classes: "govuk-tag--pink"
+},
+html: 'This is a design mockup: data is not stored and some features may not work. <a class="govuk-link"
+    href="/../">Back to prototype home</a>.'
+}) }}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+<fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+            What type of representation is it?
+        </h1>
+    </legend>
+
+    <div class="govuk-form-group">
+        <div class="govuk-radios govuk-radios" data-module="govuk-radios" data-govuk-radios-init="">
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="categoryId" name="categoryId" type="radio" value="consultees" data-cy="answer-consultees">
+                <label class="govuk-label govuk-radios__label" for="categoryId">
+                    Consultees
+                </label>
+            </div>
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="categoryId-2" name="categoryId" type="radio"
+                    value="interested-parties" data-cy="answer-interested-parties">
+                <label class="govuk-label govuk-radios__label" for="categoryId-2">
+                    Interested Party
+                </label>
+            </div>
+        </div>
+    </div>
+
+
+
+</fieldset>
+
+
+
+<a href="02-who-are-you-submitting-a-representation-for.html" type="submit" class="govuk-button" data-module="govuk-button" data-cy="button-save-and-continue"
+    data-govuk-button-init="">
+    Continue
+</a>
+</form>
+
+
+{% endblock %}
