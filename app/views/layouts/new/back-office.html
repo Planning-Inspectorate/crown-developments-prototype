@@ -2,8 +2,8 @@
 
 {% block header %}
 <style>
-  *{
-    font-family: Helvetica, sans-serif !important;  
+  * {
+    font-family: Helvetica, sans-serif !important;
   }
 
   .back-office-header {
@@ -89,13 +89,13 @@
     border-bottom: black 5px solid;
   }
 
-  .govuk-footer{
+  .govuk-footer {
     border-top: #11A19A 7px solid;
-    color:#485156;  
+    color: #485156;
   }
 
   .govuk-template--rebranded .govuk-footer {
-    background:#F3F2F1;
+    background: #F3F2F1;
   }
 </style>
 
@@ -140,6 +140,20 @@
 
 
 </header>
+
+
+{% endblock %}
+{% block beforeContent %}
+{% if showBanner %}
+  {{ govukPhaseBanner({
+  tag: {
+  text: "Prototype",
+  classes: "govuk-tag--pink"
+  },
+  html: 'This is a design mockup: data is not stored and some features may not work. <a class="govuk-link" href="/../">Back to prototype home</a>.'
+  }) }}
+{% endif %}
+
 
 {% endblock %}
 
