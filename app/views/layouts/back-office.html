@@ -3,7 +3,16 @@
 
 {% block header %}
 
-  {% include "components/headers/header-back-office.njk" %}
+    <div class="govuk-width-container back-office-header__container">
+      <div class="back-office-header__logo-group">
+        <div class="back-office-header__logo-wrapper">
+          <img src="/public/images/Crown.png" alt="Crown logo">
+        </div>
+        <div class="back-office-header__org-name">
+          <p  id="PINS-name">
+          Planning<br>Inspectorate </p>
+        </div>
+      </div>
 
 {% endblock %}
 
