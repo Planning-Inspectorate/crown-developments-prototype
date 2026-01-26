@@ -145,13 +145,14 @@
 {% endblock %}
 {% block beforeContent %}
 {% if showBanner %}
-  {{ govukPhaseBanner({
-  tag: {
-  text: "Prototype",
-  classes: "govuk-tag--pink"
-  },
-  html: 'This is a design mockup: data is not stored and some features may not work. <a class="govuk-link" href="/../">Back to prototype home</a>.'
-  }) }}
+{{ govukPhaseBanner({
+tag: {
+text: "Prototype",
+classes: "govuk-tag--pink"
+},
+html: 'This is a design mockup: data is not stored and some features may not work. <a class="govuk-link"
+  href="/../">Back to prototype home</a>.'
+}) }}
 {% endif %}
 
 
@@ -167,7 +168,7 @@
 
 <footer class="govuk-footer">
   <div class="govuk-width-container">
-
+    
     <div class="govuk-footer__meta">
       <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
 
