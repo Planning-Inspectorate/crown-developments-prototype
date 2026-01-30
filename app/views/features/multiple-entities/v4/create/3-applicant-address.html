@@ -1,20 +1,17 @@
-{% extends "layouts/back-office.html" %}
+{% extends "layouts/back-office.njk" %}
 
 {% set pageName = "Home" %}
 
 {% block content %}
 
-  <main class="govuk-main-wrapper" id="main-content">
+      <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+  <div class="govuk-width-container">
+
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-
-        <h1 class="govuk-heading-l">Add applicant details</h1>
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="event-name">
-            Organisation name
-          </label>
-          <input class="govuk-input" id="event-name" name="eventName" type="text">
-        </div>
+        <h1 class="govuk-heading-l">What is the address of the applicant organisation?</h1>
+        <p class="govuk-hint">Optional</p>
 
         <fieldset class="govuk-fieldset">
 
@@ -50,12 +47,7 @@
           </div>
         </fieldset>
 
-        <a href="4-check-applicant-details.html" class="govuk-button">Continue</a>
-
-        <a href="2-check-applicant-details.html" class="govuk-button govuk-button--secondary">Cancel</a>
-
+        <a href="3a-check-applicant-details" class="govuk-button">Continue</a>
       </div>
     </div>
-  </main>
-
-{% endblock %}
+  {% endblock %}

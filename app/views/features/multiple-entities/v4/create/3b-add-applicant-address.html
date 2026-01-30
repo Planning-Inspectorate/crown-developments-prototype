@@ -1,0 +1,53 @@
+{% extends "layouts/back-office.njk" %}
+
+{% set pageName = "Home" %}
+
+{% block content %}
+
+      <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+  <div class="govuk-width-container">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">What is the address of the applicant organisation?</h1>
+        <p class="govuk-hint">Optional</p>
+
+        <fieldset class="govuk-fieldset">
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-line-1">
+              Address line 1 (optional)
+            </label>
+            <input class="govuk-input" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1">
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-line-2">
+              Address line 2 (optional)
+            </label>
+            <input class="govuk-input" id="address-line-2" name="addressLine2" type="text" autocomplete="address-line2">
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-town">
+              Town or city (optional)
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="addressTown" type="text" autocomplete="address-level2">
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-county">
+              County (optional)
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="addressCounty" type="text">
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-postcode">
+              Postcode (optional)
+            </label>
+            <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code">
+          </div>
+        </fieldset>
+
+        <a href="3c-check-applicant-details" class="govuk-button">Continue</a>
+      </div>
+    </div>
+  {% endblock %}
