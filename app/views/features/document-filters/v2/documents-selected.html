@@ -206,38 +206,50 @@
                                         <fieldset class="govuk-fieldset" aria-describedby="type-of-application-hint">
                                             <div class="govuk-checkboxes govuk-checkboxes--small">
                                                 <div class="govuk-checkboxes__item">
-                                                    <input class="govuk-checkboxes__input" id="type-1" name="type" type="checkbox" value="Planning permission">
+                                                    <input class="govuk-checkboxes__input" id="type-1" name="type" type="checkbox">
                                                     <label class="govuk-label govuk-checkboxes__label" for="type-1">
                                                         Application (21)
                                                     </label>
                                                 </div>
-                                                <div class="govuk-checkboxes__item">
-                                                    <input class="govuk-checkboxes__input" id="type-1" name="type" type="checkbox" value="Planning permission">
-                                                    <label class="govuk-label govuk-checkboxes__label" for="type-1">
-                                                        Accepted (2)
-                                                    </label>
-                                                </div>
-                                                <div class="govuk-checkboxes__item">
+                                                 <div class="govuk-checkboxes__item">
                                                     <input class="govuk-checkboxes__input" id="type-1" name="type" type="checkbox" value="Planning permission">
                                                     <label class="govuk-label govuk-checkboxes__label" for="type-1">
                                                         Consultation (1)
                                                     </label>
                                                 </div>
                                                 <div class="govuk-checkboxes__item">
-                                                    <input class="govuk-checkboxes__input" id="type-1" name="type" type="checkbox" value="Planning permission">
-                                                    <label class="govuk-label govuk-checkboxes__label" for="type-1">
+                                                    <input class="govuk-checkboxes__input" id="type-2" name="type" type="checkbox" value="Accepted" checked="true">
+                                                    <label class="govuk-label govuk-checkboxes__label" for="type-2">
+                                                        Accepted (2)
+                                                    </label>
+                                                </div>
+                                                <div class="govuk-checkboxes__item">
+                                                    <input class="govuk-checkboxes__input" id="type-3" name="type" type="checkbox" value="Planning permission">
+                                                    <label class="govuk-label govuk-checkboxes__label" for="type-3">
                                                         Procedure choice (34)
                                                     </label>
                                                 </div>
                                                 <div class="govuk-checkboxes__item">
-                                                    <input class="govuk-checkboxes__input" id="type-1" name="type" type="checkbox" value="Planning permission">
-                                                    <label class="govuk-label govuk-checkboxes__label" for="type-1">
-                                                        Hearing (12)
+                                                    <input class="govuk-checkboxes__input" id="type-4" name="type" type="checkbox" value="Hearing">
+                                                    <label class="govuk-label govuk-checkboxes__label" for="type-4">
+                                                        Written representations (2)
                                                     </label>
                                                 </div>
                                                 <div class="govuk-checkboxes__item">
-                                                    <input class="govuk-checkboxes__input" id="type-2" name="type" type="checkbox" value="Outline planning permission with some matters reserved">
-                                                    <label class="govuk-label govuk-checkboxes__label" for="type-2">
+                                                    <input class="govuk-checkboxes__input" id="type-4" name="type" type="checkbox" value="Hearing">
+                                                    <label class="govuk-label govuk-checkboxes__label" for="type-4">
+                                                        Inquiry (12)
+                                                    </label>
+                                                </div>
+                                                <div class="govuk-checkboxes__item">
+                                                    <input class="govuk-checkboxes__input" id="type-4" name="type" type="checkbox" value="Hearing">
+                                                    <label class="govuk-label govuk-checkboxes__label" for="type-4">
+                                                        Hearing (3)
+                                                    </label>
+                                                </div>
+                                                <div class="govuk-checkboxes__item">
+                                                    <input class="govuk-checkboxes__input" id="type-5" name="type" type="checkbox" value="Outline planning permission with some matters reserved">
+                                                    <label class="govuk-label govuk-checkboxes__label" for="type-5">
                                                         Decision (1)
                                                     </label>
                                                 </div>
@@ -273,7 +285,7 @@
                                             <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
                                                 Day
                                             </label>
-                                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="11">
                                         </div>
                                     </div>
                                     <div class="govuk-date-input__item">
@@ -281,7 +293,7 @@
                                             <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
                                                 Month
                                             </label>
-                                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="12">
                                         </div>
                                     </div>
                                     <div class="govuk-date-input__item">
@@ -289,7 +301,7 @@
                                             <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
                                                 Year
                                             </label>
-                                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="2025">
                                         </div>
                                     </div>
                                 </div>
@@ -353,6 +365,39 @@
                 </form>
 
             </div>
+
+            <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+                    <div class="govuk-grid-row" style="margin-top: 24px;">
+                        <div class="govuk-grid-column-full">
+                            <p class="govuk-body">
+                                Active filters
+
+                            </p>
+                            <div style="flex-direction:column; gap:0px;">
+                                <div style="display:flex; align-items:center; gap:12px;">
+
+                                    <span style="display:inline-flex; gap:0px;">
+                                        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                            <span class="govuk-body selected-filter-tag" style="margin:0px; border-radius:5px; background:#f3f2f1; color:#0b0c0c; font-family:'GDS Transport',Arial,sans-serif; border-radius:4px; padding:4px 12px; border:1px solid #b1b4b6; white-space:nowrap;">
+                                                <button type="button" style="background:none; border:none; padding:0; margin-right:8px; font-size:20px; line-height:1; cursor:pointer;">×</button> Stage: Accepted
+                                            </span>
+                                            <span class="govuk-body selected-filter-tag" style="margin:0px; border-radius:5px; background:#f3f2f1; color:#0b0c0c; font-family:'GDS Transport',Arial,sans-serif; border-radius:4px; padding:4px 12px; border:1px solid #b1b4b6; white-space:nowrap;">
+                                                <button type="button" style="background:none; border:none; padding:0; margin-right:8px; font-size:16px; line-height:1; cursor:pointer;">×</button>From: 11 December 2025
+                                                
+                                            </span>
+                                        </div>
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding-top:20px; font-size:19px;">
+
+                        <a href="documents" class="govuk-link" style="font-weight:normal;">Clear search and filters</a>
+                    </div>
+                    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
             <div id="pagination" class="govuk-body">
                 <p class="govuk-body">
                     Showing
@@ -639,8 +684,8 @@
     display: flex;
     align-items: center;
 ">
-<a href="documents-selected" class="govuk-button govuk-button--secondary" style="margin:0;">
-Filters selected
+<a href="documents" class="govuk-button govuk-button--secondary" style="margin:0;">
+Filters unselected
 </a>
 
 {% endblock %}
