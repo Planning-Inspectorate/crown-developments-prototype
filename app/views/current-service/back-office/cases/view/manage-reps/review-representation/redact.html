@@ -1,0 +1,115 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName = "Home" %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+tag: {
+text: "Prototype",
+classes: "govuk-tag--pink"
+},
+html: 'This is a design mockup: data is not stored and some features may not work. <a class="govuk-link"
+  href="/../">Back to prototype home</a>.'
+}) }}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">
+  <span class="govuk-caption-xl">F5E60-CDE6D</span>
+  Review representation
+</h1>
+
+<h2 class="govuk-heading-m">Redaction suggestions</h2>
+<p class="govuk-body">We have suggested some common redactions and hidden these for you. To make these visible again,
+  'Reject' each suggestion.</p>
+
+<table class="govuk-table">
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Redaction suggestion</th>
+      <th scope="col" class="govuk-table__header">Type of information</th>
+      <th scope="col" class="govuk-table__header">Action</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Keir Starmer</td>
+      <td class="govuk-table__cell">Person</td>
+      <td class="govuk-table__cell"><a class="govuk-link" href="">Reject</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">42 Meadow Lane, Bristol, BS1 4AB</td>
+      <td class="govuk-table__cell">Address</td>
+      <td class="govuk-table__cell"><a class="govuk-link" href="">Reject</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">+447912345678</td>
+      <td class="govuk-table__cell">Phone number</td>
+      <td class="govuk-table__cell"><a class="govuk-link" href="">Reject</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 class="govuk-heading-m">Redaction preview</h2>
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Original representation
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    I am submitting this written representation regarding the proposed Crown development application for land adjacent
+    to Meadow Lane in Bristol. My name is <span style="background-color: yellow" aria-label="redaction suggestion">Keir
+      Starmer</span> and I currently reside at <span style="background-color: yellow"
+      aria-label="redaction suggestion">Meadow Lane, Bristol, BS1 4AB</span>. If you need to contact me about this
+    representation, my phone number is <span style="background-color: yellow" aria-label="redaction suggestion">+44 7912
+      345678</span>.<br><br>
+
+    While I understand the significance of this non-urgent Crown development and its role in supporting national
+    infrastructure, I have concerns about the potential impact on local traffic and access to essential services during
+    the construction phase. Disruption to residents and businesses could be considerable if appropriate measures are not
+    put in place.<br><br>
+
+    I strongly urge the Planning Inspectorate to ensure that a comprehensive traffic management plan is implemented and
+    that clear communication channels are established for local residents throughout the project. Furthermore, steps
+    should be taken to preserve existing green spaces and minimise noise and environmental disruption wherever possible.
+    Thank you for considering my comments on this application.
+  </div>
+</details>
+<div class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint">I am
+  submitting this written representation regarding the proposed Crown development application for land adjacent to
+  Meadow Lane in Bristol. My name is <span style="background-color: rgb(0, 0, 0)" aria-label="redaction suggestion">Keir
+    Starmer</span> and I currently reside at <span style="background-color: rgb(0, 0, 0)"
+    aria-label="redaction suggestion">Meadow Lane, Bristol, BS1 4AB</span>. If you need to contact me about this
+  representation, my phone number is <span style="background-color:rgb(0, 0, 0)"  aria-label="redaction suggestion">+44
+    7912 345678</span>.<br><br>
+
+  While I understand the significance of this non-urgent Crown development and its role in supporting national
+  infrastructure, I have concerns about the potential impact on local traffic and access to essential services during
+  the construction phase. Disruption to residents and businesses could be considerable if appropriate measures are not
+  put in place.<br><br>
+
+  I strongly urge the Planning Inspectorate to ensure that a comprehensive traffic management plan is implemented and
+  that clear communication channels are established for local residents throughout the project. Furthermore, steps
+  should be taken to preserve existing green spaces and minimise noise and environmental disruption wherever possible.
+  Thank you for considering my comments on this application.</div>
+
+  <button class="govuk-button govuk-button--secondary">Redact selected text</button>
+
+  <button class="govuk-button govuk-button--secondary">Undo</button>
+
+  <button class="govuk-button govuk-button--secondary">Undo all changes</button>
+
+  <div>
+
+    <a class="govuk-button" href="redact-check.html">Redact selected text</a>
+
+  </div>
+
+{% endblock %}

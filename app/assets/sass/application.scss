@@ -52,6 +52,7 @@
 }
 
 
+/*  New back office service navigation override */
 /*Components*/
 
 /*Dashboard box*/
@@ -82,4 +83,18 @@
 .row-inline {
     display: flex;
     gap: 8px;
+}
+
+/*Filters for manage reps*/
+
+
+.filter-container {
+	background-color: #f3f2f1;
+}
+
+.filter-box {
+	.govuk-checkboxes {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
 }
