@@ -1,0 +1,33 @@
+{% extends "layouts/back-office.njk" %}
+
+{% set pageName = "Home" %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              What is the name of the agent organisation?
+            </h1>
+          </legend>
+
+          <div class="govuk-form-group">
+        
+          <input class="govuk-input" id="agentName" name="agentName" type="text" value=""
+            aria-describedby="agentName-hint">
+          </div>
+
+        <a href="2a-agent-address" class="govuk-button">Continue</a>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}
