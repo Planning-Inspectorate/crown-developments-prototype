@@ -2,23 +2,10 @@
 
 {% set pageName = "Home" %}
 
-{% block beforeContent %}
-
-{{ govukPhaseBanner({
-tag: {
-text: "Prototype",
-classes: "govuk-tag--pink"
-},
-html: 'This is a design mockup: data is not stored and some features may not work. <a class="govuk-link"
-    href="/../">Back to prototype home</a>.'
-}) }}
-
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
-
-{% endblock %}
-
 {% block content %}
-
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
 <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
         <h1 class="govuk-fieldset__heading">
