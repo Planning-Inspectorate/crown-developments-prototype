@@ -4,6 +4,13 @@
 
 {% block content %}
 
+
+<style>
+.content-warning-tag {
+    margin-right: 8px;
+}
+</style>
+
     <div class="govuk-grid-row">
 
         <div class="govuk-grid-column-one-third">
@@ -31,6 +38,21 @@
         </div>
 
         <div class="govuk-grid-column-two-thirds">
+
+            <div class="govuk-notification-banner govuk-notification-banner--notification" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+                    <div class="govuk-notification-banner__header">
+                        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                            Important
+                        </h2>
+                    </div>
+                    <div class="govuk-notification-banner__content">
+                        <h3 class="govuk-notification-banner__heading">
+                            Written representations may contain distressing content
+                        </h3>
+                        <p class="govuk-body">A content warning tag has been applied to written representations containing content that some may find distressing.</p>
+                    </div>
+                </div>
+
             <span class="govuk-caption-xl">CROWN/2025/0000001</span>
             <h1 class="govuk-heading-xl">Written representations</h1>
             <div>
@@ -68,7 +90,9 @@
             </div>
             <div style="margin-top: 24px;">
                 <p class='govuk-body govuk-!-font-weight-bold'>
-                    <a href='written-representations-example' class='govuk-link'>Amira Khan on behalf of Avonvale Heritage Trust</a>
+                    <strong class="govuk-tag govuk-tag--red content-warning-tag">
+                                    Content warning
+                                </strong><a href='written-representations-example' class='govuk-link'>Amira Khan on behalf of Avonvale Heritage Trust</a>
                 </p>
                 <p class='govuk-body'>See attached representation document.</p>
                 <div class='govuk-grid-row'>
@@ -102,7 +126,9 @@
                 </div>
                 <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
                 <p class='govuk-body govuk-!-font-weight-bold'>
-                    <a href='written-representations-example' class='govuk-link'>Sophie Williams</a>
+                    <strong class="govuk-tag govuk-tag--red content-warning-tag">
+                                    Content warning
+                                </strong><a href='written-representations-example' class='govuk-link'>Sophie Williams</a>
                 </p>
                 <p class='govuk-body'>See attached letter.</p>
                 <div class='govuk-grid-row'>
@@ -153,7 +179,9 @@
                 </div>
                 <hr class='govuk-section-break govuk-section-break--m govuk-section-break--visible'>
                 <p class='govuk-body govuk-!-font-weight-bold'>
-                    <a href='written-representations-example' class='govuk-link'>Kwame Mensah on behalf of Community Development Group</a>
+                    <strong class="govuk-tag govuk-tag--red content-warning-tag">
+                                    Content warning
+                                </strong><a href='written-representations-example' class='govuk-link'>Kwame Mensah on behalf of Community Development Group</a>
                 </p>
                 <p class='govuk-body'>See attached letter.</p>
                 <div class='govuk-grid-row'>
