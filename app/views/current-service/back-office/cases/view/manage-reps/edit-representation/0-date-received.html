@@ -2,23 +2,11 @@
 
 {% set pageName = "Home" %}
 
-{% block beforeContent %}
-
-{{ govukPhaseBanner({
-tag: {
-text: "Prototype",
-classes: "govuk-tag--pink"
-},
-html: 'This is a design mockup: data is not stored and some features may not work. <a class="govuk-link"
-    href="/../">Back to prototype home</a>.'
-}) }}
-
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
-
-{% endblock %}
-
 {% block content %}
-
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+    
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
     <form action="" method="post" novalidate="">
         <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" role="group" aria-describedby="withdrawalRequestDate-hint">
@@ -65,7 +53,7 @@ html: 'This is a design mockup: data is not stored and some features may not wor
 
 
 
-        <a href="01-rep-type" type="submit" class="govuk-button" data-module="govuk-button" data-cy="button-save-and-continue"
+        <a href="0a-submission-method.html" type="submit" class="govuk-button" data-module="govuk-button" data-cy="button-save-and-continue"
             data-govuk-button-init="">
             Continue
         </a>
