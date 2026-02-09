@@ -1,0 +1,41 @@
+<fieldset class="govuk-fieldset">
+
+    {% extends "layouts/back-office.njk" %}
+
+    {% set showPrototypeBanner = true %}
+
+    {% set pageName = "Distressing content" %}
+
+    {% block content %}
+        <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                         <h1 class="govuk-heading-l">Does this application involve potentially distressing content?</h1>
+                         <div class="govuk-hint">
+                            If you select 'Yes', this will trigger a warning on the front office
+                        </div>
+                        <div class="govuk-radios" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input">
+                                <label class="govuk-label govuk-radios__label">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input">
+                                <label class="govuk-label govuk-radios__label">
+                                    No
+                                </label>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <a href="" class="govuk-button">Continue</a>
+
+            </div>
+        </div>
+
+    {% endblock %}

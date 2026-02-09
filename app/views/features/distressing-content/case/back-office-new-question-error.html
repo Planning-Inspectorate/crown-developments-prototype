@@ -1,0 +1,61 @@
+<fieldset class="govuk-fieldset">
+
+    {% extends "layouts/back-office.njk" %}
+
+    {% set showPrototypeBanner = true %}
+
+    {% set pageName = "Distressing content" %}
+
+    {% block content %}
+        <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <div class="govuk-error-summary" data-module="govuk-error-summary">
+                    <div role="alert">
+                        <h2 class="govuk-error-summary__title">
+                            There is a problem
+                        </h2>
+                        <div class="govuk-error-summary__body">
+                            <ul class="govuk-list govuk-error-summary__list">
+                                <li>
+                                    <a href="#input">Select whether this application involves potentially distressing content</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="govuk-form-group govuk-form-group--error">
+                    <fieldset class="govuk-fieldset">
+                        <h1 class="govuk-heading-l">Does this application involve potentially distressing content?</h1>
+
+                        <div class="govuk-hint">
+                            If you select 'Yes', this will trigger a warning on the front office 
+                        </div>
+                        <p class="govuk-error-message">
+                            <span class="govuk-visually-hidden">Error:</span>
+                            Select whether this application involves potentially distressing content
+                        </p>
+                        <div id="input" class="govuk-radios" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input">
+                                <label class="govuk-label govuk-radios__label">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input">
+                                <label class="govuk-label govuk-radios__label">
+                                    No
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <a href="" class="govuk-button">Continue</a>
+
+                </div>
+            </div>
+
+        {% endblock %}
