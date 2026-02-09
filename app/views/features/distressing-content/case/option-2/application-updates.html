@@ -1,0 +1,115 @@
+{% extends "layouts/front-office.html" %}
+
+{% block pageTitle %}
+  Application updates
+{% endblock %}
+
+{% block content %}
+  {%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+
+      {{ mojSideNavigation({
+      label: "Side navigation",
+      items: [{
+        text: "Application Information",
+        href: "application-information"
+       
+      }, {
+        text: "Documents",
+        href: "documents"
+      }, {
+        text: "Have your say",
+        href: "have-your-say-on-a-crown-development-application"
+      }, {
+        text: "Application updates",
+        href: "application-updates.html",
+         active: true
+      }, {
+        text: "Written representations",
+        href: "written-representations.html"
+      }]
+    }) }}
+
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-warning-text">
+                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="govuk-warning-text__text">
+                    <span class="govuk-visually-hidden">Warning</span>
+                    This application may contain content that some may find distressing.
+                </strong>
+            </div>
+
+
+      <span class="govuk-caption-xl">CROWN/2025/0000020</span>
+      <h1 class="govuk-heading-xl">Application updates</h1>
+
+      <!--timeline starts here -->
+
+      <d
+<div class="moj-timeline">
+  <div class="moj-timeline__item">
+    <div class="moj-timeline__header">
+      <h2 class="moj-timeline__title">28 November 2025</h2>
+    </div>
+    <div class="moj-timeline__description">
+      <p class="govuk-!-margin-0">
+        The Secretary of State issued a Correction Order for the Avonvale Government Office Development. This followed a request from the Applicant’s legal representative on 15 October 2025 to amend the approved site boundary.
+      </p>
+    </div>
+  </div>
+
+  <div class="moj-timeline__item">
+    <div class="moj-timeline__header">
+      <h2 class="moj-timeline__title">12 September 2025</h2>
+    </div>
+    <div class="moj-timeline__description">
+      Decision notice published by the Secretary of State granting consent for the proposed development, subject to conditions relating to sustainable design and transport mitigation.
+    </div>
+  </div>
+
+  <div class="moj-timeline__item">
+    <div class="moj-timeline__header">
+      <h2 class="moj-timeline__title">30 July 2025</h2>
+    </div>
+    <div class="moj-timeline__description">
+      Avon Valley Planning Authority submitted its formal response to the Secretary of State’s consultation, raising no objection but recommending additional landscaping measures.
+    </div>
+  </div>
+
+  <div class="moj-timeline__item">
+    <div class="moj-timeline__header">
+      <h2 class="moj-timeline__title">15 June 2025</h2>
+    </div>
+    <div class="moj-timeline__description">
+      The Secretary of State requested comments from Avon Valley Planning Authority and statutory consultees by 5 July 2025.
+    </div>
+  </div>
+
+  <div class="moj-timeline__item">
+    <div class="moj-timeline__header">
+      <h2 class="moj-timeline__title">22 April 2025</h2>
+    </div>
+    <div class="moj-timeline__description">
+      Recommendations issued by the Planning Inspectorate following completion of the examination phase.
+    </div>
+  </div>
+
+  <div class="moj-timeline__item">
+    <div class="moj-timeline__header">
+      <h2 class="moj-timeline__title">10 February 2025</h2>
+    </div>
+    <div class="moj-timeline__description">
+      Notification of completion of the Examination was published on the Planning Inspectorate website.
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+
+  {% endblock %}
