@@ -1,0 +1,98 @@
+{% extends "layouts/front-office.html" %}
+
+{% set pageName = "Home" %}
+
+{% block content %}
+
+    <style>
+        .document-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .document-list li {
+            margin: 0;
+            padding-top: 0.5rem;
+            padding-bottom: 1.25rem;
+            border-top: 1px solid #b1b4b6;
+        }
+
+        .document-list__meta-data {
+            margin-top: 0.25rem;
+            color: #505a5f;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    </style>
+
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-third">
+            {{ mojSideNavigation({
+        label: "Side navigation",
+        items: [{
+        text: "Application information",
+        href: "application-information"
+        
+        }, {
+        text: "Documents",
+        href: "documents"
+        }, {
+        text: "Have your say",
+        href: "have-your-say-on-a-crown-development-application"
+        }, {
+        text: "Application updates",
+        href: "application-updates.html"
+        }, {
+        text: "Written representations",
+        href: "written-representations.html",
+        active: true
+        }]
+        }) }}
+
+        </div>
+        <a href="written-representations" class="govuk-back-link">Back to list</a>
+
+        
+
+        <div class="govuk-grid-column-two-thirds">
+            <span class="govuk-caption-xl">CROWN/2025/0000001</span>
+            <h1 class="govuk-heading-xl">Rajesh Patel on behalf of Avonvale Chamber of Commerce</h1>
+            <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Date submitted
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        7 September 2025
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Submitted by
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Consultees
+                    </dd>
+                </div>
+            </dl>
+
+            <p class="govuk-body pins-pre-line pins-overflow-break-word">See attached letter.</p>
+
+            <h2 class="govuk-heading-m">Attachment(s)</h2>
+
+            <ul class="govuk-list document-list">
+                <li>
+                    <a class="govuk-link" href="" target="_blank" rel="noreferrer">
+                        (PDF, 204 KB) (opens in new window)
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
