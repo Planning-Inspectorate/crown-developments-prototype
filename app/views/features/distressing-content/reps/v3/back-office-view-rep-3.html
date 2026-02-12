@@ -1,0 +1,230 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName = "Home" %}
+
+{% block beforeContent %}
+
+    {{ govukPhaseBanner({
+tag: {
+text: "Prototype",
+classes: "govuk-tag--pink"
+},
+html: 'This is a design mockup: data is not stored and some features may not work. <a class="govuk-link"
+    href="/../">Back to prototype home</a>.'
+}) }}
+
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+        <div class="govuk-notification-banner govuk-notification-banner--notification" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+                <div class="govuk-notification-banner__header">
+                    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                        Important
+                    </h2>
+                </div>
+                <div class="govuk-notification-banner__content">
+                    <h3 class="govuk-notification-banner__heading">
+                        Written representations may contain distressing content
+                    </h3>
+                    <p class="govuk-body">Written representations on this case may contain content that some may find distressing.</p>
+                </div>
+            </div>
+        </div>
+          <div class="govuk-grid-column-full">
+
+            <h1 class="govuk-heading-l">
+                <span class="govuk-caption-xl">F5E60-CDE6D</span>
+                Review representation
+            </h1>
+        </div>
+    </div>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+
+            <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Reference
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        F5E60-CDE6D
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href=""></a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        What date was the representation received?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        26 November 2025
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden">
+                                What date was the representation received?</span></a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Representation type
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Interested Party
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden">
+                                What type of representation is it?</span></a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Status
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Awaiting review
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="">Manage<span class="govuk-visually-hidden">
+                                What is the status of the representation?</span></a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Who you are submitting for
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Myself
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden">
+                                Who are you submitting a representation for?</span></a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Your full name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Edward Carlisle<br>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden">
+                                What is your name?</span></a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        What is your contact preference
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Email
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden">
+                                What is your preferred contact method?</span></a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Email address
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Frankm@ams.com
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden">
+                                What is your email address?</span></a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Tell us about application
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+
+                        <details class="govuk-details">
+                            <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text">
+                                    View written representation
+                                </span>
+                            </summary>
+                            <div class="govuk-details__text">
+                                I object to the proposed development because of its impact on local traffic and the surrounding environment. While I understand the need for additional prison capacity, the application does not provide enough evidence that the transport network can cope with the increase in vehicle movements. Reasons for objection Traffic and transport The Transport Assessment does not include accurate data on peak-time traffic. The proposed staff car park will increase congestion on the A37, which is already at capacity during rush hour. Environmental impact The application does not explain how construction noise will be managed. There is no clear plan for protecting the nearby nature reserve during works. Suggested changes Provide an updated Transport Assessment with real-time traffic modelling. Include a detailed Construction Environmental Management Plan. Consider alternative access routes to reduce pressure on the A37. Conclusion Until these issues are addressed, I do not support the application.
+                            </div>
+                        </details>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden">
+                                What do you want to say about this application?</span></a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Would you like to be heard at a hearing?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Yes
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="">Edit<span class="govuk-visually-hidden">
+                                Would you like to be heard at a hearing?</span></a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Redacted Comment
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        -
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href=""></a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Distressing content warning
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        No
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href=""></a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Attachments uploaded?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        No
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href=""></a>
+                    </dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <p class="govuk-body">
+                <a class="govuk-link govuk-link--no-visited-state" href="/features/distressing-content/index.html">Withdraw representation</a>
+            </p>
+            <a class="govuk-button" href="back-office-option-3a">Continue</a>
+        </div>
+
+    </div>
+
+{% endblock %}
