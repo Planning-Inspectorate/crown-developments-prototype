@@ -1,0 +1,93 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName = "Home" %}
+
+{% block beforeContent %}
+
+    {{ govukPhaseBanner({
+tag: {
+text: "Prototype",
+classes: "govuk-tag--pink"
+},
+html: 'This is a design mockup: data is not stored and some features may not work. <a class="govuk-link"
+    href="/../">Back to prototype home</a>.'
+}) }}
+
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-grid-row">
+
+      
+
+        <div class="govuk-grid-column-full">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h1 class="govuk-heading-l">
+                        <span class="govuk-caption-xl">F5E60-CDE6D</span>
+                        Review representation
+                    </h1>
+                </div>
+            </div>
+            <h2 class="govuk-heading-m">Review comment</h2>
+
+            <ul class="govuk-task-list">
+                <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                    <div class="govuk-task-list__name-and-hint">
+                        <a class="govuk-link govuk-task-list__link" href="review-comment" aria-describedby="task-list-1-status">
+                            Comment
+                        </a>
+                    </div>
+                    <div class="govuk-task-list__status" id="task-list-1-status">
+                        <strong class="govuk-tag govuk-tag--blue">
+                            Incomplete
+                        </strong>
+                    </div>
+                </li>
+            </ul>
+
+            <h2 class="govuk-heading-m">Review attachments</h2>
+
+            <ul class="govuk-task-list">
+                <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                    <div class="govuk-task-list__name-and-hint">
+                        <a class="govuk-link govuk-task-list__link" href="review-attachments" aria-describedby="task-list-1-status">
+                            representation-attachment.pdf
+                        </a>
+                    </div>
+                    <div class="govuk-task-list__status" id="task-list-1-status">
+                        <strong class="govuk-tag govuk-tag--blue">
+                            Incomplete
+                        </strong>
+                    </div>
+                </li>
+            </ul>
+
+            <h2 class="govuk-heading-m">Mark distressing content</h2>
+
+            <ul class="govuk-task-list">
+                <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                    <div class="govuk-task-list__name-and-hint">
+                        <a class="govuk-link govuk-task-list__link" href="mark-distressing" aria-describedby="task-list-1-status">
+                            Mark distressing content
+                        </a>
+                    </div>
+                    <div class="govuk-task-list__status" id="task-list-1-status">
+                        <strong class="govuk-tag govuk-tag--blue">
+                            Incomplete
+                        </strong>
+                    </div>
+                </li>
+            </ul>
+
+            <strong class="govuk-tag govuk-tag govuk-tag--grey">
+                Review incomplete
+            </strong>
+
+        </div>
+
+    </div>
+
+{% endblock %}

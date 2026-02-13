@@ -1,0 +1,63 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName = "Home" %}
+
+{% block beforeContent %}
+
+    {{ govukPhaseBanner({
+tag: {
+text: "Prototype",
+classes: "govuk-tag--pink"
+},
+html: 'This is a design mockup: data is not stored and some features may not work. <a class="govuk-link"
+    href="/../">Back to prototype home</a>.'
+}) }}
+
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-l">
+                <span class="govuk-caption-xl">F5E60-CDE6D</span>
+               Does this representation contain potentially distressing content?
+            </h1>
+
+           
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                       
+                        <div class="govuk-radios" data-module="govuk-radios" data-govuk-radios-init="">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="reviewCommentDecision" name="reviewCommentDecision" type="radio" value="accepted">
+                                <label class="govuk-label govuk-radios__label" for="reviewCommentDecision">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="reviewCommentDecision-2" name="reviewCommentDecision" type="radio" value="accept-and-redact">
+                                <label class="govuk-label govuk-radios__label" for="reviewCommentDecision-2">
+                                    No
+                                </label>
+                            </div>
+
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div>
+        </div>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <a href="task-list-4" type="submit" class="govuk-button" data-module="govuk-button" data-govuk-button-init="">
+                    Continue
+                </a>
+            </div>
+        </div>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName = "Home" %}
+
+{% block beforeContent %}
+
+  {{ govukPhaseBanner({
+tag: {
+text: "Prototype",
+classes: "govuk-tag--pink"
+},
+html: 'This is a design mockup: data is not stored and some features may not work. <a class="govuk-link"
+    href="/../">Back to prototype home</a>.'
+}) }}
+
+  <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">
+      <span class="govuk-caption-xl">F5E60-CDE6D</span>
+      Review attachment
+    </h1>
+
+    <form method="POST">
+      
+        
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Reference
+              </dt>
+              <dd class="govuk-summary-list__value">
+                21AE4-72530
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Original attachment
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <span class="pins-white-space-pre-line">
+                  <a class="govuk-link govuk-task-list__link" href="" aria-describedby="task-list-1-status">
+                    representation-attachment.pdf
+                  </a>
+                </span>
+              </dd>
+            </div>
+          </dl>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                Review decision
+              </legend>
+              <div class="govuk-radios" data-module="govuk-radios" data-govuk-radios-init="">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="reviewCommentDecision" name="reviewCommentDecision" type="radio" value="accepted">
+                  <label class="govuk-label govuk-radios__label" for="reviewCommentDecision">
+                    Accept
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="reviewCommentDecision-2" name="reviewCommentDecision" type="radio" value="accept-and-redact">
+                  <label class="govuk-label govuk-radios__label" for="reviewCommentDecision-2">
+                    Accept and redact
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="reviewCommentDecision-3" name="reviewCommentDecision" type="radio" value="rejected">
+                  <label class="govuk-label govuk-radios__label" for="reviewCommentDecision-3">
+                    Reject
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+        </div>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <a href="task-list-3" class="govuk-button">
+            Continue
+          </a>
+        </div>
+      </div>
+    </form>
+
+  {% endblock %}
