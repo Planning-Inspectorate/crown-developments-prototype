@@ -1,0 +1,90 @@
+{% extends "layouts/back-office.html" %}
+
+{% set pageName = "Home" %}
+
+{% block beforeContent %}
+
+  {{ govukPhaseBanner({
+tag: {
+text: "Prototype",
+classes: "govuk-tag--pink"
+},
+html: 'This is a design mockup: data is not stored and some features may not work. <a class="govuk-link"
+    href="/../">Back to prototype home</a>.'
+}) }}
+
+  <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+  
+        <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">
+      <span class="govuk-caption-xl">F5E60-CDE6D</span>
+      Review representation
+    </h1>
+
+    <h2 class="govuk-heading-m">Review comment</h2>
+
+    <form method="POST">
+
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Reference
+              </dt>
+              <dd class="govuk-summary-list__value">
+                21AE4-72530
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Tell us about application
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <span class="pins-white-space-pre-line">I object to the proposed development because of its impact on local traffic and the surrounding environment. While I understand the need for additional prison capacity, the application does not provide enough evidence that the transport network can cope with the increase in vehicle movements. Reasons for objection Traffic and transport The Transport Assessment does not include accurate data on peak-time traffic. The proposed staff car park will increase congestion on the A37, which is already at capacity during rush hour. Environmental impact The application does not explain how construction noise will be managed. There is no clear plan for protecting the nearby nature reserve during works. Suggested changes Provide an updated Transport Assessment with real-time traffic modelling. Include a detailed Construction Environmental Management Plan. Consider alternative access routes to reduce pressure on the A37. Conclusion Until these issues are addressed, I do not support the application.</span>
+              </dd>
+            </div>
+          </dl>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                Review decision
+              </legend>
+              <div class="govuk-radios" data-module="govuk-radios" data-govuk-radios-init="">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="reviewCommentDecision" name="reviewCommentDecision" type="radio" value="accepted">
+                  <label class="govuk-label govuk-radios__label" for="reviewCommentDecision">
+                   Accept
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="reviewCommentDecision-2" name="reviewCommentDecision" type="radio" value="accept-and-redact">
+                  <label class="govuk-label govuk-radios__label" for="reviewCommentDecision-2">
+                   Accept and redact                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="reviewCommentDecision-3" name="reviewCommentDecision" type="radio" value="rejected">
+                  <label class="govuk-label govuk-radios__label" for="reviewCommentDecision-3">
+                    Reject
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+        </div>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <a href="task-list-2" class="govuk-button">
+            Continue
+          </a>
+        </div>
+      </div>
+    </form>
+
+  {% endblock %}
