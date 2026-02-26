@@ -10,28 +10,25 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-one-third">
 
-      {{ mojSideNavigation({
-      label: "Side navigation",
-      items: [{
-        text: "Application information",
-        href: "application-information"
-       
-      }, {
-        text: "Documents",
-        href: "documents"
-      }, {
-        text: "Have your say",
-        href: "have-your-say-on-a-crown-development-application"
-      }, {
-        text: "Application updates",
-        href: "application-updates.html",
-         active: true
-      }, {
-        text: "Written representations",
-        href: "written-representations.html"
-      }]
-    }) }}
-
+      <nav class="moj-side-navigation" aria-label="Side navigation">
+            <ul class="moj-side-navigation__list">
+                <li class="moj-side-navigation__item">
+                    <a href="application-information.html">Application information</a>
+                </li>
+                <li class="moj-side-navigation__item">
+                    <a href="documents.html">Documents</a>
+                </li>
+                <li class="moj-side-navigation__item">
+                    <a href="have-your-say-on-a-crown-development-application.html">Have your say</a>
+                </li>
+                <li class="moj-side-navigation__item moj-side-navigation__item--active">
+                    <a href="application-updates.html" aria-current="location">Application updates</a>
+                </li>
+                <li class="moj-side-navigation__item">
+                    <a href="written-representations.html">Written representations</a>
+                </li>
+            </ul>
+        </nav>
     </div>
 
     <div class="govuk-grid-column-two-thirds">
