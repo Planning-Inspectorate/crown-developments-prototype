@@ -1,0 +1,144 @@
+{% extends "layouts/back-office.njk" %}
+
+{% set showPrototypeBanner = true %}
+
+{% set pageName = "Question" %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+        <div class="govuk-error-summary" data-module="govuk-error-summary">
+            <div role="alert">
+                <h2 class="govuk-error-summary__title">
+                    Invalid combination
+                </h2>
+                <div class="govuk-error-summary__body">
+                    <ul class="govuk-list govuk-error-summary__list">
+                        
+                        <li>
+                            <a href="#">EIA: Yes
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">Development plan: Yes
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">Right of way: No
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <h1 class="govuk-heading-l">Application category</h1>
+
+        <div class="govuk-form-group govuk-form-group--error">
+            <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend">
+                    Is this application an Environmental Impact Assessment (EIA) development?
+
+                </legend>
+                <div class="govuk-hint">
+                    If 'Yes', this application will be marked as a special development
+                </div>
+
+                <p class="govuk-error-message">
+                    <span class="govuk-visually-hidden">Error:</span> Invalid combination
+                </p>
+                <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" type="radio" checked="checked">
+                        <label class="govuk-label govuk-radios__label">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" type="radio" >
+                        <label class="govuk-label govuk-radios__label">
+                            No
+                        </label>
+                    </div>
+
+                </div>
+
+
+            </fieldset>
+
+        </div>
+        <div class="govuk-form-group govuk-form-group--error">
+            <fieldset class="govuk-fieldset">
+
+                <legend class="govuk-fieldset__legend">
+                    Does this application accord with the development plan?
+
+                </legend>
+                <div class="govuk-hint">
+                    If 'No', this application will be marked as a special development
+                </div>
+
+                <p class="govuk-error-message">
+                    <span class="govuk-visually-hidden">Error:</span> Invalid combination
+                </p>
+                <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" type="radio" checked="checked">
+                        <label class="govuk-label govuk-radios__label">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" type="radio" >
+                        <label class="govuk-label govuk-radios__label">
+                            No
+                        </label>
+                    </div>
+
+                </div>
+            </fieldset>
+
+        </div>
+
+        <div class="govuk-form-group govuk-form-group--error">
+            <fieldset class="govuk-fieldset">
+
+                <legend class="govuk-fieldset__legend">
+                    Does this application affect a right of way?
+                </legend>
+                <div class="govuk-hint">
+                    If 'Yes', this application will be marked as a special development </div>
+
+                <p class="govuk-error-message">
+                    <span class="govuk-visually-hidden">Error:</span> Invalid combination
+                </p>
+                <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" type="radio" >
+                        <label class="govuk-label govuk-radios__label">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" type="radio" checked="checked">
+                        <label class="govuk-label govuk-radios__label">
+                            No
+                        </label>
+                    </div>
+
+                </div>
+            </fieldset>
+
+        </div>
+
+
+        <a href="application-info-populated.html#details" class="govuk-button">Continue</a>
+
+    </div>
+</div>
+
+{% endblock %}

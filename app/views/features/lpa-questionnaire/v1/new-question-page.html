@@ -1,0 +1,108 @@
+{% extends "layouts/back-office.njk" %}
+
+{% set showPrototypeBanner = true %}
+
+{% set pageName = "Question" %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+        <h1 class="govuk-heading-l">Application category</h1>
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend">
+                    Is this application an Environmental Impact Assessment (EIA) development?
+
+                </legend>
+                <div class="govuk-hint">
+                    If 'Yes', this application will be marked as a special development
+                </div>
+                <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" type="radio" value="england">
+                        <label class="govuk-label govuk-radios__label">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" type="radio" value="scotland">
+                        <label class="govuk-label govuk-radios__label">
+                            No
+                        </label>
+                    </div>
+
+                </div>
+
+
+            </fieldset>
+
+        </div>
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+
+                <legend class="govuk-fieldset__legend">
+                    Does this application accord with the development plan?
+
+                </legend>
+                <div class="govuk-hint">
+                    If 'No', this application will be marked as a special development
+                </div>
+                <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" type="radio" value="england">
+                        <label class="govuk-label govuk-radios__label">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" type="radio" value="scotland">
+                        <label class="govuk-label govuk-radios__label">
+                            No
+                        </label>
+                    </div>
+
+                </div>
+            </fieldset>
+
+        </div>
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+
+                <legend class="govuk-fieldset__legend">
+                    Does this application affect a right of way?
+                </legend>
+                <div class="govuk-hint">
+                    If 'Yes', this application will be marked as a special development </div>
+                <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" type="radio" value="england">
+                        <label class="govuk-label govuk-radios__label">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" type="radio" value="scotland">
+                        <label class="govuk-label govuk-radios__label">
+                            No
+                        </label>
+                    </div>
+
+                </div>
+            </fieldset>
+
+        </div>
+
+
+        <a href="new-question-page-error.html" class="govuk-button">Continue</a>
+
+    </div>
+</div>
+
+{% endblock %}
