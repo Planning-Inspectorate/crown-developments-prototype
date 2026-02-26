@@ -102,3 +102,10 @@
 		grid-template-columns: 1fr 1fr;
 	}
 }
+
+/* MoJ nav colour customisation */
+
+.moj-side-navigation__item--active > a {
+  color: black !important;
+  border-left-color: #29A197 !important;
+}
