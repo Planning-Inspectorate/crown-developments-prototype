@@ -5,398 +5,408 @@ Crown Developments prototype
 
 {% block content %}
 
-  <h1 class="govuk-heading-xl">Distressing content warning</h1>
+<h1 class="govuk-heading-xl">Distressing content warning</h1>
 
-  <p class="govuk-body">Implementation of a distressing content warning for Crown Development applications.</p>
-  <p class="govuk-body">
-    <a href="https://app.mural.co/t/allpins6990/m/allpins6990/1767863342296/1a53aafed5c905ae20db5f4a21d8b05d5d122d10">Mural link
-    </a>
-  </p>
+<p class="govuk-body">Implementation of a distressing content warning for Crown Development applications.</p>
+<p class="govuk-body">
+  <a href="https://app.mural.co/t/allpins6990/m/allpins6990/1767863342296/1a53aafed5c905ae20db5f4a21d8b05d5d122d10">Mural
+    link
+  </a>
+</p>
 
-  <h2 class="govuk-heading-l">Application-level warning</h2>
+<h2 class="govuk-heading-l">Application-level warning</h2>
 
-  <div class="govuk-tabs" data-module="govuk-tabs">
-    <h3 class="govuk-tabs__title">
-      Contents
-    </h3>
-    <ul class="govuk-tabs__list">
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <h3 class="govuk-tabs__title">
+    Contents
+  </h3>
+  <ul class="govuk-tabs__list">
 
-      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-        <a class="govuk-tabs__tab" href="#case-version-2">
-          Version 2
-        </a>
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#case-version-2">
+        Version 2
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#case-version-1">
+        Version 1
+      </a>
+    </li>
+  </ul>
+
+  <div class="govuk-tabs__panel" id="case-version-2">
+    <h3 class="govuk-heading-m">Version 2</h3>
+    <p class="govuk-body">Updated full case version including document tagging.</p>
+
+    <h4 class="govuk-heading-s">Front office</h4>
+    <ul class="govuk-list">
+      <li>
+        <a href="case/v2/application-information" class="govuk-body govuk-link">Application information</a>
       </li>
-      <li class="govuk-tabs__list-item">
-        <a class="govuk-tabs__tab" href="#case-version-1">
-          Version 1
-        </a>
+
+    </ul>
+    <h4 class="govuk-heading-s">Back office</h4>
+
+    <ul class="govuk-list">
+      <li>
+        <a href="case/back-office-new-question" class="govuk-link">
+          New question</a>
+      </li>
+      <li>
+        <a href="case/back-office-new-question-error" class="govuk-link">
+          New question validation error</a>
+      </li>
+      <li>
+        <a href="case/back-office-create-case-check-answers" class="govuk-link">
+          Create case check your answers</a>
+      </li>
+      <li>
+        <a href="case/back-office-manage-application#details" class="govuk-link">
+          Manage application view</a>
       </li>
     </ul>
+  </div>
 
-    <div class="govuk-tabs__panel" id="case-version-2">
-      <h3 class="govuk-heading-m">Version 2</h3>
-      <p class="govuk-body">Updated full case version including document tagging.</p>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="case-version-1">
+    <h3 class="govuk-heading-m">Version 1</h3>
+    <p class="govuk-body">Front office and back office implementation of a distressing content flag for whole
+      application.</p>
 
-      <h4 class="govuk-heading-s">Front office</h4>
-      <ul class="govuk-list">
-        <li>
-          <a href="case/v2/application-information" class="govuk-body govuk-link">Application information</a>
-        </li>
+    <h4 class="govuk-heading-s">Front office</h4>
+    <ul class="govuk-list">
+      <li>
+        <a href="case/option-1/application-information" class="govuk-body govuk-link">Option 1: Below heading</a>
+      </li>
+      <li>
+        <a href="case/option-2/application-information" class="govuk-body govuk-link">Option 2: Above heading</a>
+      </li>
+      <li>
+        <a href="case/option-3/application-information" class="govuk-body govuk-link">Option 3: Above banner</a>
+      </li>
 
-      </ul>
-      <h4 class="govuk-heading-s">Back office</h4>
+    </ul>
 
-      <ul class="govuk-list">
-        <li>
-          <a href="case/back-office-new-question" class="govuk-link">
-            New question</a>
-        </li>
-        <li>
-          <a href="case/back-office-new-question-error" class="govuk-link">
-            New question validation error</a>
-        </li>
-        <li>
-          <a href="case/back-office-create-case-check-answers" class="govuk-link">
-            Create case check your answers</a>
-        </li>
-        <li>
-          <a href="case/back-office-manage-application#details" class="govuk-link">
-            Manage application view</a>
-        </li>
-      </ul>
-    </div>
+    <h4 class="govuk-heading-s">Back office</h4>
 
-    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="case-version-1">
-      <h3 class="govuk-heading-m">Version 1</h3>
-      <p class="govuk-body">Front office and back office implementation of a distressing content flag for whole application.</p>
+    <ul class="govuk-list">
+      <li>
+        <a href="case/back-office-new-question" class="govuk-link">
+          New question</a>
+      </li>
+      <li>
+        <a href="case/back-office-new-question-error" class="govuk-link">
+          New question validation error</a>
+      </li>
+      <li>
+        <a href="case/back-office-create-case-check-answers" class="govuk-link">
+          Create case check your answers</a>
+      </li>
+      <li>
+        <a href="case/back-office-manage-application#details" class="govuk-link">
+          Manage application view</a>
+      </li>
+    </ul>
+  </div>
 
-      <h4 class="govuk-heading-s">Front office</h4>
-      <ul class="govuk-list">
-        <li>
-          <a href="case/option-1/application-information" class="govuk-body govuk-link">Option 1: Below heading</a>
-        </li>
-        <li>
-          <a href="case/option-2/application-information" class="govuk-body govuk-link">Option 2: Above heading</a>
-        </li>
-        <li>
-          <a href="case/option-3/application-information" class="govuk-body govuk-link">Option 3: Above banner</a>
-        </li>
+</div>
 
-      </ul>
+<h2 class="govuk-heading-l">Documents</h2>
 
-      <h4 class="govuk-heading-s">Back office</h4>
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <h3 class="govuk-tabs__title">
+    Contents
+  </h3>
+  <ul class="govuk-tabs__list">
 
-      <ul class="govuk-list">
-        <li>
-          <a href="case/back-office-new-question" class="govuk-link">
-            New question</a>
-        </li>
-        <li>
-          <a href="case/back-office-new-question-error" class="govuk-link">
-            New question validation error</a>
-        </li>
-        <li>
-          <a href="case/back-office-create-case-check-answers" class="govuk-link">
-            Create case check your answers</a>
-        </li>
-        <li>
-          <a href="case/back-office-manage-application#details" class="govuk-link">
-            Manage application view</a>
-        </li>
-      </ul>
-    </div>
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#Docs-version-2">
+        Version 2
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#Docs-version-1">
+        Version 1
+      </a>
+    </li>
+  </ul>
+
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="Docs-version-1">
+    <h3 class="govuk-heading-m">Version 1 wireframes</h3>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Distressing content warning to flag where documents may contain distressing content.</li>
+    </ul>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a href="/features/distressing-content/documents/v1-option-1.html" class="govuk-link">
+          Option 1</a>
+      </li>
+      <li>
+        <a href="/features/distressing-content/documents/v1-option-2.html" class="govuk-link">
+          Option 2</a>
+      </li>
+      <li>
+        <a href="/features/distressing-content/documents/v1-option-3.html" class="govuk-link">
+          Option 3</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="govuk-tabs__panel" id="Docs-version-2">
+    <h3 class="govuk-heading-m">Version 2</h3>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Settled on blue Important banner based on Comms feedback</li>
+      <li>Finalised content</li>
+
+    </ul>
+    <a href="documents/v2.html">Documents page</a>
 
   </div>
 
-  <h2 class="govuk-heading-l">Documents</h2>
+</div>
 
-  <div class="govuk-tabs" data-module="govuk-tabs">
-    <h3 class="govuk-tabs__title">
-      Contents
-    </h3>
-    <ul class="govuk-tabs__list">
+<h2 class="govuk-heading-l">Reps</h2>
 
-      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-        <a class="govuk-tabs__tab" href="#Docs-version-2">
-          Version 2
-        </a>
-      </li>
-      <li class="govuk-tabs__list-item">
-        <a class="govuk-tabs__tab" href="#Docs-version-1">
-          Version 1
-        </a>
-      </li>
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <h3 class="govuk-tabs__title">
+    Contents
+  </h3>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#reps-version-4">
+        Version 4
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#reps-version-3">
+        Version 3
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#reps-version-2">
+        Version 2
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#version-1">
+        Version 1
+      </a>
+    </li>
+  </ul>
+
+  <div class="govuk-tabs__panel" id="reps-version-4">
+    <h3 class="govuk-heading-m">Version 4</h3>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Add missing back office step</li>
+      <li>Remove BO warning banner - not MVP</li>
+      <li>Add warning banner where a rep is marked as distressing but the case is not</li>
+
     </ul>
+    <h4 class="govuk-heading-s">Front office</h4>
 
-    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="Docs-version-1">
-      <h3 class="govuk-heading-m">Version 1 wireframes</h3>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>Distressing content warning to flag where documents may contain distressing content.</li>
-      </ul>
+    <ul class="govuk-list">
+      <li>
+        <a href="reps/v4/front-office" class="govuk-body govuk-link">Front office prototype</a>
+      </li>
+      <li>
+        <a href="reps/v4/warning-written-representations-example" class="govuk-body govuk-link">Written rep with
+          warning</a>
+      </li>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="/features/distressing-content/documents/v1-option-1.html" class="govuk-link">
-            Option 1</a>
-        </li>
-        <li>
-          <a href="/features/distressing-content/documents/v1-option-2.html" class="govuk-link">
-            Option 2</a>
-        </li>
-        <li>
-          <a href="/features/distressing-content/documents/v1-option-3.html" class="govuk-link">
-            Option 3</a>
-        </li>
-      </ul>
-    </div>
+    </ul>
+    <h4 class="govuk-heading-s">Back office</h4>
 
-    <div class="govuk-tabs__panel" id="Docs-version-2">
-      <h3 class="govuk-heading-m">Version 2</h3>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>Settled on blue Important banner based on Comms feedback</li>
-        <li>Finalised content</li>
+    <ol class="govuk-list govuk-list--number">
+      <li>
+        <a href="reps/v4/manage-reps" class="govuk-link">Manage representations</a>
+      </li>
+      <li>
+        <a href="reps/v4/review-representation" class="govuk-link">Review representation</a>
+      </li>
 
-      </ul>
-      <a href="documents/v2.html">Documents page</a>
+      <li>
+        <a href="reps/v4/task-list" class="govuk-link">
+          Task list</a>
+      </li>
+      <li>
+        <a href="reps/v4/review-comment" class="govuk-link">
+          Review comment</a>
+      </li>
+      <li>
+        <a href="reps/v4/task-list-2" class="govuk-link">
+          Task list 2</a>
+      </li>
+      <li>
+        <a href="reps/v4/review-attachments" class="govuk-link">
+          Review attachments</a>
+      </li>
+      <li>
+        <a href="reps/v4/task-list-3" class="govuk-link">
+          Task list 3</a>
+      </li>
+      <li>
+        <a href="reps/v4/mark-distressing" class="govuk-link">
+          Distressing content?</a>
+      </li>
+      <li>
+        <a href="reps/v4/task-list-4" class="govuk-link">
+          Task list 4</a>
+      </li>
+      <li>
+        <a href="reps/v4/task-list-4-no" class="govuk-link">
+          Task list- no distressing content</a>
+      </li>
+      <li>
+        <a href="reps/v4/manage-reps-success" class="govuk-link">Manage representations-success banner</a>
+      </li>
 
-    </div>
+      <li>
+        <a href="reps/v4/manage-reps-conflict.html" class="govuk-link">Warning where a rep is marked as distressing but
+          the case is not</a>
+      </li>
+      <li>
+        <a href="reps/v4/view-representation.html" class="govuk-link">Accepted representation</a>
+      </li>
 
+    </ol>
   </div>
 
-  <h2 class="govuk-heading-l">Reps</h2>
+  <div class="govuk-tabs__panel" id="reps-version-3">
+    <h3 class="govuk-heading-m">Version 3</h3>
 
-  <div class="govuk-tabs" data-module="govuk-tabs">
-    <h3 class="govuk-tabs__title">
-      Contents
-    </h3>
-    <ul class="govuk-tabs__list">
-      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-        <a class="govuk-tabs__tab" href="#reps-version-4">
-          Version 4
-        </a>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Update location of back office question</li>
+      <li>Update location of front office tag</li>
+    </ul>
+    <h4 class="govuk-heading-s">Front office</h4>
+
+    <ul class="govuk-list">
+      <li>
+        <a href="reps/v3/front-office" class="govuk-body govuk-link">Front office prototype</a>
       </li>
-      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-        <a class="govuk-tabs__tab" href="#reps-version-3">
-          Version 3
-        </a>
+      <li>
+        <a href="reps/v3/warning-written-representations-example" class="govuk-body govuk-link">Written rep with
+          warning</a>
       </li>
-      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-        <a class="govuk-tabs__tab" href="#reps-version-2">
-          Version 2
-        </a>
+
+    </ul>
+    <h4 class="govuk-heading-s">Back office</h4>
+
+    <ol class="govuk-list govuk-list--number">
+      <li>
+        <a href="reps/v3/manage-reps" class="govuk-link">Manage representations</a>
       </li>
-      <li class="govuk-tabs__list-item">
-        <a class="govuk-tabs__tab" href="#version-1">
-          Version 1
-        </a>
+
+      <li>
+        <a href="reps/v3/task-list" class="govuk-link">
+          Task list</a>
+      </li>
+      <li>
+        <a href="reps/v3/review-comment" class="govuk-link">
+          Review comment</a>
+      </li>
+      <li>
+        <a href="reps/v3/task-list-2" class="govuk-link">
+          Task list 2</a>
+      </li>
+      <li>
+        <a href="reps/v3/review-attachments" class="govuk-link">
+          Review attachments</a>
+      </li>
+      <li>
+        <a href="reps/v3/task-list-3" class="govuk-link">
+          Task list 3</a>
+      </li>
+      <li>
+        <a href="reps/v3/mark-distressing" class="govuk-link">
+          Distressing content?</a>
+      </li>
+      <li>
+        <a href="reps/v3/task-list-4" class="govuk-link">
+          Task list 4</a>
+      </li>
+      <li>
+        <a href="reps/v3/task-list-4-no" class="govuk-link">
+          Task list- no distressing content</a>
+      </li>
+      <li>
+        <a href="reps/v3/manage-reps-success" class="govuk-link">Manage representations-success banner</a>
+      </li>
+
+    </ol>
+  </div>
+
+  <div class="govuk-tabs__panel" id="reps-version-2">
+    <h3 class="govuk-heading-m">Version 2</h3>
+    <h4 class="govuk-heading-s">Front office</h4>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Updated banner text to update new global banner content</li>
+    </ul>
+    <ul class="govuk-list">
+      <li>
+        <a href="reps/v2/front-office" class="govuk-body govuk-link">Front office prototype</a>
+      </li>
+      <li>
+        <a href="reps/v2/warning-written-representations-example" class="govuk-body govuk-link">Written rep with
+          warning</a>
+      </li>
+
+    </ul>
+    <h4 class="govuk-heading-s">Back office</h4>
+
+    <ul class="govuk-list">
+      <li>
+        <a href="reps/v2/back-office-view-rep-3" class="govuk-link">
+          View rep</a>
+      </li>
+
+      <li>
+        <a href="reps/v2/back-office-option-3a" class="govuk-link">
+          Distressing content?</a>
+      </li>
+      <li>
+        <a href="reps/v2/back-office-option-3b" class="govuk-link">
+          Review decision</a>
       </li>
     </ul>
-
-    <div class="govuk-tabs__panel" id="reps-version-4">
-      <h3 class="govuk-heading-m">Version 4</h3>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>Add missing back office step</li>
-        <li>Remove BO warning banner - not MVP</li>
-        <li>Add warning banner where a rep is marked as distressing but the case is not</li>
-
-      </ul>
-      <h4 class="govuk-heading-s">Front office</h4>
-
-      <ul class="govuk-list">
-        <li>
-          <a href="reps/v4/front-office" class="govuk-body govuk-link">Front office prototype</a>
-        </li>
-        <li>
-          <a href="reps/v4/warning-written-representations-example" class="govuk-body govuk-link">Written rep with warning</a>
-        </li>
-
-      </ul>
-      <h4 class="govuk-heading-s">Back office</h4>
-
-      <ol class="govuk-list govuk-list--number">
-        <li>
-          <a href="reps/v4/manage-reps" class="govuk-link">Manage representations</a>
-        </li>
-        <li>
-          <a href="reps/v4/review-representation" class="govuk-link">Review representation</a>
-        </li>
-
-        <li>
-          <a href="reps/v4/task-list" class="govuk-link">
-            Task list</a>
-        </li>
-        <li>
-          <a href="reps/v4/review-comment" class="govuk-link">
-            Review comment</a>
-        </li>
-        <li>
-          <a href="reps/v4/task-list-2" class="govuk-link">
-            Task list 2</a>
-        </li>
-        <li>
-          <a href="reps/v4/review-attachments" class="govuk-link">
-            Review attachments</a>
-        </li>
-        <li>
-          <a href="reps/v4/task-list-3" class="govuk-link">
-            Task list 3</a>
-        </li>
-        <li>
-          <a href="reps/v4/mark-distressing" class="govuk-link">
-            Distressing content?</a>
-        </li>
-        <li>
-          <a href="reps/v4/task-list-4" class="govuk-link">
-            Task list 4</a>
-        </li>
-        <li>
-          <a href="reps/v4/task-list-4-no" class="govuk-link">
-            Task list- no distressing content</a>
-        </li>
-        <li>
-          <a href="reps/v4/manage-reps-success" class="govuk-link">Manage representations-success banner</a>
-        </li>
-
-        <li>
-          <a href="reps/v4/manage-reps-conflict.html" class="govuk-link">Warning where a rep is marked as distressing but the case is not</a></li>
-
-      </ol>
-    </div>
-
-    <div class="govuk-tabs__panel" id="reps-version-3">
-      <h3 class="govuk-heading-m">Version 3</h3>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>Update location of back office question</li>
-        <li>Update location of front office tag</li>
-      </ul>
-      <h4 class="govuk-heading-s">Front office</h4>
-
-      <ul class="govuk-list">
-        <li>
-          <a href="reps/v3/front-office" class="govuk-body govuk-link">Front office prototype</a>
-        </li>
-        <li>
-          <a href="reps/v3/warning-written-representations-example" class="govuk-body govuk-link">Written rep with warning</a>
-        </li>
-
-      </ul>
-      <h4 class="govuk-heading-s">Back office</h4>
-
-      <ol class="govuk-list govuk-list--number">
-        <li>
-          <a href="reps/v3/manage-reps" class="govuk-link">Manage representations</a>
-        </li>
-
-        <li>
-          <a href="reps/v3/task-list" class="govuk-link">
-            Task list</a>
-        </li>
-        <li>
-          <a href="reps/v3/review-comment" class="govuk-link">
-            Review comment</a>
-        </li>
-        <li>
-          <a href="reps/v3/task-list-2" class="govuk-link">
-            Task list 2</a>
-        </li>
-        <li>
-          <a href="reps/v3/review-attachments" class="govuk-link">
-            Review attachments</a>
-        </li>
-        <li>
-          <a href="reps/v3/task-list-3" class="govuk-link">
-            Task list 3</a>
-        </li>
-        <li>
-          <a href="reps/v3/mark-distressing" class="govuk-link">
-            Distressing content?</a>
-        </li>
-        <li>
-          <a href="reps/v3/task-list-4" class="govuk-link">
-            Task list 4</a>
-        </li>
-        <li>
-          <a href="reps/v3/task-list-4-no" class="govuk-link">
-            Task list- no distressing content</a>
-        </li>
-        <li>
-          <a href="reps/v3/manage-reps-success" class="govuk-link">Manage representations-success banner</a>
-        </li>
-
-      </ol>
-    </div>
-
-    <div class="govuk-tabs__panel" id="reps-version-2">
-      <h3 class="govuk-heading-m">Version 2</h3>
-      <h4 class="govuk-heading-s">Front office</h4>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>Updated banner text to update new global banner content</li>
-      </ul>
-      <ul class="govuk-list">
-        <li>
-          <a href="reps/v2/front-office" class="govuk-body govuk-link">Front office prototype</a>
-        </li>
-        <li>
-          <a href="reps/v2/warning-written-representations-example" class="govuk-body govuk-link">Written rep with warning</a>
-        </li>
-
-      </ul>
-      <h4 class="govuk-heading-s">Back office</h4>
-
-      <ul class="govuk-list">
-        <li>
-          <a href="reps/v2/back-office-view-rep-3" class="govuk-link">
-            View rep</a>
-        </li>
-
-        <li>
-          <a href="reps/v2/back-office-option-3a" class="govuk-link">
-            Distressing content?</a>
-        </li>
-        <li>
-          <a href="reps/v2/back-office-option-3b" class="govuk-link">
-            Review decision</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="version-1">
-      <h3 class="govuk-heading-m">Version 1</h3>
-      <p class="govuk-body">Front office and back office implementation of the distressing content warning for reps.</p>
-
-      <h4 class="govuk-heading-s">Front office</h4>
-      <ul class="govuk-list">
-        <a href="reps/front-office" class="govuk-body govuk-link">Front office prototype</a>
-      </ul>
-
-      <h4 class="govuk-heading-s">Back office</h4>
-
-      <ul class="govuk-list">
-        <li>
-          <a href="reps/back-office-view-rep" class="govuk-link">
-            View rep</a>
-        </li>
-        <li>
-          <a href="reps/back-office-option-1" class="govuk-link">
-            Option 1 - Additional radios</a>
-        </li>
-        <li>
-          <a href="reps/back-office-option-2" class="govuk-link">
-            Option 2 - Warning banner</a>
-        </li>
-        <li>
-          <a href="reps/back-office-view-rep-3" class="govuk-link">
-            Option 3 - review - separate pages</a>
-          <a href="reps/back-office-option-3a" class="govuk-link">
-            Option 3a</a>
-          <a href="reps/back-office-option-3b" class="govuk-link">
-            Option 3b</a>
-        </li>
-      </ul>
-    </div>
-
   </div>
+
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="version-1">
+    <h3 class="govuk-heading-m">Version 1</h3>
+    <p class="govuk-body">Front office and back office implementation of the distressing content warning for reps.</p>
+
+    <h4 class="govuk-heading-s">Front office</h4>
+    <ul class="govuk-list">
+      <a href="reps/front-office" class="govuk-body govuk-link">Front office prototype</a>
+    </ul>
+
+    <h4 class="govuk-heading-s">Back office</h4>
+
+    <ul class="govuk-list">
+      <li>
+        <a href="reps/back-office-view-rep" class="govuk-link">
+          View rep</a>
+      </li>
+      <li>
+        <a href="reps/back-office-option-1" class="govuk-link">
+          Option 1 - Additional radios</a>
+      </li>
+      <li>
+        <a href="reps/back-office-option-2" class="govuk-link">
+          Option 2 - Warning banner</a>
+      </li>
+      <li>
+        <a href="reps/back-office-view-rep-3" class="govuk-link">
+          Option 3 - review - separate pages</a>
+        <a href="reps/back-office-option-3a" class="govuk-link">
+          Option 3a</a>
+        <a href="reps/back-office-option-3b" class="govuk-link">
+          Option 3b</a>
+      </li>
+    </ul>
+  </div>
+
+</div>
 
 {% endblock %}
