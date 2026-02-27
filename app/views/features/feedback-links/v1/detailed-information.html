@@ -1,7 +1,6 @@
 {% extends "layouts/front-office.html" %}
 {% set pageName = "Detailed information - Find a Crown Development application" %}
 
-
 {% block beforeContent %}
   <style>
     .cd-cards-grid {
@@ -13,7 +12,7 @@
     .cd-card-divider {
       border: 0;
       border-top: 1px solid #b1b4b6;
-      margin: 0 0 16px 0;
+      margin: 0 0 16px;
     }
 
     .cd-card-heading {
@@ -46,51 +45,81 @@
 
 {% block content %}
 
-<div class="cd-cards-grid">
-  <div>
-    <hr class="cd-card-divider">
-    <div class="pins-chevron-card">
-      <div class="pins-chevron-card__wrapper">
-        <h3 class="pins-chevron-card__heading govuk-heading-s cd-card-heading">
-          <a class="govuk-link pins-chevron-card__link" href="https://www.gov.uk/government/publications/crown-development-applications-procedural-guide">Procedural guidance</a>
-          <span aria-hidden="true" class="cd-card-chevron">
-            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 4l8 8-8 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-        </h3>
-        <p class="govuk-body pins-chevron-card__description">The roles and responsibilities of each party in the non-urgent Crown development process.</p>
+  <div class="govuk-grid-row" style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+    <div>
+      <hr style="border:0; border-top:1px solid #b1b4b6; margin:0 0 16px 0;">
+      <div class="pins-chevron-card">
+        <div class="pins-chevron-card__wrapper">
+          <h3 class="pins-chevron-card__heading govuk-heading-s" style="display:flex; align-items:center; justify-content:space-between; margin-bottom:4px;">
+            <a class="govuk-link pins-chevron-card__link" href="https://www.gov.uk/government/publications/crown-development-applications-procedural-guide">Procedural guidance</a>
+            <span aria-hidden="true" style="margin-left:8px; display:inline-flex; align-items:center;">
+              <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;"><path d="M8 4l8 8-8 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </h3>
+          <p class="govuk-body pins-chevron-card__description">The roles and responsibilities of each party in the non-urgent Crown development process.</p>
+        </div>
       </div>
     </div>
-  </div>
-
-  <div>
-    <hr class="cd-card-divider">
-    <div class="pins-chevron-card">
-      <div class="pins-chevron-card__wrapper">
-        <h3 class="pins-chevron-card__heading govuk-heading-s cd-card-heading">
-          <a class="govuk-link pins-chevron-card__link" href="https://www.gov.uk/government/publications/planning-application-forms-templates-for-local-planning-authorities">Application documents</a>
-          <span aria-hidden="true" class="cd-card-chevron">
-            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 4l8 8-8 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-        </h3>
-        <p class="govuk-body pins-chevron-card__description">Resources for submitting a Crown development application.</p>
+    <div>
+      <hr style="border:0; border-top:1px solid #b1b4b6; margin:0 0 16px 0;">
+      <div class="pins-chevron-card">
+        <div class="pins-chevron-card__wrapper">
+          <h3 class="pins-chevron-card__heading govuk-heading-s" style="display:flex; align-items:center; justify-content:space-between; margin-bottom:4px;">
+            <a class="govuk-link pins-chevron-card__link" href="https://www.gov.uk/government/publications/planning-application-forms-templates-for-local-planning-authorities">Application documents</a>
+            <span aria-hidden="true" style="margin-left:8px; display:inline-flex; align-items:center;">
+              <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;"><path d="M8 4l8 8-8 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </h3>
+          <p class="govuk-body pins-chevron-card__description">Resources for submitting a Crown development application.</p>
+        </div>
       </div>
     </div>
-  </div>
-
-  <div>
-    <hr class="cd-card-divider">
-    <div class="pins-chevron-card">
-      <div class="pins-chevron-card__wrapper">
-        <h3 class="pins-chevron-card__heading govuk-heading-s cd-card-heading">
-          <a class="govuk-link pins-chevron-card__link" href="https://www.legislation.gov.uk/uksi/2025/409/contents/made">Legislation information</a>
-          <span aria-hidden="true" class="cd-card-chevron">
-            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 4l8 8-8 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-        </h3>
-        <p class="govuk-body pins-chevron-card__description">View The Town and Country Planning Order 2025 to understand our legal duties.</p>
+    <div>
+      <hr style="border:0; border-top:1px solid #b1b4b6; margin:0 0 16px 0;">
+      <div class="pins-chevron-card">
+        <div class="pins-chevron-card__wrapper">
+          <h3 class="pins-chevron-card__heading govuk-heading-s" style="display:flex; align-items:center; justify-content:space-between; margin-bottom:4px;">
+            <a class="govuk-link pins-chevron-card__link" href="https://www.legislation.gov.uk/uksi/2025/409/contents/made">Legislation information</a>
+            <span aria-hidden="true" style="margin-left:8px; display:inline-flex; align-items:center;">
+              <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;"><path d="M8 4l8 8-8 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </h3>
+          <h3 class="pins-chevron-card__heading govuk-heading-s" style="display:flex; align-items:center; justify-content:space-between; margin-bottom:4px;">
+            <p class="govuk-body pins-chevron-card__description">View The Town and Country Planning Order 2025 to understand our legal duties.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
+      <div>
+        <hr style="border:0; border-top:1px solid #b1b4b6; margin:0 0 16px 0;">
+        <div class="pins-chevron-card">
+          <div class="pins-chevron-card__wrapper">
+            <h3 class="pins-chevron-card__heading govuk-heading-s" style="display:flex; align-items:center; justify-content:space-between; margin-bottom:4px;">
+              <a class="govuk-link pins-chevron-card__link" href="2-words-we-use">Words we use</a>
+              <span aria-hidden="true" style="margin-left:8px; display:inline-flex; align-items:center;">
+                <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;"><path d="M8 4l8 8-8 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </h3>
+            <h3 class="pins-chevron-card__heading govuk-heading-s" style="display:flex; align-items:center; justify-content:space-between; margin-bottom:4px;">
+              <p class="govuk-body pins-chevron-card__description">Definitions of the words we use to talk about Crown Development applications.</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <hr style="border:0; border-top:1px solid #b1b4b6; margin:0 0 16px 0;">
+          <div class="pins-chevron-card">
+            <div class="pins-chevron-card__wrapper">
+              <h3 class="pins-chevron-card__heading govuk-heading-s" style="display:flex; align-items:center; justify-content:space-between; margin-bottom:4px;">
+                <a class="govuk-link pins-chevron-card__link" href="2-words-we-use">Take part in user research</a>
+                <span aria-hidden="true" style="margin-left:8px; display:inline-flex; align-items:center;">
+                  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;"><path d="M8 4l8 8-8 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </h3>
+              <h3 class="pins-chevron-card__heading govuk-heading-s" style="display:flex; align-items:center; justify-content:space-between; margin-bottom:4px;">
+                <p class="govuk-body pins-chevron-card__description">Help us improve our service by taking part in user research.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-{% endblock %}
+    {% endblock %}
