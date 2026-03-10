@@ -1,0 +1,53 @@
+{% extends "layouts/new/front-office.html" %}
+
+{% set pageName = "Declaration" %}
+
+{% block content %}
+   
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+            <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+            <h1 class="govuk-heading-l">
+                Declaration
+            </h1>
+            <p class="govuk-body">By submitting this form, you are making a written representation on a Crown development application. Your comment will be considered by the Planning Inspectors before they make a decision on the application.</p>
+            <br>
+            <div class="govuk-form-group">
+
+                <p class="govuk-hint">Select each statement to confirm that you agree.</p>
+
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" type="checkbox">
+                        <label class="govuk-label govuk-checkboxes__label">
+                            I consent to my name, comment and supporting documents being published on this website
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" type="checkbox">
+                        <label class="govuk-label govuk-checkboxes__label">
+                            The Planning Inspectorate may contact me by email about my comment and supporting documents
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" type="checkbox">
+                        <label class="govuk-label govuk-checkboxes__label">
+                            I have read and understood the
+                            <a href="">Customer Privacy Notice
+                            </a>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+              <a class="govuk-button" href="18-success.html">
+Accept and submit            </a>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
