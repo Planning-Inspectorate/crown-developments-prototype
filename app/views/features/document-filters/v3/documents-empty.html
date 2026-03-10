@@ -161,6 +161,7 @@
     }
 
 
+
     .govuk-details__summary::before {
         clip-path: polygon(6.38% 22.63%, 49.5% 65.75%, 92.63% 22.63%, 100% 30%, 50% 80%, 0% 30%);
         background-color: black;
@@ -182,7 +183,7 @@
         {{ mojSideNavigation({
         label: "Side navigation",
         items: [{
-        text: "Application information",
+        text: "Application Information",
         href: "application-information"
         }, {
         text: "Documents",
@@ -211,7 +212,7 @@
             <details class="govuk-details govuk-!-margin-bottom-0 filter-panel">
                 <summary class="govuk-details__summary" style="padding:10px 30px;width:80%">
                     <a class="govuk-link govuk-link--no-underline">
-                        Category
+                       Category
                     </a>
                 </summary>
                 <div style="padding-left:30px;">
@@ -222,8 +223,8 @@
                                     <fieldset class="govuk-fieldset" aria-describedby="type-of-application-hint">
                                         <div class="govuk-checkboxes govuk-checkboxes--small">
                                             <div class="govuk-checkboxes__item">
-                                                <input class="govuk-checkboxes__input" id="type-1" name="type" checked="checked"
-                                                    type="checkbox">
+                                                <input class="govuk-checkboxes__input" id="type-1" name="type"
+                                                    type="checkbox" value="Planning permission">
                                                 <label class="govuk-label govuk-checkboxes__label" for="type-1">
                                                     Application (21)
                                                 </label>
@@ -232,13 +233,13 @@
                                                 <input class="govuk-checkboxes__input" id="type-1" name="type"
                                                     type="checkbox" value="Planning permission">
                                                 <label class="govuk-label govuk-checkboxes__label" for="type-1">
-                                                    LPA questionnaire (1)
+                                                    LPA questionnaire (2)
                                                 </label>
                                             </div>
                                             <div class="govuk-checkboxes__item">
-                                                <input class="govuk-checkboxes__input" id="type-3" name="type"
+                                                <input class="govuk-checkboxes__input" id="type-1" name="type"
                                                     type="checkbox" value="Planning permission">
-                                                <label class="govuk-label govuk-checkboxes__label" for="type-3">
+                                                <label class="govuk-label govuk-checkboxes__label" for="type-1">
                                                     Procedure choice (34)
                                                 </label>
                                             </div>
@@ -257,10 +258,10 @@
                                                 </label>
                                             </div>
                                             <div class="govuk-checkboxes__item">
-                                                <input class="govuk-checkboxes__input" id="type-5" name="type"
+                                                <input class="govuk-checkboxes__input" id="type-2" name="type"
                                                     type="checkbox"
                                                     value="Outline planning permission with some matters reserved">
-                                                <label class="govuk-label govuk-checkboxes__label" for="type-5">
+                                                <label class="govuk-label govuk-checkboxes__label" for="type-2">
                                                     Decision (1)
                                                 </label>
                                             </div>
@@ -298,7 +299,7 @@
                                         </label>
                                         <input class="govuk-input govuk-date-input__input govuk-input--width-2"
                                             id="passport-issued-day" name="passport-issued-day" type="text"
-                                            inputmode="numeric" value="11">
+                                            inputmode="numeric">
                                     </div>
                                 </div>
                                 <div class="govuk-date-input__item">
@@ -308,7 +309,7 @@
                                         </label>
                                         <input class="govuk-input govuk-date-input__input govuk-input--width-2"
                                             id="passport-issued-month" name="passport-issued-month" type="text"
-                                            inputmode="numeric" value="12">
+                                            inputmode="numeric">
                                     </div>
                                 </div>
                                 <div class="govuk-date-input__item">
@@ -318,7 +319,7 @@
                                         </label>
                                         <input class="govuk-input govuk-date-input__input govuk-input--width-4"
                                             id="passport-issued-year" name="passport-issued-year" type="text"
-                                            inputmode="numeric" value="2025">
+                                            inputmode="numeric">
                                     </div>
                                 </div>
                             </div>
@@ -390,45 +391,6 @@
             </form>
 
         </div>
-
-        <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
-
-        <div class="govuk-grid-row" style="margin-top: 24px;">
-            <div class="govuk-grid-column-full">
-                <p class="govuk-body">
-                    Active filters
-
-                </p>
-                <div style="flex-direction:column; gap:0px;">
-                    <div style="display:flex; align-items:center; gap:12px;">
-
-                        <span style="display:inline-flex; gap:0px;">
-                            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                                <a style="text-decoration: none;" href="documents.html"><span class="govuk-body selected-filter-tag"
-                                    style="margin:0px; border-radius:5px; background:#f3f2f1; color:#0b0c0c; font-family:'GDS Transport',Arial,sans-serif; border-radius:4px; padding:4px 12px; border:1px solid #b1b4b6; white-space:nowrap;">
-                                    <button type="button"
-                                        style="background:none; border:none; padding:0; margin-right:8px; font-size:20px; line-height:1; cursor:pointer;">×</button>
-                                    Category: Application
-                                </span></a>
-                                <a style="text-decoration: none;" href="documents.html"><span class="govuk-body selected-filter-tag"
-                                    style="margin:0px; border-radius:5px; background:#f3f2f1; color:#0b0c0c; font-family:'GDS Transport',Arial,sans-serif; border-radius:4px; padding:4px 12px; border:1px solid #b1b4b6; white-space:nowrap;">
-                                    <button type="button"
-                                        style="background:none; border:none; padding:0; margin-right:8px; font-size:16px; line-height:1; cursor:pointer;">×</button>Published from:
-                                    11 December 2025
-
-                                </span></a>
-                            </div>
-                        </span>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div style="padding-top:20px; font-size:19px;">
-
-            <a href="documents" class="govuk-link" style="font-weight:normal;">Clear search and filters</a>
-        </div>
-        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
         <div id="pagination" class="govuk-body">
             <p class="govuk-body">
                 Showing
