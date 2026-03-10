@@ -1,0 +1,16 @@
+{% extends "layouts/question.njk" %}
+
+{% block question %}
+    {{ govukInput({
+        name: "email-address",
+        id: "email-address",
+        label: {
+            text: "What is your email address?",
+            classes: "govuk-label--l",
+            isPageHeading: true
+        },
+        hint: {
+            text: "We will use your email address to send you information about this project. We will not publish your email address."
+        }
+    }) }}
+{% endblock %}

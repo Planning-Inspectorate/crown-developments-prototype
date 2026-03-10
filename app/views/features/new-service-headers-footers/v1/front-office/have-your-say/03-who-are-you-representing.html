@@ -1,0 +1,52 @@
+{% extends "layouts/front-office.html" %}
+
+{% set pageName = "Who are you representing?" %}
+
+{% block content %}
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form action="" method="post" novalidate="">
+
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            Who are you representing?
+                        </h1>
+                    </legend>
+
+                    <div class="govuk-form-group">
+                        <div class="govuk-radios govuk-radios" data-module="govuk-radios" data-govuk-radios-init="">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="representedTypeId" name="representedTypeId" type="radio" value="person" data-cy="answer-person">
+                                <label class="govuk-label govuk-radios__label" for="representedTypeId">
+                                    A person
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="representedTypeId-2" name="representedTypeId" type="radio" value="organisation" data-cy="answer-organisation">
+                                <label class="govuk-label govuk-radios__label" for="representedTypeId-2">
+                                    An organisation or charity I work or volunteer for
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="representedTypeId-3" name="representedTypeId" type="radio" value="household" data-cy="answer-household">
+                                <label class="govuk-label govuk-radios__label" for="representedTypeId-3">
+                                    An organisation or charity I do not work or volunteer for
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+               <a href="04-what-is-your-name.html" class="govuk-button">
+                    Continue
+                </a>
+            </form>
+        </div>
+
+    </div>
+
+{% endblock %}

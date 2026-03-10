@@ -1,0 +1,117 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+      items: [
+          {
+              text: "Home",
+              href: "#"
+          },
+          {
+              text: "Crown Development Applications",
+              href: "#"
+          },
+          {
+              text: "Start now"
+          }
+      ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        {{ serviceName }}
+      </h1>
+
+      <p>Use this service to have your say about a Crown Development Application. We need your personal details
+        and your comments about CROWN/2025/0000020.</p>
+
+      <p>The application can be inspected under the Documents heading.</p>
+
+
+      <p>If you're under 18, get an adult to submit your comment for you.</p>
+
+      <h2 class="govuk-heading-m">Writing your comments</h2>
+
+      <p>Your comments must be about what you consider to be the main issues and impacts. You should include as much
+        detail as possible and cover anything that may affect your day-to-day life.</p>
+
+      <p>Your comments will be:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>taken into account before a decision is made on the application</li>
+        <li>published on this website along with your name</li>
+      </ul>
+
+
+      <p>You must submit your comments before 11:59pm on 12 December 2025.</p>
+
+      {{ govukButton({
+          text: "Start now",
+          href: "/who-are-you-submitting-for",
+          isStartButton: true
+      }) }}
+
+      {% set details %}
+      <p> At the Planning Inspectorate, we value your privacy. This statement outlines how we process your personal data.</p>
+
+      <p>
+          When you submit a comment on a non-urgent Crown development application, we’ll ask for your name and email address. 
+
+      </p>
+
+      <p>Your name and comment will be published on the <a href="https://find-crown-development.planninginspectorate.gov.uk/applications">Find a Crown development application service</a>. We will only use your email address to communicate with you about your submission and will not use your data for any other, unrelated purpose. </p>
+
+      <p>We’ll process all of your data in line with our legal obligation under The Town and Country Planning (Crown Development Applications) (Procedure and Written Representations) Order 2025</a>. 
+
+<p> You can read full details of how we process your data in our <a href=https://www.gov.uk/government/publications/planning-inspectorate-privacy-notices/customer-privacy-notice>GOV. UK Customer privacy notice</a>.
+      
+
+      <p>You have the right to access and correct your data. To do this, contact the Planning Inspectorate Senior Data Protection Manager at <a
+              href="mailto:dataprotection@planninginspectorate.gov.uk.">dataprotection@planninginspectorate.gov.uk</a>.</p>
+
+
+  {% endset %}
+
+  {{ govukDetails({
+      summaryText: "How we process your data",
+      html: details
+  }) }}
+
+      <h2 class="govuk-heading-m">Before you start</h2>
+
+      <p><strong>If you are commenting for yourself as an individual</strong></p>
+      <p>You will need your:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>full name</li>
+        <li>email address</li>
+        <li>comments about the application</li>
+      </ul>
+
+      <p><strong>If you are commenting for an organisation you work or volunteer for</strong></p>
+      <p>You will need your:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>full name</li>
+        <li>email address</li>
+        <li>the name of the charity or organisation you work for</li>
+        <li>comments about the application</li>
+      </ul>
+
+      <p><strong>If you are commenting on behalf of another person or organisation</strong></p>
+      <p>You will need your:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>full name</li>
+        <li>email address</li>
+        <li>the details of the person or organisation you are representing</li>
+        <li>comments about the application</li>
+      </ul>
+
+    </div>
+  </div>
+{% endblock %}

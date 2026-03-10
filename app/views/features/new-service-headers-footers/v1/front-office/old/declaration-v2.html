@@ -1,0 +1,52 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+          Declaration
+      </h1>
+<p>By submitting this form, you are making a written representation on a Crown development application. Your comment will be considered by the Planning Inspectors before they make a decision on the application.</p>
+
+      {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+{{ govukCheckboxes({
+  name: "waste",
+  fieldset: {
+    legend: {
+      text: "",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: "Select each statement to confirm that you agree"
+  },
+  items: [
+    {
+      value: "data",
+      text: "I consent to my name, comment and supporting documents being published on this website"
+    },
+    {
+      value: "contact",
+      text: "The Planning Inspectorate may contact me by email about my comment and supporting documents"
+    },
+    {
+        value: "privacy",
+        html: 'I have read and understood the <a href="https://www.gov.uk/government/publications/planning-inspectorate-privacy-notices/customer-privacy-notice" target="_blank" rel="noopener noreferrer">GOV.UK Customer Privacy Notice</a>'
+    
+      }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Submit"
+}) }}
+
+{% endblock %}

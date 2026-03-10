@@ -1,0 +1,13 @@
+{% extends "layouts/question.njk" %}
+
+{% block question %}
+    {{ govukInput({
+        label: {
+            text: "What is the full name of the organisation or charity that you are representing?",
+            classes: "govuk-label--l",
+            isPageHeading: true
+
+        },
+        name: "rep-org-name"
+    }) }}
+{% endblock %}

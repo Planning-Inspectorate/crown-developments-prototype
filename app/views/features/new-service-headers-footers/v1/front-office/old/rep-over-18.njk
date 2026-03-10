@@ -1,0 +1,27 @@
+{% extends "layouts/question.njk" %}
+
+{% block question %}
+    {{ govukRadios({
+        name: "rep-over-18",
+        fieldset: {
+            legend: {
+                text: "Is the person you are representing 18 or over?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+            }
+        },
+        hint: {
+            text: "You can still submit a representation for them if they are under 18, but we will process their personal details in a different way."
+        },
+        items: [
+            {
+                value: "yes",
+                text: "Yes"
+            },
+            {
+                value: "no",
+                text: "No"
+            }
+        ]
+    }) }}
+{% endblock %}
