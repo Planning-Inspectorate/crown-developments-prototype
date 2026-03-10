@@ -2,6 +2,13 @@
 
 {% set pageName = "Home" %}
 
+
+{% block beforeContent %}
+
+{% include "components/phase-banner/beta" %}
+
+{% endblock %}
+
 {% block content %}
     <style>
         .govuk-details__summary::before {

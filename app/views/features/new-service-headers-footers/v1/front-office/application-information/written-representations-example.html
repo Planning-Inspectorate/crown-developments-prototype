@@ -2,6 +2,13 @@
 
 {% set pageName = "Home" %}
 
+
+{% block beforeContent %}
+
+{% include "components/phase-banner/beta" %}
+
+{% endblock %}
+
 {% block content %}
 
 
@@ -52,11 +59,13 @@
         </nav>
 
         </div>
-        <a href="written-representations" class="govuk-back-link">Back to list</a>
+        
 
         <div class="govuk-grid-column-two-thirds">
-            <span class="govuk-caption-xl">CROWN/2025/0000001</span>
-            <h1 class="govuk-heading-xl">Amira Khan on behalf of Avonvale Heritage Trust</h1>
+
+            <a href="written-representations" class="govuk-back-link">Back to list</a>
+            <span class="govuk-caption-l">CROWN/2025/0000001</span>
+            <h1 class="govuk-heading-l">Amira Khan on behalf of Avonvale Heritage Trust</h1>
             <dl class="govuk-summary-list">
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">

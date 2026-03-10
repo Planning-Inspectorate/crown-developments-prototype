@@ -4,6 +4,13 @@
 Application updates
 {% endblock %}
 
+
+{% block beforeContent %}
+
+{% include "components/phase-banner/beta" %}
+
+{% endblock %}
+
 {% block content %}
 {%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
 
