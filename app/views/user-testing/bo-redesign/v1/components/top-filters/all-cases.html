@@ -1,0 +1,248 @@
+<!--Custom styling-->
+<style>
+
+    .govuk-details__summary::before {
+        clip-path: polygon(6.38% 22.63%, 49.5% 65.75%, 92.63% 22.63%, 100% 30%, 50% 80%, 0% 30%);
+        background-color: black;
+        width: 3px;
+        height: 3px;
+    }
+
+    .govuk-details[open] > .govuk-details__summary::before {
+        clip-path: polygon(0% 71.88%, 49.5% 22.63%, 98.5% 71.88%, 91.63% 78.71%, 50% 36.88%, 7.37% 79.29%);
+        width: 3px;
+        height: 3px;
+    }
+
+    .govuk-details__summary-text {
+        text-decoration: none !important;
+    }
+
+    .grey-filter-box {
+        background-color: #F3F2F1;
+        padding: 3px 20px 30px;
+    }
+
+    .filters-button {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .govuk-details__summary::before {
+        color: black;
+    }
+
+    .filter-panel {
+        margin-top: 30px;
+        padding;
+        0px;
+        margin-bottom: 0;
+    }
+
+    .filter-options {
+        padding-left: 30px;
+    }
+
+</style>
+
+<!--Filter HTML-->
+
+<details class="govuk-details govuk-!-margin-top-3">
+    <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+            Sort and filter
+        </span>
+    </summary>
+    <div class="grey-filter-box">
+
+        <details class="govuk-details filter-panel">
+            <summary class="govuk-details__summary">
+                <h3 class="govuk-heading-s">
+                    Sort by
+                </span>
+            </summary>
+            <div class="filter-options">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+
+                        <div class="govuk-radios--small" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" type="radio">
+                                <label class="govuk-label govuk-radios__label">
+                                    Reference
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" type="radio">
+                                <label class="govuk-label govuk-radios__label">
+                                    Local planning authority (LPA)
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" type="radio">
+                                <label class="govuk-label govuk-radios__label">
+                                    Application type
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" type="radio">
+                                <label class="govuk-label govuk-radios__label">
+                                    Stage
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" type="radio">
+                                <label class="govuk-label govuk-radios__label">
+                                    Date published (newest)
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" type="radio">
+                                <label class="govuk-label govuk-radios__label">
+                                    Date published (oldest)
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </details>
+        <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+        <details class="govuk-details filter-panel">
+            <summary class="govuk-details__summary">
+                <h3 class="govuk-heading-s">
+                    Type of application
+                </span>
+            </summary>
+            <div class="filter-options">
+                <form class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <div class="govuk-grid-row">
+                            <div class="">
+                                <fieldset class="govuk-fieldset" aria-describedby="type-of-application-hint">
+                                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="type-3" name="type" type="checkbox" value="Approval of reserved matters following outline approval">
+                                            <label class="govuk-label govuk-checkboxes__label" for="type-3">
+                                                Approval of reserved matters following outline approval (0)
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="type-4" name="type" type="checkbox" value="Planning permission and listed building consent (LBC)">
+                                            <label class="govuk-label govuk-checkboxes__label" for="type-4">
+                                                Planning permission and listed building consent (LBC) for alterations, extension or demolition of a listed building (3)
+                                            </label>
+
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="type-2" name="type" type="checkbox" value="Outline planning permission with some matters reserved">
+                                            <label class="govuk-label govuk-checkboxes__label" for="type-2">
+                                                Outline planning permission with some matters reserved (1)
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="type-2" name="type" type="checkbox" value="Outline planning permission with some matters reserved">
+                                            <label class="govuk-label govuk-checkboxes__label" for="type-2">
+                                                Outline planning permission with all matters reserved (1)
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-checkboxes__item">
+
+                                            <input class="govuk-checkboxes__input" id="type-1" name="type" type="checkbox" value="Planning permission">
+                                            <label class="govuk-label govuk-checkboxes__label" for="type-1">
+                                                Planning permission (20)
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </details>
+        <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+        <details class="filter-panel">
+            <summary class="govuk-details__summary">
+                <h3 class="govuk-heading-s">Stage</h3>
+            </summary>
+            <div class="filter-options">
+                <form class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <div class="govuk-grid-row">
+                            <div class="">
+                                <fieldset class="govuk-fieldset" aria-describedby="stage-hint">
+                                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="stage-accepted" name="stage" type="checkbox" value="Accepted">
+                                            <label class="govuk-label govuk-checkboxes__label" for="stage-accepted">
+                                                Accepted (0)
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="stage-consultation" name="stage" type="checkbox" value="Consultation">
+                                            <label class="govuk-label govuk-checkboxes__label" for="stage-consultation">
+                                                Consultation (2)
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="stage-procedure" name="stage" type="checkbox" value="Procedure choice">
+                                            <label class="govuk-label govuk-checkboxes__label" for="stage-procedure">
+                                                Procedure choice (0)
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="stage-written" name="stage" type="checkbox" value="Written representations">
+                                            <label class="govuk-label govuk-checkboxes__label" for="stage-written">
+                                                Written representations (2)
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="stage-inquiry" name="stage" type="checkbox" value="Inquiry">
+                                            <label class="govuk-label govuk-checkboxes__label" for="stage-inquiry">
+                                                Inquiry (0)
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="stage-hearing" name="stage" type="checkbox" value="Hearing">
+                                            <label class="govuk-label govuk-checkboxes__label" for="stage-hearing">
+                                                Hearing (1)
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="stage-decision" name="stage" type="checkbox" value="Decision">
+                                            <label class="govuk-label govuk-checkboxes__label" for="stage-decision">
+                                                Final decision (12)
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="stage-decision" name="stage" type="checkbox" value="Decision">
+                                            <label class="govuk-label govuk-checkboxes__label" for="stage-decision">
+                                                Post-decision (0)
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="govuk-grid-column-one-third"></div>
+                        </div>
+
+                        
+
+                    </fieldset>
+                </form>
+            </div>
+
+             <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+        </details>
+         <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+        <a href="applications-selected" class="govuk-button filters-button" ">
+            Apply filters
+        </a>
+    </div>
+</details>

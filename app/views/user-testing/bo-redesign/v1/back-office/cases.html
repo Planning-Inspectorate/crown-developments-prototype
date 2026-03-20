@@ -1,26 +1,25 @@
 {% extends "user-testing/bo-redesign/v1/layouts/back-office.html" %}
 {% block content %}
 
-  <div class="govuk-grid-row">
+  <h1 class="govuk-heading-xl">
+    All cases
+  </h1>
 
-    <h1 class="govuk-heading-xl">
-      All cases
-    </h1>
+  <h1 class='govuk-label-wrapper'>
+    <label class='govuk-label govuk-label--l' id='search-label' for='search-input'>
+      Search cases
+    </label>
+  </h1>
+  <div id='search-hint' class='govuk-hint'>
+    To find a specific case, search by reference.
+  </div>
+  <div class='row-inline'><input class='govuk-input' id='search-input' value='' name='searchCriteria' type='text'>
+    <button type='submit' style="margin:0px" class='govuk-button' data-module='govuk-button' id='search-button' data-govuk-button-init=''>
+      Search
+    </button>
+  </div>
 
-    <h1 class='govuk-label-wrapper'>
-      <label class='govuk-label govuk-label--l' id='search-label' for='search-input'>
-        Search cases
-      </label>
-    </h1>
-    <div id='search-hint' class='govuk-hint'>
-      To find a specific case, search by reference.
-    </div>
-    <div class='row-inline'><input class='govuk-input' id='search-input' value='' name='searchCriteria' type='text'>
-      <button type='submit' class='govuk-button govuk-button' data-module='govuk-button' id='search-button' data-govuk-button-init=''>
-        Search
-      </button>
-    </div>
-
+  {% include "/user-testing/bo-redesign/v1/components/top-filters/all-cases.html" %}
 
   <table class="govuk-table" data-module="moj-sortable-table" data-moj-sortable-table-init="">
     <thead class="govuk-table__head">
@@ -53,7 +52,7 @@
           </button>
         </th>
         <th scope="col" class="govuk-table__header" aria-sort="none">
-          <button type="button" data-index="4">Status<svg width="22" height="22" focusable="false" aria-hidden="true" role="img" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <button type="button" data-index="4">Stage<svg width="22" height="22" focusable="false" aria-hidden="true" role="img" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M8.1875 9.5L10.9609 3.95703L13.7344 9.5H8.1875Z" fill="currentColor"></path>
               <path d="M13.7344 12.0781L10.9609 17.6211L8.1875 12.0781H13.7344Z" fill="currentColor"></path>
             </svg>
@@ -117,8 +116,5 @@
 
     </tbody>
   </table>
-
-
-  </div>
 
   {%endblock%}
