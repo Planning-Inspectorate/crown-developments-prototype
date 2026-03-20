@@ -1,10 +1,8 @@
-{% extends "layouts/back-office.njk" %}
-
-{% set pageName = "Home" %}
+{% extends "user-testing/bo-redesign/v1/layouts/back-office.html" %}
+{% set currentArea = "create" %}
 
 {% block content %}
 
-  <div class="govuk-width-container">
     <a href="javascript:history.back()" class="govuk-back-link" style="margin:0px">Back</a>
     <main class="govuk-main-wrapper">
       <div class="govuk-grid-row">
@@ -19,7 +17,6 @@
         </div>
       </div>
     </main>
-  </div>
 
   <a href="4-applicant-address" class="govuk-button">Continue</a>
 

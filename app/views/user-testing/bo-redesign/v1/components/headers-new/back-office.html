@@ -116,12 +116,12 @@
             Menu
           </button>
           <ul class="govuk-service-navigation__list" id="navigation">
-            <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
+            <li class="govuk-service-navigation__item {% if currentArea == 'cases' %}govuk-service-navigation__item--active{% endif %}">
               <a class="govuk-service-navigation__link" href="/user-testing/bo-redesign/v1/back-office/cases.html" aria-current="true">
                 All cases
               </a>
             </li>
-            <li class="govuk-service-navigation__item">
+            <li class="govuk-service-navigation__item {% if currentArea == 'create' %}govuk-service-navigation__item--active{% endif %}">
               <a class="govuk-service-navigation__link" href="/user-testing/bo-redesign/v1/back-office/cases/create-a-case/1-type-of-application.html">
                 Create new case
               </a>
