@@ -4,8 +4,6 @@
 
 {% block content %}
 
-
-
 <a href="/user-testing/bo-redesign/v1/back-office/cases" class="govuk-back-link">Back to all cases</a>
 
 
@@ -21,7 +19,7 @@
         <h2 class="govuk-heading-m">Local planning authority (LPA)</h2>
 
         {% from "/user-testing/bo-redesign/v1/components/manage-tables/contacts-table.njk" import
-        applicationUpdatesTable %}
+        contactsTable %}
 
         {% set rows = [
         {
@@ -38,10 +36,7 @@
         }
         ] %}
 
-        {{ applicationUpdatesTable(rows) }}
-
-        {% from "/user-testing/bo-redesign/v1/components/manage-tables/contacts-table.njk" import
-        applicationUpdatesTable %}
+        {{ contactsTable(rows) }}
 
         {% set rows = [
         {
@@ -58,7 +53,7 @@
         }
         ] %}
 
-        {{ applicationUpdatesTable(rows) }}
+        {{ contactsTable(rows) }}
 
         <h2 class="govuk-heading-m">Applicant</h2>
 
@@ -96,7 +91,7 @@
         ]
         }
         ] %}
-        {{ applicationUpdatesTable(rows) }}
+        {{ contactsTable(rows) }}
 
 
         {% set rows = [
@@ -140,14 +135,15 @@
         ]
         },{
         key: "Contact 5",
-        value: "Robert Kinsella<br>robert.kinsella@onep.gov.ex.uk<br>0300 010 5512<br>Office for National Estates and Property (ONEP)",
+        value: "Robert Kinsella<br>robert.kinsella@onep.gov.ex.uk<br>0300 010 5512<br>Office for National Estates and
+        Property (ONEP)",
         actions:
         [
 
         ]
         }
         ] %}
-        {{ applicationUpdatesTable(rows) }}
+        {{ contactsTable(rows) }}
 
         <h2 class="govuk-heading-m">Agent</h2>
 
@@ -166,7 +162,7 @@
         }
         ] %}
 
-        {{ applicationUpdatesTable(rows) }}
+        {{ contactsTable(rows) }}
 
 
         {% set rows = [
@@ -196,7 +192,7 @@
         ]
         }
         ] %}
-        {{ applicationUpdatesTable(rows) }}
+        {{ contactsTable(rows) }}
 
     </div>
 

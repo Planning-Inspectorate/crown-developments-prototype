@@ -1,13 +1,4 @@
-{% macro contactsTable(rows = []) %}
-
-<style>
-  .govuk-summary-list__row {
-    border: none;
-  }
-  .govuk-summary-list__key, .govuk-summary-list__value, .govuk-summary-list__actions {
-    padding-right: 0px;
-  }
-</style>
+{% macro detailsTable(rows = []) %}
 
 {% for row in rows %}
 
@@ -35,13 +26,12 @@
           </ul>
         {% endif %}
       </dd>
+      
     </div>
 
 
   {% if loop.last %}
   </dl>
-  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-
   {% endif %}
 
 {% endfor %}

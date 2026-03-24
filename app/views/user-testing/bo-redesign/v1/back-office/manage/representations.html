@@ -23,6 +23,13 @@
                 class="govuk-link">Add new representation</a></p>
 
 
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <h2 class='govuk-heading--m'>
+            Representation dates
+        </h2>
+
         {% from "/user-testing/bo-redesign/v1/components/manage-tables/reps-table.njk" import
         repsTable %}
 
@@ -44,6 +51,18 @@
         {
         "key": "Representations publish date",
         "value": "1 February 2026",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+
+        {
+        "key": "Notice of procedure date",
+        "value": "4 March 2026",
         "actions": [
         {
         "text": "Change",

@@ -1,6 +1,6 @@
 {% extends "user-testing/bo-redesign/v1/layouts/back-office.html" %}
 {% set currentArea = "cases" %}
-{% set currentPage = "eia" %}
+{% set currentPage = "fee" %}
 
 {% block content %}
 
@@ -17,7 +17,7 @@
 
     <div class="govuk-grid-column-two-thirds">
         <span class="govuk-caption-l">CROWN/2025/0000073</span>
-        <h1 class="govuk-heading-l">Environmental impact assessment</h1>
+        <h1 class="govuk-heading-l">Fee</h1>
 
         {% from "/user-testing/bo-redesign/v1/components/manage-tables/dates-table.njk" import
         datesTable %}
@@ -25,8 +25,8 @@
         {% set rows = [
         {
 
-        "key": "EIA screening",
-        "value": "-",
+        "key": "Fee amount",
+        "value": "£1.00",
         "actions": [
         {
         "text": "Change",
@@ -36,8 +36,8 @@
         ]
         },
         {
-        "key": "EIA screening outcome",
-        "value": "Yes",
+        "key": "Fee received date",
+        "value": "1 January 2025",
         "actions": [
         {
         "text": "Change",
@@ -47,8 +47,19 @@
         ]
         },
         {
-        "key": "Date environment statement was received",
-        "value": "2 March 2026",
+        "key": "Fee refund amount",
+        "value": "£10.00",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Fee refund date",
+        "value": "1 December 2026",
         "actions": [
         {
         "text": "Change",
