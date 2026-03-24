@@ -1,3 +1,9 @@
+<style>
+  .external::after {
+    
+  }
+</style>
+
 <nav class="moj-side-navigation" aria-label="Side navigation" style="padding-top: 0px !important;">
   <ul class="moj-side-navigation__list">
 
@@ -9,9 +15,7 @@
       <a href="/user-testing/bo-redesign/v1/back-office/manage/details" {% if currentPage == 'details' %} aria-current="location" {% endif %}>Details</a>
     </li>
 
-    <li class="moj-side-navigation__item {% if currentPage == 'documents' %}moj-side-navigation__item--active{% endif %}">
-      <a href="/user-testing/bo-redesign/v1/back-office/manage/documents" {% if currentPage == 'documents' %} aria-current="location" {% endif %}>Documents</a>
-    </li>
+    
 
     <li class="moj-side-navigation__item {% if currentPage == 'updates' %}moj-side-navigation__item--active{% endif %}">
       <a href="/user-testing/bo-redesign/v1/back-office/manage/updates" {% if currentPage == 'updates' %} aria-current="location" {% endif %}>Application updates</a>
@@ -39,3 +43,15 @@
 
     <li class="moj-side-navigation__item {% if currentPage == 'procedure' %}moj-side-navigation__item--active{% endif %}">
       <a href="/user-testing/bo-redesign/v1/back-office/manage/procedure" {% if currentPage == 'procedure' %} aria-current="location" {% endif %}>Procedure</a>
+    </li>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <h3 class="govuk-heading-s">External links</h2>
+    <li class="moj-side-navigation__item {% if currentPage == 'documents' %}moj-side-navigation__item--active{% endif %}">
+      <a class="external" href="https://pinso365.sharepoint.com/sites/CrownDevelopmentsDevSite1/Crown%20Developments/Forms/AllItems.aspx?FolderCTID=0x0120002AEB4E42385D4248BC40ED69E7C865EE&id=%2Fsites%2FCrownDevelopmentsDevSite1%2FCrown%20Developments%2FCROWN%2D2026%2D0000076" {% if currentPage == 'documents' %} aria-current="location" {% endif %}>Documents (SharePoint)</a>
+    </li>
+     <li class="moj-side-navigation__item {% if currentPage == 'documents' %}moj-side-navigation__item--active{% endif %}">
+      <a class="external" href="" {% if currentPage == 'notify' %} aria-current="location" {% endif %}>GovNotify</a>
+    </li>
+  </ul>
+</nav>
