@@ -8,9 +8,6 @@
 
 <a href="/user-testing/bo-redesign/v1/back-office/cases" class="govuk-back-link">Back to all cases</a>
 
-<h1 class="govuk-heading-l  govuk-!-margin-top-3">
-    CROWN/2025/0000073
-</h1>
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-one-third">
@@ -19,7 +16,9 @@
     </div>
 
     <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-m">Application updates</h2>
+
+        <span class="govuk-caption-l">CROWN/2025/0000073</span>
+        <h1 class="govuk-heading-l">Updates</h1>
         <p class="govuk-body"><a
                 href="/user-testing/bo-redesign/v1/back-office/cases/view/application-updates/create-update/update-details"
                 class="govuk-link">Create new update</a></p>
@@ -27,7 +26,7 @@
         <p class="govuk-body">Showing <strong>1</strong> to <strong>3</strong> of <strong>3</strong> updates</p>
 
 
-        {% from "/user-testing/bo-redesign/v1/components/application-updates-table/application-updates-table.njk" import
+        {% from "/user-testing/bo-redesign/v1/components/manage-tables/application-updates-table.njk" import
         applicationUpdatesTable %}
 
         {% set rows = [

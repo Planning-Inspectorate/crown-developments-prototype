@@ -1,0 +1,50 @@
+{% macro applicationUpdatesTable(rows = []) %}
+
+<style>
+  .govuk-summary-list__row {
+    border: none;
+  }
+  .govuk-summary-list__key, .govuk-summary-list__value, .govuk-summary-list__actions {
+    padding-right: 0px;
+  }
+</style>
+
+{% for row in rows %}
+
+  {% if loop.index == 1 %}
+  <dl class="govuk-summary-list">
+  {% endif %}
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">{{ row.key }}</dt>
+      <dd class="govuk-summary-list__value">{{ row.value | safe }}</dd>
+      <dd class="govuk-summary-list__actions">
+        {% if row.actions %}
+          <ul class="govuk-summary-list__actions-list">
+            {% for action in row.actions %}
+              <li class="govuk-summary-list__actions-list-item">
+                <p class="govuk-body" style="padding:0; margin:0; line-height:1;">
+                  <a class="govuk-link" href="{{ action.href }}">{{ action.text }}
+                    {% if action.visuallyHidden %}
+                      <span class="govuk-visually-hidden">{{ action.visuallyHidden }}</span>
+                    {% endif %}
+                  </a>
+                </p>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </dd>
+    </div>
+
+
+  {% if loop.last %}
+  </dl>
+  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+  <dl class="govuk-summary-list">
+  </dl>
+  {% endif %}
+
+{% endfor %}
+
+{% endmacro %}
