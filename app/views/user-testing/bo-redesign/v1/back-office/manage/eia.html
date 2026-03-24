@@ -1,0 +1,68 @@
+{% extends "user-testing/bo-redesign/v1/layouts/back-office.html" %}
+{% set currentArea = "cases" %}
+{% set currentPage = "eia" %}
+
+{% block content %}
+
+
+
+<a href="/user-testing/bo-redesign/v1/back-office/cases" class="govuk-back-link">Back to all cases</a>
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+
+        {% include "/user-testing/bo-redesign/v1/components/side-nav/side-nav.njk" %}
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-l">CROWN/2025/0000073</span>
+        <h1 class="govuk-heading-l">Environmental impact assessment</h1>
+
+        {% from "/user-testing/bo-redesign/v1/components/manage-tables/dates-table.njk" import
+        datesTable %}
+
+        {% set rows = [
+        {
+
+        "key": "EIA screening",
+        "value": "-",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "EIA screening outcome",
+        "value": "-",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Date environment statement was received",
+        "value": "-",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        }
+        ] %}
+
+        {{ datesTable(rows) }}
+
+    </div>
+
+</div>
+
+{% endblock %}
