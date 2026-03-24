@@ -1,0 +1,211 @@
+{% extends "user-testing/bo-redesign/v1/layouts/back-office.html" %}
+{% set currentArea = "cases" %}
+{% set currentPage = "dates" %}
+
+{% block content %}
+
+
+
+<a href="/user-testing/bo-redesign/v1/back-office/cases" class="govuk-back-link">Back to all cases</a>
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+
+        {% include "/user-testing/bo-redesign/v1/components/side-nav/side-nav.njk" %}
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-l">CROWN/2025/0000073</span>
+        <h1 class="govuk-heading-l">Dates</h1>
+
+        {% from "/user-testing/bo-redesign/v1/components/manage-tables/dates-table.njk" import
+        datesTable %}
+
+        {% set rows = [
+        {
+
+        "key": "Application received date",
+        "value": "3 December 2025",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Application accepted date",
+        "value": "-",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "LPA questionnaire sent date",
+        "value": "22 January 2026",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "LPA questionnaire received date",
+        "value": "29 January 2026",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Publish date",
+        "value": "-",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Press notice date",
+        "value": "17 November 2025",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Neighbours notified by LPA date",
+        "value": "20 November 2025",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Site notice by LPA date",
+        "value": "-",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Target decision date",
+        "value": "4 April 2026",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Extended target decision date",
+        "value": "-",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Recovered date",
+        "value": "8 August 2025",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Recovered report sent date",
+        "value": "15 September 2025",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Site visit",
+        "value": "-",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Withdrawn date",
+        "value": "6 July 2025",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Original decision date",
+        "value": "21 October 2025",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Turned away date",
+        "value": "-",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        }
+        ] %}
+
+        {{ datesTable(rows) }}
+
+    </div>
+
+</div>
+
+{% endblock %}
