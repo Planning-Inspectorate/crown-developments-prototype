@@ -1,0 +1,57 @@
+<style>
+  .external::after {
+    
+  }
+</style>
+
+<nav class="moj-side-navigation" aria-label="Side navigation" style="padding-top: 0px !important;">
+  <ul class="moj-side-navigation__list">
+
+    <li class="moj-side-navigation__item {% if currentPage == 'overview' %}moj-side-navigation__item--active{% endif %}">
+      <a href="/user-testing/bo-redesign/v1/back-office/manage-application" {% if currentPage == 'overview' %} aria-current="location" {% endif %}>Overview</a>
+    </li>
+
+    <li class="moj-side-navigation__item {% if currentPage == 'details' %}moj-side-navigation__item--active{% endif %}">
+      <a href="/user-testing/bo-redesign/v1/back-office/manage/details" {% if currentPage == 'details' %} aria-current="location" {% endif %}>Details</a>
+    </li>
+
+    
+
+    <li class="moj-side-navigation__item {% if currentPage == 'updates' %}moj-side-navigation__item--active{% endif %}">
+      <a href="/user-testing/bo-redesign/v1/back-office/manage/updates" {% if currentPage == 'updates' %} aria-current="location" {% endif %}>Application updates</a>
+    </li>
+
+    <li class="moj-side-navigation__item {% if currentPage == 'contacts' %}moj-side-navigation__item--active{% endif %}">
+      <a href="/user-testing/bo-redesign/v1/back-office/manage/contacts" {% if currentPage == 'contacts' %} aria-current="location" {% endif %}>Contacts</a>
+    </li>
+
+    <li class="moj-side-navigation__item {% if currentPage == 'dates' %}moj-side-navigation__item--active{% endif %}">
+      <a href="/user-testing/bo-redesign/v1/back-office/manage/dates" {% if currentPage == 'dates' %} aria-current="location" {% endif %}>Dates</a>
+    </li>
+
+    <li class="moj-side-navigation__item {% if currentPage == 'representations' %}moj-side-navigation__item--active{% endif %}">
+      <a href="/user-testing/bo-redesign/v1/back-office/manage/representations" {% if currentPage == 'representations' %} aria-current="location" {% endif %}>Representations</a>
+    </li>
+
+    <li class="moj-side-navigation__item {% if currentPage == 'case-team' %}moj-side-navigation__item--active{% endif %}">
+      <a href="/user-testing/bo-redesign/v1/back-office/manage/case-team" {% if currentPage == 'case-team' %} aria-current="location" {% endif %}>Case team</a>
+    </li>
+
+    <li class="moj-side-navigation__item {% if currentPage == 'eia' %}moj-side-navigation__item--active{% endif %}">
+      <a href="/user-testing/bo-redesign/v1/back-office/manage/eia" {% if currentPage == 'eia' %} aria-current="location" {% endif %}>Environmental impact assessment</a>
+    </li>
+
+    <li class="moj-side-navigation__item {% if currentPage == 'fee' %}moj-side-navigation__item--active{% endif %}">
+      <a href="/user-testing/bo-redesign/v1/back-office/manage/fee" {% if currentPage == 'fee' %} aria-current="location" {% endif %}>Fee</a>
+    </li>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <h3 class="govuk-heading-s">External links</h2>
+    <li class="moj-side-navigation__item {% if currentPage == 'documents' %}moj-side-navigation__item--active{% endif %}">
+      <a class="external" href="https://pinso365.sharepoint.com/sites/CrownDevelopmentsDevSite1/Crown%20Developments/Forms/AllItems.aspx?FolderCTID=0x0120002AEB4E42385D4248BC40ED69E7C865EE&id=%2Fsites%2FCrownDevelopmentsDevSite1%2FCrown%20Developments%2FCROWN%2D2026%2D0000076" {% if currentPage == 'documents' %} aria-current="location" {% endif %}>Documents (SharePoint)</a>
+    </li>
+     <li class="moj-side-navigation__item {% if currentPage == 'documents' %}moj-side-navigation__item--active{% endif %}">
+      <a class="external" href="" {% if currentPage == 'notify' %} aria-current="location" {% endif %}>GovNotify</a>
+    </li>
+  </ul>
+</nav>

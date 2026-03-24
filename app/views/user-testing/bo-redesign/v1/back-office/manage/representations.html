@@ -1,0 +1,213 @@
+{% extends "user-testing/bo-redesign/v1/layouts/back-office.html" %}
+{% set currentArea = "cases" %}
+{% set currentPage = "representations" %}
+
+{% block content %}
+
+
+<a href="/user-testing/bo-redesign/v1/back-office/cases" class="govuk-back-link">Back to all cases</a>
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+
+        {% include "/user-testing/bo-redesign/v1/components/side-nav/side-nav.njk" %}
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <span class="govuk-caption-l">CROWN/2025/0000073</span>
+        <h1 class="govuk-heading-l">Representations</h1>
+        <p class="govuk-body"><a
+                href="/user-testing/bo-redesign/v1/back-office/cases/view/manage-reps/edit-representation/0-date-received.html"
+                class="govuk-link">Add new representation</a></p>
+
+
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <h2 class='govuk-heading--m'>
+            Representation dates
+        </h2>
+
+        {% from "/user-testing/bo-redesign/v1/components/manage-tables/reps-table.njk" import
+        repsTable %}
+
+
+        {% set rows = [
+        {
+        "key": "Representations period",
+        "value": "Start: midnight, 1 January 2026<br>
+        End: 11:59pm, 31 December 2026",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+
+        {
+        "key": "Representations publish date",
+        "value": "1 February 2026",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+
+        {
+        "key": "Notice of procedure date",
+        "value": "4 March 2026",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        }
+        ] %}
+
+        {{ repsTable(rows) }}
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <h2 class='govuk-label-wrapper'>
+            <label class='govuk-label govuk-label--m' id='search-label' for='search-input'>
+                Search representations
+            </label>
+        </h2>
+        <div id='search-hint' class='govuk-hint'>
+            Search by reference, keywords or name of person or organisation.
+        </div>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-!-margin-top-2  govuk-grid-column-two-thirds-from-desktop">
+                <input class='govuk-input' id='search-input' value='' name='searchCriteria' type='text'>
+
+            </div>
+            <div class="govuk-!-margin-top-2 govuk-grid-column-one-third-from-desktop">
+                <button type='submit' style="width:100%" class='govuk-button' data-module='govuk-button'
+                    id='search-button' data-govuk-button-init=''>
+                    Search
+                </button>
+            </div>
+        </div>
+
+        {% include "/user-testing/bo-redesign/v1/components/top-filters/manage-reps.html" %}
+        
+        <p class="govuk-body">Showing <strong>1</strong> to <strong>4</strong> of <strong>4</strong> representations</p>
+
+
+        {% from "/user-testing/bo-redesign/v1/components/manage-tables/reps-table.njk" import
+        repsTable %}
+
+        {% set rows = [
+            {
+                key: "Reference",
+                value: "C4D86-D8DD9",
+                actions:
+                [
+                {
+                text: "View",
+                href: "",
+                visuallyHidden: "publish date"
+                }
+                ]
+                },
+                {
+                key: "From",
+                value: "Oliver Grant"
+                },
+                {
+                key: "Submission date",
+                value: "1 November 2025"
+                },
+                {
+                key: "Status",
+                value: "<strong class='govuk-tag govuk-tag--red'>Rejected</strong>"
+            },{
+                key: "Reference",
+                value: "C4D86-D8DD9",
+                actions:
+                [
+                {
+                text: "View",
+                href: "",
+                visuallyHidden: "publish date"
+                }
+                ]
+                },
+                {
+                key: "From",
+                value: "Aisha Karim"
+                },
+                {
+                key: "Submission date",
+                value: "1 November 2025"
+                },
+                {
+                key: "Status",
+                value: "<strong class='govuk-tag govuk-tag--green'>Accepted</strong>"
+            },{
+                key: "Reference",
+                value: "C4D86-D8DD9",
+                actions:
+                [
+                {
+                text: "View",
+                href: "",
+                visuallyHidden: "publish date"
+                }
+                ]
+                },
+                {
+                key: "From",
+                value: "Daniel Cooper"
+                },
+                {
+                key: "Submission date",
+                value: "1 November 2025"
+                },
+                {
+                key: "Status",
+                value: "<strong class='govuk-tag govuk-tag--grey'>Withdrawn</strong>"
+            },{
+                key: "Reference",
+                value: "C4D86-D8DD9",
+                actions:
+                [
+                {
+                text: "View",
+                href: "",
+                visuallyHidden: "publish date"
+                }
+                ]
+                },
+                {
+                key: "From",
+                value: "Michael Fraser"
+                },
+                {
+                key: "Submission date",
+                value: "1 November 2025"
+                },
+                {
+                key: "Status",
+                value: "<strong class='govuk-tag'>Awaiting review</strong>"
+            }
+        ] %}
+
+        {{ repsTable(rows) }}
+
+    </div>
+
+
+</div>
+
+{% endblock %}

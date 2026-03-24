@@ -1,0 +1,202 @@
+{% extends "user-testing/bo-redesign/v1/layouts/back-office.html" %}
+{% set currentArea = "cases" %}
+{% set currentPage = "contacts" %}
+
+{% block content %}
+
+<a href="/user-testing/bo-redesign/v1/back-office/cases" class="govuk-back-link">Back to all cases</a>
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+
+        {% include "/user-testing/bo-redesign/v1/components/side-nav/side-nav.njk" %}
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-l">CROWN/2025/0000073</span>
+        <h1 class="govuk-heading-l">Contacts</h1>
+        <h2 class="govuk-heading-m">Local planning authority (LPA)</h2>
+
+        {% from "/user-testing/bo-redesign/v1/components/manage-tables/contacts-table.njk" import
+        contactsTable %}
+
+        {% set rows = [
+        {
+        key: "LPA",
+        value: "North Wexford District Council<br>12 Market Row<br>Wexfordshire<br>WX1 4AB"
+        },{
+
+        key: "Email",
+        value: "planning@northwexford.gov.uk"
+        },
+        {
+        key: "Telephone",
+        value: "01482 555100"
+        }
+        ] %}
+
+        {{ contactsTable(rows) }}
+
+        {% set rows = [
+        {
+        key: "Secondary LPA",
+        value: "South Penn Borough Council<br>Civic Centre<br>44 Ridgeway<br>South Penn<br>SP9 2HT"
+        },{
+
+        key: "Email",
+        value: "development.control@southpenn.gov.uk"
+        },
+        {
+        key: "Telephone",
+        value: "01624 883210"
+        }
+        ] %}
+
+        {{ contactsTable(rows) }}
+
+        <h2 class="govuk-heading-m">Applicant</h2>
+
+        {% set rows = [
+        {
+        key: "Applicants",
+        value: "",
+        actions:
+        [
+        {
+        text: "Change",
+        href: ""
+        }
+        ]
+        },{
+        key: "Applicant 1",
+        value: "Department for Infrastructure<br>85 Falcon Street<br>London<br>SW1A 9ZT",
+        actions:
+        [
+
+        ]
+        },{
+        key: "Applicant 2",
+        value: "Ministry of Community Development<br>Crown Buildings<br>9 Kingsway<br>London WC2B 6RH",
+        actions:
+        [
+
+        ]
+        },{
+        key: "Applicant 3",
+        value: "Office for National Estates and Property<br>3 Regent Walk<br>Birmingham<br>B1 4DD",
+        actions:
+        [
+
+        ]
+        }
+        ] %}
+        {{ contactsTable(rows) }}
+
+
+        {% set rows = [
+        {
+        key: "Applicant contacts",
+        value: "",
+        actions:
+        [
+        {
+        text: "Change",
+        href: ""
+        }
+        ]
+        },{
+        key: "Contact 1",
+        value: "Sarah Whitfield<br>sarah.whitfield@ditp.gov.uk<br>+020 7034 1121<br>Department for Infrastructure",
+        actions:
+        [
+
+        ]
+        },{
+        key: "Contact 2",
+        value: "Priya Sandhu<br>priya.sandhu@ditp.gov.uk<br>020 7034 1188<br>Department for Infrastructure",
+        actions:
+        [
+
+        ]
+        },{
+        key: "Contact 3",
+        value: "James Holloway<br>james.holloway@ditp.gov.uk<br>Department for Infrastructure",
+        actions:
+        [
+
+        ]
+        },{
+        key: "Contact 4",
+        value: "Emily Rhodes<br>emily.rhodes@mcd.gov.uk<br>020 7160 4420<br>Ministry of Community Development (MCD)",
+        actions:
+        [
+
+        ]
+        },{
+        key: "Contact 5",
+        value: "Robert Kinsella<br>robert.kinsella@onep.gov.ex.uk<br>0300 010 5512<br>Office for National Estates and
+        Property (ONEP)",
+        actions:
+        [
+
+        ]
+        }
+        ] %}
+        {{ contactsTable(rows) }}
+
+        <h2 class="govuk-heading-m">Agent</h2>
+
+        {% set rows = [
+        {
+        key: "Agent",
+        value: "Bennett Clarke<br>48 Montague Place<br>London<br>WC1H 7AL",
+        actions:
+        [
+        {
+        text: "Change",
+        href: "",
+        visuallyHidden: "publish date"
+        }
+        ]
+        }
+        ] %}
+
+        {{ contactsTable(rows) }}
+
+
+        {% set rows = [
+        {
+        key: "Agent contacts",
+        value: "",
+        actions:
+        [
+        {
+        text: "Change",
+        href: ""
+        }
+        ]
+        },{
+        key: "Contact 1",
+        value: "Rebecca Allen<br> rebecca.allen@bennettclarke.uk<br>020 3011 9080",
+        actions:
+        [
+
+        ]
+        },{
+        key: "Contact 2",
+        value: "Samuel Price<br>samuel.price@bennettclarke.example",
+        actions:
+        [
+
+        ]
+        }
+        ] %}
+        {{ contactsTable(rows) }}
+
+    </div>
+
+
+</div>
+
+{% endblock %}
