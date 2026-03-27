@@ -1,35 +1,29 @@
 {% extends "layouts/main.njk" %}
-{% set serviceName %}
-Crown Developments prototype
+{% set serviceName %}Crown Developments prototype
 {% endset%}
+
+{% set pageName = "AI content changes" %}
 
 {% block content %}
 
   <div class="govuk-width-container">
     <div class="govuk-grid-row">
 
-      <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
 
-        <h1 class="govuk-heading-l">[Feature title]</h1>
+        <h1 class="govuk-heading-l">AI content changes</h1>
 
         <h2 class="govuk-heading-m">Feature description</h2>
         <ul class="govuk-list">
           <!-- user value (what the feature lets someone do) -->
-          <li></li>
+          <li>Updating content for the 'Have your say' journey for news AI requirements.</li>
         </ul>
 
         <h3 class="govuk-heading-s">Jira links</h3>
         <ul class="govuk-list">
-          <li></li>
+          <li><a href="https://pins-ds.atlassian.net/browse/CROWN-1546" class="govuk-link">CROWN-1546 - Content order on ‘Have Your Say’ start page</a></li>
         </ul>
 
-        <h2 class="govuk-heading-m">Accessibility considerations</h2>
-        <ul class="govuk-list">
-          <!-- testing, aria labels, other things to specify-->
-          <li>
-            <a href="" class="govuk-link"></a>
-          </li>
-        </ul>
 
         <div class="govuk-tabs" data-module="govuk-tabs">
           <h2 class="govuk-tabs__title">
@@ -46,33 +40,15 @@ Crown Developments prototype
           </ul>
 
           <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="version-1">
-            <h2 class="govuk-heading-m">[Version title]</h2>
-            <h3 class="govuk-heading-s">Change log</h3>
+            <h2 class="govuk-heading-m">Version 1</h2>
+          
             <ul class="govuk-list govuk-list--bullet">
-              <li>[Changes made]</li>
+              <li><a href="v1/have-your-say-on-a-crown-development-application" class="govuk-link">Have your say start page</a></li>
+               <li><a href="v1/13-what-do-you-want-to-say-about-this-application" class="govuk-link">What do you want to say about this application?</a></li>
+                   <li><a href="v1/17-declaration" class="govuk-link">Declaration</a></li>
             </ul>
 
-            <p class="govuk-body">
-              <a href="/v1/" class="govuk-link">[Link to prototype]</a>
             </p>
-
-            <details class="govuk-details">
-              <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text">
-                  Page list
-                </span>
-              </summary>
-              <div class="govuk-details__text">
-                <ul class="govuk-list">
-                  <li>
-                    <a href="" class="govuk-link">
-                      [Links to pages]</a>
-                  </li>
-                </ul>
-              </div>
-            </details>
-
-            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
             <!--<div class="govuk-tabs__panel" id="version-2"> <h2 class="govuk-heading-m">[Version title]</h2> <ul class="govuk-list govuk-list--bullet"> <li>[Description]</li> </ul> <a href="" Class="govuk-button">[Link to prototype]</a> <details class="govuk-details"> <summary class="govuk-details__summary"> <span class="govuk-details__summary-text"> Page list </span> </summary> <div class="govuk-details__text"> <ul class="govuk-list"> <li><a href="" class="govuk-link"> [Links to pages]</a></li> </ul> </div> </details> <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible"> </div>-->
           </div>
