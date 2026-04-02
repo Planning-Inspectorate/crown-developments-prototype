@@ -1,0 +1,102 @@
+{% extends "user-testing/bo-redesign/v2/layouts/back-office.html" %}
+{% set currentArea = "cases" %}
+{% set currentPage = "updates" %}
+
+{% block content %}
+
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column"><a href="/user-testing/bo-redesign/v2/back-office/cases" class="govuk-back-link">Back to all cases</a>
+
+        {% include "/user-testing/bo-redesign/v2/components/side-nav/side-nav.njk" %}
+
+        <span class="govuk-caption-l">CROWN/2025/0000073</span>
+        <h1 class="govuk-heading-l">Updates</h1>
+        <p class="govuk-body"><a
+                href="/user-testing/bo-redesign/v2/back-office/cases/view/application-updates/create-update/update-details"
+                class="govuk-link">Create new update</a></p>
+
+        <p class="govuk-body">Showing <strong>1</strong> to <strong>3</strong> of <strong>3</strong> updates</p>
+
+
+        {% from "/user-testing/bo-redesign/v2/components/manage-tables/application-updates-table.njk" import
+        applicationUpdatesTable %}
+
+        {% set rows = [
+            {
+                key: "Publish date",
+                value: "2 December 2025",
+                actions:
+                [
+                {
+                text: "View",
+                href: "/user-testing/bo-redesign/v2/back-office/cases/view/application-updates/review-unpublished.html",
+                visuallyHidden: "publish date"
+                }
+                ]
+                },
+                {
+                key: "Update details",
+                value: "New site assessment issued"
+                },
+                {
+                key: "Status",
+                value: "<strong class='govuk-tag govuk-tag--yellow'>Unpublished</strong>"
+        
+            },
+            {
+                key: "Publish date",
+                value: "12 January 2026",
+                actions:
+                [
+                {
+                text: "View",
+                href: "/user-testing/bo-redesign/v2/back-office/cases/view/application-updates/review-published.html",
+                visuallyHidden: "publish date"
+                }
+                ]
+                },
+                {
+                key: "Update details",
+                value: "Procedure choice announced"
+                },
+                {
+                key: "Status",
+                value: "<strong class='govuk-tag govuk-tag--green'>Published</strong>"
+        
+            },
+            {
+                key: "Publish date",
+                value: "Not published",
+                actions:
+                [
+                {
+                text: "View",
+                href: "/user-testing/bo-redesign/v2/back-office/cases/view/application-updates/review-draft.html",
+                visuallyHidden: "publish date"
+                }
+                ]
+                },
+                {
+                key: "Update details",
+                value: "Decision has been announced"
+                },
+                {
+                key: "Status",
+                value: "<strong class='govuk-tag govuk-tag--grey'>Draft</strong>"
+        
+            }
+        ] %}
+
+        {{ applicationUpdatesTable(rows) }}
+
+        
+
+    </div>
+
+
+</div>
+
+{% endblock %}
