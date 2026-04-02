@@ -1,0 +1,24 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% block header %}
+  {% include "user-testing/bo-redesign/v2/components/headers-new/back-office.html" %}  
+{% endblock %}
+
+{% block content %}
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<h3 class="govuk-heading-s">External links</h3>
+<ul class="govuk-list">
+  <li class="moj-sub-navigation__item {% if currentPage == 'documents' %}moj-sub-navigation__item--active{% endif %}">
+    <a class="external" href="https://pinso365.sharepoint.com/sites/CrownDevelopmentsDevSite1/Crown%20Developments/Forms/AllItems.aspx?FolderCTID=0x0120002AEB4E42385D4248BC40ED69E7C865EE&id=%2Fsites%2FCrownDevelopmentsDevSite1%2FCrown%20Developments%2FCROWN%2D2026%2D0000076" {% if currentPage == 'documents' %} aria-current="page" {% endif %}>Documents (SharePoint)</a>
+  </li>
+  <li class="moj-sub-navigation__item {% if currentPage == 'documents' %}moj-sub-navigation__item--active{% endif %}">
+    <a class="external" href="" {% if currentPage == 'notify' %} aria-current="page" {% endif %}>GovNotify</a>
+  </li>
+</ul>
+
+{% endblock %}
+
+{% block footer %}
+  {% include "user-testing/bo-redesign/v2/components/footers/back-office.html" %}  
+{% endblock %}

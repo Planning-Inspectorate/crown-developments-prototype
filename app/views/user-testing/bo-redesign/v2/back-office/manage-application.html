@@ -1,0 +1,126 @@
+{% extends "user-testing/bo-redesign/v2/layouts/back-office.html" %}
+{% set currentArea = "cases" %}
+{% set currentPage = "overview" %}
+
+{% block content %}
+
+
+
+
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column">
+
+  <a href="/user-testing/bo-redesign/v2/back-office/cases" class="govuk-back-link">Back to all cases</a>
+  
+  {% include "/user-testing/bo-redesign/v2/components/side-nav/side-nav.njk" %}
+    <span class="govuk-caption-l">CROWN/2025/0000073</span>
+    <h1 class="govuk-heading-l">Overview</h1>
+
+     {% from "/user-testing/bo-redesign/v2/components/manage-tables/dates-table.njk" import
+        datesTable %}
+
+        {% set rows = [
+        
+        {
+        "key": "Application description",
+        "value": "Construction of a new government office complex comprising three interconnected buildings with associated parking,
+      landscaping, and secure perimeter fencing. The development will include sustainable design features such as green
+      roofs, solar panels, and rainwater harvesting systems.",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Application type",
+        "value": "Planning permission",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Site address",
+        "value": "Plot 12, Avonvale Way, Kingsford Road, Southmere, Avonshire, AS4 9LT",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Site coordinates",
+        "value": "Easting: 369823
+Northing: 023698",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Site area (ha)",
+        "value": "2",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Expected submission date",
+        "value": "20 November 2025",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Decision outcome",
+        "value": "-",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Decision date",
+        "value": "-",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        }
+        ] %}
+
+        {{ datesTable(rows) }}
+  </div>
+</div>
+   
+
+   
+    
+{% endblock %}

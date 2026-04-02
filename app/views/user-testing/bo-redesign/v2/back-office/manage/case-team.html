@@ -1,0 +1,83 @@
+{% extends "user-testing/bo-redesign/v2/layouts/back-office.html" %}
+{% set currentArea = "cases" %}
+{% set currentPage = "case-team" %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column"><a href="/user-testing/bo-redesign/v2/back-office/cases" class="govuk-back-link">Back to all cases</a>
+
+        {% include "/user-testing/bo-redesign/v2/components/side-nav/side-nav.njk" %}
+        <span class="govuk-caption-l">CROWN/2025/0000073</span>
+        <h1 class="govuk-heading-l">Case team</h1>
+
+        {% from "/user-testing/bo-redesign/v2/components/manage-tables/dates-table.njk" import
+        datesTable %}
+
+        {% set rows = [
+        {
+
+        "key": "Inspector 1",
+        "value": "Tom Reeves",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Inspector 2",
+        "value": "Danielle Hughes",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Inspector 3",
+        "value": "-",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Assessor inspector",
+        "value": "Katie Wilson",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Planning officer",
+        "value": "Alex Boyd",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "",
+        "visuallyHidden": "date"
+        }
+        ]
+        }
+        ] %}
+
+        {{ datesTable(rows) }}
+
+    </div>
+
+</div>
+
+{% endblock %}
