@@ -6,13 +6,11 @@
 
 
 
-
-
 <div class="govuk-grid-row">
 
   <div class="govuk-grid-column">
 
-  <a href="/user-testing/bo-redesign/v2/back-office/cases" class="govuk-back-link">Back to all cases</a>
+  <a href="/user-testing/bo-redesign/v2/back-office/cases" class="govuk-back-link">Back to all applications</a>
   
   {% include "/user-testing/bo-redesign/v2/components/side-nav/side-nav.njk" %}
     <span class="govuk-caption-l">CROWN/2025/0000073</span>
@@ -118,9 +116,18 @@ Northing: 023698",
 
         {{ datesTable(rows) }}
   </div>
+  
+   <h3 class="govuk-heading-s">External links</h3>
+    <ul class="govuk-list ">
+      <li class="govuk-link">
+        <a class="external" href="https://pinso365.sharepoint.com/sites/CrownDevelopmentsDevSite1/Crown%20Developments/Forms/AllItems.aspx?FolderCTID=0x0120002AEB4E42385D4248BC40ED69E7C865EE&id=%2Fsites%2FCrownDevelopmentsDevSite1%2FCrown%20Developments%2FCROWN%2D2026%2D0000076" {% if currentPage == 'documents' %} aria-current="location" {% endif %}>Documents (SharePoint)</a>
+      </li>
+       <li class="govuk-link">
+        <a class="external" href="" {% if currentPage == 'notify' %} aria-current="location" {% endif %}>GovNotify</a>
+      </li>
+    </ul>
 </div>
    
 
-   
     
 {% endblock %}
