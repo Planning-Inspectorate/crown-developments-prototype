@@ -1,0 +1,63 @@
+{% extends "layouts/back-office.html" %} {% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link" style="margin: 0px"
+  >Back</a
+>
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="" method="post" novalidate="">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="updateDetails">
+            Do you want to add attachments?
+          </label>
+        </h1>
+
+        <div class="govuk-form-group">
+          
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input
+                  class="govuk-radios__input"
+                  type="radio"
+            
+                />
+                <label
+                  class="govuk-label govuk-radios__label"
+
+                >
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input
+                  class="govuk-radios__input"
+                  
+                />
+                <label
+                  class="govuk-label govuk-radios__label"                >
+                No
+                </label>
+              </div>
+             
+            </div>
+          </fieldset>
+        </div>
+
+        <a
+          href="../"
+          type="submit"
+          class="govuk-button"
+          data-module="govuk-button"
+          data-cy="button-save-and-continue"
+          data-govuk-button-init=""
+        >
+          Continue
+        </a>
+      </form>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
