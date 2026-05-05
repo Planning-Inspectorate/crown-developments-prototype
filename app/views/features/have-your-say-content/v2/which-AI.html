@@ -1,0 +1,42 @@
+{% extends "layouts/new/front-office.html" %}
+
+{% set pageName = "What do you want to say about this application?" %}
+
+{% block content %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+
+        <p class="govuk-body">
+
+
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <div class="govuk-form-group">
+                        <h1 class="govuk-label-wrapper">
+                            <label class="govuk-label govuk-label--l" for="event-name">
+                                Which AI tool did you use?
+                            </label>
+                        </h1>
+                        <p class="govuk-hint">For example, ChatGPT, Microsoft Copilot or Google Gemini.</p>
+                        <input class="govuk-input" id="event-name" name="eventName" type="text">
+                    </div>
+
+        </div>
+        </fieldset>
+
+
+        <a href="how-ai.html" class="govuk-button">
+            Continue
+        </a>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}
