@@ -1,0 +1,357 @@
+{% extends "layouts/front-office.html" %}
+
+{% set pageName = "Home" %}
+
+{% block beforeContent %}
+
+<!-- Full-width teal banner -->
+<div style="width:100vw; margin-left:calc(-50vw + 50%); background:#00847E;">
+    <div class="govuk-width-container">
+        <br>
+        <h1 style="color:white" class="govuk-heading-xl pins-info-heading">
+            Find a Crown Development application
+        </h1>
+        <p style="color:white" class="govuk-body pins-info-body">
+            Here you can find more information about Crown development applications. These are planning applications for
+            non-urgent, nationally important developments made by Crown bodies (including Other Government Departments).
+        </p>
+        <p style="color:white" class="govuk-body pins-info-body">
+            This site is managed by the Planning Inspectorate, the government agency responsible for handling Crown
+            development applications.
+        </p>
+        <br>
+    </div>
+</div>
+<div class="govuk-width-container">
+    {% endblock %}
+
+    {% block content %}
+
+    <style>
+        /* Tooltip text */
+        #tooltiptext {
+            visibility: hidden;
+            background-color: white;
+            color: #000;
+            text-align: left;
+            margin: 10px;
+            padding: 16px;
+            border-radius: 4px;
+            left: 48%;
+            /* Position the tooltip text - see examples below! */
+            position: absolute;
+            z-index: 1;
+        }
+
+        #tooltiptext:after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 0;
+            z-index: 1;
+            border-style: solid;
+            border-color: #ffffff transparent;
+            border-width: 10px 10px 0;
+            bottom: -10px;
+            left: 50%;
+            margin-left: -10px;
+        }
+
+        #tooltip {
+            background-image: url("https://www.ordnancesurvey.co.uk/img-assets/products/overview-england-wales.x4fa67183.xe4e2d2f0.jpg");
+            background-size: cover;
+            height: 700px;
+            width: 100%;
+            background-color: rgb(188, 214, 188);
+            text-align: center;
+            padding-top: 400px;
+        }
+
+        .layout-slots__divider {
+            color: #ffffff;
+        }
+
+        a {
+            color: #1d70b8;
+        }
+
+        .grey-box {
+            display: none;
+        }
+
+        .govuk-main-wrapper {
+            padding-top: 0;
+        }
+
+        .filter {
+            background-color: #f3f2f1;
+            padding: 8px;
+            border-radius: 5px;
+            margin-left: 10px;
+            border: 1px solid #505a5f;
+            text-decoration: none;
+            color: black;
+        }
+
+        .filters {
+            margin-bottom: 16px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid #b1b4b6;
+        }
+
+        .filters .govuk-details__text {
+            border: none;
+            padding-left: 0;
+        }
+
+        .filtersText {
+            text-decoration: none;
+            color: #000;
+            font-weight: 700;
+            font-size: 1.1875rem;
+        }
+
+        .filter:visited {
+            color: black;
+        }
+
+        .govuk-header,
+        .govuk-header__container {
+            background-color: rgb(7, 71, 69);
+
+            border-bottom: 10px solid #00847f;
+        }
+
+        .greybg {
+            box-shadow: #f3f2f1 800px 0px, #f3f2f1 -800px 0;
+        }
+
+        .listbox {
+            border: 1px solid rgb(147, 147, 147);
+            padding: 16px;
+            margin: 12px;
+            transform: translateY(600px);
+            position: absolute;
+            background-color: white;
+            width: 554px;
+        }
+
+        .govuk-details__summary::before {
+            clip-path: polygon(6.38% 22.63%, 49.5% 65.75%, 92.63% 22.63%, 100% 30%, 50% 80%, 0% 30%);
+            background-color: black;
+            color: black;
+            width: 3px;
+            height: 3px;
+            background-color: black;
+            color: black;
+        }
+
+        .govuk-details[open]>.govuk-details__summary::before {
+            clip-path: polygon(0% 71.88%, 49.5% 22.63%, 98.5% 71.88%, 91.63% 78.71%, 50% 36.88%, 7.37% 79.29%);
+            width: 3px;
+            height: 3px;
+        }
+
+        .govuk-accordion__section-button {
+            font-size: 19px !important;
+        }
+
+        .govuk-accordion__section-button {
+            padding-bottom: 0 !important;
+        }
+
+        #accordion-default-content-1 {
+            padding-bottom: 0 !important;
+        }
+
+        .govuk-form-group {
+            margin-bottom: 20px !important;
+        }
+
+        .govuk-accordion__section-content {
+            padding-bottom: 0 !important;
+        }
+    </style>
+    <main class="govuk-main-wrapper" id="main-content">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <h2 class="govuk-heading-l" style="margin-top: 30px;">
+                    All Crown Development applications
+                </h2>
+            </div>
+            <div class="govuk-grid-column-two-thirds">
+
+
+                <div id="search-hint" class="govuk-hint">
+                    Search applications</div>
+                <form class="govuk-form-group"
+                    style="display: flex; gap: 8px; align-items: center; margin-bottom: 0px;">
+                    <label class="govuk-label govuk-visually-hidden" for="keyword-search">Keyword search</label>
+                    <input class="govuk-input" id="keyword-search" name="keyword-search" type="text" autocomplete="off"
+                        style="margin-bottom: 0; width:100%;">
+                    <button class="govuk-button" id="keyword-search-button" type="submit"
+                        style="margin-bottom: 0;">Search</button>
+                </form>
+
+                <details class="govuk-details govuk-accordion" data-module="govuk-details" style="border-bottom: 0;">
+
+                    <!-- Accordion Header Styling applied to the Summary Toggle -->
+                    <summary class="govuk-details__summary govuk-accordion__section-header"
+                        style="padding-top: 15px; padding-bottom: 15px;">
+                        <h2 class="govuk-accordion__section-heading">
+                            <span
+                                class="govuk-details__summary-text govuk-accordion__section-button govuk-!-font-size-19">
+                                Show filters
+                            </span>
+                        </h2>
+                    </summary>
+
+                    <!-- Accordion Content Border Box -->
+                    <div class="govuk-details__text govuk-accordion__section-content"
+                        style="padding: 15px 0 0 0; border: none;">
+
+                        <!-- Filter Body Container -->
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                    Status
+                                </legend>
+
+                                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="status-1" name="status"
+                                            type="checkbox" value="active">
+                                        <label class="govuk-label govuk-checkboxes__label" for="status-1">
+                                            Active
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="status-2" name="status"
+                                            type="checkbox" value="closed">
+                                        <label class="govuk-label govuk-checkboxes__label" for="status-2">
+                                            Closed
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </div>
+
+                        <!-- Apply Filters Button -->
+                        <button type="submit" class="govuk-button govuk-button--secondary govuk-!-margin-top-4"
+                            data-module="govuk-button">
+                            Apply filters
+                        </button>
+
+                    </div>
+                </details>
+
+
+
+
+            </div>
+
+            <div class="govuk-grid-column-full">
+
+
+                <div class="govuk-grid-column-full">
+
+                    <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+                    <div class="pins-table__container" role="region">
+                        <table class="govuk-table">
+                            <thead class="govuk-table__head">
+                                <tr class="govuk-table__row">
+                                    <th scope="col" class="govuk-table__header">Application reference</th>
+                                    <th scope="col" class="govuk-table__header">Applicant name</th>
+                                    <th scope="col" class="govuk-table__header">Local planning authority</th>
+                                </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                                <tr class="govuk-table__row">
+                                    <th scope="row" class="govuk-table__header">
+                                        <a class="govuk-link" href="">
+                                            CROWN/2025/0000057
+                                        </a>
+                                    </th>
+
+                                    <td class="govuk-table__cell">Department for Sustainable Infrastructure (DfSI)
+                                    </td>
+                                    <td class="govuk-table__cell">North Wessex Planning Partnership (NWPP)</td>
+
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <th scope="row" class="govuk-table__header">
+                                        <a class="govuk-link" href="" ">
+                                            CROWN/2025/0000051
+                                        </a>
+                                    </th>
+
+                                    <td class=" govuk-table__cell">Office for Community Resilience and Urban Futures
+                                            (OCRUF)</td>
+                                    <td class="govuk-table__cell">South Fenwick Borough Council</td>
+
+                                </tr>
+
+                                <tr class="govuk-table__row">
+
+                                    <th scope="row" class="govuk-table__header">
+                                        <a>CROWN/2025/0000052
+                                        </a>
+                                    </th>
+                                    <td class="govuk-table__cell">Ministry for Integrated Transport (MiT)</td>
+                                    <td class="govuk-table__cell">West Darnley District Council</td>
+
+                                </tr>
+
+                                <tr class="govuk-table__row">
+                                    <th scope="row" class="govuk-table__header">
+                                        <a class="govuk-link" href="">CROWN/2025/0000051</a>
+                                    </th>
+                                    <td class=" govuk-table__cell">Department for Housing Innovation and Regional
+                                        Strategy
+                                        (DHIRS)</td>
+                                    <td class="govuk-table__cell">East Grinstead Vale Council</td>
+
+                                </tr>
+
+                                <tr class="govuk-table__row">
+                                    <th scope="row" class="govuk-table__header">
+                                        <a>CROWN/2025/0000056
+                                        </a>
+                                    </th>
+                                    <td class="govuk-table__cell">Commission for Environmental Planning and Urban
+                                        Renewal
+                                        (CEPUR)</td>
+                                    <td class="govuk-table__cell">North Penbury Council</td>
+                                </tr>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </main>
+</div>
+
+<div id="no-filters-panel" style="
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 1000;
+    background: #fff;
+    border: 2px solid #b1b4b6;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+">
+    <a href="applications-selected" class="govuk-button govuk-button--secondary" style="margin:0;">
+        Filters selected
+    </a>
+</div>
+{% endblock %}
