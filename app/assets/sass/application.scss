@@ -109,3 +109,218 @@
   color: black !important;
   border-left-color: #29A197 !important;
 }
+/* Accordion */
+.app-accordion {
+  padding: 20px 15px;
+}
+
+/* Show all link */
+.app-accordion__show-all {
+  background: none;
+  border: none;
+  color: #1d70b8;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-decoration: underline;
+}
+
+/* Sections */
+
+/* Remove default spacing */
+.app-accordion__heading {
+  margin: 0;
+}
+
+/* Accordion button (main styling match) */
+
+
+.app-accordion__parent-toggle {
+  background: none;
+  border: none;
+  color: #1d70b8;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.app-accordion__section {
+	padding-bottom: 20px;
+  border-bottom: #cecece solid 1px;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.app-accordion__heading {
+  margin: 0 0 5px 0;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+/* Section toggle button */
+.app-accordion__section-toggle {
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 16px;
+  color: #1d70b8;
+}
+
+/* spacing between icon and text */
+.app-accordion__toggle-text {
+  margin-left: 5px;
+}
+
+/* Chevon (GOV.UK structure) */
+.app-accordion__chevron {
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+
+  width: 20px;
+  height: 20px;
+
+
+  border: 1px solid #1d70b8;
+  border-radius: 50%;
+   color: #1d70b8;
+}
+
+.app-accordion__chevron::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+
+  bottom: 5px;
+  left: 6px;
+
+  width: 6px;
+  height: 6px;
+
+  transform: rotate(-45deg);
+
+  
+border-top: 2px solid #1d70b8;
+  border-right: 2px solid #1d70b8;
+
+
+}
+
+/* collapsed = down */
+.app-accordion__section-toggle[aria-expanded="false"] .app-accordion__chevron {
+  transform: rotate(180deg);
+}
+
+/* expanded = up */
+.app-accordion__section-toggle[aria-expanded="true"] .app-accordion__chevron {
+  transform: rotate(0deg);
+}
+
+.app-accordion__content {
+  margin-top: 10px;
+}
+
+.app-accordion__parent-toggle,
+.app-accordion__section-toggle {
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 16px;
+  color: #1d70b8;
+}
+
+/* spacing between icon and text */
+.app-accordion__toggle-text {
+  margin-left: 5px;
+  padding:5px;
+}
+
+/* collapsed = down */
+.app-accordion__parent-toggle[aria-expanded="false"] .app-accordion__chevron,
+.app-accordion__section-toggle[aria-expanded="false"] .app-accordion__chevron {
+  transform: rotate(180deg);
+}
+
+/* expanded = up */
+.app-accordion__parent-toggle[aria-expanded="true"] .app-accordion__chevron,
+.app-accordion__section-toggle[aria-expanded="true"] .app-accordion__chevron {
+  transform: rotate(0deg);
+}
+
+
+.app-accordion__parent-toggle:focus-visible,
+.app-accordion__section-toggle:focus-visible {
+  outline: 3px solid #ffdd00;
+}
+
+
+.app-accordion__panel {
+  background: #f3f2f1;
+  padding: 15px;
+}
+
+
+.app-accordion__panel[hidden] {
+  display: none;
+}
+
+
+.app-accordion__heading {
+  margin: 0;
+  padding-bottom: 20px;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+
+.app-accordion__parent-toggle:focus,
+.app-accordion__section-toggle:focus {
+  outline: none;
+	color:black;
+  background-color: #ffdd00;
+
+  box-shadow:
+
+    0 4px #0b0c0c;
+}
+
+.app-accordion__parent-toggle:hover .app-accordion__chevron,
+.app-accordion__section-toggle:hover .app-accordion__chevron {
+  background: #0b0c0c;
+  border-color: #0b0c0c;
+}
+
+.app-accordion__parent-toggle:hover .app-accordion__chevron::after,
+.app-accordion__section-toggle:hover .app-accordion__chevron::after {
+  border-top-color: #ffffff;
+  border-right-color: #ffffff;
+}
+
+
+.app-accordion__parent-toggle:focus .app-accordion__chevron,
+.app-accordion__section-toggle:focus .app-accordion__chevron {
+  background: #0b0c0c;
+  border-color: #0b0c0c;
+}
+
+.app-accordion__parent-toggle:focus .app-accordion__chevron::after,
+.app-accordion__section-toggle:focus .app-accordion__chevron::after {
+  border-top-color: #ffdd00;
+  border-right-color: #ffdd00;
+}
+
+
+.app-accordion__section:hover {
+  background-color: #f3f2f1;
+}
+
+#accordion-filter-apply-button {
+	margin:0px;
+}
