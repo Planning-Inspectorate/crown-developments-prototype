@@ -1,0 +1,63 @@
+{% macro appAccordion(params) %}
+
+    <div class="app-accordion" id="{{ params.id }}">
+
+        <button
+  type="button"
+  class="app-accordion__parent-toggle"
+  aria-expanded="false"
+  aria-controls="{{ params.id }}-all">
+
+            <span class="app-accordion__chevron" aria-hidden="true"></span>
+
+            <span class="app-accordion__toggle-text">
+    Show filters
+  </span>
+
+        </button>
+
+        <div id="{{ params.id }}-all" class="app-accordion__panel" hidden>
+            {% for item in params.items %}
+
+                <div class="app-accordion__section">
+
+                    <h3 class="app-accordion__heading">
+                        {{ item.heading }}
+                    </h3>
+
+                    <button
+        type="button"
+        class="app-accordion__section-toggle"
+        aria-expanded="false"
+        aria-controls="{{ params.id }}-section-{{ loop.index }}">
+
+                        <span class="app-accordion__chevron" aria-hidden="true"></span>
+
+                        <span class="app-accordion__toggle-text">
+          Show
+        </span>
+
+                    </button>
+
+                    <div
+        id="{{ params.id }}-section-{{ loop.index }}"
+        class="app-accordion__content"
+        hidden>
+
+                        {{ item.content | safe }}
+
+                    </div>
+
+                </div>
+
+            {% endfor %}
+
+            <button class="govuk-button" type="submit" id="accordion-filter-apply-button" style="margin-top: 10px;">
+  Apply filters
+</button>
+
+        </div>
+
+    </div>
+
+{% endmacro %}
