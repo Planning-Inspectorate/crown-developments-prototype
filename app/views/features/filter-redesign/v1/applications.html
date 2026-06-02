@@ -35,21 +35,14 @@
     </div>
 </div>
 <div class="govuk-width-container">
-    {% endblock %}
-
-    {% block content %}
-
-
-
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
             <h2 class="govuk-heading-l" style="margin-top: 30px;">
                 All Crown Development applications
             </h2>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
 
-            <div style="padding:0px 10px">
+
+            <div>
                 <div id="search-hint" class="govuk-hint">
                     Search applications</div>
                 <form class="govuk-form-group"
@@ -60,218 +53,203 @@
                     <button class="govuk-button" id="keyword-search-button" type="submit"
                         style="margin-bottom: 0;">Search</button>
                 </form>
+
+
+                {% from "govuk/components/details/macro.njk" import govukDetails %}
+
+                <div style="margin-top: 20px">
+                    {{ govukDetails({
+                    summaryText: "Filters",
+                    html: '<h3 class="govuk-heading-s">Type of application</h3>
+                    <fieldset class="govuk-fieldset" aria-describedby="stage-hint">
+                        <div class="govuk-checkboxes govuk-checkboxes--small">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="stage-accepted" name="stage" type="checkbox"
+                                    value="Accepted">
+                                <label class="govuk-label govuk-checkboxes__label" for="stage-accepted">
+                                    Planning permission (0)
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="stage-consultation" name="stage"
+                                    type="checkbox" value="Consultation">
+                                <label class="govuk-label govuk-checkboxes__label" for="stage-consultation">
+                                    Outline planning permission with some matters reserved (2)
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="stage-procedure" name="stage" type="checkbox"
+                                    value="Procedure choice">
+                                <label class="govuk-label govuk-checkboxes__label" for="stage-procedure">
+                                    Approval of reserved matters following outline approval (0)
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="stage-written" name="stage" type="checkbox"
+                                    value="Written representations">
+                                <label class="govuk-label govuk-checkboxes__label" for="stage-written">
+                                    Planning permission and listed building consent (LBC) for alterations, extension or
+                                    demolition
+                                    of a listed building (2)
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+                    <h3 class="govuk-heading-s">Stage</h3>
+                    <fieldset class="govuk-fieldset" aria-describedby="stage-hint">
+                        <div class="govuk-checkboxes govuk-checkboxes--small">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="stage-accepted" name="stage" type="checkbox"
+                                    value="Accepted">
+                                <label class="govuk-label govuk-checkboxes__label" for="stage-accepted">
+                                    Accepted (0)
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="stage-consultation" name="stage"
+                                    type="checkbox" value="Consultation">
+                                <label class="govuk-label govuk-checkboxes__label" for="stage-consultation">
+                                    Consultation (2)
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="stage-procedure" name="stage" type="checkbox"
+                                    value="Procedure choice">
+                                <label class="govuk-label govuk-checkboxes__label" for="stage-procedure">
+                                    Procedure choice (0)
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="stage-written" name="stage" type="checkbox"
+                                    value="Written representations">
+                                <label class="govuk-label govuk-checkboxes__label" for="stage-written">
+                                    Written representations (2)
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="stage-inquiry" name="stage" type="checkbox"
+                                    value="Inquiry">
+                                <label class="govuk-label govuk-checkboxes__label" for="stage-inquiry">
+                                    Inquiry (0)
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="stage-hearing" name="stage" type="checkbox"
+                                    value="Hearing">
+                                <label class="govuk-label govuk-checkboxes__label" for="stage-hearing">
+                                    Hearing (1)
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="stage-decision" name="stage" type="checkbox"
+                                    value="Decision">
+                                <label class="govuk-label govuk-checkboxes__label" for="stage-decision">
+                                    Final decision (12)
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="stage-decision" name="stage" type="checkbox"
+                                    value="Decision">
+                                <label class="govuk-label govuk-checkboxes__label" for="stage-decision">
+                                    Post-decision (0)
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <button class="govuk-button" id="keyword-search-button" type="submit"
+                        style="margin-top: 30px;">Apply
+                        filters</button>
+                    '
+
+                    }) }}
+                </div>
             </div>
 
 
-            {% from "components/accordion/accordion.njk" import appAccordion %}
+            <p class="govuk-body govuk-clearfix">
+                Showing <strong>1</strong>
+                to <strong>5</strong>
+                of <strong>5</strong> results
+            </p>
+            <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
 
-            {{ appAccordion({
-            id: "test-accordion",
-            items: [
-            {
-            heading: "Type of application",
-            content: '<fieldset class="govuk-fieldset" aria-describedby="stage-hint">
-                <div class="govuk-checkboxes govuk-checkboxes--small">
-                    <div class="govuk-checkboxes__item ">
-                        <input class="govuk-checkboxes__input" id="type-3" name="type" type="checkbox"
-                            value="Approval of reserved matters following outline approval">
-                        <label class="govuk-label govuk-checkboxes__label" for="type-3">
-                            Approval of reserved matters following outline approval (0)
-                        </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="type-4" name="type" type="checkbox"
-                            value="Planning permission and listed building consent (LBC)">
-                        <label class="govuk-label govuk-checkboxes__label" for="type-4">
-                            Planning permission and listed building consent (LBC) for alterations, extension or
-                            demolition of a listed
-                            building (3)
-                        </label>
+            <div class="pins-table__container" role="region">
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header">Application reference</th>
+                            <th scope="col" class="govuk-table__header">Applicant name</th>
+                            <th scope="col" class="govuk-table__header">Local planning authority</th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">
+                                <a class="govuk-link" href="">
+                                    CROWN/2025/0000057
+                                </a>
+                            </th>
 
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="type-2" name="type" type="checkbox"
-                            value="Outline planning permission with some matters reserved">
-                        <label class="govuk-label govuk-checkboxes__label" for="type-2">
-                            Outline planning permission with some matters reserved (1)
-                        </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="type-2" name="type" type="checkbox"
-                            value="Outline planning permission with some matters reserved">
-                        <label class="govuk-label govuk-checkboxes__label" for="type-2">
-                            Outline planning permission with all matters reserved (1)
-                        </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="type-1" name="type" type="checkbox"
-                            value="Planning permission">
-                        <label class="govuk-label govuk-checkboxes__label" for="type-1">
-                            Planning permission (20)
-                        </label>
-                    </div>
-                </div>
-            </fieldset>
-            '
-            },
-            {
-            heading: "Stage",
-            content: '<fieldset class="govuk-fieldset" aria-describedby="stage-hint">
-                <div class="govuk-checkboxes govuk-checkboxes--small">
-                    <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="stage-accepted" name="stage" type="checkbox"
-                            value="Accepted">
-                        <label class="govuk-label govuk-checkboxes__label" for="stage-accepted">
-                            Accepted (0)
-                        </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="stage-consultation" name="stage" type="checkbox"
-                            value="Consultation">
-                        <label class="govuk-label govuk-checkboxes__label" for="stage-consultation">
-                            Consultation (2)
-                        </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="stage-procedure" name="stage" type="checkbox"
-                            value="Procedure choice">
-                        <label class="govuk-label govuk-checkboxes__label" for="stage-procedure">
-                            Procedure choice (0)
-                        </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="stage-written" name="stage" type="checkbox"
-                            value="Written representations">
-                        <label class="govuk-label govuk-checkboxes__label" for="stage-written">
-                            Written representations (2)
-                        </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="stage-inquiry" name="stage" type="checkbox"
-                            value="Inquiry">
-                        <label class="govuk-label govuk-checkboxes__label" for="stage-inquiry">
-                            Inquiry (0)
-                        </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="stage-hearing" name="stage" type="checkbox"
-                            value="Hearing">
-                        <label class="govuk-label govuk-checkboxes__label" for="stage-hearing">
-                            Hearing (1)
-                        </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="stage-decision" name="stage" type="checkbox"
-                            value="Decision">
-                        <label class="govuk-label govuk-checkboxes__label" for="stage-decision">
-                            Final decision (12)
-                        </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="stage-decision" name="stage" type="checkbox"
-                            value="Decision">
-                        <label class="govuk-label govuk-checkboxes__label" for="stage-decision">
-                            Post-decision (0)
-                        </label>
-                    </div>
-                </div>
-            </fieldset>'
-            }
-            ]
-            }) }}
+                            <td class="govuk-table__cell">Department for Sustainable Infrastructure (DfSI)
+                            </td>
+                            <td class="govuk-table__cell">North Wessex Planning Partnership (NWPP)</td>
 
-
-
-        </div>
-
-        <div class="govuk-grid-column-full">
-
-
-            <div class="govuk-grid-column-full">
-
-                <p class="govuk-body govuk-clearfix">
-                    Showing <strong>1</strong>
-                    to <strong>5</strong>
-                    of <strong>5</strong> results
-                </p>
-                <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
-
-                <div class="pins-table__container" role="region">
-                    <table class="govuk-table">
-                        <thead class="govuk-table__head">
-                            <tr class="govuk-table__row">
-                                <th scope="col" class="govuk-table__header">Application reference</th>
-                                <th scope="col" class="govuk-table__header">Applicant name</th>
-                                <th scope="col" class="govuk-table__header">Local planning authority</th>
-                            </tr>
-                        </thead>
-                        <tbody class="govuk-table__body">
-                            <tr class="govuk-table__row">
-                                <th scope="row" class="govuk-table__header">
-                                    <a class="govuk-link" href="">
-                                        CROWN/2025/0000057
-                                    </a>
-                                </th>
-
-                                <td class="govuk-table__cell">Department for Sustainable Infrastructure (DfSI)
-                                </td>
-                                <td class="govuk-table__cell">North Wessex Planning Partnership (NWPP)</td>
-
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <th scope="row" class="govuk-table__header">
-                                    <a class="govuk-link" href="" ">
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">
+                                <a class="govuk-link" href="" ">
                                             CROWN/2025/0000051
                                         </a>
                                     </th>
 
                                     <td class=" govuk-table__cell">Office for Community Resilience and Urban Futures
-                                        (OCRUF)</td>
-                                <td class="govuk-table__cell">South Fenwick Borough Council</td>
+                                    (OCRUF)</td>
+                            <td class="govuk-table__cell">South Fenwick Borough Council</td>
 
-                            </tr>
+                        </tr>
 
-                            <tr class="govuk-table__row">
+                        <tr class="govuk-table__row">
 
-                                <th scope="row" class="govuk-table__header">
-                                    <a>CROWN/2025/0000052
-                                    </a>
-                                </th>
-                                <td class="govuk-table__cell">Ministry for Integrated Transport (MiT)</td>
-                                <td class="govuk-table__cell">West Darnley District Council</td>
+                            <th scope="row" class="govuk-table__header">
+                                <a>CROWN/2025/0000052
+                                </a>
+                            </th>
+                            <td class="govuk-table__cell">Ministry for Integrated Transport (MiT)</td>
+                            <td class="govuk-table__cell">West Darnley District Council</td>
 
-                            </tr>
+                        </tr>
 
-                            <tr class="govuk-table__row">
-                                <th scope="row" class="govuk-table__header">
-                                    <a class="govuk-link" href="">CROWN/2025/0000051</a>
-                                </th>
-                                <td class=" govuk-table__cell">Department for Housing Innovation and Regional
-                                    Strategy
-                                    (DHIRS)</td>
-                                <td class="govuk-table__cell">East Grinstead Vale Council</td>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">
+                                <a class="govuk-link" href="">CROWN/2025/0000051</a>
+                            </th>
+                            <td class=" govuk-table__cell">Department for Housing Innovation and Regional
+                                Strategy
+                                (DHIRS)</td>
+                            <td class="govuk-table__cell">East Grinstead Vale Council</td>
 
-                            </tr>
+                        </tr>
 
-                            <tr class="govuk-table__row">
-                                <th scope="row" class="govuk-table__header">
-                                    <a>CROWN/2025/0000056
-                                    </a>
-                                </th>
-                                <td class="govuk-table__cell">Commission for Environmental Planning and Urban
-                                    Renewal
-                                    (CEPUR)</td>
-                                <td class="govuk-table__cell">North Penbury Council</td>
-                            </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">
+                                <a>CROWN/2025/0000056
+                                </a>
+                            </th>
+                            <td class="govuk-table__cell">Commission for Environmental Planning and Urban
+                                Renewal
+                                (CEPUR)</td>
+                            <td class="govuk-table__cell">North Penbury Council</td>
+                        </tr>
 
-                            </tr>
+                        </tr>
 
-                        </tbody>
-                    </table>
-                </div>
+                    </tbody>
+                </table>
             </div>
         </div>
-        </main>
     </div>
+    </main>
+</div>
 
-    {% endblock %}
+{% endblock %}
