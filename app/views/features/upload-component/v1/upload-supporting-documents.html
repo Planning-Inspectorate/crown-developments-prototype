@@ -33,9 +33,6 @@
             <li>total upload size must be under 1GB</li>
         </ul>
 
-        <p class="govuk-body govuk-!-font-weight-bold">Upload attachments</p>
-
-
 
         <details class="govuk-details">
             <summary class="govuk-details__summary">
@@ -79,6 +76,10 @@
 
         {% from "features/upload-component/v1/components/multi-file-upload/multi-file-upload.njk" import uploadArea %}
 
+        {{ uploadArea({
+        label: " ",
+        hint: " "
+        }) }}
 
     </div>
 
