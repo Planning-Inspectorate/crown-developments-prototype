@@ -1,0 +1,71 @@
+{% extends "layouts/main.njk" %}
+{% set serviceName %}
+Crown Developments prototype
+{% endset%}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Update cookies page</h1>
+
+      <h2 class="govuk-heading-m">Feature description</h2>
+      <ul class="govuk-list">
+        <li>Update the cookies page to introduce a structured cookies table aligned with GOV.UK guidance and the NSIPs
+          example, including a list of cookies (name, purpose, duration) with clear categorisation (e.g. strictly
+          necessary, analytics).</li>
+      </ul>
+
+      <h3 class="govuk-heading-s">Jira links</h3>
+      <ul class="govuk-list">
+        <li><a href="https://pins-ds.atlassian.net/browse/CROWN-1631" class="govuk-link">CROWN-1631: Update cookies page
+            with GTM details &amp; cookies table</a></li>
+        <li><a href="https://pins-ds.atlassian.net/browse/CROWN-1627" class="govuk-link">CROWN-1627: Update Crown
+            cookies page to include Microsoft Clarity</a></li>
+
+        <li><a href="https://pins-ds.atlassian.net/browse/CROWN-1605" class="govuk-link">CROWN-1605 (Parent)</a></li>
+      </ul>
+
+      <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#version-1">
+              Version 1
+            </a>
+          </li>
+          <!--[VERSION 2] <li class="govuk-tabs__list-item govuk-tabs__list-item--selected"> <a class="govuk-tabs__tab" href="#version-2"> Version 2 </a> </li>-->
+        </ul>
+
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="version-1">
+          <h2 class="govuk-heading-m">Cookies table &ndash; initial implementation</h2>
+          <h3 class="govuk-heading-s">Change log</h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Added structured cookies table with name, purpose and duration columns</li>
+            <li>Categorised cookies into &ldquo;Strictly necessary&rdquo; and &ldquo;Analytics&rdquo; sections</li>
+            <li>Aligned page layout with GOV.UK Design System cookies page pattern</li>
+          </ul>
+
+          <p class="govuk-body">
+            <a href="v1/cookies" class="govuk-link">View cookies page</a>
+          </p>
+
+
+
+          <!--<div class="govuk-tabs__panel" id="version-2"> <h2 class="govuk-heading-m">[Version title]</h2> <ul class="govuk-list govuk-list--bullet"> <li>[Description]</li> </ul> <a href="" Class="govuk-button">[Link to prototype]</a> <details class="govuk-details"> <summary class="govuk-details__summary"> <span class="govuk-details__summary-text"> Page list </span> </summary> <div class="govuk-details__text"> <ul class="govuk-list"> <li><a href="" class="govuk-link"> [Links to pages]</a></li> </ul> </div> </details> <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible"> </div>-->
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}
