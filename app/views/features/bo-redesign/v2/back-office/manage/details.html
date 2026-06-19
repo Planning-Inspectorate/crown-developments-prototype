@@ -1,0 +1,237 @@
+{% extends "features/bo-redesign/v2/layouts/back-office.html" %}
+{% set currentArea = "cases" %}
+{% set currentPage = "details" %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column"><a href="/features/bo-redesign/v2/back-office/cases" class="govuk-back-link">Back to
+            all applications</a>
+        <h1 class="govuk-heading-l">CROWN/2025/0000073</h1>
+
+        <h2 class="govuk-heading-m">External links</h2>
+        <ul class="govuk-list ">
+            <li class="govuk-link">
+                <a class="external"
+                    href="https://pinso365.sharepoint.com/sites/CrownDevelopmentsDevSite1/Crown%20Developments/Forms/AllItems.aspx?FolderCTID=0x0120002AEB4E42385D4248BC40ED69E7C865EE&id=%2Fsites%2FCrownDevelopmentsDevSite1%2FCrown%20Developments%2FCROWN%2D2026%2D0000076"
+                    {% if currentPage=='documents' %} aria-current="location" {% endif %}>Documents (SharePoint)</a>
+            </li>
+            <li class="govuk-link">
+                <a class="external" href="" {% if currentPage=='notify' %} aria-current="location" {% endif %}>GOV.UK
+                    Notify</a>
+            </li>
+        </ul>
+        {% include "/features/bo-redesign/v2/components/side-nav/side-nav.njk" %}
+
+
+    </div>
+    {% from "/features/bo-redesign/v2/components/manage-tables/details-table.njk" import
+    detailsTable %}
+
+    {% set rows = [
+    {
+    "key": "Category",
+    "value": "Major development",
+    "actions": [
+    {
+    "text": "Change",
+    "href": "",
+    "visuallyHidden": "date"
+    }
+    ]
+    },
+    {
+    "key": "Procedure",
+    "value": "Written representations",
+    "actions": [
+    {
+    "text": "Change",
+    "href": "",
+    "visuallyHidden": "date"
+    }
+    ]
+    },
+    {
+    "key": "Status",
+    "value": "Accepted",
+    "actions": [
+    {
+    "text": "Change",
+    "href": "",
+    "visuallyHidden": "date"
+    }
+    ]
+    },
+    {
+    "key": "Stage",
+    "value": "Written representations",
+    "actions": [
+    {
+    "text": "Change",
+    "href": "",
+    "visuallyHidden": "date"
+    }
+    ]
+    },
+    {
+    "key": "LPA reference",
+    "value": "-",
+    "actions": [
+    {
+    "text": "Change",
+    "href": "",
+    "visuallyHidden": "date"
+    }
+    ]
+    },
+    {
+    "key": "Distressing content",
+    "value": "No",
+    "actions": [
+    {
+    "text": "Change",
+    "href": "",
+    "visuallyHidden": "date"
+    }
+    ]
+    },
+    {
+    "key": "Nationally important",
+    "value": "No",
+    "actions": [
+    {
+    "text": "Change",
+    "href": "",
+    "visuallyHidden": "date"
+    }
+    ]
+    },
+    {
+    "key": "Nationally important confirmation date",
+    "value": "-",
+    "actions": [
+    {
+    "text": "Change",
+    "href": "",
+    "visuallyHidden": "date"
+    }
+    ]
+    },
+    {
+    "key": "Green belt",
+    "value": "Yes",
+    "actions": [
+    {
+    "text": "Change",
+    "href": "",
+    "visuallyHidden": "date"
+    }
+    ]
+    },
+    {
+    "key": "Site is visible from public land",
+    "value": "Yes",
+    "actions": [
+    {
+    "text": "Change",
+    "href": "",
+    "visuallyHidden": "date"
+    }
+    ]
+    },
+    {
+    "key": "Health and safety issues",
+    "value": "",
+    "actions": [
+    {
+    "text": "Change",
+    "href": "",
+    "visuallyHidden": "date"
+    }
+    ]
+    },
+    {
+    "key": "Community Infrastructure Levy (CIL) liable",
+    "value": "Yes",
+    "actions": [
+    {
+    "text": "Change",
+    "href": "",
+    "visuallyHidden": "date"
+    }
+    ]
+    },
+    {
+    "key": "CIL amount",
+    "value": "£10",
+    "actions": [
+    {
+    "text": "Change",
+    "href": "",
+    "visuallyHidden": "date"
+    }
+    ]
+    },
+    {
+    "key": "Biodiversity net gain (BNG) exempt",
+    "value": "Yes",
+    "actions": [
+    {
+    "text": "Change",
+    "href": "",
+    "visuallyHidden": "date"
+    }
+    ]
+    },
+    {
+    "key": "Costs application(s)",
+    "value": "There is a cost claim",
+    "actions": [
+    {
+    "text": "Change",
+    "href": "",
+    "visuallyHidden": "date"
+    }
+    ]
+    },
+    {
+    "key": "Environmental Impact Assessment (EIA) development",
+    "value": "-",
+    "actions": [
+    {
+    "text": "Change",
+    "href": "",
+    "visuallyHidden": "date"
+    }
+    ]
+    },
+    {
+    "key": "Development plan",
+    "value": "-",
+    "actions": [
+    {
+    "text": "Change",
+    "href": "",
+    "visuallyHidden": "date"
+    }
+    ]
+    },
+    {
+    "key": "Right of way",
+    "value": "-",
+    "actions": [
+    {
+    "text": "Change",
+    "href": "",
+    "visuallyHidden": "date"
+    }
+    ]
+    }
+    ] %}
+
+    {{ detailsTable(rows) }}
+
+
+
+    {% endblock %}

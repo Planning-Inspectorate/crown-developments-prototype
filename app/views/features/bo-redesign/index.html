@@ -1,0 +1,56 @@
+{% extends "layouts/main.njk" %}
+{% set serviceName %}
+Crown Developments prototype
+{% endset%}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Back office redesign</h1>
+
+      <h2 class="govuk-heading-m">Feature description</h2>
+      <ul class="govuk-list">
+        <!-- user value (what the feature lets someone do) -->
+        <li>Accessibility and visual updates for back office</li>
+      </ul>
+
+      <h3 class="govuk-heading-s">Jira links</h3>
+      <ul class="govuk-list">
+        <li><a href="https://pins-ds.atlassian.net/browse/CROWN-1314">CROWN 1314: R&D back office redesign</a></li>
+      </ul>
+
+      <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#version-1">
+              Version 1
+            </a>
+          </li>
+          <!--[VERSION 2] <li class="govuk-tabs__list-item govuk-tabs__list-item--selected"> <a class="govuk-tabs__tab" href="#version-2"> Version 2 </a> </li>-->
+        </ul>
+
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="version-1">
+          <h2 class="govuk-heading-m">Version 2</h2>
+          <p class="govuk-body"><a href="v2/back-office/cases.html" class="govuk-link">Manage case</a></p>
+
+
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

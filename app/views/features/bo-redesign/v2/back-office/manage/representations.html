@@ -1,0 +1,294 @@
+{% extends "features/bo-redesign/v2/layouts/back-office.html" %}
+{% set currentArea = "cases" %}
+{% set currentPage = "representations" %}
+
+{% block content %}
+
+<a href="/features/bo-redesign/v2/back-office/cases" class="govuk-back-link">Back to
+    all applications</a>
+
+<h1 class="govuk-heading-l">CROWN/2025/0000073</h1>
+
+<h2 class="govuk-heading-m">External links</h2>
+<ul class="govuk-list ">
+    <li class="govuk-link">
+        <a class="external"
+            href="https://pinso365.sharepoint.com/sites/CrownDevelopmentsDevSite1/Crown%20Developments/Forms/AllItems.aspx?FolderCTID=0x0120002AEB4E42385D4248BC40ED69E7C865EE&id=%2Fsites%2FCrownDevelopmentsDevSite1%2FCrown%20Developments%2FCROWN%2D2026%2D0000076"
+            {% if currentPage=='documents' %} aria-current="location" {% endif %}>Documents (SharePoint)</a>
+    </li>
+    <li class="govuk-link">
+        <a class="external" href="" {% if currentPage=='notify' %} aria-current="location" {% endif %}>GOV.UK
+            Notify</a>
+    </li>
+</ul>
+
+{% include "/features/bo-redesign/v2/components/side-nav/side-nav.njk" %}
+
+
+<h2 class='govuk-heading--m'>
+    Representation dates
+</h2>
+
+
+{% from "/features/bo-redesign/v2/components/manage-tables/reps-table.njk" import
+repsTable %}
+
+
+{% set rows = [
+{
+"key": "Representations period",
+"value": "Start: midnight, 1 January 2026<br>
+End: 11:59pm, 31 December 2026",
+"actions": [
+{
+"text": "Change",
+"href": "",
+"visuallyHidden": "date"
+}
+]
+},
+
+{
+"key": "Representations publish date",
+"value": "1 February 2026",
+"actions": [
+{
+"text": "Change",
+"href": "",
+"visuallyHidden": "date"
+}
+]
+},
+
+{
+"key": "Notice of procedure date",
+"value": "4 March 2026",
+"actions": [
+{
+"text": "Change",
+"href": "",
+"visuallyHidden": "date"
+}
+]
+}
+] %}
+
+{{ repsTable(rows) }}
+
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+<h2 class='govuk-heading--m'>
+    Add a representation
+</h2>
+
+<p class="govuk-body"><a
+        href="/features/bo-redesign/v2/back-office/cases/view/manage-reps/edit-representation/0-date-received.html"
+        class="govuk-link">Add new representation</a></p>
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+<h2 class='govuk-label-wrapper'>
+    <label class='govuk-label govuk-label--m' id='search-label' for='search-input'>
+        Search representations
+    </label>
+</h2>
+
+<div id='search-hint' class='govuk-hint'>
+    Search by reference, keywords or name of person or organisation.
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-!-margin-top-2  govuk-grid-column-full">
+        <input class='govuk-input govuk-!-width-two-thirds' id='search-input' value='' name='searchCriteria'
+            type='text'>
+
+    </div>
+    <div class="govuk-!-margin-top-2 govuk-grid-column-one-third-from-desktop">
+        <button type='submit' class='govuk-button' data-module='govuk-button' id='search-button'
+            data-govuk-button-init=''>
+            Search
+        </button>
+    </div>
+</div>
+
+
+
+{% include "/features/bo-redesign/v2/components/top-filters/manage-reps.html" %}
+
+<p class="govuk-body">Showing <strong>1</strong> to <strong>13</strong> of <strong>13</strong> representations, newest
+    first.</p>
+
+
+<table class="govuk-table" data-module="moj-sortable-table" data-moj-sortable-table-init="">
+    <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header" aria-sort="none"><button type="button"
+                    data-index="0">Reference<svg width="22" height="22" focusable="false" aria-hidden="true" role="img"
+                        viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.1875 9.5L10.9609 3.95703L13.7344 9.5H8.1875Z" fill="currentColor"></path>
+                        <path d="M13.7344 12.0781L10.9609 17.6211L8.1875 12.0781H13.7344Z" fill="currentColor">
+                        </path>
+                    </svg></button></th>
+            <th scope="col" class="govuk-table__header" aria-sort="descending"><button type="button"
+                    data-index="1">From<svg width="22" height="22" focusable="false" aria-hidden="true" role="img"
+                        viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.4375 7L11 15.8687L6.5625 7L15.4375 7Z" fill="currentColor"></path>
+                    </svg></button></th>
+            <th scope="col" class="govuk-table__header" aria-sort="none"><button type="button" data-index="2">Submission
+                    date<svg width="22" height="22" focusable="false" aria-hidden="true" role="img" viewBox="0 0 22 22"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.1875 9.5L10.9609 3.95703L13.7344 9.5H8.1875Z" fill="currentColor"></path>
+                        <path d="M13.7344 12.0781L10.9609 17.6211L8.1875 12.0781H13.7344Z" fill="currentColor">
+                        </path>
+                    </svg></button></th>
+            <th scope="col" class="govuk-table__header" aria-sort="none"><button type="button" data-index="3">Status<svg
+                        width="22" height="22" focusable="false" aria-hidden="true" role="img" viewBox="0 0 22 22"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.1875 9.5L10.9609 3.95703L13.7344 9.5H8.1875Z" fill="currentColor"></path>
+                        <path d="M13.7344 12.0781L10.9609 17.6211L8.1875 12.0781H13.7344Z" fill="currentColor">
+                        </path>
+                    </svg></button></th>
+            <th scope="col" class="govuk-table__header" aria-sort="none">Action</th>
+        </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">82D18-7D169</td>
+            <td class="govuk-table__cell">test test</td>
+            <td class="govuk-table__cell" data-sort-value="1769685484459">29 Jan 2026</td>
+            <td class="govuk-table__cell">Awaiting review</td>
+            <td class="govuk-table__cell"><a
+                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/manage-representations/82D18-7D169/review"
+                    class="govuk-link">Review</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">26F2C-04B11</td>
+            <td class="govuk-table__cell">test test</td>
+            <td class="govuk-table__cell" data-sort-value="1769685536363">29 Jan 2026</td>
+            <td class="govuk-table__cell">Accepted</td>
+            <td class="govuk-table__cell"><a
+                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/manage-representations/26F2C-04B11/view"
+                    class="govuk-link">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">B848A-07D85</td>
+            <td class="govuk-table__cell">test te</td>
+            <td class="govuk-table__cell" data-sort-value="1770905976791">12 Feb 2026</td>
+            <td class="govuk-table__cell">Accepted</td>
+            <td class="govuk-table__cell"><a
+                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/manage-representations/B848A-07D85/view"
+                    class="govuk-link">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">21AE4-72530</td>
+            <td class="govuk-table__cell">Oliver Pembroke</td>
+            <td class="govuk-table__cell" data-sort-value="1768293689398">13 Jan 2026</td>
+            <td class="govuk-table__cell">Accepted</td>
+            <td class="govuk-table__cell"><a
+                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/manage-representations/21AE4-72530/view"
+                    class="govuk-link">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">344A7-B8268</td>
+            <td class="govuk-table__cell">Oliver Khan</td>
+            <td class="govuk-table__cell" data-sort-value="1770904357212">12 Feb 2026</td>
+            <td class="govuk-table__cell">Accepted</td>
+            <td class="govuk-table__cell"><a
+                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/manage-representations/344A7-B8268/view"
+                    class="govuk-link">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">C4D86-D8DD9</td>
+            <td class="govuk-table__cell">Oliver Grant</td>
+            <td class="govuk-table__cell" data-sort-value="1667260800000">1 Nov 2022</td>
+            <td class="govuk-table__cell">Rejected</td>
+            <td class="govuk-table__cell"><a
+                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/manage-representations/C4D86-D8DD9/view"
+                    class="govuk-link">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">945FC-23293</td>
+            <td class="govuk-table__cell">Oliver A</td>
+            <td class="govuk-table__cell" data-sort-value="1772202353132">27 Feb 2026</td>
+            <td class="govuk-table__cell">Awaiting review</td>
+            <td class="govuk-table__cell"><a
+                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/manage-representations/945FC-23293/review"
+                    class="govuk-link">Review</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">451F4-829BD</td>
+            <td class="govuk-table__cell">Frank Pembroke</td>
+            <td class="govuk-table__cell" data-sort-value="1772118115600">26 Feb 2026</td>
+            <td class="govuk-table__cell">Accepted</td>
+            <td class="govuk-table__cell"><a
+                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/manage-representations/451F4-829BD/view"
+                    class="govuk-link">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">49452-6733A</td>
+            <td class="govuk-table__cell">Frank Pembroke</td>
+            <td class="govuk-table__cell" data-sort-value="1773231544153">11 Mar 2026</td>
+            <td class="govuk-table__cell">Awaiting review</td>
+            <td class="govuk-table__cell"><a
+                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/manage-representations/49452-6733A/review"
+                    class="govuk-link">Review</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">8C37C-F246F</td>
+            <td class="govuk-table__cell">Frank Matches</td>
+            <td class="govuk-table__cell" data-sort-value="1767880374296">8 Jan 2026</td>
+            <td class="govuk-table__cell">Accepted</td>
+            <td class="govuk-table__cell"><a
+                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/manage-representations/8C37C-F246F/view"
+                    class="govuk-link">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">F5E60-CDE6D</td>
+            <td class="govuk-table__cell">Edward Carlisle</td>
+            <td class="govuk-table__cell" data-sort-value="1764115200000">26 Nov 2025</td>
+            <td class="govuk-table__cell">Withdrawn</td>
+            <td class="govuk-table__cell"><a
+                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/manage-representations/F5E60-CDE6D/view"
+                    class="govuk-link">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">00022-8E4B3</td>
+            <td class="govuk-table__cell">Beatrice Langley</td>
+            <td class="govuk-table__cell" data-sort-value="1767880344710">8 Jan 2026</td>
+            <td class="govuk-table__cell">Accepted</td>
+            <td class="govuk-table__cell"><a
+                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/manage-representations/00022-8E4B3/view"
+                    class="govuk-link">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">44BA4-6B93C</td>
+            <td class="govuk-table__cell">Amelia Scanlan</td>
+            <td class="govuk-table__cell" data-sort-value="1761955200000">1 Nov 2025</td>
+            <td class="govuk-table__cell">Accepted</td>
+            <td class="govuk-table__cell"><a
+                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/manage-representations/44BA4-6B93C/view"
+                    class="govuk-link">View</a></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+</div>
+
+{% endblock %}
