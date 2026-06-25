@@ -1,8 +1,19 @@
-
 {# app/views/components/dashboard-box/macro.njk #}
 {% macro dashboardBox(params) %}
 
-  {# base class #}
-  {% set classes = "dashboard-box" %}
+  <style>
+
+    .pins-dashboard-box {
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 0 #CECECE, inset 2px 0 0 #CECECE, inset -2px 0 0 #CECECE, inset 0 4px 0 #1E70B8;
+      width: 100%;
+    }
+  </style>
+
+  <div class="pins-dashboard-box">
+    {{params.html | safe }}
+
+  </div>
 
 {% endmacro %}
