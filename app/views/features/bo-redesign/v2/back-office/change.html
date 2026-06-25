@@ -1,0 +1,43 @@
+{% extends "features/bo-redesign/v2/layouts/back-office.html" %}
+{% set currentArea = "create" %}
+
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link" style="margin:0px">Back</a>
+<main class="govuk-main-wrapper">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="" method="post" novalidate="">
+        <input type="hidden" name="_csrf" value="FGb3omNxw6CHQypbRxEq6SviQAnPgjI3fBmII=">
+        <span class="govuk-caption-l">CROWN/2025/0000073
+        </span>
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="description">
+            What is the description of the development?
+          </label>
+        </h1>
+
+
+
+        <div class="govuk-form-group">
+
+          <div id="description-hint" class="govuk-hint">
+            This will be published on the website.
+          </div>
+          <textarea class="govuk-textarea" id="description" name="description" rows="5"
+            aria-describedby="description-hint">Construction of a new government office complex comprising three interconnected buildings with associated parking, landscaping, and secure perimeter fencing. The development will include sustainable design features such as green roofs, solar panels, and rainwater harvesting systems.</textarea>
+        </div>
+
+
+
+      </form>
+
+      <a href="manage-application-success.html" class="govuk-button">Save</a>
+
+    </div>
+  </div>
+</main>
+</div>
+
+{% endblock %}

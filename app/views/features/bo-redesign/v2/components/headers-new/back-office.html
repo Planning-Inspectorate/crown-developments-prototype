@@ -93,6 +93,25 @@
   .govuk-service-navigation__link {
     color: black !important;
   }
+
+  @media (max-width: 639px) {
+    .govuk-service-navigation__wrapper {
+      width: 100%;
+      margin: 0px 10px;
+    }
+
+    .govuk-service-navigation__item {
+      padding: 10px 0px;
+      border: none;
+
+    }
+
+    .govuk-service-navigation__item--active {
+      padding: 10px 0px;
+      font-weight: 700;
+      margin: 0px 0px;
+    }
+  }
 </style>
 
 <header class="back-office-header" role="banner">
@@ -132,7 +151,7 @@
               </a>
             </li>
             <li class="govuk-service-navigation__item">
-              <a class="govuk-service-navigation__link" href="/user-testing/bo-redesign/index.html" aria-current="true">
+              <a class="govuk-service-navigation__link" href="/features/bo-redesign/index.html" aria-current="true">
                 <strong class="govuk-service-navigation__active-fallback">Sign out</strong>
               </a>
             </li>
