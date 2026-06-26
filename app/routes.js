@@ -4,16 +4,20 @@
 //
 
 const govukPrototypeKit = require('govuk-prototype-kit')
-
 const {applyAzureHostingFix} = require('./azure-hosting-fix');
 applyAzureHostingFix();
-
 const {getJourney} = require("./journeys");
 const router = govukPrototypeKit.requests.setupRouter();
 
-const SKIP_ANSWERS = false;
+// --- FEATURE ROUTES ---
+require('./views/features/bo-redesign/v2/back-office/change-routes')(router);
+//require('./sub-routes/features/test/test')(router)
 
-router.post('/continue-answer', function (req, res) {
+
+// --- OTHER ---
+//const SKIP_ANSWERS = false;
+
+/*router.post('/continue-answer', function (req, res) {
   if (req.body.continue === 'yes') {
     res.redirect('/features/application-updates/back-office/6-yes');
   } else if (req.body.continue === 'no') {
@@ -38,11 +42,16 @@ router.post('/who-are-you-submitting-a-representation-for', function (request, r
   // fallback: go back to the form
   return response.redirect('back');
 });
-
 router.use(function (req, res, next) {
-    if (req.url.endsWith('start')) {
-        req.session.data = {}; // clear session on each start
+
+    if (req.url.startsWith('/test/')) {
+        return next()
     }
+
+    if (req.url.endsWith('start')) {
+        req.session.data = {};
+    }
+
     if (req.method === 'POST') {
         console.log('POST', req.url);
         const question = req.url.replace('/', '');
@@ -59,3 +68,5 @@ router.use(function (req, res, next) {
      }
     next();
 });
+
+*/
