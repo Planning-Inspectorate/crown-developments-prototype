@@ -3,11 +3,27 @@
 {% set currentPage = "details" %}
 
 {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+        <a href="/features/bo-redesign/v2/back-office/cases" class="govuk-back-link">Back to all applications</a>
+
+        {% if showSuccessBanner %}
+        {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+
+        {% call govukNotificationBanner({ type: "success" }) %} <h3 class="govuk-notification-banner__heading">
+            {{ successMessage or "Application updated" }}
+        </h3>
+        {% endcall %}
+        {% endif %}
+
+    </div>
+</div>
 
 
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column"><a href="/features/bo-redesign/v2/back-office/cases" class="govuk-back-link">Back to
-            all applications</a>
+    <div class="govuk-grid-column-full">
         <h1 class="govuk-heading-l">CROWN/2025/0000073</h1>
         <button class="govuk-button">Publish application</button>
 
@@ -26,213 +42,180 @@
         {% include "/features/bo-redesign/v2/components/side-nav/side-nav.njk" %}
 
 
-    </div>
-    {% from "/features/bo-redesign/v2/components/manage-tables/details-table.njk" import
-    detailsTable %}
 
-    {% set rows = [
-    {
-    "key": "Category",
-    "value": "Major development",
-    "actions": [
-    {
-    "text": "Change",
-    "href": "",
-    "visuallyHidden": "date"
-    }
-    ]
-    },
-    {
-    "key": "Procedure",
-    "value": "Written representations",
-    "actions": [
-    {
-    "text": "Change",
-    "href": "",
-    "visuallyHidden": "date"
-    }
-    ]
-    },
-    {
-    "key": "Status",
-    "value": "Accepted",
-    "actions": [
-    {
-    "text": "Change",
-    "href": "",
-    "visuallyHidden": "date"
-    }
-    ]
-    },
-    {
-    "key": "Stage",
-    "value": "Written representations",
-    "actions": [
-    {
-    "text": "Change",
-    "href": "",
-    "visuallyHidden": "date"
-    }
-    ]
-    },
-    {
-    "key": "LPA reference",
-    "value": "-",
-    "actions": [
-    {
-    "text": "Change",
-    "href": "",
-    "visuallyHidden": "date"
-    }
-    ]
-    },
-    {
-    "key": "Distressing content",
-    "value": "No",
-    "actions": [
-    {
-    "text": "Change",
-    "href": "",
-    "visuallyHidden": "date"
-    }
-    ]
-    },
-    {
-    "key": "Nationally important",
-    "value": "No",
-    "actions": [
-    {
-    "text": "Change",
-    "href": "",
-    "visuallyHidden": "date"
-    }
-    ]
-    },
-    {
-    "key": "Nationally important confirmation date",
-    "value": "-",
-    "actions": [
-    {
-    "text": "Change",
-    "href": "",
-    "visuallyHidden": "date"
-    }
-    ]
-    },
-    {
-    "key": "Green belt",
-    "value": "Yes",
-    "actions": [
-    {
-    "text": "Change",
-    "href": "",
-    "visuallyHidden": "date"
-    }
-    ]
-    },
-    {
-    "key": "Site is visible from public land",
-    "value": "Yes",
-    "actions": [
-    {
-    "text": "Change",
-    "href": "",
-    "visuallyHidden": "date"
-    }
-    ]
-    },
-    {
-    "key": "Health and safety issues",
-    "value": "",
-    "actions": [
-    {
-    "text": "Change",
-    "href": "",
-    "visuallyHidden": "date"
-    }
-    ]
-    },
-    {
-    "key": "Community Infrastructure Levy (CIL) liable",
-    "value": "Yes",
-    "actions": [
-    {
-    "text": "Change",
-    "href": "",
-    "visuallyHidden": "date"
-    }
-    ]
-    },
-    {
-    "key": "CIL amount",
-    "value": "£10",
-    "actions": [
-    {
-    "text": "Change",
-    "href": "",
-    "visuallyHidden": "date"
-    }
-    ]
-    },
-    {
-    "key": "Biodiversity net gain (BNG) exempt",
-    "value": "Yes",
-    "actions": [
-    {
-    "text": "Change",
-    "href": "",
-    "visuallyHidden": "date"
-    }
-    ]
-    },
-    {
-    "key": "Costs application(s)",
-    "value": "There is a cost claim",
-    "actions": [
-    {
-    "text": "Change",
-    "href": "",
-    "visuallyHidden": "date"
-    }
-    ]
-    },
-    {
-    "key": "Environmental Impact Assessment (EIA) development",
-    "value": "-",
-    "actions": [
-    {
-    "text": "Change",
-    "href": "",
-    "visuallyHidden": "date"
-    }
-    ]
-    },
-    {
-    "key": "Development plan",
-    "value": "-",
-    "actions": [
-    {
-    "text": "Change",
-    "href": "",
-    "visuallyHidden": "date"
-    }
-    ]
-    },
-    {
-    "key": "Right of way",
-    "value": "-",
-    "actions": [
-    {
-    "text": "Change",
-    "href": "",
-    "visuallyHidden": "date"
-    }
-    ]
-    }
-    ] %}
+        {% from "/features/bo-redesign/v2/components/manage-tables/details-table.njk" import
+        detailsTable %}
 
-    {{ detailsTable(rows) }}
+        {% set rows = [
+        {
+        "key": "Category",
+        "value": "Major development",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "/features/bo-redesign/v2/back-office/change?fieldId=category",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Procedure",
+        "value": "Written representations",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "/features/bo-redesign/v2/back-office/change?fieldId=procedure",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Status",
+        "value": "Accepted",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "/features/bo-redesign/v2/back-office/change?fieldId=status",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Stage",
+        "value": "Written representations",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "/features/bo-redesign/v2/back-office/change?fieldId=stage",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "LPA reference",
+        "value": "-",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "/features/bo-redesign/v2/back-office/change?fieldId=lpaReference",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Distressing content",
+        "value": "No",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "/features/bo-redesign/v2/back-office/change?fieldId=distressing",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Nationally important",
+        "value": "No",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "/features/bo-redesign/v2/back-office/change?fieldId=nationallyImportant",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Nationally important confirmation date",
+        "value": "-",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "/features/bo-redesign/v2/back-office/change?fieldId=nationallyImportantConfirmation",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Green belt",
+        "value": "Yes",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "/features/bo-redesign/v2/back-office/change?fieldId=greenBelt",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Site is visible from public land",
+        "value": "Yes",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "/features/bo-redesign/v2/back-office/change?fieldId=visible",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Health and safety issues",
+        "value": "",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "/features/bo-redesign/v2/back-office/change?fieldId=health",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Community Infrastructure Levy (CIL) liable",
+        "value": "Yes",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "/features/bo-redesign/v2/back-office/change?fieldId=cil",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "CIL amount",
+        "value": "£10",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "/features/bo-redesign/v2/back-office/change?fieldId=cilAmount",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Biodiversity net gain (BNG) exempt",
+        "value": "Yes",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "/features/bo-redesign/v2/back-office/change?fieldId=bng",
+        "visuallyHidden": "date"
+        }
+        ]
+        },
+        {
+        "key": "Costs application(s)",
+        "value": "There is a cost claim",
+        "actions": [
+        {
+        "text": "Change",
+        "href": "/features/bo-redesign/v2/back-office/change?fieldId=costsApplication",
+        "visuallyHidden": "date"
+        }
+        ]
+        }
+        ] %}
+
+        {{ detailsTable(rows) }}
 
 
 
-    {% endblock %}
+        {% endblock %}
