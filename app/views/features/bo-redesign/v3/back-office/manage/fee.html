@@ -1,13 +1,16 @@
 {% extends "features/bo-redesign/v2/layouts/back-office.html" %}
 {% set currentArea = "cases" %}
-{% set currentPage = "case-team" %}
+{% set currentPage = "fee" %}
 
 {% block content %}
+
+
 
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column"><a href="/features/bo-redesign/v2/back-office/cases" class="govuk-back-link">Back to
             all applications</a>
+
 
         <h1 class="govuk-heading-l">CROWN/2025/0000073</h1>
 
@@ -25,7 +28,6 @@
                     Notify</a>
             </li>
         </ul>
-
         {% include "/features/bo-redesign/v2/components/side-nav/side-nav.njk" %}
 
 
@@ -35,8 +37,8 @@
         {% set rows = [
         {
 
-        "key": "Inspector 1",
-        "value": "Tom Reeves",
+        "key": "Fee amount",
+        "value": "£1.00",
         "actions": [
         {
         "text": "Change",
@@ -46,8 +48,8 @@
         ]
         },
         {
-        "key": "Inspector 2",
-        "value": "Danielle Hughes",
+        "key": "Fee received date",
+        "value": "1 January 2025",
         "actions": [
         {
         "text": "Change",
@@ -57,8 +59,8 @@
         ]
         },
         {
-        "key": "Inspector 3",
-        "value": "-",
+        "key": "Fee refund amount",
+        "value": "£10.00",
         "actions": [
         {
         "text": "Change",
@@ -68,30 +70,8 @@
         ]
         },
         {
-        "key": "Case officer",
-        "value": "Brogan Andrews",
-        "actions": [
-        {
-        "text": "Change",
-        "href": "",
-        "visuallyHidden": "date"
-        }
-        ]
-        },
-        {
-        "key": "Assessor inspector",
-        "value": "Katie Wilson",
-        "actions": [
-        {
-        "text": "Change",
-        "href": "",
-        "visuallyHidden": "date"
-        }
-        ]
-        },
-        {
-        "key": "Planning officer",
-        "value": "Alex Boyd",
+        "key": "Fee refund date",
+        "value": "1 December 2026",
         "actions": [
         {
         "text": "Change",

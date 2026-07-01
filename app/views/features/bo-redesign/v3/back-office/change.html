@@ -1,0 +1,177 @@
+{% extends "features/bo-redesign/v2/layouts/back-office.html" %}
+{% set currentArea = "create" %}
+
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link" style="margin:0px">Back</a>
+<main class="govuk-main-wrapper">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <form action="change" method="post" novalidate="">
+        <input type="hidden" name="_csrf" value="FGb3omNxw6CHQypbRxEq6SviQAnPgjI3fBmII=">
+        <input type="hidden" name="fieldId" value="{{ fieldId }}">
+
+        <span class="govuk-caption-l">CROWN/2025/0000073</span>
+
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="{{ fieldName }}">
+            {{ fieldLabel }}
+          </label>
+        </h1>
+
+        <!-- TEXTAREA FIELD -->
+        {% if fieldType === 'textarea' %}
+        <div class="govuk-form-group">
+          {% if fieldHint %}
+          <div id="{{ fieldName }}-hint" class="govuk-hint">
+            {{ fieldHint }}
+          </div>
+          {% endif %}
+          <textarea class="govuk-textarea" id="{{ fieldName }}" name="{{ fieldName }}" rows="{{ fieldRows or 5 }}" {% if
+            fieldHint %}aria-describedby="{{ fieldName }}-hint" {% endif %}>{{ currentValue }}</textarea>
+        </div>
+        {% endif %}
+
+        <!-- TEXT INPUT FIELD -->
+        {% if fieldType === 'text' %}
+        <div class="govuk-form-group">
+          {% if fieldHint %}
+          <div id="{{ fieldName }}-hint" class="govuk-hint">
+            {{ fieldHint }}
+          </div>
+          {% endif %}
+          <input class="govuk-input" id="{{ fieldName }}" name="{{ fieldName }}" type="{{ inputType or 'text' }}"
+            value="{{ currentValue }}" {% if fieldHint %}aria-describedby="{{ fieldName }}-hint" {% endif %}>
+        </div>
+        {% endif %}
+
+        <!-- RADIOS FIELD -->
+        {% if fieldType === 'radios' %}
+        <div class="govuk-form-group">
+          {% if fieldHint %}
+          <div id="{{ fieldName }}-hint" class="govuk-hint">
+            {{ fieldHint }}
+          </div>
+          {% endif %}
+          <fieldset class="govuk-fieldset" {% if fieldHint %}aria-describedby="{{ fieldName }}-hint" {% endif %}>
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              {% for option in fieldOptions %}
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="{{ fieldName }}-{{ option.value }}" name="{{ fieldName }}"
+                  type="radio" value="{{ option.value }}" {% if currentValue===option.value %}checked{% endif %}>
+                <label class="govuk-label govuk-radios__label" for="{{ fieldName }}-{{ option.value }}">
+                  {{ option.text }}
+                </label>
+              </div>
+              {% endfor %}
+            </div>
+          </fieldset>
+        </div>
+        {% endif %}
+
+        <!-- ADDRESS FIELD -->
+        {% if fieldType === 'address' %}
+        <div class="govuk-form-group">
+          {% if fieldHint %}
+          <div id="{{ fieldName }}-hint" class="govuk-hint">
+            {{ fieldHint }}
+          </div>
+          {% endif %}
+          <textarea class="govuk-textarea" id="{{ fieldName }}" name="{{ fieldName }}" rows="4" {% if fieldHint
+            %}aria-describedby="{{ fieldName }}-hint" {% endif %}>{{ currentValue }}</textarea>
+          <div class="govuk-hint" style="margin-top: 10px;">Enter address on separate lines</div>
+        </div>
+        {% endif %}
+
+        <!-- ADDRESS MULTI FIELD -->
+        {% if fieldType === 'address-multi' %}
+        {% for field in addressFields %}
+        <div class="govuk-form-group">
+          {{ govukInput({
+          label: {
+          text: field.label
+          },
+          id: field.name,
+          name: field.name,
+          value: addressFieldValues[field.name],
+          classes: field.classes,
+          suffix: suffix
+
+          }) }}
+        </div>
+        {% endfor %}
+        {% endif %}
+
+
+        <!-- COORDINATES FIELD -->
+        {% if fieldType === 'coordinates' %}
+        <div class="govuk-form-group">
+          {% if fieldHint %}
+          <div id="{{ fieldName }}-hint" class="govuk-hint">
+            {{ fieldHint }}
+          </div>
+          {% endif %}
+
+          <div class="govuk-form-group" style="margin-top: 20px;">
+            <label class="govuk-label" for="easting">Easting</label>
+            <input class="govuk-input govuk-input--width-10" id="easting" name="easting" type="text"
+              value="{{ eastingValue }}">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="northing">Northing</label>
+            <input class="govuk-input govuk-input--width-10" id="northing" name="northing" type="text"
+              value="{{ northingValue }}">
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- DATE FIELD -->
+        {% if fieldType === 'date' %}
+        <div class="govuk-form-group">
+          {% if fieldHint %}
+          <div id="{{ fieldName }}-hint" class="govuk-hint">
+            {{ fieldHint }}
+          </div>
+          {% endif %}
+          <fieldset class="govuk-fieldset" {% if fieldHint %}aria-describedby="{{ fieldName }}-hint" {% endif %}>
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            </legend>
+            <div class="govuk-date-input" id="{{ fieldName }}">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="{{ fieldName }}-day">Day</label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="{{ fieldName }}-day"
+                    name="{{ fieldName }}-day" type="text" value="{{ dayValue }}" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="{{ fieldName }}-month">Month</label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="{{ fieldName }}-month"
+                    name="{{ fieldName }}-month" type="text" value="{{ monthValue }}" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="{{ fieldName }}-year">Year</label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="{{ fieldName }}-year"
+                    name="{{ fieldName }}-year" type="text" value="{{ yearValue }}" inputmode="numeric">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        {% endif %}
+
+        <button type="submit" class="govuk-button">Save</button>
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

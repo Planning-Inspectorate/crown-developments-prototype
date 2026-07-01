@@ -1,8 +1,10 @@
 {% extends "features/bo-redesign/v2/layouts/back-office.html" %}
 {% set currentArea = "cases" %}
-{% set currentPage = "case-team" %}
+{% set currentPage = "eia" %}
 
 {% block content %}
+
+
 
 
 <div class="govuk-grid-row">
@@ -28,36 +30,13 @@
 
         {% include "/features/bo-redesign/v2/components/side-nav/side-nav.njk" %}
 
-
         {% from "/features/bo-redesign/v2/components/manage-tables/dates-table.njk" import
         datesTable %}
 
         {% set rows = [
         {
 
-        "key": "Inspector 1",
-        "value": "Tom Reeves",
-        "actions": [
-        {
-        "text": "Change",
-        "href": "",
-        "visuallyHidden": "date"
-        }
-        ]
-        },
-        {
-        "key": "Inspector 2",
-        "value": "Danielle Hughes",
-        "actions": [
-        {
-        "text": "Change",
-        "href": "",
-        "visuallyHidden": "date"
-        }
-        ]
-        },
-        {
-        "key": "Inspector 3",
+        "key": "EIA screening",
         "value": "-",
         "actions": [
         {
@@ -68,8 +47,8 @@
         ]
         },
         {
-        "key": "Case officer",
-        "value": "Brogan Andrews",
+        "key": "EIA screening outcome",
+        "value": "Yes",
         "actions": [
         {
         "text": "Change",
@@ -79,19 +58,8 @@
         ]
         },
         {
-        "key": "Assessor inspector",
-        "value": "Katie Wilson",
-        "actions": [
-        {
-        "text": "Change",
-        "href": "",
-        "visuallyHidden": "date"
-        }
-        ]
-        },
-        {
-        "key": "Planning officer",
-        "value": "Alex Boyd",
+        "key": "Date environment statement was received",
+        "value": "2 March 2026",
         "actions": [
         {
         "text": "Change",
