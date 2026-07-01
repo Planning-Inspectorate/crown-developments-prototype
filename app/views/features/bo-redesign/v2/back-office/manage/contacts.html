@@ -2,7 +2,26 @@
 {% set currentArea = "cases" %}
 {% set currentPage = "contacts" %}
 
+{% from "/features/bo-redesign/v2/components/manage-tables/contacts-table.njk" import
+contactsTable %}
+
 {% block content %}
+
+<style>
+    .pins-button-link {
+
+        font-family: "GDS Transport", arial, sans-serif;
+        color: #1d70b8;
+        text-decoration: underline;
+        text-decoration-thickness: 0.0625rem;
+        text-underline-offset: 0.1em;
+        font-size: 1em;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+</style>
 
 
 <div class="govuk-grid-row">
@@ -30,187 +49,176 @@
         {% include "/features/bo-redesign/v2/components/side-nav/side-nav.njk" %}
 
     </div>
-    <h2 class="govuk-heading-m">Local planning authority (LPA)</h2>
 
-    {% from "/features/bo-redesign/v2/components/manage-tables/contacts-table.njk" import
-    contactsTable %}
+    <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+            <dt class="govuk-summary-list__key">
+                LPA contact
+            </dt>
+            <dd class="govuk-summary-list__value">
+                system-test-council@example.com<br>1234567890<br>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+            <dt class="govuk-summary-list__key">
+                LPA address
+            </dt>
+            <dd class="govuk-summary-list__value">
+                PO Box 270<br>Guildhall<br>London<br>EC2P 2EJ
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+            <dt class="govuk-summary-list__key">
+                Secondary LPA contact
+            </dt>
+            <dd class="govuk-summary-list__value">
+                -
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+            <dt class="govuk-summary-list__key">
+                Secondary LPA address
+            </dt>
+            <dd class="govuk-summary-list__value">
+                -
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Has agent
+            </dt>
+            <dd class="govuk-summary-list__value">
+                Yes
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/contacts/has-agent">Edit<span
+                        class="govuk-visually-hidden"> Is the applicant using an agent? (Contacts)</span></a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Agent organisation name
+            </dt>
+            <dd class="govuk-summary-list__value">
+                Jordan Taylor Planning Consultancy Ltd
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link"
+                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/contacts/add-agent-details">Edit<span
+                        class="govuk-visually-hidden"> What is the name of the agent organisation? (Contacts)</span></a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Agent address
+            </dt>
+            <dd class="govuk-summary-list__value">
+                14 Kingsway House<br>Meadow Business Park<br>Westbridge<br>WB4 8PL
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link"
+                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/contacts/agent-address">Edit<span
+                        class="govuk-visually-hidden"> What is the address of the agent organisation?
+                        (Contacts)</span></a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Agent contacts
+            </dt>
+            <dd class="govuk-summary-list__value">
+                <div data-behaviour="toggle-list">
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                            Alex Morgan<br>alex.morgan@morganplanning.co.uk
+                        </li>
 
-    {% set rows = [
-    {
-    key: "LPA",
-    value: "North Wexford District Council<br>12 Market Row<br>Wexfordshire<br>WX1 4AB"
-    },{
+                        <li>
+                            Daniel Daniel<br>daniel.wright@morganplanning.co.uk<br>01174968202
+                        </li>
 
-    key: "Email",
-    value: "planning@northwexford.gov.uk"
-    },
-    {
-    key: "Telephone",
-    value: "01482 555100"
-    }
-    ] %}
+                    </ul>
 
-    {{ contactsTable(rows) }}
+                    <button class="pins-button-link" data-toggle="">Show 1 more</button>
+                    <ul class="govuk-list govuk-list--bullet govuk-!-padding-top-4" data-show-more="" hidden="">
+                        <li>
+                            Sophie Lewis<br>sophie.lewis@morganplanning.co.uk
+                        </li>
 
-    {% set rows = [
-    {
-    key: "Secondary LPA",
-    value: "South Penn Borough Council<br>Civic Centre<br>44 Ridgeway<br>South Penn<br>SP9 2HT"
-    },{
+                    </ul>
+                </div>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link"
+                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/contacts/check-agent-contact-details">Edit<span
+                        class="govuk-visually-hidden"> Check agent contact details (Contacts)</span></a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Applicants
+            </dt>
+            <dd class="govuk-summary-list__value">
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                        Department for Justice Infrastructure<br> Government Buildings<br>42 Whitehall
+                        Place<br>London<br>SW1A 2AA </li>
 
-    key: "Email",
-    value: "development.control@southpenn.gov.uk"
-    },
-    {
-    key: "Telephone",
-    value: "01624 883210"
-    }
-    ] %}
+                    <li>
+                        Defence Property and Facilities Agency<br> Hawthorn House<br>1 Arsenal
+                        Way<br>Portchester<br>PO16
+                        8XY </li>
 
-    {{ contactsTable(rows) }}
+                </ul>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link"
+                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/contacts/check-applicant-details">Edit<span
+                        class="govuk-visually-hidden"> Check applicant details (Contacts)</span></a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Applicant contacts
+            </dt>
+            <dd class="govuk-summary-list__value">
+                <div data-behaviour="toggle-list">
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                            Sarah Mitchell<br>sarah.mitchell@justice-infrastructure.gov.uk<br>01632960210<br>Department
+                            for
+                            Justice Infrastructure
+                        </li>
 
-    <h2 class="govuk-heading-m">Applicant</h2>
+                        <li>
+                            Michael Ahmed<br>michael.ahmed@dpfa.gov.uk<br>Defence Property and Facilities Agency
+                        </li>
 
-    {% set rows = [
-    {
-    key: "Applicants",
-    value: "",
-    actions:
-    [
-    {
-    text: "Change",
-    href: ""
-    }
-    ]
-    },{
-    key: "Applicant 1",
-    value: "Department for Infrastructure<br>85 Falcon Street<br>London<br>SW1A 9ZT",
-    actions:
-    [
+                    </ul>
 
-    ]
-    },{
-    key: "Applicant 2",
-    value: "Ministry of Community Development<br>Crown Buildings<br>9 Kingsway<br>London WC2B 6RH",
-    actions:
-    [
+                    <button class="pins-button-link" data-toggle="">Show 3 more</button>
+                    <ul class="govuk-list govuk-list--bullet govuk-!-padding-top-4" data-show-more="" hidden="">
+                        <li>
+                            James Carter<br>james.carter@dpfa.gov.uk<br>01632960325<br>Defence Property and Facilities
+                            Agency
+                        </li>
 
-    ]
-    },{
-    key: "Applicant 3",
-    value: "Office for National Estates and Property<br>3 Regent Walk<br>Birmingham<br>B1 4DD",
-    actions:
-    [
+                        <li>
+                            Rebecca Foster<br>rebecca.foster@dpfa.gov.uk<br>Defence Property and Facilities Agency
+                        </li>
 
-    ]
-    }
-    ] %}
-    {{ contactsTable(rows) }}
+                        <li>
+                            Charlotte Green<br>charlotte.green@dpfa.gov.uk<br>Defence Property and Facilities Agency
+                        </li>
 
-
-    {% set rows = [
-    {
-    key: "Applicant contacts",
-    value: "",
-    actions:
-    [
-    {
-    text: "Change",
-    href: ""
-    }
-    ]
-    },{
-    key: "Contact 1",
-    value: "Sarah Whitfield<br>sarah.whitfield@ditp.gov.uk<br>+020 7034 1121<br>Department for Infrastructure",
-    actions:
-    [
-
-    ]
-    },{
-    key: "Contact 2",
-    value: "Priya Sandhu<br>priya.sandhu@ditp.gov.uk<br>020 7034 1188<br>Department for Infrastructure",
-    actions:
-    [
-
-    ]
-    },{
-    key: "Contact 3",
-    value: "James Holloway<br>james.holloway@ditp.gov.uk<br>Department for Infrastructure",
-    actions:
-    [
-
-    ]
-    },{
-    key: "Contact 4",
-    value: "Emily Rhodes<br>emily.rhodes@mcd.gov.uk<br>020 7160 4420<br>Ministry of Community Development (MCD)",
-    actions:
-    [
-
-    ]
-    },{
-    key: "Contact 5",
-    value: "Robert Kinsella<br>robert.kinsella@onep.gov.ex.uk<br>0300 010 5512<br>Office for National Estates and
-    Property (ONEP)",
-    actions:
-    [
-
-    ]
-    }
-    ] %}
-    {{ contactsTable(rows) }}
-
-    <h2 class="govuk-heading-m">Agent</h2>
-
-    {% set rows = [
-    {
-    key: "Agent",
-    value: "Bennett Clarke<br>48 Montague Place<br>London<br>WC1H 7AL",
-    actions:
-    [
-    {
-    text: "Change",
-    href: "",
-    visuallyHidden: "publish date"
-    }
-    ]
-    }
-    ] %}
-
-    {{ contactsTable(rows) }}
-
-
-    {% set rows = [
-    {
-    key: "Agent contacts",
-    value: "",
-    actions:
-    [
-    {
-    text: "Change",
-    href: ""
-    }
-    ]
-    },{
-    key: "Contact 1",
-    value: "Rebecca Allen<br> rebecca.allen@bennettclarke.uk<br>020 3011 9080",
-    actions:
-    [
-
-    ]
-    },{
-    key: "Contact 2",
-    value: "Samuel Price<br>samuel.price@bennettclarke.example",
-    actions:
-    [
-
-    ]
-    }
-    ] %}
-    {{ contactsTable(rows) }}
-
-</div>
-
-
-</div>
-
-{% endblock %}
+                    </ul>
+                </div>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link"
+                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/contacts/check-applicant-contact-details">Edit<span
+                        class="govuk-visually-hidden"> Check applicant contact details (Contacts)</span></a>
+            </dd>
+        </div>
+    </dl>
+    {% endblock %}
