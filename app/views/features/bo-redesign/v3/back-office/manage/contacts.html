@@ -1,0 +1,224 @@
+{% extends "features/bo-redesign/v2/layouts/back-office.html" %}
+{% set currentArea = "cases" %}
+{% set currentPage = "contacts" %}
+
+{% from "/features/bo-redesign/v2/components/manage-tables/contacts-table.njk" import
+contactsTable %}
+
+{% block content %}
+
+<style>
+    .pins-button-link {
+
+        font-family: "GDS Transport", arial, sans-serif;
+        color: #1d70b8;
+        text-decoration: underline;
+        text-decoration-thickness: 0.0625rem;
+        text-underline-offset: 0.1em;
+        font-size: 1em;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+</style>
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column"><a href="/features/bo-redesign/v2/back-office/cases" class="govuk-back-link">Back to
+            all applications</a>
+
+
+        <h1 class="govuk-heading-l">CROWN/2025/0000073</h1>
+
+        <button class="govuk-button">Publish application</button>
+
+        <h2 class="govuk-heading-m">External links</h2>
+        <ul class="govuk-list ">
+            <li class="govuk-link">
+                <a class="external"
+                    href="https://pinso365.sharepoint.com/sites/CrownDevelopmentsDevSite1/Crown%20Developments/Forms/AllItems.aspx?FolderCTID=0x0120002AEB4E42385D4248BC40ED69E7C865EE&id=%2Fsites%2FCrownDevelopmentsDevSite1%2FCrown%20Developments%2FCROWN%2D2026%2D0000076"
+                    {% if currentPage=='documents' %} aria-current="location" {% endif %}>Sharepoint documents</a>
+            </li>
+            <li class="govuk-link">
+                <a class="external" href="" {% if currentPage=='notify' %} aria-current="location" {% endif %}>GOV.UK
+                    Notify</a>
+            </li>
+        </ul>
+
+        {% include "/features/bo-redesign/v2/components/side-nav/side-nav.njk" %}
+
+    </div>
+
+    <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+            <dt class="govuk-summary-list__key">
+                LPA contact
+            </dt>
+            <dd class="govuk-summary-list__value">
+                system-test-council@example.com<br>1234567890<br>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+            <dt class="govuk-summary-list__key">
+                LPA address
+            </dt>
+            <dd class="govuk-summary-list__value">
+                PO Box 270<br>Guildhall<br>London<br>EC2P 2EJ
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+            <dt class="govuk-summary-list__key">
+                Secondary LPA contact
+            </dt>
+            <dd class="govuk-summary-list__value">
+                -
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+            <dt class="govuk-summary-list__key">
+                Secondary LPA address
+            </dt>
+            <dd class="govuk-summary-list__value">
+                -
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Has agent
+            </dt>
+            <dd class="govuk-summary-list__value">
+                Yes
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/contacts/has-agent">Edit<span
+                        class="govuk-visually-hidden"> Is the applicant using an agent? (Contacts)</span></a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Agent organisation name
+            </dt>
+            <dd class="govuk-summary-list__value">
+                Jordan Taylor Planning Consultancy Ltd
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link"
+                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/contacts/add-agent-details">Edit<span
+                        class="govuk-visually-hidden"> What is the name of the agent organisation? (Contacts)</span></a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Agent address
+            </dt>
+            <dd class="govuk-summary-list__value">
+                14 Kingsway House<br>Meadow Business Park<br>Westbridge<br>WB4 8PL
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link"
+                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/contacts/agent-address">Edit<span
+                        class="govuk-visually-hidden"> What is the address of the agent organisation?
+                        (Contacts)</span></a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Agent contacts
+            </dt>
+            <dd class="govuk-summary-list__value">
+                <div data-behaviour="toggle-list">
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                            Alex Morgan<br>alex.morgan@morganplanning.co.uk
+                        </li>
+
+                        <li>
+                            Daniel Daniel<br>daniel.wright@morganplanning.co.uk<br>01174968202
+                        </li>
+
+                    </ul>
+
+                    <button class="pins-button-link" data-toggle="">Show 1 more</button>
+                    <ul class="govuk-list govuk-list--bullet govuk-!-padding-top-4" data-show-more="" hidden="">
+                        <li>
+                            Sophie Lewis<br>sophie.lewis@morganplanning.co.uk
+                        </li>
+
+                    </ul>
+                </div>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link"
+                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/contacts/check-agent-contact-details">Edit<span
+                        class="govuk-visually-hidden"> Check agent contact details (Contacts)</span></a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Applicants
+            </dt>
+            <dd class="govuk-summary-list__value">
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                        Department for Justice Infrastructure<br> Government Buildings<br>42 Whitehall
+                        Place<br>London<br>SW1A 2AA </li>
+
+                    <li>
+                        Defence Property and Facilities Agency<br> Hawthorn House<br>1 Arsenal
+                        Way<br>Portchester<br>PO16
+                        8XY </li>
+
+                </ul>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link"
+                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/contacts/check-applicant-details">Edit<span
+                        class="govuk-visually-hidden"> Check applicant details (Contacts)</span></a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Applicant contacts
+            </dt>
+            <dd class="govuk-summary-list__value">
+                <div data-behaviour="toggle-list">
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                            Sarah Mitchell<br>sarah.mitchell@justice-infrastructure.gov.uk<br>01632960210<br>Department
+                            for
+                            Justice Infrastructure
+                        </li>
+
+                        <li>
+                            Michael Ahmed<br>michael.ahmed@dpfa.gov.uk<br>Defence Property and Facilities Agency
+                        </li>
+
+                    </ul>
+
+                    <button class="pins-button-link" data-toggle="">Show 3 more</button>
+                    <ul class="govuk-list govuk-list--bullet govuk-!-padding-top-4" data-show-more="" hidden="">
+                        <li>
+                            James Carter<br>james.carter@dpfa.gov.uk<br>01632960325<br>Defence Property and Facilities
+                            Agency
+                        </li>
+
+                        <li>
+                            Rebecca Foster<br>rebecca.foster@dpfa.gov.uk<br>Defence Property and Facilities Agency
+                        </li>
+
+                        <li>
+                            Charlotte Green<br>charlotte.green@dpfa.gov.uk<br>Defence Property and Facilities Agency
+                        </li>
+
+                    </ul>
+                </div>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link"
+                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/contacts/check-applicant-contact-details">Edit<span
+                        class="govuk-visually-hidden"> Check applicant contact details (Contacts)</span></a>
+            </dd>
+        </div>
+    </dl>
+    {% endblock %}

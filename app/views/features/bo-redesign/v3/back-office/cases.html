@@ -1,0 +1,384 @@
+{% extends "features/bo-redesign/v2/layouts/back-office.html" %}
+{% set currentArea = "cases" %}
+{% set currentPage = "overview" %}
+
+{% block content %}
+
+<style>
+  .row-inline {
+    display: flex;
+    gap: 8px;
+  }
+
+  @media (max-width: 739px) {
+    .govuk-table__row {
+      display: none;
+    }
+  }
+
+  @media (min-width: 740px) {
+    .cards {
+      display: none;
+    }
+  }
+</style>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      Manage Crown Development applications
+    </h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+    <h2 class='govuk-label-wrapper'>
+      <label class='govuk-label govuk-label--l' id='search-label' for='search-input'>
+        Search applications
+      </label>
+    </h2>
+    <div id='search-hint' class='govuk-hint'>
+      To find a specific application, search by reference.
+    </div>
+    <div class='row-inline'><input class='govuk-input' id='search-input' value='' name='searchCriteria' type='text'>
+      <button type='submit' class='govuk-button govuk-button' data-module='govuk-button' id='search-button'
+        data-govuk-button-init=''>
+        Search
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <table class="govuk-table" data-module="moj-sortable-table" data-moj-sortable-table-init="">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header" aria-sort="descending">
+            <button type="button" data-index="0">Reference<svg width="22" height="22" focusable="false"
+                aria-hidden="true" role="img" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.4375 7L11 15.8687L6.5625 7L15.4375 7Z" fill="currentColor"></path>
+              </svg>
+            </button>
+          </th>
+          <th scope="col" class="govuk-table__header" aria-sort="none">
+            <button type="button" data-index="1">Site location<svg width="22" height="22" focusable="false"
+                aria-hidden="true" role="img" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.1875 9.5L10.9609 3.95703L13.7344 9.5H8.1875Z" fill="currentColor"></path>
+                <path d="M13.7344 12.0781L10.9609 17.6211L8.1875 12.0781H13.7344Z" fill="currentColor"></path>
+              </svg>
+            </button>
+          </th>
+          <th scope="col" class="govuk-table__header" aria-sort="none">
+            <button type="button" data-index="2">Local planning authority (LPA)<svg width="22" height="22"
+                focusable="false" aria-hidden="true" role="img" viewbox="0 0 22 22" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.1875 9.5L10.9609 3.95703L13.7344 9.5H8.1875Z" fill="currentColor"></path>
+                <path d="M13.7344 12.0781L10.9609 17.6211L8.1875 12.0781H13.7344Z" fill="currentColor"></path>
+              </svg>
+            </button>
+          </th>
+          <th scope="col" class="govuk-table__header" aria-sort="none">
+            <button type="button" data-index="3">Application type<svg width="22" height="22" focusable="false"
+                aria-hidden="true" role="img" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.1875 9.5L10.9609 3.95703L13.7344 9.5H8.1875Z" fill="currentColor"></path>
+                <path d="M13.7344 12.0781L10.9609 17.6211L8.1875 12.0781H13.7344Z" fill="currentColor"></path>
+              </svg>
+            </button>
+          </th>
+          <th scope="col" class="govuk-table__header" aria-sort="none">
+            <button type="button" data-index="4">Status<svg width="22" height="22" focusable="false" aria-hidden="true"
+                role="img" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.1875 9.5L10.9609 3.95703L13.7344 9.5H8.1875Z" fill="currentColor"></path>
+                <path d="M13.7344 12.0781L10.9609 17.6211L8.1875 12.0781H13.7344Z" fill="currentColor"></path>
+              </svg>
+            </button>
+          </th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" data-sort-value="CROWN/2025/0000073">
+            <a class="govuk-link" href="manage-application">CROWN/2025/0000073</a>
+          </td>
+          <td class="govuk-table__cell pins-white-space-pre-wrap">Plot 12, Avonvale Way, Kingsford Road, Southmere,
+            Avonshire, AS4 9LT</td>
+          <td class="govuk-table__cell">Riverstone District Council</td>
+          <td class="govuk-table__cell">Outline planning permission with some matters reserved</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag">
+              New
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" data-sort-value="CROWN/2025/0000070/LBC">
+            <a class="govuk-link" href="manage-application">CROWN/2025/0000070/LBC</a>
+          </td>
+          <td class="govuk-table__cell pins-white-space-pre-wrap">Easting: 654321 Northing: 123456</td>
+          <td class="govuk-table__cell">Oakridge Planning Authority</td>
+          <td class="govuk-table__cell">Planning permission and listed building consent (LBC) for alterations, extension
+            or demolition of a listed building</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--blue">
+              Accepted
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" data-sort-value="CROWN/2025/0000069">
+            <a class="govuk-link" href="manage-application">CROWN/2025/0000069</a>
+          </td>
+          <td class="govuk-table__cell pins-white-space-pre-wrap">5 Quarry View Close, Stonebridge, SB6 8RY</td>
+          <td class="govuk-table__cell">Meadowgate County Council</td>
+          <td class="govuk-table__cell">Planning permission</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--red">
+              Invalid
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" data-sort-value="CROWN/2025/0000068">
+            <a class="govuk-link" href="manage-application">CROWN/2025/0000068</a>
+          </td>
+          <td class="govuk-table__cell pins-white-space-pre-wrap">17 Harbour Road, Westport, WP3 4GH</td>
+          <td class="govuk-table__cell">Westport Borough Council</td>
+          <td class="govuk-table__cell">Planning permission</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--yellow">
+              Consultation period open
+            </strong>
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" data-sort-value="CROWN/2025/0000067">
+            <a class="govuk-link" href="manage-application">CROWN/2025/0000067</a>
+          </td>
+          <td class="govuk-table__cell pins-white-space-pre-wrap">RAF Northmoor, Northmoor Lane, NM8 2ZX</td>
+          <td class="govuk-table__cell">Northmoor Council</td>
+          <td class="govuk-table__cell">Outline planning permission with some matters reserved</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--green">
+              Hearing/Inquiry date set
+            </strong>
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" data-sort-value="CROWN/2025/0000066">
+            <a class="govuk-link" href="manage-application">CROWN/2025/0000066</a>
+          </td>
+          <td class="govuk-table__cell pins-white-space-pre-wrap">Ministry Estate, Eastfield Road, EF5 3QA</td>
+          <td class="govuk-table__cell">Eastfield District Council</td>
+          <td class="govuk-table__cell">Planning permission</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--pink">
+              Application on hold awaiting further information
+            </strong>
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" data-sort-value="CROWN/2025/0000065">
+            <a class="govuk-link" href="manage-application">CROWN/2025/0000065</a>
+          </td>
+          <td class="govuk-table__cell pins-white-space-pre-wrap">22 Greenbank Avenue, Hillcrest, HC7 4YU</td>
+          <td class="govuk-table__cell">Hillcrest Council</td>
+          <td class="govuk-table__cell">Planning permission</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--orange">
+              Report awaited
+            </strong>
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" data-sort-value="CROWN/2025/0000064">
+            <a class="govuk-link" href="manage-application">CROWN/2025/0000064</a>
+          </td>
+          <td class="govuk-table__cell pins-white-space-pre-wrap">Civic Campus, King's Way, KW2 1AA</td>
+          <td class="govuk-table__cell">Kingshire Council</td>
+          <td class="govuk-table__cell">Planning permission</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--purple">
+              Report sent to Decision Branch
+            </strong>
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" data-sort-value="CROWN/2025/0000063">
+            <a class="govuk-link" href="manage-application">CROWN/2025/0000063</a>
+          </td>
+          <td class="govuk-table__cell pins-white-space-pre-wrap">Old Foundry Site, Mill Street, MS9 7CD</td>
+          <td class="govuk-table__cell">Millborough Authority</td>
+          <td class="govuk-table__cell">Planning permission</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--turquoise">
+              Decision awaited
+            </strong>
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" data-sort-value="CROWN/2025/0000062">
+            <a class="govuk-link" href="manage-application">CROWN/2025/0000062</a>
+          </td>
+          <td class="govuk-table__cell pins-white-space-pre-wrap">Defence Logistics Centre, Station Road, SR4 8LM</td>
+          <td class="govuk-table__cell">Southmere Council</td>
+          <td class="govuk-table__cell">Planning permission</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--purple">
+              Decided
+            </strong>
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" data-sort-value="CROWN/2025/0000061">
+            <a class="govuk-link" href="manage-application">CROWN/2025/0000061</a>
+          </td>
+          <td class="govuk-table__cell pins-white-space-pre-wrap">7 Woodland Court, Riverton, RV6 2LP</td>
+          <td class="govuk-table__cell">Riverton Borough Council</td>
+          <td class="govuk-table__cell">Planning permission</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--grey">
+              Withdrawn
+            </strong>
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" data-sort-value="CROWN/2025/0000060">
+            <a class="govuk-link" href="manage-application">CROWN/2025/0000060</a>
+          </td>
+          <td class="govuk-table__cell pins-white-space-pre-wrap">Government Works Depot, Canal Lane, CL1 9QR</td>
+          <td class="govuk-table__cell">Canalshire Council</td>
+          <td class="govuk-table__cell">Planning permission</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--purple">
+              Declined to determine
+            </strong>
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" data-sort-value="CROWN/2025/0000059">
+            <a class="govuk-link" href="manage-application">CROWN/2025/0000059</a>
+          </td>
+          <td class="govuk-table__cell pins-white-space-pre-wrap">14 Riverside Walk, Brookfield, BF3 5TE</td>
+          <td class="govuk-table__cell">Brookfield Council</td>
+          <td class="govuk-table__cell">Planning permission</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--red">
+              Closed - invalid
+            </strong>
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" data-sort-value="CROWN/2025/0000058">
+            <a class="govuk-link" href="manage-application">CROWN/2025/0000058</a>
+          </td>
+          <td class="govuk-table__cell pins-white-space-pre-wrap">39 Market Square, Ashford, AF8 7GH</td>
+          <td class="govuk-table__cell">Ashford District Council</td>
+          <td class="govuk-table__cell">Planning permission</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--grey">
+              Closed - opened in error
+            </strong>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <div class="cards">
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <h3 class="govuk-heading-s">
+        <a class="govuk-link" href="manage-application">CROWN/2025/0000073</a>
+      </h3>
+      <p class="govuk-body">
+        <span class="govuk-!-font-weight-bold">Site location:
+        </span>
+        Plot 12, Avonvale Way, Kingsford Road, Southmere, Avonshire, AS4 9LT
+      </p>
+      <p class="govuk-body">
+        <span class="govuk-!-font-weight-bold">Local planning authority (LPA):</span>
+        Riverstone District Council
+      </p>
+      <p class="govuk-body">
+        <span class="govuk-!-font-weight-bold">Application type:</span>
+        Outline planning permission with some matters reserved
+      </p>
+      <p class="govuk-body">
+        <span class="govuk-!-font-weight-bold">Stage:</span>
+        <strong class="govuk-tag">New</strong>
+      </p>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h3 class="govuk-heading-s">
+        <a class="govuk-link" href="manage-application">CROWN/2025/0000070/LBC</a>
+      </h3>
+      <p class="govuk-body">
+        <span class="govuk-!-font-weight-bold">Location:
+        </span>
+        Easting: 654321 Northing: 123456
+      </p>
+      <p class="govuk-body">
+        <span class="govuk-!-font-weight-bold">Local planning authority (LPA):
+        </span>Oakridge Planning Authority
+      </p>
+      <p class="govuk-body">
+        <span class="govuk-!-font-weight-bold">Application type:</span>
+        Planning permission and listed building consent (LBC) for alterations, extension or demolition of a listed
+        building
+      </p>
+      <p class="govuk-body">
+        <span class="govuk-!-font-weight-bold">Stage:
+        </span>
+        <strong class="govuk-tag govuk-tag--blue">
+          Accepted
+        </strong>
+      </p>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h3 class="govuk-heading-s">
+        <a class="govuk-link" href="manage-application">CROWN/2025/0000069</a>
+      </h3>
+      <p class="govuk-body">
+        <span class="govuk-!-font-weight-bold">Location:
+        </span>5 Quarry View Close, Stonebridge, SB6 8RY
+      </p>
+      <p class="govuk-body">
+        <span class="govuk-!-font-weight-bold">Local planning authority (LPA):
+        </span>Meadowgate County Council
+      </p>
+      <p class="govuk-body">
+        <span class="govuk-!-font-weight-bold">Application type:</span>
+        Planning permission
+      </p>
+      <p class="govuk-body">
+        <span class="govuk-!-font-weight-bold">Stage:
+        </span>
+        <strong class="govuk-tag govuk-tag--red">
+          Invalid
+        </strong>
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+{%endblock%}
