@@ -1,32 +1,72 @@
 <style>
-  .govuk-footer {
-    border-top: #13a19b 10px solid;
+  /* FOOTER BACKGROUND AND BORDER COLOUR */
+  .pins-footer {
+    background: #f3f2f1;
+    border-top: 4px solid #13a19b !important;
+    padding: 30px 0;
+    font-size: 16px;
+    color: #0b0c0c;
+  }
+
+  /* CONTAINER BACKGROUND AND ITEM DISTRIBUTION AND ALIGMENT */
+  .govuk-footer__meta {
+    display: flex;
+    background: #f3f2f1;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .govuk-footer__inline-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+  }
+
+  .govuk-footer__inline-list-item {
+    display: inline;
+  }
+
+  /* LINKS, VISITED AND, HOVER STATES */
+  .govuk-footer__link {
+    color: #1d70b8;
+    text-decoration: underline;
+    transition: color 0.2s;
+  }
+
+  .a:visited,
+  .govuk-footer_link:visited {
     color: #0b0c0c !important;
   }
 
-  .govuk-template--rebranded .govuk-footer {
-    background: #f3f3f3;
+  .govuk-footer__link:hover {
+    color: #003078;
+    text-decoration: none;
+  }
+
+  @media (max-width: 600px) {
+    .govuk-footer__meta {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
   }
 </style>
-
-<footer class="govuk-footer">
+<footer class="pins-footer" role="contentinfo">
   <div class="govuk-width-container">
-
     <div class="govuk-footer__meta">
-      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+      <div>
+        <ul class="govuk-footer__inline-list">
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" target="_blank" href="https://mhclg.service-now.com/sp/?id=landing">Report a
+              problem</a>
+          </li>
 
-        <div>
-          <ul class="govuk-footer__inline-list">
-            <li class="govuk-footer__inline-list-item">
-              <a class="govuk-footer__link" target="_blank" href="https://mhclg.service-now.com/sp/?id=landing">Report a
-                problem</a>
-            </li>
-          </ul>
-        </div>
-
-        <span class="govuk-footer__licence-description">
-          © Planning Inspectorate. All rights reserved.
-        </span>
+        </ul>
+      </div>
+      <div>
+        <span class="govuk-footer__copyright">© Planning Inspectorate</span>
       </div>
     </div>
   </div>
