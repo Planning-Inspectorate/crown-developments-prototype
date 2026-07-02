@@ -1,0 +1,128 @@
+{% extends "features/bo-redesign/v3/layouts/back-office.html" %}
+{% set currentArea = "cases" %}
+{% set currentPage = "hearing" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+    <a href="/features/bo-redesign/v3/back-office/cases" class="govuk-back-link">Back to all applications</a>
+
+    {% if showSuccessBanner %}
+    {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+
+    {% call govukNotificationBanner({ type: "success" }) %} <h3 class="govuk-notification-banner__heading">
+      {{ successMessage or "Application updated" }}
+    </h3>
+    {% endcall %}
+    {% endif %}
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-l">CROWN/2025/0000073</h1>
+    <button class="govuk-button">Publish application</button>
+
+    <h2 class="govuk-heading-m">External links</h2>
+    <ul class="govuk-list ">
+      <li class="govuk-link">
+        <a class="external"
+          href="https://pinso365.sharepoint.com/sites/CrownDevelopmentsDevSite1/Crown%20Developments/Forms/AllItems.aspx?FolderCTID=0x0120002AEB4E42385D4248BC40ED69E7C865EE&id=%2Fsites%2FCrownDevelopmentsDevSite1%2FCrown%20Developments%2FCROWN%2D2026%2D0000076"
+          {% if currentPage=='documents' %} aria-current="location" {% endif %}>Sharepoint documents</a>
+      </li>
+      <li class="govuk-link">
+        <a class="external" href="" {% if currentPage=='notify' %} aria-current="location" {% endif %}>GOV.UK
+          Notify</a>
+      </li>
+    </ul>
+
+    {% include "/features/bo-redesign/v3/components/side-nav/side-nav.njk" %}
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Notice of procedure date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          -
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link"
+            href="/cases/fa0d8ba9-016f-44d0-a4ba-7425d3716784/hearing/hearing-procedure-notification-date">Change<span
+              class="govuk-visually-hidden"> What is the Notice of procedure date? (Hearing)</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Hearing date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          -
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/cases/fa0d8ba9-016f-44d0-a4ba-7425d3716784/hearing/hearing-date">Change<span
+              class="govuk-visually-hidden"> What is the hearing date? (Hearing)</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Hearing duration
+        </dt>
+        <dd class="govuk-summary-list__value">
+          -
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/cases/fa0d8ba9-016f-44d0-a4ba-7425d3716784/hearing/hearing-duration">Change<span
+              class="govuk-visually-hidden"> What is the hearing duration? (Hearing)</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Hearing venue
+        </dt>
+        <dd class="govuk-summary-list__value">
+          -
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/cases/fa0d8ba9-016f-44d0-a4ba-7425d3716784/hearing/hearing-venue">Change<span
+              class="govuk-visually-hidden"> What is the venue of the hearing? (Hearing)</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Hearing notification date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          -
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link"
+            href="/cases/fa0d8ba9-016f-44d0-a4ba-7425d3716784/hearing/hearing-notification-date">Change<span
+              class="govuk-visually-hidden"> What is the hearing notification date? (Hearing)</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Hearing issues report published date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          -
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link"
+            href="/cases/fa0d8ba9-016f-44d0-a4ba-7425d3716784/hearing/hearing-issues-report-published-date">Change<span
+              class="govuk-visually-hidden"> When was the hearing issues report published? (Hearing)</span></a>
+        </dd>
+      </div>
+    </dl>
+
+  </div>
+
+
+
+  {% endblock %}
