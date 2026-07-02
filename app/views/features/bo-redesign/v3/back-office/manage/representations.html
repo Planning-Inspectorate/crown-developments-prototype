@@ -59,7 +59,19 @@ End: 11:59pm, 31 December 2026",
 "visuallyHidden": "date"
 }
 ]
-},
+}
+] %}
+
+{{ repsTable(rows) }}
+
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+<h2 class='govuk-heading--m'>
+    Representation procedure
+</h2>
+
+{% set rows = [
+
 
 {
 "key": "Notice of procedure date",
@@ -76,7 +88,6 @@ End: 11:59pm, 31 December 2026",
 
 {{ repsTable(rows) }}
 
-
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
 
@@ -86,6 +97,9 @@ End: 11:59pm, 31 December 2026",
 
 <p class="govuk-body"><a href="/features/bo-redesign/v3/back-office/cases/view/manage-reps/manage-reps.html"
         class="govuk-link">Manage representations</a></p>
+
+<p class="govuk-body"><a href="/features/bo-redesign/v3/back-office/cases/view/manage-reps/manage-reps.html"
+        class="govuk-link">Add new representation</a></p>
 
 
 </div>
