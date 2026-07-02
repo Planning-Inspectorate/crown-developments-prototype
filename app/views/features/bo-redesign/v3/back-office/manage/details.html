@@ -1,4 +1,4 @@
-{% extends "features/bo-redesign/v2/layouts/back-office.html" %}
+{% extends "features/bo-redesign/v3/layouts/back-office.html" %}
 {% set currentArea = "cases" %}
 {% set currentPage = "details" %}
 
@@ -6,7 +6,7 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
-        <a href="/features/bo-redesign/v2/back-office/cases" class="govuk-back-link">Back to all applications</a>
+        <a href="/features/bo-redesign/v3/back-office/cases" class="govuk-back-link">Back to all applications</a>
 
         {% if showSuccessBanner %}
         {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
@@ -39,11 +39,11 @@
                     Notify</a>
             </li>
         </ul>
-        {% include "/features/bo-redesign/v2/components/side-nav/side-nav.njk" %}
+        {% include "/features/bo-redesign/v3/components/side-nav/side-nav.njk" %}
 
 
 
-        {% from "/features/bo-redesign/v2/components/manage-tables/details-table.njk" import
+        {% from "/features/bo-redesign/v3/components/manage-tables/details-table.njk" import
         detailsTable %}
 
         {% set rows = [
@@ -53,7 +53,7 @@
         "actions": [
         {
         "text": "Change",
-        "href": "/features/bo-redesign/v2/back-office/change?fieldId=category",
+        "href": "/features/bo-redesign/v3/back-office/change?fieldId=category",
         "visuallyHidden": "date"
         }
         ]
@@ -64,7 +64,7 @@
         "actions": [
         {
         "text": "Change",
-        "href": "/features/bo-redesign/v2/back-office/change?fieldId=procedure",
+        "href": "/features/bo-redesign/v3/back-office/change?fieldId=procedure",
         "visuallyHidden": "date"
         }
         ]
@@ -75,7 +75,7 @@
         "actions": [
         {
         "text": "Change",
-        "href": "/features/bo-redesign/v2/back-office/change?fieldId=status",
+        "href": "/features/bo-redesign/v3/back-office/change?fieldId=status",
         "visuallyHidden": "date"
         }
         ]
@@ -86,7 +86,7 @@
         "actions": [
         {
         "text": "Change",
-        "href": "/features/bo-redesign/v2/back-office/change?fieldId=stage",
+        "href": "/features/bo-redesign/v3/back-office/change?fieldId=stage",
         "visuallyHidden": "date"
         }
         ]
@@ -97,7 +97,7 @@
         "actions": [
         {
         "text": "Change",
-        "href": "/features/bo-redesign/v2/back-office/change?fieldId=lpaReference",
+        "href": "/features/bo-redesign/v3/back-office/change?fieldId=lpaReference",
         "visuallyHidden": "date"
         }
         ]
@@ -108,7 +108,7 @@
         "actions": [
         {
         "text": "Change",
-        "href": "/features/bo-redesign/v2/back-office/change?fieldId=distressing",
+        "href": "/features/bo-redesign/v3/back-office/change?fieldId=distressing",
         "visuallyHidden": "date"
         }
         ]
@@ -119,7 +119,7 @@
         "actions": [
         {
         "text": "Change",
-        "href": "/features/bo-redesign/v2/back-office/change?fieldId=nationallyImportant",
+        "href": "/features/bo-redesign/v3/back-office/change?fieldId=nationallyImportant",
         "visuallyHidden": "date"
         }
         ]
@@ -130,7 +130,7 @@
         "actions": [
         {
         "text": "Change",
-        "href": "/features/bo-redesign/v2/back-office/change?fieldId=nationallyImportantConfirmation",
+        "href": "/features/bo-redesign/v3/back-office/change?fieldId=nationallyImportantConfirmation",
         "visuallyHidden": "date"
         }
         ]
@@ -141,7 +141,7 @@
         "actions": [
         {
         "text": "Change",
-        "href": "/features/bo-redesign/v2/back-office/change?fieldId=greenBelt",
+        "href": "/features/bo-redesign/v3/back-office/change?fieldId=greenBelt",
         "visuallyHidden": "date"
         }
         ]
@@ -152,7 +152,7 @@
         "actions": [
         {
         "text": "Change",
-        "href": "/features/bo-redesign/v2/back-office/change?fieldId=visible",
+        "href": "/features/bo-redesign/v3/back-office/change?fieldId=visible",
         "visuallyHidden": "date"
         }
         ]
@@ -163,7 +163,7 @@
         "actions": [
         {
         "text": "Change",
-        "href": "/features/bo-redesign/v2/back-office/change?fieldId=health",
+        "href": "/features/bo-redesign/v3/back-office/change?fieldId=health",
         "visuallyHidden": "date"
         }
         ]
@@ -174,7 +174,7 @@
         "actions": [
         {
         "text": "Change",
-        "href": "/features/bo-redesign/v2/back-office/change?fieldId=cil",
+        "href": "/features/bo-redesign/v3/back-office/change?fieldId=cil",
         "visuallyHidden": "date"
         }
         ]
@@ -185,7 +185,7 @@
         "actions": [
         {
         "text": "Change",
-        "href": "/features/bo-redesign/v2/back-office/change?fieldId=cilAmount",
+        "href": "/features/bo-redesign/v3/back-office/change?fieldId=cilAmount",
         "visuallyHidden": "date"
         }
         ]
@@ -196,7 +196,7 @@
         "actions": [
         {
         "text": "Change",
-        "href": "/features/bo-redesign/v2/back-office/change?fieldId=bng",
+        "href": "/features/bo-redesign/v3/back-office/change?fieldId=bng",
         "visuallyHidden": "date"
         }
         ]
@@ -207,7 +207,7 @@
         "actions": [
         {
         "text": "Change",
-        "href": "/features/bo-redesign/v2/back-office/change?fieldId=costsApplication",
+        "href": "/features/bo-redesign/v3/back-office/change?fieldId=costsApplication",
         "visuallyHidden": "date"
         }
         ]
