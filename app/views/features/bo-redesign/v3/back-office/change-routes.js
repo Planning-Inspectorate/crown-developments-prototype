@@ -2,16 +2,16 @@ const fieldDefinitions = require('./field-definitions');
 
 module.exports = function (router) {
   /**
-   * GET /features/bo-redesign/v2/back-office/manage-application
+   * GET /features/bo-redesign/v3/back-office/manage-application
    * Displays the manage application page and clears success banner flag
    */
-  router.get('/features/bo-redesign/v2/back-office/manage-application', (req, res) => {
+  router.get('/features/bo-redesign/v3/back-office/manage-application', (req, res) => {
     // Capture the success message if it exists
     const successMessage = req.session.data.successMessage;
     const showBanner = req.session.data.showSuccessBanner;
 
     // Render the page
-    res.render('features/bo-redesign/v2/back-office/manage-application', {
+    res.render('features/bo-redesign/v3/back-office/manage-application', {
       showSuccessBanner: showBanner,
       successMessage: successMessage
     });
@@ -24,20 +24,20 @@ module.exports = function (router) {
   });
 
   /**
-   * GET /features/bo-redesign/v2/back-office/change
+   * GET /features/bo-redesign/v3/back-office/change
    * Displays the reusable edit form with field-specific data
    */
-  router.get('/features/bo-redesign/v2/back-office/change', (req, res) => {
+  router.get('/features/bo-redesign/v3/back-office/change', (req, res) => {
     const fieldId = req.query.fieldId;
 
     if (!fieldId) {
-      return res.redirect('/features/bo-redesign/v2/back-office/manage-application');
+      return res.redirect('/features/bo-redesign/v3/back-office/manage-application');
     }
 
     const field = fieldDefinitions.getFieldById(fieldId);
 
     if (!field) {
-      return res.redirect('/features/bo-redesign/v2/back-office/manage-application');
+      return res.redirect('/features/bo-redesign/v3/back-office/manage-application');
     }
 
     // Get current value from session or use empty string
@@ -90,19 +90,19 @@ module.exports = function (router) {
       templateData.yearValue = dateParts.year;
     }
 
-    res.render('features/bo-redesign/v2/back-office/change', templateData);
+    res.render('features/bo-redesign/v3/back-office/change', templateData);
   });
 
   /**
-   * POST /features/bo-redesign/v2/back-office/change
+   * POST /features/bo-redesign/v3/back-office/change
    * Handles form submission and saves the updated field value
    */
-  router.post('/features/bo-redesign/v2/back-office/change', (req, res) => {
+  router.post('/features/bo-redesign/v3/back-office/change', (req, res) => {
     const fieldId = req.body.fieldId;
     const field = fieldDefinitions.getFieldById(fieldId);
 
     if (!field) {
-      return res.redirect('/features/bo-redesign/v2/back-office/manage-application');
+      return res.redirect('/features/bo-redesign/v3/back-office/manage-application');
     }
 
     // Build the value based on field type
@@ -140,7 +140,7 @@ module.exports = function (router) {
     req.session.data.successMessage = `Application updated`;
 
     // Redirect back to manage page
-    res.redirect('/features/bo-redesign/v2/back-office/manage-application');
+    res.redirect('/features/bo-redesign/v3/back-office/manage-application');
   });
 };
 

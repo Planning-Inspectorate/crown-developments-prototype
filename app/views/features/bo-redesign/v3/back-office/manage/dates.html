@@ -1,4 +1,4 @@
-{% extends "features/bo-redesign/v2/layouts/back-office.html" %}
+{% extends "features/bo-redesign/v3/layouts/back-office.html" %}
 {% set currentArea = "cases" %}
 {% set currentPage = "dates" %}
 
@@ -8,7 +8,7 @@
 
 
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column"><a href="/features/bo-redesign/v2/back-office/cases" class="govuk-back-link">Back to
+    <div class="govuk-grid-column"><a href="/features/bo-redesign/v3/back-office/cases" class="govuk-back-link">Back to
             all applications</a>
 
         <h1 class="govuk-heading-l">CROWN/2025/0000073</h1>
@@ -27,15 +27,26 @@
                     Notify</a>
             </li>
         </ul>
-        {% include "/features/bo-redesign/v2/components/side-nav/side-nav.njk" %}
+        {% include "/features/bo-redesign/v3/components/side-nav/side-nav.njk" %}
 
     </div>
 
-    {% from "/features/bo-redesign/v2/components/manage-tables/dates-table.njk" import
+    {% from "/features/bo-redesign/v3/components/manage-tables/dates-table.njk" import
     datesTable %}
 
     {% set rows = [
+
     {
+    "key": "Expected submission date",
+    "value": data.expectedSubmissionDate or "20 November 2025",
+    "actions": [
+    {
+    "text": "Change",
+    "href": "/features/bo-redesign/v3/back-office/change?fieldId=expectedSubmissionDate",
+    "visuallyHidden": "Expected submission date"
+    }
+    ]
+    },{
 
     "key": "Application received date",
     "value": "3 December 2025",

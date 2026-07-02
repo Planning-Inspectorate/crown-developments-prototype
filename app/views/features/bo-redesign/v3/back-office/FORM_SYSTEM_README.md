@@ -66,7 +66,7 @@ Update the `rows` array in the template:
   "actions": [
     {
       "text": "Change",
-      "href": "/features/bo-redesign/v2/back-office/change?fieldId=uniqueFieldId",
+      "href": "/features/bo-redesign/v3/back-office/change?fieldId=uniqueFieldId",
       "visuallyHidden": "Field Name"
     }
   ]
@@ -205,7 +205,7 @@ If you need a completely custom component type:
 ## Testing
 
 To test the form flow:
-1. Navigate to `/features/bo-redesign/v2/back-office/manage-application`
+1. Navigate to `/features/bo-redesign/v3/back-office/manage-application`
 2. Click "Change" on any field
 3. Update the value
 4. Click "Save changes"

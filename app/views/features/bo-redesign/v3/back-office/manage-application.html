@@ -7,7 +7,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds-from-desktop">
 
-    <a href="/features/bo-redesign/v2/back-office/cases" class="govuk-back-link">Back to all applications</a>
+    <a href="/features/bo-redesign/v3/back-office/cases" class="govuk-back-link">Back to all applications</a>
 
     {% if showSuccessBanner %}
     {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
@@ -48,7 +48,7 @@
 
 
 
-    {% from "/features/bo-redesign/v2/components/manage-tables/dates-table.njk" import
+    {% from "/features/bo-redesign/v3/components/manage-tables/dates-table.njk" import
     datesTable %}
 
     {% set rows = [
@@ -61,29 +61,67 @@
     "actions": [
     {
     "text": "Change",
-    "href": "/features/bo-redesign/v2/back-office/change?fieldId=applicationDescription",
+    "href": "/features/bo-redesign/v3/back-office/change?fieldId=applicationDescription",
     "visuallyHidden": "Application description"
     }
     ]
     },
+
     {
     "key": "Application type",
     "value": data.applicationType or "Planning permission",
     "actions": [
     {
     "text": "Change",
-    "href": "/features/bo-redesign/v2/back-office/change?fieldId=applicationType",
+    "href": "/features/bo-redesign/v3/back-office/change?fieldId=applicationType",
     "visuallyHidden": "Application type"
     }
     ]
     },
+
+    {
+    "key": "Applicants",
+    "value": "Department for Education",
+    "actions": [
+    {
+    "text": "Change",
+    "href": "/features/bo-redesign/v2/back-office/change?fieldId=applicant",
+    "visuallyHidden": "Applicants"
+    }
+    ]
+    },
+
+    {
+    "key": "Local planning authority",
+    "value": "Birchester City Council",
+    "actions": [
+    {
+    "text": "Change",
+    "href": "/features/bo-redesign/v2/back-office/change?fieldId=LPA",
+    "visuallyHidden": "local planning authority"
+    }
+    ]
+    },
+
+    {
+    "key": "Secondary LPA",
+    "value": "No",
+    "actions": [
+    {
+    "text": "Change",
+    "href": "/features/bo-redesign/v2/back-office/change?fieldId=LPA2",
+    "visuallyHidden": "secondary local planning authority"
+    }
+    ]
+    },
+
     {
     "key": "Site address",
     "value": data.siteAddress or "Plot 12, Avonvale Way, Kingsford Road, Southmere, Avonshire, AS4 9LT",
     "actions": [
     {
     "text": "Change",
-    "href": "/features/bo-redesign/v2/back-office/change?fieldId=siteAddress",
+    "href": "/features/bo-redesign/v3/back-office/change?fieldId=siteAddress",
     "visuallyHidden": "Site address"
     }
     ]
@@ -94,7 +132,7 @@
     "actions": [
     {
     "text": "Change",
-    "href": "/features/bo-redesign/v2/back-office/change?fieldId=siteCoordinates",
+    "href": "/features/bo-redesign/v3/back-office/change?fieldId=siteCoordinates",
     "visuallyHidden": "Site coordinates"
     }
     ]
@@ -105,19 +143,8 @@
     "actions": [
     {
     "text": "Change",
-    "href": "/features/bo-redesign/v2/back-office/change?fieldId=siteArea",
+    "href": "/features/bo-redesign/v3/back-office/change?fieldId=siteArea",
     "visuallyHidden": "Site area"
-    }
-    ]
-    },
-    {
-    "key": "Expected submission date",
-    "value": data.expectedSubmissionDate or "20 November 2025",
-    "actions": [
-    {
-    "text": "Change",
-    "href": "/features/bo-redesign/v2/back-office/change?fieldId=expectedSubmissionDate",
-    "visuallyHidden": "Expected submission date"
     }
     ]
     },
@@ -127,7 +154,7 @@
     "actions": [
     {
     "text": "Change",
-    "href": "/features/bo-redesign/v2/back-office/change?fieldId=decisionOutcome",
+    "href": "/features/bo-redesign/v3/back-office/change?fieldId=decisionOutcome",
     "visuallyHidden": "Decision outcome"
     }
     ]
@@ -138,7 +165,7 @@
     "actions": [
     {
     "text": "Change",
-    "href": "/features/bo-redesign/v2/back-office/change?fieldId=decisionDate",
+    "href": "/features/bo-redesign/v3/back-office/change?fieldId=decisionDate",
     "visuallyHidden": "Decision date"
     }
     ]
@@ -150,7 +177,7 @@
     <h2 class="govuk-heading-m">Details</h2>
 
 
-    {% from "/features/bo-redesign/v2/components/manage-tables/details-table.njk" import
+    {% from "/features/bo-redesign/v3/components/manage-tables/details-table.njk" import
     detailsTable %}
 
     {% set rows = [
@@ -160,7 +187,7 @@
     "actions": [
     {
     "text": "Change",
-    "href": "/features/bo-redesign/v2/back-office/change?fieldId=category",
+    "href": "/features/bo-redesign/v3/back-office/change?fieldId=category",
     "visuallyHidden": "date"
     }
     ]
@@ -171,7 +198,7 @@
     "actions": [
     {
     "text": "Change",
-    "href": "/features/bo-redesign/v2/back-office/change?fieldId=procedure",
+    "href": "/features/bo-redesign/v3/back-office/change?fieldId=procedure",
     "visuallyHidden": "date"
     }
     ]
@@ -182,7 +209,7 @@
     "actions": [
     {
     "text": "Change",
-    "href": "/features/bo-redesign/v2/back-office/change?fieldId=status",
+    "href": "/features/bo-redesign/v3/back-office/change?fieldId=status",
     "visuallyHidden": "date"
     }
     ]
@@ -193,7 +220,7 @@
     "actions": [
     {
     "text": "Change",
-    "href": "/features/bo-redesign/v2/back-office/change?fieldId=stage",
+    "href": "/features/bo-redesign/v3/back-office/change?fieldId=stage",
     "visuallyHidden": "date"
     }
     ]
@@ -204,7 +231,7 @@
     "actions": [
     {
     "text": "Change",
-    "href": "/features/bo-redesign/v2/back-office/change?fieldId=lpaReference",
+    "href": "/features/bo-redesign/v3/back-office/change?fieldId=lpaReference",
     "visuallyHidden": "date"
     }
     ]
@@ -215,7 +242,7 @@
     "actions": [
     {
     "text": "Change",
-    "href": "/features/bo-redesign/v2/back-office/change?fieldId=distressing",
+    "href": "/features/bo-redesign/v3/back-office/change?fieldId=distressing",
     "visuallyHidden": "date"
     }
     ]
@@ -226,7 +253,7 @@
     "actions": [
     {
     "text": "Change",
-    "href": "/features/bo-redesign/v2/back-office/change?fieldId=nationallyImportant",
+    "href": "/features/bo-redesign/v3/back-office/change?fieldId=nationallyImportant",
     "visuallyHidden": "date"
     }
     ]
@@ -237,7 +264,7 @@
     "actions": [
     {
     "text": "Change",
-    "href": "/features/bo-redesign/v2/back-office/change?fieldId=nationallyImportantConfirmation",
+    "href": "/features/bo-redesign/v3/back-office/change?fieldId=nationallyImportantConfirmation",
     "visuallyHidden": "date"
     }
     ]
@@ -248,7 +275,7 @@
     "actions": [
     {
     "text": "Change",
-    "href": "/features/bo-redesign/v2/back-office/change?fieldId=greenBelt",
+    "href": "/features/bo-redesign/v3/back-office/change?fieldId=greenBelt",
     "visuallyHidden": "date"
     }
     ]
@@ -259,7 +286,7 @@
     "actions": [
     {
     "text": "Change",
-    "href": "/features/bo-redesign/v2/back-office/change?fieldId=visible",
+    "href": "/features/bo-redesign/v3/back-office/change?fieldId=visible",
     "visuallyHidden": "date"
     }
     ]
@@ -270,7 +297,7 @@
     "actions": [
     {
     "text": "Change",
-    "href": "/features/bo-redesign/v2/back-office/change?fieldId=health",
+    "href": "/features/bo-redesign/v3/back-office/change?fieldId=health",
     "visuallyHidden": "date"
     }
     ]
@@ -281,7 +308,7 @@
     "actions": [
     {
     "text": "Change",
-    "href": "/features/bo-redesign/v2/back-office/change?fieldId=cil",
+    "href": "/features/bo-redesign/v3/back-office/change?fieldId=cil",
     "visuallyHidden": "date"
     }
     ]
@@ -292,7 +319,7 @@
     "actions": [
     {
     "text": "Change",
-    "href": "/features/bo-redesign/v2/back-office/change?fieldId=cilAmount",
+    "href": "/features/bo-redesign/v3/back-office/change?fieldId=cilAmount",
     "visuallyHidden": "date"
     }
     ]
@@ -303,7 +330,7 @@
     "actions": [
     {
     "text": "Change",
-    "href": "/features/bo-redesign/v2/back-office/change?fieldId=bng",
+    "href": "/features/bo-redesign/v3/back-office/change?fieldId=bng",
     "visuallyHidden": "date"
     }
     ]
@@ -314,7 +341,20 @@
     "actions": [
     {
     "text": "Change",
-    "href": "/features/bo-redesign/v2/back-office/change?fieldId=costsApplication",
+    "href": "/features/bo-redesign/v3/back-office/change?fieldId=costsApplication",
+    "visuallyHidden": "date"
+    }
+    ]
+    },
+    {
+    "key": "Special development",
+    "value": '
+    EIA development: Yes<br>Development plan: No<br>Right of way: Yes<br>
+    ',
+    "actions": [
+    {
+    "text": "Change",
+    "href": "/features/bo-redesign/v3/back-office/change?fieldId=costsApplication",
     "visuallyHidden": "date"
     }
     ]
