@@ -51,36 +51,70 @@ contactsTable %}
     </div>
 
     <dl class="govuk-summary-list">
-        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-                LPA contact
+                Applicants
             </dt>
             <dd class="govuk-summary-list__value">
-                system-test-council@example.com<br>1234567890<br>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                        Department for Justice Infrastructure<br> Government Buildings<br>42 Whitehall
+                        Place<br>London<br>SW1A 2AA </li>
+
+                    <li>
+                        Defence Property and Facilities Agency<br> Hawthorn House<br>1 Arsenal
+                        Way<br>Portchester<br>PO16
+                        8XY </li>
+
+                </ul>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link"
+                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/contacts/check-applicant-details">Change<span
+                        class="govuk-visually-hidden"> Check applicant details (Contacts)</span></a>
             </dd>
         </div>
-        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-                LPA address
+                Applicant contacts
             </dt>
             <dd class="govuk-summary-list__value">
-                PO Box 270<br>Guildhall<br>London<br>EC2P 2EJ
+                <div data-behaviour="toggle-list">
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                            Sarah Mitchell<br>sarah.mitchell@justice-infrastructure.gov.uk<br>01632960210<br>Department
+                            for
+                            Justice Infrastructure
+                        </li>
+
+                        <li>
+                            Michael Ahmed<br>michael.ahmed@dpfa.gov.uk<br>Defence Property and Facilities Agency
+                        </li>
+
+                    </ul>
+
+                    <button class="pins-button-link" data-toggle="">Show 3 more</button>
+                    <ul class="govuk-list govuk-list--bullet govuk-!-padding-top-4" data-show-more="" hidden="">
+                        <li>
+                            James Carter<br>james.carter@dpfa.gov.uk<br>01632960325<br>Defence Property and Facilities
+                            Agency
+                        </li>
+
+                        <li>
+                            Rebecca Foster<br>rebecca.foster@dpfa.gov.uk<br>Defence Property and Facilities Agency
+                        </li>
+
+                        <li>
+                            Charlotte Green<br>charlotte.green@dpfa.gov.uk<br>Defence Property and Facilities Agency
+                        </li>
+
+                    </ul>
+                </div>
             </dd>
-        </div>
-        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
-            <dt class="govuk-summary-list__key">
-                Secondary LPA contact
-            </dt>
-            <dd class="govuk-summary-list__value">
-                -
-            </dd>
-        </div>
-        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
-            <dt class="govuk-summary-list__key">
-                Secondary LPA address
-            </dt>
-            <dd class="govuk-summary-list__value">
-                -
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link"
+                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/contacts/check-applicant-contact-details">Change<span
+                        class="govuk-visually-hidden"> Check applicant contact details (Contacts)</span></a>
             </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -154,71 +188,39 @@ contactsTable %}
                         class="govuk-visually-hidden"> Check agent contact details (Contacts)</span></a>
             </dd>
         </div>
-        <div class="govuk-summary-list__row">
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
             <dt class="govuk-summary-list__key">
-                Applicants
+                LPA contact
             </dt>
             <dd class="govuk-summary-list__value">
-                <ul class="govuk-list govuk-list--bullet">
-                    <li>
-                        Department for Justice Infrastructure<br> Government Buildings<br>42 Whitehall
-                        Place<br>London<br>SW1A 2AA </li>
-
-                    <li>
-                        Defence Property and Facilities Agency<br> Hawthorn House<br>1 Arsenal
-                        Way<br>Portchester<br>PO16
-                        8XY </li>
-
-                </ul>
-            </dd>
-            <dd class="govuk-summary-list__actions">
-                <a class="govuk-link"
-                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/contacts/check-applicant-details">Change<span
-                        class="govuk-visually-hidden"> Check applicant details (Contacts)</span></a>
+                system-test-council@example.com<br>1234567890<br>
             </dd>
         </div>
-        <div class="govuk-summary-list__row">
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
             <dt class="govuk-summary-list__key">
-                Applicant contacts
+                LPA address
             </dt>
             <dd class="govuk-summary-list__value">
-                <div data-behaviour="toggle-list">
-                    <ul class="govuk-list govuk-list--bullet">
-                        <li>
-                            Sarah Mitchell<br>sarah.mitchell@justice-infrastructure.gov.uk<br>01632960210<br>Department
-                            for
-                            Justice Infrastructure
-                        </li>
-
-                        <li>
-                            Michael Ahmed<br>michael.ahmed@dpfa.gov.uk<br>Defence Property and Facilities Agency
-                        </li>
-
-                    </ul>
-
-                    <button class="pins-button-link" data-toggle="">Show 3 more</button>
-                    <ul class="govuk-list govuk-list--bullet govuk-!-padding-top-4" data-show-more="" hidden="">
-                        <li>
-                            James Carter<br>james.carter@dpfa.gov.uk<br>01632960325<br>Defence Property and Facilities
-                            Agency
-                        </li>
-
-                        <li>
-                            Rebecca Foster<br>rebecca.foster@dpfa.gov.uk<br>Defence Property and Facilities Agency
-                        </li>
-
-                        <li>
-                            Charlotte Green<br>charlotte.green@dpfa.gov.uk<br>Defence Property and Facilities Agency
-                        </li>
-
-                    </ul>
-                </div>
-            </dd>
-            <dd class="govuk-summary-list__actions">
-                <a class="govuk-link"
-                    href="/cases/78d4e9b6-4718-4787-9719-20f394fbb53e/contacts/check-applicant-contact-details">Change<span
-                        class="govuk-visually-hidden"> Check applicant contact details (Contacts)</span></a>
+                PO Box 270<br>Guildhall<br>London<br>EC2P 2EJ
             </dd>
         </div>
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+            <dt class="govuk-summary-list__key">
+                Secondary LPA contact
+            </dt>
+            <dd class="govuk-summary-list__value">
+                -
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+            <dt class="govuk-summary-list__key">
+                Secondary LPA address
+            </dt>
+            <dd class="govuk-summary-list__value">
+                -
+            </dd>
+        </div>
+
+
     </dl>
     {% endblock %}
