@@ -1,0 +1,77 @@
+{% extends "features/bo-redesign/v3/layouts/back-office.html" %}
+{% set currentArea = "cases" %}
+{% set currentPage = "history" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-column"><a href="history.html" class="govuk-back-link">Back</a>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+            <span class=" govuk-caption-l">
+                CROWN/2026/0000010
+            </span>
+            <h1 class="govuk-heading-l">View application history</h1>
+        </div>
+    </div>
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-full">
+            <div class="govuk-warning-text">
+                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="govuk-warning-text__text">
+                    <span class="govuk-visually-hidden">Warning</span>
+                    Application history does not include events before 15 September 2026.
+                </strong>
+            </div>
+            <table class="govuk-table">
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Date and time</th>
+                        <th scope="col" class="govuk-table__header govuk-!-width-two-quarters">Details</th>
+                        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">User</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">30 October 2026<br>
+                            <span>7:04am</span>
+                        </td>
+                        <td class="govuk-table__cell">Target decision date changed from '25 December 2026' to '31
+                            December 2026'</td>
+                        <td class="govuk-table__cell">John Crimwell</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">26 October 2026<br>
+                            <span>12:37pm</span>
+                        </td>
+                        <td class="govuk-table__cell">Inspector 'Mabel Humphrey' was added</td>
+                        <td class="govuk-table__cell">John Crimwell</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">22 September 2026<br>
+                            <span>1:12pm</span>
+                        </td>
+                        <td class="govuk-table__cell">Applicant contact 2 changed from 'Ava Bennett' to 'Sophie Carter'
+                        </td>
+                        <td class="govuk-table__cell">Aisha Grumann</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">19 September 2026<br>
+                            <span>1:51pm</span>
+                        </td>
+                        <td class="govuk-table__cell">Application status changed from 'Procedure choice' to 'Inquiry'
+                        </td>
+                        <td class="govuk-table__cell">Jeff Parker</td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    {% endblock %}
