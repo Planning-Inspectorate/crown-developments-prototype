@@ -1,0 +1,61 @@
+{% extends "layouts/new/front-office.html" %}
+
+{% set pageName = "Use of AI" %}
+
+{% block content %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+        <h1 class="govuk-heading-l">Use of AI</h1>
+
+
+        <p class="govuk-body">
+            We ask whether you've used artificial intelligence (AI) to help write or translate your representation. This
+            helps
+            Inspectors understand how it was prepared.
+        </p>
+
+        <p class="govuk-body">You do not need to tell us if you've used AI to check spelling or grammar.</p>
+
+        <p class="govuk-body">If you've used AI, check your representation is accurate and reflects your
+            views and experiences.</p>
+
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    <h2 class="govuk-fieldset__heading">
+                        Did you use AI to write your written representation?
+                    </h2>
+                </legend>
+
+                <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" type="radio" value="england">
+                        <label class="govuk-label govuk-radios__label">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" type="radio" value="scotland">
+                        <label class="govuk-label govuk-radios__label">
+                            No
+                        </label>
+                    </div>
+
+                </div>
+            </fieldset>
+        </div>
+
+        <a href="how-AI.html" class="govuk-button">
+            Continue
+        </a>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}
